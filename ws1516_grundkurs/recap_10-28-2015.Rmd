@@ -1,0 +1,120 @@
+---
+title: "Typologien politischer Systeme"
+author: "Dag Tanneberg"
+date: "4. November 2015"
+output:
+  beamer_presentation:
+    theme: "Frankfurt"
+    fonttheme: "professionalfonts"
+---
+
+# Allgemeines zu Typologien
+
+Typologien *beschreiben* und *systematisieren* Varianz.
+
+- Typologie: "organized system of types" \newline
+  (Collier et al. 2008: 152)
+- Typ: einzigartige Kombination von Merkmal\textit{en} \newline
+  (Elman 2005: 296)
+  
+Bei Typologien handelt es sich um
+
+- mehrdimensionale Klassifikationen,
+- deren Merkmalsraum sich auf eine Theorie stützt,
+- und deren Mächtigkeit maßgeblich von der Qualität der
+  zugrundeliegenden Theorie abhängt.
+
+# Lijphardts _Patterns of Democracy_
+
+\textbf{Frage:} "[W]ho will do the governing and to whose
+  interests should the government be responsive when the
+  people are in disagreement and have divergent
+  preferences?" \newline
+  (Lijphardt 1999, 1)
+
+\begin{enumerate}
+  \item \textbf{Die Mehrheit!} \newline
+    Mehrheitsdemokratie, d.i. Machtkonzentration in knappen
+    Mehrheiten
+  \item \textbf{So viele wie möglich!}
+    Konsensdemokratie, d.i. Teilung, Streuung und Brechung
+    politischer Macht
+\end{enumerate}
+    
+"[\dots] [T]he majoritarian model of democracy is exclusive,
+  competitive, and adversarial, whereas the consensus model
+  is characterized by inclusiveness, bargaining, and
+  compromise; [\dots]." \newline
+  (Lijphardt 1999, 2)
+  
+# Merkmale von Konsens- und Mehrheitsdemokratie
+
+\begin{tabular}{lll}
+~ & Konsensdemokratie & Mehrheitsdemokratie \\ \hline
+~ & Exekutive-Parteien \\ \hline
+1. & Koalitionsregierung & Einparteiregierung \\
+2. & Gleichgewicht Exek. \& Leg. & Dominanz Exek. \\
+3. & Vielparteiensystem & Zweiparteiensystem \\
+4. & Verhältniswahl & Mehrheitswahlsystem \\
+5. & Korporatismus & Pluralismus \\ \hline
+~ & Föderalismus-Unitarismus \\ \hline
+6.  & Bundesstaat & Zentralstaat \\
+7.  & Zweikammersystem & Einkammersystem \\
+8.  & "starre" Verfassung & flexible Verfassung \\
+9.  & richterl. Normenkontrolle & keine richterl. Normenk. \\
+10. & autonome Zentralbank & von Exek. abh. Zentralbank \\
+\end{tabular}
+
+# In welchen Quadranten sollten alle Fälle liegen?
+
+```{r, echo = FALSE, fig.width = 4, fig.height=3, fig.align='center'}
+library('ggplot2')
+pdta <- expand.grid(
+  x = factor(0:1, labels = c('Konsens', 'Mehrheit')),
+  y = factor(0:1, labels = c('Konsens', 'Mehrheit'))
+)
+p <- ggplot(data = pdta, aes(x = x, y = y)) + 
+  geom_blank() +
+  labs(x = 'Exekutive-Parteien', y = 'Föderalismus-Zentralstaat') +
+  geom_hline(yintercept = 1.5, size = .3) +
+  geom_vline(xintercept = 1.5, size = .3) +
+  theme_bw(base_size = 14) +
+  theme(
+    panel.grid = element_blank(),
+    axis.ticks = element_blank(),
+    axis.text.y = element_text(angle = 90, hjust = .5)
+  )
+  p
+```
+
+# In welchen Quadranten sollten alle Fälle liegen?
+```{r, echo = FALSE, fig.width = 4, fig.height=3, fig.align='center'}
+set.seed(14768)
+  point.dta <- data.frame(
+  x = rep(1:2, each = 10),
+  y = rep(1:2, each = 10)
+)
+p + geom_jitter(data = point.dta)
+```
+
+# Nur 2 Typen, Herr Lijphardt?
+\begin{columns}
+  \begin{column}{.4\textwidth}
+    \includegraphics[width = 14em]{lijphardt_conceptualMapDemocracy}
+  \end{column}
+  \begin{column}{.4\textwidth}
+  \small
+  Zu sehen sind
+    \begin{itemize}
+      \item z-standardisierte Mittelwerte, wobei
+      \item $x_i < 0 \equiv$ Konsensdem.,
+      \item $x_i > 0 \equiv$ Mehrheitsdem.
+    \end{itemize}
+  Was bedeuten
+  \begin{enumerate}
+    \item (-3, -3) und (3, 3),
+    \item (-3, 3) oder (3, -3),
+    \item (0, 0)?
+  \end{enumerate}
+  \end{column}
+\end{columns}
