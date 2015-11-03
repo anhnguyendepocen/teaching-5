@@ -1,2 +1,2 @@
 # teaching
-Tits and bits for teaching
+Bits and pieces for teaching
