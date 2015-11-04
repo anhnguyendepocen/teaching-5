@@ -36,7 +36,7 @@ Bei Typologien handelt es sich um
   \item \textbf{Die Mehrheit!} \newline
     Mehrheitsdemokratie, d.i. Machtkonzentration in knappen
     Mehrheiten
-  \item \textbf{So viele wie möglich!}
+  \item \textbf{So viele wie möglich!} \newline
     Konsensdemokratie, d.i. Teilung, Streuung und Brechung
     politischer Macht
 \end{enumerate}
@@ -50,14 +50,14 @@ Bei Typologien handelt es sich um
 # Merkmale von Konsens- und Mehrheitsdemokratie
 
 \begin{tabular}{lll}
-~ & Konsensdemokratie & Mehrheitsdemokratie \\ \hline
-~ & Exekutive-Parteien \\ \hline
-1. & Koalitionsregierung & Einparteiregierung \\
-2. & Gleichgewicht Exek. \& Leg. & Dominanz Exek. \\
-3. & Vielparteiensystem & Zweiparteiensystem \\
-4. & Verhältniswahl & Mehrheitswahlsystem \\
-5. & Korporatismus & Pluralismus \\ \hline
-~ & Föderalismus-Unitarismus \\ \hline
+~   & Konsensdemokratie & Mehrheitsdemokratie \\ \hline
+~   & Exekutive-Parteien \\ \hline
+1.  & Koalitionsregierung & Einparteiregierung \\
+2.  & Gleichgewicht Exek. \& Leg. & Dominanz Exek. \\
+3.  & Vielparteiensystem & Zweiparteiensystem \\
+4.  & Verhältniswahl & Mehrheitswahlsystem \\
+5.  & Korporatismus & Pluralismus \\ \hline
+~   & Föderalismus-Unitarismus \\ \hline
 6.  & Bundesstaat & Zentralstaat \\
 7.  & Zweikammersystem & Einkammersystem \\
 8.  & "starre" Verfassung & flexible Verfassung \\
@@ -103,7 +103,7 @@ p + geom_jitter(data = point.dta)
     \includegraphics[width = 14em]{lijphardt_conceptualMapDemocracy}
   \end{column}
   \begin{column}{.4\textwidth}
-  \small
+  \footnotesize
   Zu sehen sind
     \begin{itemize}
       \item z-standardisierte Mittelwerte, wobei
@@ -112,8 +112,8 @@ p + geom_jitter(data = point.dta)
     \end{itemize}
   Was bedeuten
   \begin{enumerate}
-    \item (-3, -3) und (3, 3),
-    \item (-3, 3) oder (3, -3),
+    \item (-2, -3) und (2, 2),
+    \item (-2, 2) oder (2, -3),
     \item (0, 0)?
   \end{enumerate}
   \end{column}
