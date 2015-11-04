@@ -1,7 +1,7 @@
 ---
 title: "Typologien politischer Systeme"
 author: "Dag Tanneberg"
-date: "4. November 2015"
+date: "4 November 2015"
 output:
   beamer_presentation:
     theme: "Frankfurt"
@@ -99,8 +99,8 @@ p + geom_jitter(data = point.dta)
 
 # Nur 2 Typen, Herr Lijphardt?
 \begin{columns}
-  \begin{column}{.4\textwidth}
-    \includegraphics[width = 14em]{lijphardt_conceptualMapDemocracy}
+  \begin{column}{.45\textwidth}
+    \includegraphics[width = 15em]{lijphardt_conceptualMapDemocracy}
   \end{column}
   \begin{column}{.4\textwidth}
   \footnotesize
