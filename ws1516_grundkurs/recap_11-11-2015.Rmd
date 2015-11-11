@@ -1,0 +1,124 @@
+---
+title: "Recap: Demokratisierung & Modernisierung"
+author: "Dag Tanneberg"
+date: "11 November 2015"
+output:
+  beamer_presentation:
+    theme: "Frankfurt"
+    fonttheme: "professionalfonts"
+---
+
+# Orga
+**Zusammenfassungen**
+
+https://github.com/dagtann/teaching/
+
+**Vorbereitende Fragen zur Sitzung**
+
+Fragen zur Vorbereitung der Grundkurssitzung: dag.tanneberg@wzb.eu
+
+Die Übermittlung von Fragen ist freiwillig.
+
+# Orga
+
+**Thought paper**
+  
+  Die Modernisierungstheorie behauptet einen
+  engen Zusammenhang zwischen wirtschaftlichem
+  Entwicklungsstand und Demokratisierung. Diskutieren sie
+  die Stärken und Schwächen des modernisierungstheoretischen
+  Paradigmas. Beziehen Sie sich dabei auf die erste
+  Generation von Vertretern der Modernisierungstheorie.
+  
+**Abgabe**
+
+Mi. 18. 11. 2015, 10.00 Uhr, dag.tanneberg@wzb.eu
+
+
+# Huntington, Third Wave
+
+- *Welle*: "group of transitions from nondemocratic to
+  democratic regimes that occur within a specified period 
+  of time and that significantly outnumber transitions in
+  the opposite direction during that period of time" (15)
+    1. Welle (1828 - 1926): Amerikanische & französische Revolution
+        - Gegenwelle (1922 - 1945): Mussolinis Marsch auf Rom
+    2. Welle (1943 - 1962): Nachkriegsdemokratien,
+      Dekolonialisierung, ISR, GRE, TUR
+        - Gegenwelle (1958 - 1975): Latein Amerika,
+          Indonesien 1965, Türkei 1960, Taiwan 1960er,
+          Griechenland 1967
+    3. Welle (1974 - Mitter 1990er): globaler Demokratisierungsschub
+        - Gegenwelle: ?
+        
+# Huntington, Third Wave
+- Demokratie: 
+    - *notwendige Bdg.:* "this study defines a twentieth-century
+      political system as democratic to the extent that its most
+      powerful collective decisions malers are selected through
+      fair, honest, and periodic elections in which candidates
+      freely compete for votes and in which virtually all the
+      adult population is eligible to vote" (7)
+    - *notwendige und hinreichende Bdg.:* "If popular election
+      of the top decision makers is the essence of
+      democracy, the the critical point in the process of
+      democratization is the replacement of a government
+      that was not chosen this way by one that is selected
+      in a free, open, and fair election." (9)
+- Demokratisierung $\neq$ Liberalisierung
+
+# Lipset, Some Social Requisites of Democracy
+
+**Grundsätzliches**
+\begin{itemize}
+  \item "\dots the more well-to-do a nation, the
+    greater the chances that it will sustain
+    democracy" (75)
+  \item ökon. Entwicklung $\rightarrow$
+    gesamtgesellschaftliche Modernisierung
+  \item Industrialisierung,
+    Urbanisierung, Wohlstand, Bildung
+  \item Pointe: demokratieförderlicher Wertewandel
+\end{itemize}
+
+#Lipset, Some Social Requisites of Democracy
+
+**Kausalität**
+  \begin{itemize}
+    \item Ökonom. Entwicklung: {\small Milderung akuter Existenznöte}
+    \item Urbanisierung
+    \item Bildung: {\small "creating and sustaining belief in democratic norms"}
+    \item Bildung einer Mittelklasse: {\small "mitgating role in moderating conflict"}
+    \item Forderung nach polit. Partizipation
+    \item Entradikalisierung und Inklusion: {\small 
+      Universalistische Normen in der Bürokratie,
+      Zivilgesellschaftliche Vereinigungen, etc.}
+    \item $\rightarrow$ S. 83
+  \end{itemize}
+
+# Rueschemeyer, Capitalist Development and Democracy
+
+**Synthese des Strukturalismus**
+
+1. Analyse langfristiger Veränderungen gesellschaftlicher Machtstrukturen
+2. Demokratie und ihre Konsolidierung *mögliche* Folge
+3. Pointe: Klassenkonflikte & Ressourcenkontrolle
+
+# Rueschemeyer, Capitalist Development and Democracy
+
+1. Mikroebene
+    - Machtverhältnis herrschender & beherrschter Klasse
+    - städtische Arbeiterklasse Subjekt der Demokratie
+    - Kapital. fördert Demokratie, denn:
+        1. Schwächung der Großgrundbesitzer
+        2. Stärkung von industriellem Bürgertum und Arbeiterklasse
+2. Mesoebene
+    - Autonomie des Staates von gesellschaftlichen Interessen
+    - Innovation: staatliche Eliten Interessenten in eigener Sache
+    - materielle Unabhängigkeit & ideolog.
+      geeinter/hierarchischer Repressionsapparat
+      $\rightarrow$ Autokratie
+    - Zivilgesellschaft bricht und kontrolliert staatliche Macht
+3. Makroebene
+    - Krieg, wirtschaftliche & geopolitische Abhängigkeit
+    - indirekte Wirkung, d.i. vermittelt über Staat und Klassenstruktur
