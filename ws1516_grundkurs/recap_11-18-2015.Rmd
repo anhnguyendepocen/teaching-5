@@ -1,0 +1,51 @@
+---
+title: "Recap 11. November 2015"
+author: "Dag Tanneberg"
+date: "18 November 2015"
+output:
+  beamer_presentation:
+    theme: "Frankfurt"
+    fonttheme: "professionalfonts"
+---
+
+# Kapitalismus und Demokratie
+- **Diagnose** \newline
+Die entgrenzte Marktwirtschaft belastet die Demokratie.
+- **Prozess der Entgrenzung**
+    - Denationalisierung, Deregulierung, Finanzialisierung
+    - Bedeutungsverlust korporativen Interessensausgleichs
+    - Repositionierung der Sozialdemokratie
+- **Ergebnis** \newline
+Verlust der regulativen und protektiven Kapazitäten des Staates
+
+# Wolfgang Merkel, Kapitalismus ist nicht demokratisch...
+1. Ökonomische schlägt in politische Ungleichheit um
+    - zunehmende Selektivität der Wahlbeteiligung
+    - systematische Verzerrung von Politikergebnissen
+2. Bedeutungsverlust von Wahlen
+    - Selbstausschluss benachteiligter Bev.-gruppen
+    - programmatische Reorientierung politischer Parteien
+3. Zunehmende Verwundbarkeit des Staates
+    - Erpressbarkeit durch Großinvestoren
+    - Sozialisierung privater Risiken ("too big to fail")
+4. Entparlamentarisierung politischer Entscheidungen
+5. Erosion kollektiver Organisationen
+
+# Crouch, Comment on Wolfgang Merkel
+- Wahlverwandschaft Demokratie und Marktwirtschaft
+    \begin{quote}
+    [\dots] a political market that is kept in balance by
+    there being a large number of participants, none of whom
+    can control the system. (63)
+    \end{quote}
+- Durch forschreitende soziale Ungleichheit
+    1. Verschränkung politischer und ökonomischer Macht
+    2. Verstetigung politökonomischer Asymmetrien
+    
+# Manöverkritik Thought Paper
+- Was ist die Pointe der Modernisierungstheorie?
+- "The Third Wave" gehört nicht zur Modernisierungstheorie.
+- Vermeidet Phrasen!
+- Ein Absatz, ein Gedanke
+- Weniger Breite, mehr Tiefe
+- Bringt die Dinge auf den Punkt.
