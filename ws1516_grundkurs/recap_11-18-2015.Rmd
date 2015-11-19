@@ -8,14 +8,44 @@ output:
     fonttheme: "professionalfonts"
 ---
 
+# Orga
+**Moodle**
+
+- 53017 Gr. 2 & 6 (WiSe 2015/16)
+- PW: GkBrüTa
+
+# Manöverkritik Thought Paper
+**Inhalt**
+
+- Was ist die Pointe der Modernisierungstheorie?
+- "The Third Wave" gehört nicht zur Modernisierungstheorie.
+
+**Sruktur**
+
+- Einleitung - Aufbereitung - Diskussion - Fazit
+- Ein Absatz, ein Gedanke
+- Weniger Breite, mehr Tiefe
+
+**Stil**
+
+- Auf den Punkt bringen
+- Keine Phrasen
+- Keine Bandwurmsätze
+- \tiny Rechtschreibung & Grammatik
+
 # Kapitalismus und Demokratie
-- **Diagnose** \newline
+**Diagnose**
+
 Die entgrenzte Marktwirtschaft belastet die Demokratie.
-- **Prozess der Entgrenzung**
-    - Denationalisierung, Deregulierung, Finanzialisierung
-    - Bedeutungsverlust korporativen Interessensausgleichs
-    - Repositionierung der Sozialdemokratie
-- **Ergebnis** \newline
+
+**Prozess der Entgrenzung**
+
+- Denationalisierung, Deregulierung, Finanzialisierung
+- Bedeutungsverlust korporativen Interessensausgleichs
+- Repositionierung der Sozialdemokratie
+
+**Ergebnis**
+
 Verlust der regulativen und protektiven Kapazitäten des Staates
 
 # Wolfgang Merkel, Kapitalismus ist nicht demokratisch...
@@ -41,11 +71,3 @@ Verlust der regulativen und protektiven Kapazitäten des Staates
 - Durch forschreitende soziale Ungleichheit
     1. Verschränkung politischer und ökonomischer Macht
     2. Verstetigung politökonomischer Asymmetrien
-    
-# Manöverkritik Thought Paper
-- Was ist die Pointe der Modernisierungstheorie?
-- "The Third Wave" gehört nicht zur Modernisierungstheorie.
-- Vermeidet Phrasen!
-- Ein Absatz, ein Gedanke
-- Weniger Breite, mehr Tiefe
-- Bringt die Dinge auf den Punkt.
