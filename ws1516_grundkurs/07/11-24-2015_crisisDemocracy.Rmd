@@ -1,0 +1,142 @@
+---
+author: "Dag Tanneberg"
+title: "Wohlfahrtsstaat & Krise der Demokratie"
+date: "25 November 2015"
+output:
+    beamer_presentation:
+      theme: "Frankfurt"
+      fonttheme: "professionalfonts"
+---
+
+# Recap: Drei Welten des Wohlfahrtsstaats
+
+## Residual & Institutionalized Welfare States
+
+- Richard Titmuss (1958): Essays on the Welfare State
+- Schwerpunkt Funktion von Sozialpolitik
+- Residual Welfare State: zeitlich begrenzte Abhilfe bei Notlagen
+- Institutionalized Welfare State: Redistribution von Ressourcen
+
+## Kernpunkte der Diskussion
+
+\textbf{Wohlfahrtsstaatsregime}
+
+- Kriterium der Dekommodifizierung
+- Effekt der sozialen Stratifikation
+- Wechselbeziehung von Staat, Wirtschaft und Familie
+
+\textbf{Kritik}
+
+- Kommodifizierung vs. Dekommodifizierung?
+- Status der Typologie $\rightarrow$ Ideal- oder Realtypen?
+- Vernachlässigung häuslicher Rollenverteilung
+- Unempfindlich gegen zeitabhängige Entwicklungen
+
+\textbf{Reaktion}
+
+Gøsta Esping-Andersen (Hrsg). 2002: _Why We Need a New
+  Welfare State_, Oxford University Press: Oxford.
+
+# Übung in kritischem Denken
+
+## Zufriedenheit mit der Demokratie in der EU/EG {.vcenter}
+
+![alt text](/Users/dag/Dropbox/lehre/ws1516/grundlagenkurs/07/MERKEL_SatisfDem.png)
+
+\scriptsize
+Source: Eurobarometer 1976–2014. \newline
+Note: Weighted data. EC/EU average according to historical composition.
+
+
+```{r setup, echo = FALSE, message = FALSE, warning = FALSE, fig.align='center'}
+# preamble ------------------------------------------------
+rm(list = ls())
+pathData <- '/Users/dag/Dropbox/lehre/ws1516/grundlagenkurs/07/'
+pathOut <- pathCode <- pathData
+packs <- c('ggplot2', 'dplyr', 'scales', 'grid')
+invisible(lapply(packs, library, character.only = TRUE))
+rm(packs)
+
+# load data ------------------------------------------------
+load(file.path(pathData, 'satdem_22Apr14_prep.Rdata'))
+ds <- mutate(
+  ds,
+  eastwest = ifelse(country %in% c('Austria', 'Belgium',
+    'Cyprus (Republic)', 'Denmark', 'Finland', 'France',
+    'Germany', 'Greece', 'Ireland', 'Italy', 'Luxembourg',
+    'Malta', 'Portugal', 'Spain', 'Sweden',
+    'The Netherlands', 'UK'), 'west' , 'east'
+  )
+) %>%
+mutate(
+  eastwest = factor(
+    eastwest,
+    levels = c('east', 'west'),
+    labels = c('Osteuropa', 'Westeuropa')
+  )
+) %>%
+filter(country != 'Croatia')
+```
+
+## Zufriedenheit mit der Demokratie -- Regionenmittelwerte
+
+```{r desagRegion,echo = FALSE, messages = FALSE, warning = FALSE, fig.align='center', fig.width = 7, fig.height = 7/1.618}
+byRegion <- ggplot(data = ds, aes(x = year, y = sat.wgt)) +
+  stat_summary( 
+    fun.data = mean_cl_normal, geom = 'linerange', size = .3
+  ) +
+  stat_summary(fun.y = mean, geom = 'point', size = 2) +
+  scale_y_continuous(labels = scales::percent) +
+  labs(
+    y = 'Zufriedenheit mit der Demokratie'
+  ) +
+  facet_grid(~eastwest) +
+  theme_minimal(base_size = 16) +
+  theme(
+    axis.title.x = element_blank(),
+    panel.border = element_rect(fill = 'transparent', colour = 'black', size = .1)
+  )
+print(byRegion)
+```
+\scriptsize Konfidenzintervalle bei $\alpha = 0,05$.
+
+## Zufriedenheit mit der Demokratie - Ländermittelwerte
+
+```{r desagCountry, echo = FALSE, messages = FALSE, warning = FALSE, fig.width = 7, fig.height = 7/1.618, fig.align = 'center'}
+set.seed(1)
+byCountry <- ggplot(
+  data = subset(ds, country %in% c(sample(unique(country), size = 8), 'Denmark')), 
+  aes(x = year, y = sat.wgt)
+) +
+  geom_point() +
+  geom_smooth(method = 'lm', formula = y ~ poly(x, 3)) +
+  scale_y_continuous(labels = scales::percent) +
+  labs(y = 'Zufriedenheit mit der Demokratie') +
+  facet_wrap(~ country) +
+  theme_minimal(base_size = 14) +
+  theme(
+    axis.title.x = element_blank(),
+    panel.border = element_rect(
+      fill = 'transparent', colour = 'black', size = .1
+    )
+  )
+print(byCountry)
+```
+\scriptsize Kubische Polynome, Konfidenzintervalle bei $\alpha = 0,05$.
+
+## Tuftes Regeln für statistische Grafiken
+
+Statistische Grafiken sollen:
+
+1. **die Daten zeigen**;
+2. den Betrachter zum Nachdenken über die Sache anregen;
+3. **eine Verzerrung der Daten vermeiden**;
+4. viel Information auf wenig Raum vereinigen;
+5. große Datensätze kohärent darstellen;
+6. das Auge zum Vergleich anregen;
+7. die Daten in verschiedenen Detailstufen aufbereiten;
+8. **einen klaren Zweck verfolgen**;
+9. eng statistischen und verbalen Beschreibungen folgen.
+
+Edward Tufte 2001. _Visual Display of Quantitative
+  Information_, Cheshire, CO: Graphics Press.
