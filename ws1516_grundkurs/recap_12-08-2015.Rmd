@@ -1,0 +1,70 @@
+---
+title: "Recap: Krise der Demokratie"
+author: "Dag Tanneberg"
+date: \today
+output:
+  beamer_presentation:
+    theme: "Frankfurt"
+    fonttheme: "professionalfonts"
+---
+
+# Warum über eine Krise der Demokratie sprechen?
+
+1. Funktionsversagen der Demokratie
+    - Verletzung der Menschenrechte durch demokrat. Regierungen
+2. Negative Externalitäten des Marktes
+    - sozioökonomische schlägt in politische Ungleichheit um
+3. Erstarken antidemokratischer Kräfte
+    - Vormarsch rechtspopulistischer Parteien
+4. Entstehung nicht-demokratischer Gegenmächte
+    - kapitalstarke Interessen diktieren der Politik
+
+# Wie über eine Krise der Demokratie sprechen?
+
+**Demokratie**
+
+- Begriffsinhalt bestimmt Umfang der Krisendiagnose
+- Politikergebnisse: Begriffsmerkmal oder Maßstab?
+    - Welche Ergebnisse? Warum? Politische Verantwortung?
+    - Wieviel Ergebnis a.k.a. was ist ein Nadelhaufen?
+    - Begriffsdefinition kann Kausalanalyse erschweren
+
+**Krise**
+
+- Akute oder latent Krise?
+- Benennung von Maßstab, Ursachen, Symptomen und Verlauf
+
+**Herausforderungen**
+
+- Scharnier zwischen Demokratie und Krise
+
+
+# Die Sache mit den Herausforderungen
+
+``Zu Ursachen einer Demokratiekrise werden Herausforderungen
+erst dann, wenn sie von den Bürgern und der öffentlichen
+Meinung als wichtige Herausforderungen erkannt und
+thematisiert werden **sowie** mittels der vorhandenen
+Verfahren, Institutionen, Organisationen und Personen, die
+das demokratische Gesamtsystem bereitstellt, für *demos*,
+Eliten und Öffentlichkeit nicht zufriedenstellend
+bearbeitet werden können.'' (Merkel 2015: 25; meine Hervorh.)
+
+- Kann es eine latente Krise der Demokratie geben?
+
+# Wie eine Krise der Demokratie analysieren?
+
+**Analysestrategien**
+
+- Objektive Einschätzungen, Surveydaten oder Partialanalysen?
+- Merkel et al.: Partianalysen mit *embedded democracy*
+    - Differenzierte Analyse von Teilregimen
+    - Vergleich Ungleichzeitigkeiten im Krisenverlauf
+
+**Beispiel**
+
+1. Gewalts. polit. Bedrohungen $\rightarrow$ Menschenrechtsverstöße
+2. Aushebelung bürgerl. Freiheitsrechte & Wahlregime
+3. Horiz. Verantwortlichkeit: alternat. Kontrolle der Regierung
+4. Beobachtung: Judikative greift nicht ein
+5. Diagnose: konditionale Geltung fundamentaler Normen
