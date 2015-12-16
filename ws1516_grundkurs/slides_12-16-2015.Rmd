@@ -1,0 +1,77 @@
+---
+title: "Direkte Demokratie und Zivilgesellschaft"
+author: "Dag Tanneberg"
+date: \today
+output:
+  beamer_presentation:
+    theme: "Frankfurt"
+    fonttheme: "professionalfonts"
+---
+
+# Direkte, wie bitte?
+
+**Was ist direkte Demokratie?**
+
+> - 'Referendum' ist ein Sammelbegriff und keine Definition.
+> - "die unmittelbare Herrschaft des Volkes im Ggs. zur
+  Repräsentativen Demokratie, in der Herrschaft durch vom
+  Volke gewählte Repräsentanten ausgeübt wird"
+  (Nohlen/Schultze 2002: 154)
+> - "Direkte Demokratie umfasst die unmittelbare Beteiligung
+  der Bevölkerung an Abstimmungen zu themenorientierten
+  Sachentscheidungen." \href{http://link.springer.com/book/10.1007/978-3-658-06363-4}{(\textcolor{blue}{Kersting 2016: 309})}
+  
+# Zum ideengeschichtlichen Kern der direkten Demokratie
+
+**Identität von Regierenden und Regierten**
+
+> - Realisierung des Allgemeinwillens
+> - Prägung durch Jean-Jacques Rousseau
+      1. Unteilbarkeit der Souveränität
+      2. Gegensatz von *Volonté des Touts* und *Volonté Générale*
+> - Implikationen
+    1. Demokrat. Selbstregierung als Gesellschaftsprinzip
+    2. Tendenz zum Antipluralismus
+
+# Direktdemokr. Verfahren in der repräsent. Demokratie
+
+- Komplement statt Gegenentwurf
+- nationale, regionale, kommunale Ebene
+
+**Verfahrensmerkmale**
+
+- bottom-up (Initiative) versus top-down (Plebiszit)
+- fakultativ versus obligatorisch
+- konsultativ versus bindend
+- Beteiligungs- versus Zustimmungsquorum
+
+**Zielkonflikte**
+
+- *Agenda-Setting* versus Vetoblockade
+- *a priori* versus *a posteriori* Kontrolle
+- Gemeinwohl versus Partialinteressen
+
+# Zivilgesellschaft
+
+**These**
+
+"Ohne eine starke pluralistische und tolerante
+  Zivilgesellschaft kann es keine starke Demokratie
+  geben." (Keane/Merkel: 453)
+
+# (K)eine Definition der Zivilgesellschaft
+
+**Elemente**
+
+- vor- & nicht-staatliche Sphäre
+- umfasst autonome, freiwillige Vereinigungen
+- Pluralistische Interessensverfolgung
+- Normatives Fundament: Fairness, Toleranz, Gewaltlosigkeit
+
+**Aufgaben**
+
+1. **Locke** Schutz von Leben, Freiheit und Eigentum
+2. **Montesquieu** Kontrolle staatlichen Handelns
+3. **Tocqueville** Schulen der Demokratie
+4. **Habermas** Entmachtete, kritisch räsonnierende Öffentlichkeit
+5. **Putnam** Produktion von Sozialkapital
