@@ -1,0 +1,125 @@
+---
+title: "Recap: Parteien- und Wahlsysteme"
+author: "Dag Tanneberg"
+date: \today
+output:
+  beamer_presentation:
+    theme: "Frankfurt"
+    fonttheme: "professionalfonts"
+---
+
+# Politischer Wettbewerb: Das Große und das Ganze 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{./09/demCompetScheme.pdf}
+\end{figure}
+
+- Makrokomponenten des politischen Wettbewerbs
+- Ermöglichen und beschränken Wahlverhalten
+- Wähler antizipiert sowohl PS als auch WS 
+
+# Grundsätzliches zu politischen Parteien
+
+**Politische Parteien**
+
+"auf (formal) freier Werbung beruhende
+Vergesellschaftungen mit dem Zweck, ihren Leitern innerhalb
+eines Verbandes Macht und ihren aktiven Teilnehmern dadurch
+[...] Chancen [...] zuzuwenden" (Weber 1980: 167)
+
+**Parteifunktionen**
+
+1. rekrutieren politisches Personal;
+2. treten zu Wahlen an und bekleiden politische Ämter;
+3. mobilisieren und integrieren die Wählerschaft;
+4. artikulieren, aggregieren und repräsentieren Interessen;
+5. formulieren und verfolgen die Implementation von Policies.
+
+# Parteiensysteme nach Giovanni Sartori
+
+**Parteiensystem**
+
+"Parties make for a `system', then, only when they are
+parts (in the plural); and a party system is precisely the
+system of *interactions* resulting from inter-party 
+competition." (Sartori 1976: 44)
+
+**Relevante Parteien**
+
+1. Coalition potential: Relevanz für die Regierungsbildung
+2. Blackmailing potential: Einfluss auf die Wettbewerbsrichtung
+
+**Kritik**
+
+1. Immer nur Parteienwettbewerb? $\rightarrow$ CDU/CSU
+2. Schwierige Operationalisierung Erpressungspotential $\rightarrow$ AfD
+
+# Sartoris Typologie von Parteiensystemen
+
+\begin{columns}
+\column{.45\textwidth}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = 15em]{./09/sartoriVereinfacht.png}
+  
+  {\flushleft Saalfeld 2007: 186.}
+\end{figure}
+\column{.45\textwidth}
+  \begin{enumerate}
+    \item Fragmentierung, d.i. Anzahl relevanter Partien
+    \item Ideologische Distanz, d.i. Polarisierung Wettbewerb
+    \item Explanatorische Typol.: Wettbewerbsrichtung
+    \item Kritik: Merkmalsdimen- sionen nicht unabhängig
+  \end{enumerate}
+\end{columns}
+
+# Grundsätzliches zum Wahlsystem
+
+**Wahlsysteme**
+
+"Modus, nach welchem die Wähler ihre Partei- und/oder
+Kandidatenpräferenz in Stimmen ausdrücken und diese in
+Mandate übertragen werden" (Nohlen 2009: 61)
+
+**Repräsentationsprinzipien**
+
+1. Mehrheitswahl
+    - Konzentration von Stimmen und Mandaten
+    - Bildung eindeutiger und politisch verantwortlicher Mehrheiten
+2. Verhältniswahl
+    - Proportionale Umwandlung von Stimmen in Mandate
+    - Möglichst unverzerrte Abbildung gesellschaftlicher Interessen
+
+# Technische Aspekte des Wahlsystems
+
+1. **Wahlkreiseinteilung:** Wo wird gewählt und wieviele?
+    - i.d.R. territoriale Definition, aber: Diasporawahlkreise u.ä.
+    - Wahlkreisgröße nach Stimmen oder Mandaten
+2. **Wahlbewerbung:** Wer wird gewählt?
+    - Föderalismus, parlamentarische vs. präsidentielle
+      Demokratie
+    - Mindestalter, Staatsbürgerschaft o.a. Kriterien?
+3. **Stimmgebungsverfahren:** Wie wird abgestimmt?
+    - Personen- oder Listenwahl? Stimmenanzahl pro Wähler?
+    - Stimmengewichtung, Kumulieren, Panaschieren?
+4. **Verrechnungsverfahren:** Wer gewinnt?
+    - MW: Relative vs. absolute Mehrheit, Alternative Vote,
+        Single-Transferable Vote
+    - VW: Divisorverfahren (d'Hondt) oder Wahlzahlverfahren
+        (Hare, Hagenbach-Bischoff/Droop quota, Imperiali)?
+    
+# Politische Effekte des Wahlsystems
+
+**Mechanischer Effekt**
+
+- Reduktion politischer Vielfalt
+- Disproportionalität: $\frac{1}{N}\sum_{i=1}^N|v_i-s_i|$
+- effektive Parteienzahl: $\frac{1}{\sum_{i=1}^N s_i^2}$
+
+**Psychologischer Effekt**
+
+- Wähler und Parteien antizipieren Wahlsystem
+- strategisches Wählen, z.B. Stimmensplitting
+- Wettbewerbsverhalten der Parteien, z.B. Wahlkoalitionen
+
