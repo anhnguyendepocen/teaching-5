@@ -14,7 +14,7 @@ output:
 
 # Why we should talk about this
 
-## Is this the latest thing?
+## Is crisis the latest thing?
 
 "In an age of widespread secondary school and university 
 education, the pervasiveness of the mass media, and the 
@@ -56,7 +56,7 @@ qualify as crises.
 **Scope changes texture**
 
 As the domain of democracy increases, the range of crisis
-shifts from acute, short-term disruptionx to latent,
+shifts from acute, short-term disruptions to latent,
 long-term decline.
 
 # Physical integrity violations in established democracies
