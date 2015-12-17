@@ -1,0 +1,284 @@
+--- 
+title: "Crisis of Democracy"
+author: "dag.tanneberg@wzb.eu" 
+date: "December 17, 2015" 
+output:
+  beamer_presentation: 
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: true 
+    includes: 
+      in_header: header.tex
+---
+
+# Why we should talk about this
+
+## Is this the latest thing?
+
+"In an age of widespread secondary school and university 
+education, the pervasiveness of the mass media, and the 
+displacement of manual labor by clerical and professional 
+employees, [the rise of value-oriented intellectuals; D.T.] 
+constitutes a challenge to democratic government which is 
+[...] as serious as those posed in the past by 
+aristocratic cliques, fascist movements, and communist 
+parties."
+
+\scriptsize{Michel Crozier, Samuel P. Huntington, and Joji 
+Watanuki (1975): \textit{The Crisis of Democracy}, New York 
+University Press: New York, p. 7.}
+
+## Some often raised concerns
+
+1. Functional failure of democracy 
+    - legalized torture and extra-judicial killings 
+2. Negative externalities of economic markets
+    - socioeconomic translates into political inequality
+3. Rise of anti-democratic forces
+    - right-wing populism in Europe and the US
+
+# Negotiating terms
+
+## Balancing democracy and crisis
+
+\begin{figure}[h] \centering 
+\includegraphics[width=.8\textwidth]{./termsCorrelation.pdf} 
+\end{figure}
+
+## Lessons learned on terminology
+
+**Content conditions scope**
+
+The more things go into democracy the more observations may
+qualify as crises.
+
+**Scope changes texture**
+
+As the domain of democracy increases, the range of crisis
+shifts from acute, short-term disruptionx to latent,
+long-term decline.
+
+# Physical integrity violations in established democracies
+
+```{r workspaceSetup, echo = FALSE, message = FALSE}
+rm(list = ls())
+packs <- c('ggplot2', 'car', 'lme4')
+invisible(lapply(packs, library, character.only = TRUE))
+pathOut <- "/Users/dag/Dropbox/publikationen/2013/PIinDemocracy/PiDemProj/output"
+load(file.path(pathOut, "base.RData"))
+base <- subset(base, year >= 1995 & country != "Malta")
+
+row.names(base) <- with(base,    # creates human readable id
+  paste(iso2c, year, sep = ":")
+)
+base <- within(base, {
+  t <- ave(
+    year, cow, FUN = function(x) {seq(along.with=x)-1}
+  )
+  physint.round <- log(physint+1)
+  threat.peace <- log(demonstr + strike + 1)
+  threat.vio <- log(all.Terror + riot + 1)
+  war <- ifelse(interwar == 1 | extrawar == 1, 1, 0)
+  std.threat.peace <- scale(threat.peace, scale = FALSE)
+  std.threat.vio <- scale(threat.vio, scale = FALSE)
+  std.solt.ginmar <- scale(solt.ginmar, scale = FALSE)
+  std.gr.pop <- scale(gr.pop, scale = FALSE)
+  std.solt.ginet <- scale(solt.ginet, scale = FALSE)
+  std.wdi.gini <- scale(wdi.gini, scale = FALSE)
+  std.war <- scale(war, scale = FALSE)
+  m.ruleoflaw <- ave(ruleoflaw, cow, FUN = mean)/100      ## RoL
+  std.ruleoflaw <- scale(m.ruleoflaw, scale = FALSE)
+  m.compet <- ave(compet, cow, FUN = mean)/100 ## Accountability
+  std.compet <- scale(m.compet, scale = FALSE)
+  }
+)
+```
+
+## Research Questions
+
+1. Do established democracies violate human rights?
+2. Why do established democracies violate human rights?
+3. What institutions prevent violent government behavior?
+
+## Embedded Democracy at a Glance
+
+\begin{figure}[h] \centering 
+\includegraphics[width=.8\textwidth]{./EmbeddedDemocracy.pdf} 
+\end{figure}
+
+## Established democracies violate physical integrity.
+```{r heatmap, echo = FALSE, fig.align = 'center', fig.width = 4, fig.height = 4/1.5}
+# === Heatmap for physint ==================================
+df <- subset(                                  ## data setup
+  base, select = c("country", "cow", "year", "physint")
+)
+df <- within(df,       ## compute mean physint and sort data
+  mean.physint <- ave(physint, cow, 
+    FUN = function(x) {mean(x, na.rm = TRUE) }
+  )
+)
+df <- df[with(df, order(-mean.physint, country)), ]
+df <- within(df,         # factor countries for sorting plot
+  f.country <- factor(country)
+)
+
+library('ggplot2')
+library('grid')        ## for unit() function in plot.margin
+base_size <- 9                             ## set font size
+p <- ggplot(df, aes(
+  x = year, 
+  y = reorder(f.country, mean.physint, decrease = TRUE))
+) +                                            ## add geoms
+geom_tile(
+  data = df, aes(fill = factor(physint)), colour = "white",
+  size = .3
+) +
+scale_x_continuous(
+  breaks = seq(1995, 2007, 3), expand = c(0, 0)
+) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_fill_brewer(type = 'seq', palette = 9) +
+theme_minimal(base_size = base_size) +             ## add theme
+labs(x = "", y = "", fill = "PI Violations") +
+guides(     ## remove white slashes from fill legend boxes
+  fill = guide_legend(override.aes = list(colour = NULL))
+) +
+theme(                      ## finishing touches to theme
+  text = element_text(family = 'sans'),
+  legend.position = c(.325, 1.04),
+  legend.direction = "horizontal",
+  legend.key = element_rect(colour = "white"),
+  legend.key.size = unit(.5, "lines"),
+  panel.background = element_blank(),
+  panel.border = element_blank(), 
+  panel.grid = element_blank(),
+  axis.ticks = element_blank(),
+  axis.title = element_blank(),
+  axis.text = element_text(size = .6*base_size, angle = 0),
+  plot.margin = unit(c(1, .1, 0, 0), "lines") ## crop margins
+)
+print(p)
+rm(df, p)
+```
+
+## Horizontal accountability does not constrain.
+```{r interactionTerm, echo = FALSE, fig.align = 'center', fig.width = 4, fig.height = 4/1.618, results = FALSE}
+
+library('lme4')
+lmer.fit10 <- lmer(
+  physint.round ~ 1 + t + std.threat.vio + std.threat.peace +
+  std.solt.ginmar + std.gr.pop + war +
+  std.ruleoflaw + std.compet + (1 | cow) + (0 + t | cow),
+  data = base,
+  REML = FALSE
+)
+lmer.fit11 <- update(lmer.fit10,
+  . ~ . + std.threat.vio:std.ruleoflaw,
+  data = base,
+  REML = FALSE
+)
+cmult <- 1.96
+
+pred.dta <- expand.grid(
+  physint.round = 0,
+  std.threat.peace = 0,
+  std.threat.vio = base[, 'std.threat.vio'],
+  std.solt.ginmar = 0,
+  std.gr.pop = 0,
+  std.gr.pop = 0,
+  war = 0,
+  t = 0,
+  std.ruleoflaw = quantile(
+    unique(base[, 'std.ruleoflaw']),
+    probs = c(.05, .25, .5, .75, .95)
+  ),
+  std.compet = 0
+)
+
+## create confidence intervals -----------------------------
+mm <- model.matrix(
+  terms(lmer.fit11), pred.dta
+)
+pred.dta[, 'yhat'] <- predict(     # no RE b/c threat fixed
+  lmer.fit11, pred.dta, re.form=NA
+)
+pvar <- diag(mm %*% tcrossprod(vcov(lmer.fit11), mm))
+pred.dta <- data.frame(
+  pred.dta,
+  plo = pred.dta[, 'yhat'] - cmult * sqrt(pvar),
+  phi = pred.dta[, 'yhat'] + cmult * sqrt(pvar)
+)
+
+## transform data to original scales -----------------------
+quantiles.rol <- quantile(         # Define linetype legend
+  unique(base[, 'std.ruleoflaw']), 
+  probs = c(.05, .25, .5, .75, .95)
+)
+tmp <- aggregate(m.ruleoflaw ~ country, FUN = mean, data = base)
+tmp <- tmp[with(tmp, order(m.ruleoflaw)), ]
+
+q <- 0
+pred.dta[, 'quantiles.rol'] <- 0
+for(i in quantiles.rol){
+  q <- q+1
+  pred.dta[, 'quantiles.rol'] <- ifelse(
+    pred.dta[, 'std.ruleoflaw'] == i, q, pred.dta[, 'quantiles.rol']
+  )
+}
+rm(i, q)
+
+pred.dta <- within(pred.dta, {
+  threat <- std.threat.vio + mean(base$threat.vio, na.rm = TRUE)
+  threat <- exp(threat)-1
+  rol <- std.ruleoflaw + mean(base$m.ruleoflaw, na.rm = TRUE)
+  yhat <- exp(yhat)-1
+  plo <- exp(plo)-1
+  phi <- exp(phi)-1
+  type = 'Violent'
+  quantiles.rol <- factor(
+    quantiles.rol, levels = 1:5, 
+    labels = c(
+      '5%', '25%', '50%', '75%', '95%'
+    )
+  )
+  }
+)
+
+# Proceed to plotting --------------------------------------
+p <- ggplot(
+  data = pred.dta,
+  aes(y = yhat, x = threat, linetype = quantiles.rol)
+) +
+geom_line() +
+geom_rug(sides = 'b') +
+labs(
+  x = 'No. of violent political Threats',
+  y = 'Fitted PI Violations',
+  linetype = 'Rule of Law Quantile'
+) +
+scale_linetype_manual(
+  values = c('solid', 'dotdash', 'dotted', 'longdash', 'twodash')
+) +
+theme_minimal(base_size = 10) +
+theme(
+  text = element_text(family = 'sans'),
+  legend.position = c(.475, 1.05), 
+  legend.direction = 'horizontal',
+  legend.key.size = grid::unit(.6, units = 'lines'),
+  plot.margin = grid::unit(c(1, 0, 0, 0) + .1, units = 'lines')
+)
+print(p)
+rm(p)
+```
+
+# Wrap-up
+
+## Wrap-up
+
+1. The crisis of democracy has been a topic for decades, and
+  it touches on real world concerns.
+2. What we call democracy changes systematically what we
+  call crisis.
+3. There may be grain of truth to the debate as established
+  democracies do not live up to their own standards.
