@@ -95,17 +95,23 @@ base <- within(base, {
 )
 ```
 
-## Research Questions
+## Research questions
 
 1. Do established democracies violate human rights?
 2. Why do established democracies violate human rights?
 3. What institutions prevent violent government behavior?
 
-## Embedded Democracy at a Glance
+## Embedded democracy at a glance
 
 \begin{figure}[h] \centering 
-\includegraphics[width=.8\textwidth]{./EmbeddedDemocracy.pdf} 
+\includegraphics[width=.7\textwidth]{./EmbeddedDemocracy.pdf} 
+\flushleft{
+  \scriptsize Wolfgang Merkel (2004): Embedded and Defective
+  Democracies, in: Democratization, \textbf{11}(5),
+  pp. 33-58, 37.
+}
 \end{figure}
+
 
 ## Established democracies violate physical integrity.
 ```{r heatmap, echo = FALSE, fig.align = 'center', fig.width = 4, fig.height = 4/1.5}
