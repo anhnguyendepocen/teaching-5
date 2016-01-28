@@ -1,0 +1,90 @@
+---
+title: "R2P & Demokratische Intervention"
+author: "Dag Tanneberg"
+date: "27.01.2015"
+output:
+  beamer_presentation:
+    theme: "Frankfurt"
+    fonttheme: "professionalfonts"
+---
+
+# Rechtspositivismus
+
+[**Wikipedia**](https://de.wikipedia.org/wiki/Rechtspositivismus)
+Die Geltung rechtlicher Normen rührt allein von ihrer
+positiven Setzung (z.B. Hans Kelsen) oder von ihrer
+sozialen Wirksamkeit (z.B. Eugen Ehrlich). Der R. macht 
+eine Begründung geltenden Rechts durch Rekurs auf
+Gerechtigkeit, moralische, weltanschauliche oder gar
+metaphyische Kategorien (Naturrecht) unmöglich.
+
+
+# Thought Paper
+
+> 1. Was ist die Ukraine Krise?
+> 2. Eine strukturierende Einleitung und ein
+  bilanzierendes Fazit rahmen den Text.
+> 3. Die Darstellung der Theorie erfolgt unabhängig von der
+  Arbeit am Fall.
+> 4. Begriffe müssen bei ihrer Verwendung definiert und auf
+  ihre Implikationen befragt werden. Bspw.: Was folgt aus
+  Annahme, das internationale Staatensystem sei anarchisch?
+  
+# R2P und Democratic Intervention
+
+**Normenkonflikt**
+
+Unter welchen Bedingungen darf nationale Souveränität, um 
+den Menschenrechten durch eine militärische Intervention
+Geltung zu verschaffen?
+
+# R2P
+
+**Souveränität** Verpflichtung auf den Schutz grundlegender Normen
+
+**Gerechter Grund** Verlust menschl. Lebens oder ethn. Säuberungen
+  
+**Durchführungsbedingungen**
+  
+  1. Freiheit von Interessenskonflikten
+  2. Erschöpfung aller anderen Mittel
+  3. Angemessenheit der Mittel
+  4. Aussicht auf Erfolg
+
+**Politische Rechtfertigung**
+ 
+1. UN-Sicherheitsrat oder Vollversammlung 
+2. Zustimmung einer regionalen/subregionalen Institution
+3. unilaterales Handeln
+  
+# Democratic Intervention
+
+**Souveränität** < Recht auf Nothilfe im internationalen Raum
+
+**Gerechter Grund** extreme Fälle schwerer Menschenrechtsverstöße
+  
+**Durchführung**
+
+  1. **jus ad bellum** Aussicht auf Erfolg & Postinterventionsperspektie
+  2. **jus in bellum** Schutz von Nicht-Kombattanten & Verhältnismäßigkeit dder Mittel
+  3. **jus post bellum** Aufbau eines demokratisch verfassten Rechtsstaats zur Verhinderung zukünftiger Menschenrechtsverstöße
+  
+#  Kritik
+
+"All human rights are universal, indivisible and
+interdependent and interrelated. The international community
+must treat human rights globally in a fair and equal manner,
+on the same footing, and with the same emphasis. While the
+significance of national and regional particularities and
+various historical, cultural andreligious backgrounds must
+be borne in mind, it is the duty of States, regardless of
+their political, economic and cultural systems, to promote
+and protect all human rights and fundamental freedoms."
+
+(Vienna Declaration and Programme of Action, Part I, para 5)
+
+# Fragen zur Vorlesung
+
+**Informationen zur Europäischen Integration**
+
+[Dossier Europäische Union](http://www.bpb.de/internationales/europa/europaeische-union/)
