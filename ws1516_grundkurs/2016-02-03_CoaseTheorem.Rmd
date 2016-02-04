@@ -1,0 +1,183 @@
+---
+title: "Nachtrag zu Scharpf"
+author: "Dag Tanneberg"
+date: "3 February 2016"
+output: pdf_document
+---
+
+```{r, echo = FALSE, warning=FALSE, message = FALSE, fig.pos='ht', fig.align='center', fig.width = 4, fig.height = 4/1.618, fig.cap="Verhandlungen in einer Dimension"}
+library('extrafont')
+loadfonts()
+
+library('ggplot2')
+dta <- data.frame(x = c(-1, 0, 1, 3, 5, 6), y = 1)
+ggplot(data = dta, aes(x = x, y = factor(y))) +
+  geom_point(data = subset(dta, x %in% 0:5)) +
+  geom_line() +
+  geom_text(
+    data = subset(dta, x %in% c(0, 1, 3, 5)),
+    label = c("sq", "x[A]", "x[B]", "x[C]"), vjust = 1.75,
+    family = 'CMU Serif', parse = TRUE
+  ) +
+  geom_text(
+    aes(label = c("", 0, 1, 3, 5, "")), vjust = -1,
+    family = 'CMU Serif'
+  ) +
+  scale_y_discrete(expand = c(0, 0)) +
+  theme_minimal() +
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    panel.grid = element_blank()
+  )
+rm(dta)
+```
+
+In Abbildung 1 ringen drei Parteien A, B und C um die
+Lösung eines politischen Problems. Jede der drei Parteien
+verfolgt eine eigene Agenda, die hier als Idealpunkt $x_i$
+bezeichnet sei. Jede Partei empfindet Abweichungen von ihrem
+Idealpunkt als unattraktiv. Sie bewerten einen
+Kompromissvorschlag $x$ je schlechter, desto weiter er sich
+von ihrem Idealpunkt entfernt. Dem Beispiel von Fritz Scharpf
+(S. 685) folgend sei die Nutzenfunktion jeder Partei
+$u_i(x) = x - x_i$. Unter diesen Voraussetzungen ergibt
+sich die nachstehende Auszahlungsmatrix.
+
+| $x$ | $u_A(x)$ | $u_B(x)$ | $u_C(x)$ | 
+| :---: | :---: | :---: | :---: |
+| SQ | -1 | -3 | -5 |
+| A |   0 | -2 | -4 |
+| B | -2 | 0 | -2 |
+| C | -4 | -2 | 0 |
+
+# Einfache Mehrheit bei diskreten Abstimmungsalternativen
+
+Die drei Parteien A, B und C veranstalten ein Turnier
+zwischen den vier Optionen $sq, x_A, x_B$ und $x_C$. 
+Es stehen nur diese vier Varianten zur Wahl, Abstufungen
+zwischen $x_i$ und $x_j$ sind nicht zulässig (diskrete
+Wahlalternativen). Die Parteien stimmen mit einfacher
+Mehrheit ab. Somit müssen mindestens zwei Parteien einem
+Lösungsvorschlag zustimmen, anderenfalls bleibt es beim
+*status quo*. Es sei angenommen, dass sich
+jede Partei (1) nutzenrational verhält und (2) das
+Abstimmungsergebnis nicht durch strategische
+Präferenzäußerung beeinflusst. Die nachstehende Tabelle zeigt
+zunächst, dass der *status quo* nie mehrheitsfähig ist.[^1]
+Für jeden Idealpunkt $x_i$ findet sich eine Koaltion gegen
+den *status quo*. Die Frage ist nicht ob die Parteien zu
+einer Alternative gelangen, sondern zu welcher.
+
+[^1]: Scharpf nennt $x_A$ das am leichtesten zu erreichende
+Verhandlungsergebnis. Das ist korrekt. Hintergrund seiner
+Aussage ist jedoch die Annahme, dass alle drei Parteien dem
+Verhandlungsergebnis zustimmen müssen. Dabei handelt es sich
+meines Erachtens um nichts anderes als um die versteckte
+Einführung einer Einstimmigkeitsklausel. Wenn die Zustimmung
+aller für das Zustandekommen eines Verhandlungsergebnisses
+notwendig ist und $x_A$ für alle eine Verbesserung gegenüber
+dem *status quo* darstellt, dann werden sich nutzenrationale
+Verhandlungspartner auf diesen kleinsten gemeinsamen
+Nenner einigen.
+
+| Abstimmung $i$ vs. $j$ | Für $i$ stimmen | Gewinner
+| :---: | :---: | :---: | :---: |
+| $sq$ vs. $x_A$ | $\emptyset$ | A |
+| $sq$ vs. $x_B$ | {A} | B |
+| $sq$ vs. $x_C$ | $\emptyset$ | C |
+| $x_A$ vs. $x_B$ | {A} | B |
+| $x_A$ vs. $x_C$[^2] | {A; B} | A |
+| $x_B$ vs. $x_C$ | {A; B} | B |
+
+[^2]: Partei B ist zwischen $x_A$ und $x_C$ 
+indifferent. Dieses Duell könnte auch zugunsten von
+C ausfallen. Für das Weitere ist dies unerheblich.
+
+Policy-Option $x_B$ gewinnt jede Abstimmung.
+Im paarweisen Vergleich[^3] aller Alternativen zieht das soziale
+Kollektiv aus den Parteien A, B und C also immer $x_B$ vor.
+Man nennt $x_B$ auch einen Condorcet-Gewinner. Die
+kollektive, rationale Präferenzordnung lautet daher
+$x_B \, P \, x_A \, R \, x_C \, P \, sq$. Kurzum: Wenn die 
+Parteien A, B und
+C in einer Reihe von paarweisen Abstimmungen nach einfacher
+Mehrheit über die vier politischen Alternativen entscheiden
+und sie sich dabei nutzenrational sowie nicht-strategisch 
+Verhalten, dann wird sich $x_B$ durchsetzen.
+
+[^3]: Politikalternativen paarweise gegeneinander antreten
+zu lassen ist ein üblicher Kniff der Social Choice Theory.
+Stünden unter den gewählten Annahmen (1) und (2) alle vier
+Optionen gleichzeitig zur Wahl, dann stimmte jede Partei nur
+für ihren Idealpunkt und alles bliebe beim Alten.
+
+# Einfache Mehrheit bei kontinuierlichen Abstimmungsalternativen
+
+In dieser Variante sind Abstufungen zwischen den
+Policy-Alternativen zulässig, d.h. jeder Punkt auf der Linie
+in Abbildung 1 ist definiert. Die Parteien A, B und C
+stimmen wiederum nach einfacher Mehrheit ab, wobei sie sich
+nutzenrational und nicht-strategisch Verhalten. Alle Parteien 
+müssen abstimmen. Unter diesen Voraussetzungen verändern die
+Parteien den *status quo*, wenn es einen Punkt $x'$ gibt
+den mindestens zwei Parteien bevorzugen. Ich behaupte, dass
+$x' = x_B$, weil es sich um den Median der drei Parteien
+handelt.
+
+Es sei $\alpha$ ein arbiträrer Punkt links von $x_B$. Bei
+$\alpha$ kann es sich also auch um den *status quo* handeln.
+Partei A bevorzugt $\alpha$ gegenüber $x_B$, da dessen
+Distanz zum Idealpunkt von A geringer ist.
+Gleichzeitig bevorzugen B und C $x_B$ gegenüber $\alpha$.
+
+Es sei nun $\beta$ ein arbiträrer Punkt rechts von $x_B$.
+Partei C bevorzugt $\beta$ gegenüber $x_B$, weil sich dieser
+Lösungsvorschlag dem Idealpunkt von C annähert. Dem steht
+allerdings eine Koalition aus A und B gegenüber, die $x_B$
+gegenüber $\beta$ bevorzugt.
+
+Folglich gibt es immer eine Mehrheit, die $x_B$ gegenüber
+jedem Abweichung von diesem Punkt bevorzugt. Dieses Ergebnis
+hängt von drei Annahmen ab: 1. Es gibt eine ungerade Anzahl
+von Wählern, 2. Stimmenthaltungen sind nicht zugelassen, 3.
+Alle Parteien stimmen präferenztreu ab. Veränderungen dieser
+Annahmen können das Ergebnis nachhaltig beeinflussen.
+
+# Warum dann Coase?
+
+Die obenstehenden Ausführungen kennzeichnen einen politischen
+Prozess, der den Anwendungsvoraussetzungen der
+Mehrheitsentscheidung genügt. Scharpf führt allerdings gleich
+zu Beginn seines Beitrags aus, dass dies auf der europäischen
+Ebene nicht der Fall sei. Die Legitimität von
+Politikergebnissen der Europäischen Union muss deshalb auf
+anderem Wege gewährleistet werden.
+
+Eine Möglichkeit dazu besteht in der Anwendung der
+Einstimmigkeitsregel. Sie führt zu Verhandlungsergebnissen,
+die dem kleinsten gemeinsamen Nenner der Verhandlungspartner
+entsprechen ($x_A$). Scharpf hält von dieser Variante nicht
+viel, weil sie das Potential von Verhandlungslösungen nicht
+ausschöpfe. Der kleinste gemeinsame Nenner ist nicht
+*wohlfahrtsmaximierend*[^4] und genau darauf will Scharpf mit
+seinem Verweis auf das [Coase-Theorem](https://de.wikipedia.org/wiki/Coase-Theorem)
+hinaus.
+
+[^4]: Genau das zeigt Abbildung 2 in Scharpfs Text.
+
+Nach dem Coase-Theorem werden effiziente
+Verhandlungsergebnisse erzielt, d.h. das wohlfahrtsteigernde
+Potential des Verhandlungssystem wird in vollem Umfang
+abgerufen, wenn 1. Verträge durchsetzbar sind, 2.
+Ausgleichszahlungen erfolgen können (transferierbarer
+Verhandlungsnutzen) und 3. Transaktionskosten
+vernachlässigbar klein sind. Mit anderen Worten sind
+Verhandlungslösungen der europäischen Regierungen
+legitim, wenn die Verlierer dieses Prozesses für die ihnen
+entstehenden Nachteile mit Gewissheit entschädigt werden.
+
+Scharpf behauptet nun (wie schon Coase selbst), dass dieses
+Versprechen uneingelöst bleibt, weil die Transaktionskosten
+eines Verhandlungssystems nie vernachlässigt werden können.
+Der Rest seines Beitrags zieht daraus die Konsequenzen.
