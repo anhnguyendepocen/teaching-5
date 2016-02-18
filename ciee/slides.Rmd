@@ -61,7 +61,7 @@ long-term decline.
 
 # Physical integrity violations in established democracies
 
-```{r workspaceSetup, echo = FALSE, message = FALSE}
+```{r workspaceSetup, echo = FALSE, message = FALSE, warning = FALSE}
 rm(list = ls())
 packs <- c('ggplot2', 'car', 'lme4')
 invisible(lapply(packs, library, character.only = TRUE))
@@ -114,7 +114,7 @@ base <- within(base, {
 
 
 ## Established democracies violate physical integrity.
-```{r heatmap, echo = FALSE, fig.align = 'center', fig.width = 4, fig.height = 4/1.5}
+```{r heatmap, echo = FALSE, fig.align = 'center', fig.width = 4, fig.height = 4/1.5, warning = FALSE}
 # === Heatmap for physint ==================================
 df <- subset(                                  ## data setup
   base, select = c("country", "cow", "year", "physint")
@@ -169,7 +169,7 @@ rm(df, p)
 ```
 
 ## Horizontal accountability does not constrain.
-```{r interactionTerm, echo = FALSE, fig.align = 'center', fig.width = 4, fig.height = 4/1.618, results = FALSE}
+```{r interactionTerm, echo = FALSE, fig.align = 'center', fig.width = 4, fig.height = 4/1.618, results = FALSE, warning = FALSE}
 
 library('lme4')
 lmer.fit10 <- lmer(
