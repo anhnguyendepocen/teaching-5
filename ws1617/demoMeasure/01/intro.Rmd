@@ -85,12 +85,11 @@ detach(package:ggplot2); detach(package:extrafont)
 ## Schwerpunkte des Seminars
 
 1. Grundlagen der Demokratiemessung
-2. Konzepte \& Fallstricke 
-3. Was suchen demokratische Institutionen in der Autokratie?
-4. ACLP, Freedom House, Polity IV
-5. Weitere Ansätze der Demokratiemessung
+2. Konzepte \& Erste Fallstricke 
+3. ACLP, Freedom House, Polity IV
+4. Weitere Ansätze der Demokratiemessung
     - Subjektive Demokratiemessung, Democratic Audit
-6. Zukunft der Demokratiemessung
+5. Zukunft der Demokratiemessung
     
 ## Teilnahmebedingungen
 
