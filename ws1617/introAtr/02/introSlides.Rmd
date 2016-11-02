@@ -1,0 +1,81 @@
+---
+title: "Wie ticken Autokratien?"
+author: "Dag Tanneberg"
+date: "Zusammenfassung vom 25. Oktober 2016"
+output: 
+    beamer_presentation:
+      theme: "Berlin"
+      fonttheme: "professionalfonts"
+      colortheme: "seagull"
+      toc: false 
+---
+
+## Kann es Frieden geben?
+
+- Kann politische Ordnung auf freiwilliger Übereinkunft beruhen,
+  wenn soziale Kollektive eine gewisse Größe überschreiten?
+- Nein, denn: "each individual bears the full costs or risks
+    of anything he or she does to help establish a peaceful
+    order or to provide other public goods but receives only
+    a share of the benefits" (567)
+- Nehme an, alle $N > 1$ Individuen müssen beitragen
+    ($c > 0$),
+    um den Nutzen $V > 0$ einer friedlichen Ordnung zu
+    realisieren. Es entsteht folgendes Entscheidungsproblem.
+
+  \centering
+  \begin{tabular}{l|cc}
+    ~ & \multicolumn{2}{c}{Individuen $N_{-i}$} \\
+    Individuum $i$ & Tragen bei & Tragen nicht bei \\ \hline
+    Trägt bei & $\frac{1}{N}V - c_i$ & $-c_i$ \\
+    Trägt nicht bei & $0$ & $0$ \\
+  \end{tabular}
+
+## Kann es Frieden geben?
+
+  \centering
+  \begin{tabular}{l|cc}
+    ~ & \multicolumn{2}{c}{Individuen $N_{-i}$} \\
+    Individuum $i$ & Tragen bei & Tragen nicht bei \\ \hline
+    Trägt bei & $\frac{1}{N}V - c_i$ & $-c_i$ \\
+    Trägt nicht bei & $0$ & $0$ \\
+  \end{tabular}
+
+- Wenn $N$ zunimmt, dann nimmt bei konstantem Aufwand $c_i$
+  der individuelle Nutzen einer friedlichen Ordnung ab.
+- Rationale Individuen reduzieren deshalb ihren Aufwand
+  $c_i$, wenn die Gruppengröße zunimmt.
+- Ist die Gruppe nur groß genug, dann sinkt $c_i$ auf Null
+  und der Frieden wird verfehlt.
+
+## Wer bringt den Frieden?
+
+**Lösungsansätze**
+
+1. Selektive Anreize: Beitragende erhalten über das
+  Kollektivgut hinaus weitere, individuelle Vorteile. \newline
+  $\rightarrow$ "by-product theory"
+2. Politische Unternehmer: Politisches Führungspersonal
+  übernimmt die anfallenden Kosten \newline
+  $\rightarrow$ "stationary bandit"
+
+**Begründung: $1^{st}$ blessing of the invisible hand**
+
+- Frieden erzeugt Wohlstand.
+- Wohlstand erhöht das Steueraufkommen.
+- Bandit und Gesellschaft maximieren ihren Erwartungsnutzen.
+- Das Ergebnis ist eine friedliche, prosperierende Gesellschaft.
+
+## Kritische Nachfragen
+
+**Zeithorizonte**
+
+- Sind Autokraten an institutionalisierten Nachfolgeregelung interessiert?
+
+**Power-sharing**
+
+- Gibt es Machtkämpfe zwischen dem Autokraten und seinen Gefolgsleuten?
+
+**Credible commitment**
+
+- Wie glaubwürdig sind Versprechungen eines Diktators überhaupt?
