@@ -1,0 +1,58 @@
+---
+title: "Zusammenfassung vom 28. Oktober 2016"
+author: "Dag Tanneberg"
+date: "11/4/2016"
+output: 
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Was ist die Demokratiemessung?
+
+"Wie hoch ist die demokratische Qualität eines bestimmten politischen Systems zu einem bestimmten Zeitpunkt einzuschätzen? Alle wissenschaftlichen Bemühungen, die auf die Beantwortung dieser Frage gerichtet sind, bezeichnen wir hier und im weiteren als *Demokratiemessung*." (Lauth et al. 2000: 12; Herv. i. Orig.)
+
+- Zweig der empirischen Demokratieforschung
+- Tradition seit 1950er, z.B. Lipset, Seymour Martin (1959):
+  "Some Social Requisites of Democracy. Economic Development
+  and Political Legitimacy". In: APSR, 53 (1): 69–105.
+- Erheblicher Bedeutungsgewinn in den 1990ern
+
+## Verwendung
+
+1. Wissenschaft
+    a. Klassifikation politischer Regime
+    b. Unterscheidung von Strukturtypen der Demokratie
+    c. Vergleich politischer Regime
+
+2. Demokratieförderung
+    a. Faktenbasierte Entscheidungsfindung
+    b. Politisch motivierter Missbrauch
+    
+## Herausforderungen der Demokratiemessung
+
+1. Theorie
+    a. Sind Demokratiekonzepte universal gültig? (Raum & Zeit)
+    b. Wie mächtig ist Demokratie? (Minimal vs. Maximal)
+    c. Ist Demokratie ein dichotomes oder ein graduelles Phänomen?
+    d. In welchem Verhältnis stehen die Attribute der Demokratie?
+2. Messung & Daten
+    a. Haben Kodierer einen Ermessensspielraum? (Subj. vs. Obj.)
+    b. Qualität der Indikatoren (Objektivität, Reliabilität, Validität)
+    c. Skalenniveau der Indikatoren (Trennschärfe der Erhebung)
+    d. Qualitätsprüfung (z.B. Dimensionalität der Datenmenge)
+
+## Neue Hausaufgabe
+
+Die Unterscheidung von minimalistischen und maximalistischen
+Demokratiebegriffen befeuert immer neue Debatten in der
+Demokratiemessung. Diskutiere ihre Vor- und Nachteile mit
+Blick auf Konzeptionalisierung, Messung, Aggregation und die
+wissenschaftliche Verwendung von Ergebnissen der
+Demokratiemessung.
