@@ -1,0 +1,43 @@
+---
+title: "Zusammenfassung vom 4. November 2016"
+author: "Dag Tanneberg"
+date: "11/11/2016"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+    includes: 
+      in_header: header.tex
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Zielstellung
+
+
+## Konzeptionalisierung
+
+\input{./diag_conceptTree}
+
+- Explikation eines Hintergrundkonzepts, z.B. Demokratie
+- Differenzierung in zunehmend konkretere Eigenschaften
+- Vermeide:
+    - unzulässige Verbindungen (\textit{conflation})
+    - Redundanz (\textit{redundancy})
+
+
+
+
+
+
+
+## Herausforderung 1: Konzeptionalisierung
+
+
+
+
+test

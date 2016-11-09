@@ -1,0 +1,55 @@
+---
+title: "Zusammenfassung vom 1. November 2016"
+author: "Dag Tanneberg"
+date: "11/08/2016"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+## Warum autoritäre Regime?
+
+- $\exists$ nichtdemokratische Regime ohne totalitäre Ambitionen
+- Regimetype *sui generis* jenseits von Demokrat. und Totalit.
+- Ambition: Klassifikation politischer Systeme
+- Strategie:
+    1. Unterscheidung Demokratie & Nichtdemokratie (*ex negativo*)
+    2. Einteilung von Nichtdemokratien: \newline
+      Traditional, Sultanistisch, Totalitär, Autoritär
+
+## Was sind autoritäre Regime?
+
+> "political systems with **limited, not responsible, political
+> pluralism**, without elaborate and guiding ideology, but with
+> **distinctive mentalities**, **without extensive nor intensive
+> political mobilization**, except at some points in their
+> development, and in which a leader or occasionally a small
+> group **exercises power within formally ill-defined limits but
+> actually quite predictable ones**" (159)
+
+## Was sind autoritäre Regime?
+
+**limited, not responsible, political pluralism**
+
+1. Polit. Führung schränkt Bildung polit. Gruppen ein
+2. Polit. Führung den Gruppen nicht rechschaftspflichtig
+3. Abhängigkeits- & Kooptationsbeziehungen
+
+**distinctive mentalities**
+
+1. "ways of thinking and feeling, more emotional than
+  rational, that provide noncodified ways of reacting to
+  different situations" (162)
+2. Vages Identifikationsangebot für leichtere Koalitionsbildung
+3. Schränkt Mobilisierungsfähigkeit des Regimes ein
+
+## Was sind autoritäre Regime?
+
+**political mobilization**
+
+1. Produkt von Pluralismus & Mentalität (166)
+2. Dauerhafte M. $\rightarrow$ Entw. zu Demokratie o. Totalitarismus
+3. intensiver während Konsolidierung o.a. Krisen

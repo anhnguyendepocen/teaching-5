@@ -1,0 +1,144 @@
+---
+title: "Sitzungsbegleitende Folien"
+author: "Dag Tanneberg"
+date: "11/7/2016"
+output: 
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library('ggplot2')
+library('extrafont'); loadfonts()
+```
+
+## Wie funktioniert eine notwendige Bedingungen?
+```{r}
+n <- 1500
+c <- sample(0:1, size = n, replace = TRUE, prob = c(1/3, 2/3))
+d <- vapply(
+  c, FUN = function(x){ifelse(x == 1, sample(0:1, 1), 0)},
+  numeric(1)
+)
+ggplot(data = data.frame(c, d), aes(x = factor(c), y = factor(d))) +
+  geom_jitter(size = 5, alpha = .4) +
+  scale_x_discrete(labels = c('!A', 'A')) +
+  scale_y_discrete(labels = c('!B', 'B')) +
+  labs(title = 'Wenn A eine notwendige Bedingung von B ist, dann ...') +
+  theme_grey(base_family = 'CMU Sans Serif', base_size = 24) +
+  theme(axis.title = element_blank())
+rm(list = ls())
+```
+
+## Was passiert mit dem Eigenschaftsraum der Klassifikation?
+```{r}
+pdta <- expand.grid(
+  exselec = factor(
+    1:3, 1:3, c('CE directly elected', 'CE indirectly elected', 'CE not elected')
+  ),
+  legselec = factor(
+    0:2, 0:2, c('No legislature', 'Non-elective', 'Elective')
+  ),
+  multiple_parties = factor(
+    0:2, 0:2, c('No parties', '1 party', 'At least 2 parties')
+  ),
+  gov_change = factor(0:1, 0:1, c('No alternation', 'At least 1 alternation'))
+)
+pdta <- within(pdta, {
+  democracy <- ifelse(
+    exselec %in% c('CE directly elected', 'CE indirectly elected') &
+    legselec == 'Elective' &
+    multiple_parties == 'At least 2 parties' &
+    gov_change == 'At least 1 alternation',
+    1, 0
+  )
+  democracy <- factor(democracy, 0:1, c('Not-democracy', 'Democracy'))
+  }
+)
+ggplot(data = pdta, aes(x = legselec, y = multiple_parties)) +
+  geom_tile(fill = 'white', colour = 'grey85', size = .5) +
+  scale_x_discrete(expand = c(0,0)) + 
+  scale_y_discrete(expand = c(0,0)) +
+  facet_grid(exselec ~ gov_change) +
+  theme_grey(base_family = 'CMU Sans Serif', base_size = 18) +
+  theme(
+    axis.title = element_blank(),
+    legend.position = 'bottom',
+    legend.direction = 'horizontal',
+    legend.title = element_blank(),
+    axis.ticks = element_blank()
+  )
+```
+
+## Was passiert mit dem Eigenschaftsraum der Klassifikation?
+
+```{r}
+ggplot(data = pdta, aes(x = legselec, y = multiple_parties)) +
+  geom_tile(aes(fill = democracy), colour = 'grey85', size = .5) +
+  scale_x_discrete(expand = c(0,0)) + 
+  scale_y_discrete(expand = c(0,0)) +
+  scale_fill_manual(values = c('white', 'darkorange')) +
+  facet_grid(exselec ~ gov_change) +
+  theme_grey(base_family = 'CMU Sans Serif', base_size = 18) +
+  theme(
+    axis.title = element_blank(),
+    legend.position = 'bottom',
+    legend.direction = 'horizontal',
+    legend.title = element_blank(),
+    axis.ticks = element_blank()
+  )
+```
+
+## Validität und Reliabilität
+
+![](Reliability_and_validity.pdf)
+
+## Trennschärfeverlust in [Democracy & Dictatorship (Link)](https://sites.google.com/site/joseantoniocheibub/datasets/democracy-and-dictatorship-revisited)
+
+```{r}
+# aclp <- read.csv('./data/ACLP_2010.csv')
+# aclp <- within(aclp, {
+#   regime <- ifelse(REG == 1 & TYPEII == 0, 0, 
+#     ifelse(REG == 1 & TYPEII == 1, 1, 
+#       ifelse(REG == 0, 2, NA)
+#     )
+#   )
+#   regime <- factor(regime, 0:2, c('Diktatur', 'Type 2', 'Demokratie'))
+#   }
+# )
+# ggplot(data = aclp, aes(x = YEAR, fill = regime)) + geom_bar()
+library('foreign')
+dd <- read.dta('./data/ddv1.dta')
+dd <- within(dd, {
+  regime_alt <- ifelse(
+    democracy == 0 & type2 == 0, 0,  ifelse(
+      democracy == 0 & type2 == 1, 1, ifelse(
+        democracy == 1, 2, NA
+      )
+    )
+  )
+  regime_alt <- factor(regime_alt, 0:2, c('Diktatur', 'Typ 2 Fehler', 'Demokratie'))
+  }
+)
+ggplot(
+  data = subset(dd, !is.na(regime_alt)),
+  aes(x = year, fill = regime_alt)) +
+  geom_bar(width = 1, colour = 'white', size = .1) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(
+    expand = c(0,0), limits = c(0, 200),
+    breaks = seq(0, 200, 50)
+  ) +
+  scale_fill_brewer(type = "div", palette = 5) +
+  labs(y = 'Absolute Häufigkeit') +
+  theme_grey(base_family = 'CMU Sans Serif', base_size = 22) +
+  theme(
+    legend.position = 'top', legend.direction = 'horizontal',
+    legend.title = element_blank(),
+    axis.title.x = element_blank()
+  )
+```
