@@ -1,0 +1,71 @@
+---
+title: "Zusammenfassung vom 08.11.2016"
+author: "Dag Tanneberg"
+date: "11/14/2016"
+output: 
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+## Fragestellung der Sitzung
+
+**Problem** Wie erkenne ich eine Autokratie?
+
+**Relevanz** Gegenstand nach systemat. Erwägungen eingrenzen
+
+**Übliche Lösungsstrategien**
+\begin{enumerate}
+  \item Klassenbildung Demokratie \& Autokratie
+  \item Graduelle Abstufungen der Demokratie
+\end{enumerate}
+
+**Gemeinsamenkeit** \textit{ex negativo} Bestimmung
+
+## Klassenbildung: Alvarez et al. (1996)
+
+**Ansatz** notwendige, zusammen hinreichende für Bdg. Demokratie
+
+\begin{enumerate}
+  \small
+  \item "Democracy, for us, is thus a regime in which some
+  governmental offices are filled as a consequence of
+  elections. [\dots] Contestation, in turn, entails three
+  features: 1) ex ante uncertainty, 2) ex post
+  irreversibility, 3) repeatability." (5)
+  \item "We treat dictatorship simply as a residual category,
+  perhaps better denominated as `not democracy'." (6)
+\end{enumerate}
+
+**Nachteile** 
+\begin{enumerate}
+  \item Empirische Information teilw. unzureichend (Typ II Fehler)
+  \item Binnenheterogenität gebildeter Klassen
+  \item Mangelnde Validität eines prozeduralen Demokratiebegriffs
+\end{enumerate}
+
+## Graduelle Abstufungen: Diamond (2002)
+
+**Ansatz** Schwellenwerte auf kontinuierl. Demokratiemessung
+
+\begin{enumerate}
+\small
+\item "the rather astonishing frequency with which contemporary
+  authoritarian regimes manifest, at least superficially, a
+  number of democratic features" (23)
+\item hybride Regime: Kombination demokrat. \& autokrat. Elemente
+\item "Thus the trend toward democracy has been accompanied
+  by an even more dramatic trend toward pseudodemocracy." (26)
+\end{enumerate}
+
+**Nachteile** 
+\begin{enumerate}
+  \item Rechtfertigung von Schwellenwerten
+  \item Interpretierbarkeit gebildeter Klassen
+  \item Kann man Demokratie in nichtdemokratischen Kontexten sinnvoll messen?
+\end{enumerate}
+
+
+

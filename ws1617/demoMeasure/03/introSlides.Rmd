@@ -16,28 +16,54 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Zielstellung
+## Anlass & Zielstellung
 
+\begin{quote}
+  "problems of causal inference have overshadowed the equally
+  important conceptualization and measurement" (6)
+\end{quote}
+
+- Lücke zwischen Analyseanspruch und Datenqualität
+- Rahmenwerk für die Entwicklung eines Demokratieindixes
+- Kernelemente: Konzeptionalisierung, Messung, Aggregation
+
+**Kurzfassung** \newline
+Wer Demokratie misst, betreibt Demokratietheorie.
 
 ## Konzeptionalisierung
 
 \input{./diag_conceptTree}
 
-- Explikation eines Hintergrundkonzepts, z.B. Demokratie
 - Differenzierung in zunehmend konkretere Eigenschaften
-- Vermeide:
+- Balance: Minimalismus vs. Maximalismus
+- Probleme:
     - unzulässige Verbindungen (\textit{conflation})
     - Redundanz (\textit{redundancy})
 
+## Messung
 
+1. Auswahl von Indikatoren
+    - Prinzip multipler Indikatoren/Quellen
+    - Kontextäquivalenz sicherstellen
+    - systematische Messfehler abschätzen
+2. Bestimmung des Skalenniveaus
+  \begin{quote} \small
+    "the selection of a measurement level should (a) be
+    driven by the goal of maximizing homogeneity within
+    measurement classes with the minimum number of
+    necessary distinctions and (b) be seen as a process
+    that requires both theoretical justification and
+    empirical testing" (17)
+  \end{quote}
+  $\rightarrow$ Wieviel Varianz kann das Konzept bewältigen?
+3. Replikation gewährleisten
 
+## Aggregation
 
-
-
-
-## Herausforderung 1: Konzeptionalisierung
-
-
-
-
-test
+1. Wahl des Aggregationsniveaus
+  - Wie hoch klettert man den Konzeptbaum hinauf?
+  - Sparsamkeit gegen Mehrdimensionalität abwägen
+2. Wahl der Aggregationsregel
+  - Korrespondenz zum Demokratiekonzept sicherstellen
+  - Alternative Aggregationsmethoden erproben
+3. Replikation gewährleisten
