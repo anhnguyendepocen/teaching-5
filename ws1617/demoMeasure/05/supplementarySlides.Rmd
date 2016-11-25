@@ -1,0 +1,37 @@
+---
+title: "Sitzungsbegleitende Folien zum 18.11.2016"
+author: "Dag Tanneberg"
+date: "11/14/2016"
+output: 
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(echo = FALSE, warn = FALSE, message = FALSE)
+qog <- read.csv(
+  file = paste0(
+    "/Users/dag/Dropbox/data/archive/international/",
+    "qualityOfGovernment/16jan2016/qog_std_ts_jan16.csv"
+  ),
+  as.is = TRUE
+)
+```
+
+```{r}
+library('ggplot2'); library('extrafont'); loadfonts()
+qog <- within(qog, {
+  fh_freedom <- (fh_cl + fh_pr) / 2
+  }
+)
+ggplot(
+  data = subset(qog, !is.na(fh_freedom)),
+  aes(x = factor(fh_freedom), y = p_polity2)
+) +
+  geom_boxplot(width = .7, na.rm = TRUE) +
+  theme_minimal(base_size = 24, base_family = 'CMU Sans Serif') +
+  labs(x = 'Freedom House', y = 'Polity IV')
+```

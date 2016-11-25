@@ -1,0 +1,32 @@
+\begin{adjustbox}{max totalsize={\textwidth}{.9\textheight}, center}
+\begin{tikzpicture}[every matrix/.append style={ampersand replacement=\&,matrix of nodes}]
+% --- Layout & Styles --------------------------------------
+\tikzstyle{solid node}=[circle,draw,inner sep=1.2,fill=black];
+\tikzstyle{hollow node}=[circle,draw,inner sep=1.2];
+\tikzstyle{level 1}=[sibling distance = 18em]
+\tikzstyle{level 2}=[sibling distance = 7em]
+% --- Tree -------------------------------------------------
+\node(0){Democracy}
+  child{
+    node(0-1){Offices}
+      child{node(0-1-1){Executive}
+        child{node{\sc exselec}}
+      }
+      child{node(0-1-2){Legislative}
+        child{node{\sc legselec}}
+      }
+  }
+  child{
+    node(0-2){Contestation}
+    child{ node(0-2-1) [matrix] {\textit{Ex ante} \\ uncertainty \\}
+      child{node{\sc party}}
+    }
+    child{ node(0-2-2) [matrix] {\textit{Ex post} \\ irreversibility \\}
+      child{node{\sc type ii}}
+    }
+    child{ node(0-2-3) [matrix] {Repeata- \\ bility \\}
+      child{node{\sc incumb}}
+    }
+  } ;
+\end{tikzpicture}
+\end{adjustbox}
