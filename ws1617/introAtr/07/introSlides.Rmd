@@ -1,0 +1,154 @@
+---
+title: "Warum wird in Autokratien gewählt?"
+author: "Dag Tanneberg"
+date: "11/29/2016"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+```{r, echo = FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library('ggplot2')
+library('extrafont'); loadfonts()
+library('tidyr')
+```
+
+# Zusammenfassung vom 22. November 2016
+
+## Kernprobleme der Autokratie
+
+**Ziel der Sitzung**
+
+1. Hinführung an das zentrale Problem autokratischer Politik
+    1. Was ist das Dilemma des Diktators?
+    2. Welche Lösungsstrategien stehen zur Verfügung?
+2. Kennzeichnung der entsprechenden theoretischen Traditionslinie
+3. Vergleich zur Argumentationslinie über Typologien
+
+## Wintrobe 1998: Political economy of dictatorship
+
+\begin{quote}
+  "Dictators cannot [\dots] know whether the population
+  genuinely worships them or worships them because they
+  command such worship." (20)
+\end{quote}
+
+\begin{quote}
+  "The Dictator's Dilemma, considered in abstract terms, is
+  a set of circumstances in which there are gains from
+  'exchange' (between the dictator and his subjects) but in
+  which promises and obligations are not enforceable." (25)
+\end{quote}
+
+## Wintrobe 1998, Political economy of dictatorship
+
+- **Diagnose** Wechselseitiges Glaubwürdigkeitsproblem
+- **Ursache** Fehlende institutionelle Einhegung des Diktators
+- **Folge** Verlust von Kooperationsgewinnen
+- **Lösungsstrategien**
+    1. Loyalty, d.i. Gewährung selektiver Vorteile für Kooperation
+    2. Repression, d.i. systemat. Unterdrückung polit. Opposition
+
+## Svolik 2012, Politics of authoritarian rule
+
+\begin{quote}
+  "The absence of an independent authority that would enforce
+  agreements among key political players is the essence of
+  dictatorship. After all, the presence of an actor with
+  such authority would imply a check on the very powers
+  that dictators and their allies want to command." (14)
+\end{quote}
+
+\begin{quote}
+  "Authoritarian politics takes place in the shadow of
+  betrayal and violence." (2)
+\end{quote}
+
+## Svolik 2012, Politics of authoritarian rule
+
+- **Diagnose** Wechselseitiges Glaubwürdigkeitsproblem
+- **Ursache** Fehlende institutionelle Einhegung des Diktators
+
+**Analytische Differenzierung**
+
+1. problem of authoritarian control
+    1. polit. Konflikt zw. Diktator und Bevölkerung
+    2. Lösungsstrategien: Repression \& Kooptation
+2. problem of authoritarian power-sharing
+    1. Machtkampf zw. Diktator und Regimeeliten
+    2. Lösungsstrategie: Politische Institutionen
+    
+## Unterschiede zu Typologien autokratischer Regime
+
+1. Verallgemeinerndes Modell autokratischer Herrschaft
+2. Deduktion politischer Dynamiken aus Modellprämissen
+3. Formulierung von Geltungsbedingungen politischer Institutionen
+
+# Wahlen in Autokratien
+
+## Einführung
+
+"[F]ew contemporary dictatorships admit that they are just that." \newline
+(Svolik 2012: 22)
+
+- 1990er: häufiger von Wahlen in nichtdemokratischen Kontexten
+- Wahlen verfehlen systematisch demokratische Minimalbedingungen
+- $\neq$ Anzeichen fortschreitender Demokratisierung
+- electoral authoritarianism (Schedler 2006/2013), \newline
+  competitive authoritarianism (Levitsky/Way 2002, 2010)
+
+## Verbreitung von Parlamentswahlen in Autokratien
+```{r}
+library(foreign)
+dd <- read.dta('./data/ddv1.dta')
+detach(package:foreign)
+ggplot(
+  data = subset(dd, regime >= 3),
+  aes(x = year, fill = factor(legselec))) + 
+  geom_bar(width = 1, colour = 'white', size = .1, position = 'fill') +
+  scale_fill_brewer(
+    type = "qual", palette = 3,
+    labels = c('0' = 'Existiert nicht', '1' = 'Ernannt', '2' = 'Gewählt')
+  ) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0), labels = scales::percent) +
+  labs(
+    y = 'Prozent', fill = 'Parlament'
+  ) +
+  theme_classic(base_family = 'CMU Sans Serif', base_size = 18) +
+  theme(
+    axis.title.x = element_blank(),
+    legend.position = 'bottom', legend.direction = 'horizontal'
+  )
+```
+
+\tiny{Quelle: Cheibub, Gandhi, Vreeland (2010); Variable legselec.}
+
+## Verbreitung von Mehrparteienwahlen in Autokratien
+```{r}
+ggplot(
+  data = subset(dd, regime >= 3),
+  aes(x = year, fill = factor(defacto2))) + 
+  geom_bar(width = 1, colour = 'white', size = .1, position = 'fill') +
+  scale_fill_brewer(
+    type = "qual", palette = 3,
+    labels = c('0' = 'Keine Partei', '1' = 'Einheitsliste', '2' = 'Mehrere Parteien')
+  ) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0), labels = scales::percent) +
+  labs(
+    y = 'Prozent', fill = 'Status polit. Parteien'
+  ) +
+  theme_classic(base_family = 'CMU Sans Serif', base_size = 18) +
+  theme(
+    axis.title.x = element_blank(),
+    legend.position = 'bottom', legend.direction = 'horizontal'
+  )
+```
+
+\tiny{Quelle: Cheibub, Gandhi, Vreeland (2010); Variable defacto2. Fehlende zu 100: Keine Angabe.}
+
