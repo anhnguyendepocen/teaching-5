@@ -1,0 +1,50 @@
+---
+title: "Zusammenfassung vom 3. Januar"
+author: "Dag Tanneberg"
+date: "01/10/2017"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+## Fragestellung & Argument
+- Können autoritäre Regime innenpolitische Dynamiken für
+  Positionsgewinne in den internationalen Beziehungen
+  nutzen?
+- "Nationalist, antiforeign street protests represent
+  [\dots] a costly signal by which authoritarian leaders can
+  credibly invoke the pressure of public opinion and reveal
+  domestic constraints on foreign policy."
+- **Implikation:** Regimeführung instrumentalisert Proteste
+
+
+## Mechanismen und Geltungsbedingungen
+
+**Mechanismem**
+
+1. Protestverlauf stets weitgehend unberechenbar
+    1. Demonstrationseffekt, Tipping point, Informationskaskade
+    2. Ressourcenmobilisierung
+    3. Elitenzerwürfnisse
+    4. Legitimätskosten nationalist. Proteste 
+2. Sanktion laufender Proteste teurer als ihre Prävention
+
+**Geltungsbedingungen**
+
+1. Proteste müssen authentisch sein.
+2. Partner mit strateg. Interesse an gelingenden Verhandlungen
+
+## Empirische Implikationen
+
+\begin{tabular}{cl|*{2}{c}}
+~ & ~& \multicolumn{2}{c}{Citizens}\\
+~ & ~ & mobilize & $\lnot$mobilize\\ \hline
+~ & ~~allow & Sincere pr. & Manufactured pr.\\
+~ & ~ & (Signal resolve $\lor$ hawkish com.) & (cheap talk)\\ 
+\rotatebox{90}{\rlap{Govt.}} & $\lnot$allow & Stifled pr. & No protest \\
+~ & ~ & (Credible reassurance) \\ 
+\end{tabular}
+

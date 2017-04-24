@@ -1,0 +1,136 @@
+---
+title: "Zusammenfassung vom 6. Dezember"
+author: "Dag Tanneberg"
+date: "12/13/2016"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+# Warum gründen Autokraten Parteien?
+
+## Kontext des Beitrags
+
+- Debatte über Typen autokratischer Herrschaft
+- Einparteiregime überleben im Mittel länger
+- Hirschjagdcharakter von Elitenkonflikten [(Geddes 1999: 129)](http://www.annualreviews.org/doi/abs/10.1146/annurev.polisci.2.1.115)
+
+\begin{quote}
+  Factions form in single-party regimes around policy
+  differences and competition for leadership positions,
+  but everyone is better off if all factions remain united
+  and in office. 
+\end{quote}
+
+## Smiths Fragestellung
+
+1. "A striking feature of the single-party subset is the wide
+variation in regime tenure." [(Smith 2005: 423)](https://www.cambridge.org/core/journals/world-politics/article/life-of-the-party-the-origins-of-regime-breakdown-and-persistence-under-single-party-rule/DC9ECF53F1E0E324ED9C0080112FF67C)
+2. Forschungsfrage: Woher kommt diese Varianz?
+
+```{r, message=FALSE, echo=FALSE, fig.align='center', fig.width=3, fig.height = 3/1.618}
+library('foreign')
+gwf <- read.dta(
+  "/Users/dag/Dropbox/data/GWF Autocratic Regimes 1.2/GWFcases.dta"
+)
+gwf <- within(gwf, {
+  reg_type <- ifelse(
+    gwf_regimetype %in% c(
+      "party-based", "party-personal", "party-military",
+      "party-personal-military", "oligarchy"
+    ), 1, ifelse(gwf_country == "Iran" & gwf_startyr == 1980, 1, NA)
+  )
+  reg_type <- ifelse(gwf_regimetype == 'personal', 2, reg_type)
+  reg_type <- ifelse(gwf_regimetype %in% c(
+      'military', 'military-personal', 'indirect military'
+    ), 3, reg_type
+  )
+  reg_type <- ifelse(gwf_regimetype == 'monarchy', 4, reg_type)
+  reg_type <- factor(
+    reg_type,
+    levels = c(3, 2, 1, 4),
+    labels = c('Militär', 'Personal.', 'Einpartei', 'Monarchie')
+  )
+  delta <- ifelse(!is.na(gwf_endyr), gwf_endyr, 2010) - gwf_startyr
+  }
+)
+
+library('ggplot2'); library('scales')
+library('extrafont'); loadfonts()
+ggplot(data = gwf, aes(x = reg_type, y = log10(delta+1))) +
+  geom_boxplot() +
+  scale_y_continuous(breaks = 0:2) +
+  labs(y = expression(log[10]('Überlebensdauer'+1))) +
+  theme_grey(base_family = 'CMU Sans Serif', base_size = 10) +
+  theme(
+    axis.title.x = element_blank()
+  )
+```
+
+## Smiths Antwortversuch
+
+1. Hirschjagdcharakter nicht selbstverständlich
+    - "Treating party institutions as prior variables makes it
+      nearly impossible to figure out how incentives within such
+      regimes might come, or not come, to look very much like
+      the Stag Hunt game." (427)
+2. Lücke der Theoriebildung
+    - "Missing from the study of authoritarianism is a causal
+      account linking origins to institutions and institutions to
+      outcomes, [\dots]." (421)
+3. Begleitumstände der Konsolidierung stiften Pfadabhängigkeiten
+    - "The theory suggests that prospects for long-term
+      survival of single-party regimes are best
+      conceptualized as a function of the challenges
+      political actors face as they make decisions about
+      building parties." (430)
+      
+## Theorie starker Regierungsparteien
+ \begin{quote}
+  "Elites that face organized opposition in the form of
+  highly institutionalized social groups [\dots], \textbf{and}
+  that have little or no access to rent sources are
+  likely to respond to these constraints
+  by building party institutions to mobilize their own
+  constituencies." (422; my emph.)
+\end{quote}
+
+## Vorhergesagte Entwicklungspfade
++---------------+--------------------------+---------------------------+
+| Access to\    | Organizational\          |                           |
+| rent revenues | strength of opposition   |                           |
++===============+==========================+===========================+
+|               | High                     | Low                       |
++---------------+--------------------------+---------------------------+
+| Low           | **Organizat. weapons**\  |                           |
+|               | Indonesia (1967-71)\     |                           |
+|               | Tanzania (1954-62)       |                           |
++---------------+--------------------------+---------------------------+
+| High          |                          | **Rent havens**\          |
+|               |                          | Guinea-Bissau (70-74)\    |
+|               |                          | Philippines (1978-82)     |
++---------------+--------------------------+---------------------------+
+
+## Indonesien (1966-1998)
+
+1. Gründungsmoment
+    - schwere Wirtschaftskrise
+    - Sukarno Anhänger in Politik, Verwaltung und Militär
+    - gut organisierte, national aktive kommunistische Partei (PKI)
+2. Konsolidierung
+    - Ausbau von GOLKAR zu hochdifferenzierter Organisation
+    - Rationalisierung, Bürokratisierung und Professionalisierung
+    - Verflechtung von GOLKAR mit zentraler und lokaler Staatsverwaltung
+3. Widerstandsfähigkeit des Regimes
+    - Studentenunruhen 1974, Muslimische Proteste 1977/1978
+    - Kooptation von Oppositionsführer
+    - Repression radikaler Oppositionskräfte
+4. GOLKAR hält autoritäre Regierungskoalition zusammen
+
+
+
+
+  

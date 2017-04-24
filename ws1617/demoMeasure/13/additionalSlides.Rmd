@@ -1,0 +1,141 @@
+---
+title: "Sitzungsbegleitende Folien"
+author: "Dag Tanneberg"
+date: "01/27/2017"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+# Lijphardt (1999) Patterns of Democracy
+
+## Fragestellung
+
+  "[W]ho will do the governing and to whose
+  interests should the government be responsive when the
+  people are in disagreement and have divergent
+  preferences?" \newline
+  (Lijphardt 1999, 1)
+
+## Lijphardts zwei Strukturtypen der Demokratie
+\begin{enumerate}
+  \item \textbf{Die Mehrheit!} \newline
+    Mehrheitsdemokratie, d.i. Machtkonzentration in knappen
+    Mehrheiten
+  \item \textbf{So viele wie möglich!} \newline
+    Konsensdemokratie, d.i. Teilung, Streuung und Brechung
+    politischer Macht
+\end{enumerate}
+    
+"[\dots] [T]he majoritarian model of democracy is exclusive,
+  competitive, and adversarial, whereas the consensus model
+  is characterized by inclusiveness, bargaining, and
+  compromise; [\dots]." \newline
+  (Lijphardt 1999, 2)
+  
+## Merkmale von Konsens- und Mehrheitsdemokratie
+
+\begin{tabular}{lll}
+~   & Konsensdemokratie & Mehrheitsdemokratie \\ \hline
+~   & Exekutive-Parteien \\ \hline
+1.  & Koalitionsregierung & Einparteiregierung \\
+2.  & Gleichgewicht Exek. \& Leg. & Dominanz Exek. \\
+3.  & Vielparteiensystem & Zweiparteiensystem \\
+4.  & Verhältniswahl & Mehrheitswahlsystem \\
+5.  & Korporatismus & Pluralismus \\ \hline
+~   & Föderalismus-Unitarismus \\ \hline
+6.  & Bundesstaat & Zentralstaat \\
+7.  & Zweikammersystem & Einkammersystem \\
+8.  & "starre" Verfassung & flexible Verfassung \\
+9.  & richterl. Normenkontrolle & keine richterl. Normenk. \\
+10. & autonome Zentralbank & von Exek. abh. Zentralbank \\
+\end{tabular}
+
+## Nur 2 Typen, Herr Lijphardt?
+\begin{columns}
+  \begin{column}{.45\textwidth}
+    \includegraphics[width = 15em]{lijphardt_conceptualMapDemocracy}
+  \end{column}
+  \begin{column}{.4\textwidth}
+  \footnotesize
+  Zu sehen sind
+    \begin{itemize}
+      \item z-standardisierte Mittelwerte, wobei
+      \item $x_i < 0 \equiv$ Konsensdem.,
+      \item $x_i > 0 \equiv$ Mehrheitsdem.
+    \end{itemize}
+  Was bedeuten
+  \begin{enumerate}
+    \item (-2, -3) und (2, 2),
+    \item (-2, 2) oder (2, -3),
+    \item (0, 0)?
+  \end{enumerate}
+  \end{column}
+\end{columns}
+
+# Bochsler & Kriesi (2013)
+
+## Zielstellung
+
+- Vielfalt der Demokratie konzeptionalisieren und messen
+- Demokratie Barometer: 1990 - 2007
+- 50 Länder
+- 19 Indikatoren
+
+## Intuition: Wie funktioniert eine expl. Faktorenanalyse?
+
+> - Was macht eine Banane zur Banane?
+> - Farbe, Form, Größe, Geruch, Geschmack, Alter, Herkunft, 
+    Anbaubedingungen, \dots
+> - Warum ist das keine Banane?
+
+## Warum ist das keine Banane?
+
+![Das ist keine Banane!](./banana.jpg)
+
+
+## Explorative Faktorenanalyse
+
+- Statistisches Verfahren zur Verdichtung großer Variablenmengen
+- Abbildung manifester Indikatoren auf latente Variablen
+- Empirischer Messwert $\approx$ Effekt unbeobachteter Größen
+- z.B. Muskelmasse $\approx$ Training + Veranlagung + $\cdots$ + $\epsilon$
+
+
+\begin{equation}
+\boldsymbol{x}_{q \times 1} = \boldsymbol{\lambda}_{q \times k}\boldsymbol{\xi}_{k \times 1} + \boldsymbol{u}_{q \times 1}
+\end{equation}
+
+\begin{equation}
+\begin{pmatrix}
+  x_1 \\
+  \vdots \\
+  x_q \\
+\end{pmatrix} =
+\begin{pmatrix}
+  \lambda_{11} & \cdots & \lambda_{1k} \\
+  \vdots & ~ & \vdots \\
+  \lambda_{q1} & \cdots & \lambda_{qk}
+\end{pmatrix} \times
+\begin{pmatrix}
+  \xi_1 \\
+  \vdots \\
+  \xi_k \\
+\end{pmatrix} +
+\begin{pmatrix}
+  u_1 \\
+  \vdots \\
+  u_q \\
+\end{pmatrix}
+\end{equation}
+\begin{equation}
+  x_1 = \lambda_{11}\xi_1 +  \lambda_{12}\xi_2 + \cdots +  \lambda_{1k}\xi_k + u_1  
+\end{equation}
+
+## STATA
+
+    > factor x y z, pf factors(#)
+    > rotate varimax

@@ -96,7 +96,7 @@ library('tidyr')
 (Svolik 2012: 22)
 
 - 1990er: häufiger von Wahlen in nichtdemokratischen Kontexten
-- Wahlen verfehlen systematisch demokratische Minimalbedingungen
+- Wahlen verfehlen systematisch demokrat. Minimalbedingungen
 - $\neq$ Anzeichen fortschreitender Demokratisierung
 - electoral authoritarianism (Schedler 2006/2013), \newline
   competitive authoritarianism (Levitsky/Way 2002, 2010)

@@ -1,0 +1,109 @@
+---
+title: "Zusammenfassung vom 9. Dezember"
+author: "Dag Tanneberg"
+date: "12/16/2016"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+    includes: 
+      in_header: header.tex
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library('ggplot2')
+library('extrafont'); loadfonts(quiet = TRUE)
+```
+
+## Allgemeines zum Polity Index
+- **Erstveröffentlichung** [Ted R. Gurr (1974): Persistence and
+  Change in Political Systems, 1800-1971. In: American
+  Political Science Review, **68**(4), pp. 
+  1482-1504.](http://www.jstor.org/stable/1959937?seq=1#page_scan_tab_contents)
+- **aktuelle Version** [Polity IV](http://www.systemicpeace.org/polityproject.html)
+- **Ziel** vergl. Längsschnitt über Muster politischer Autorität
+- **Analysebene** staatlich verfasste Polity (über 500.000 EW)
+- **Zeitraum** 1800 - 2015
+
+## Konzept: Authority patterns
+\begin{quote}
+    "a set of asymetric relations
+    among hierarchically
+    ordered members of a social unit that involves the
+    direction of the unit. [\dots] The direction of a social
+    unit involves the definition of its goals, the
+    regulation of conduct of its members, and the
+    allocation and coordination of roles within it."
+\end{quote}
+
+\small Harry Eckstein & Ted R. Gurr (1975): *Patterns of
+    authority. A structural basis for political inquiry*,
+    New York: Wiley-Interscience, p. 22.
+
+## Konzept: Authority patterns
+- Auswahl theoretisch relevanter & messbarer Merkmale
+1. Influence relations
+    - Regulation of partic.: verbindl. Regeln der Präferenzartikulation
+    - Competitiveness of partic.: Freiheit Präferenzen zu verfolgen
+    - Constraints on the chief executive: Grenzen der Staatsgewalt
+    - Directiveness: staatl. Regulation von Wirtschaft & Sozialem
+2. Executive Recruitment
+    - Regulation: verbindl. Regeln der Machtübertragung
+    - Competitveness: Machtübertragung durch Wahlen?
+    - Openness: Zugangschancen zu exekutiven Ämtern
+3. Complexity
+    - Moncratism: Exekutive Indidvidual- oder Kollektivorgan?
+    - Centralism: Föderaler Staatsaufbau?
+
+## Konzept: Demokratie & Autokratie
+- essenzielle & interdependente Merkmale der Demokratie
+    1. Institutionen & Verfahren zur Artikulation polit. Präferenzen
+    2. Einhegung staatlicher Willkürherrschaft
+    3. Geltung liberaler Bürgerrechte
+- Selektionsschritte:
+    1. Daten für 1 & 2: "operational indicator of democracy" (83)
+    2. Beschränkung auf 5 Komponentenvariablen
+
+## Konzeptbaum
+\input{./conceptTree}
+
+## Messung & Aggregation
+1. Messung
+    - subjektive Demokratiemessung auf Grundlage hist. Quellen
+    - Erhebung von polytomen Merkmale
+2. Aggregation
+    - Teilskalen für Demokratie & Autokratie
+    - Gewichtung und Addition der Merkmalsausprägungen
+    - Skalenbereiche für Demokratie & Autokratie sind disjunkt
+3. Ergebnis
+    - graduelle, flexible Demokratiemessung
+
+## Kritik
+1. Auslassungen & Redundanz
+    1. Vernachlässigt Partizipationsdimension polit. Demokratie
+    2. Redundanz: Regulation & Competitiveness messen dasselbe
+2. Erhebungsinstrument nicht ausreichend differenziert
+    1. Ungewisse Bedeutung einzelner Skalenpunkte
+    2. Rangordnung verschiedener Skalenpunkte zweifelhaft
+3. Inkonsistenz von Konzept und Messung
+    1. Konzept arbeitet mit notw. Bedingungen, Messung nicht
+    2. Gewichtungsschema nicht gerechtfertigt
+4. Interne Homogeneität
+    - Grauzone: Was bedeutet eine Veränderung um 1 Punkt?
+    - Nullpunkt: Was heißt die 0?
+
+## 4. Interne Homogenität des Polity Scores
+```{r, fig.width=4, fig.height=4/1.618, fig.align='center'}
+pdta <- expand.grid(democ = 0:10, autoc = 0:10)
+pdta <- within(pdta, score <- democ - autoc)
+ggplot(data = pdta, aes(x = score)) +
+  geom_bar() +
+  scale_y_continuous(limits = c(0, 12), breaks = seq(0, 12, 2)) +
+  labs(
+    x = "Polity Score\nDemokratie - Autokratie", y = "Kombinationen"
+  ) +
+  theme_minimal(base_family = 'CMU Sans Serif')
+```

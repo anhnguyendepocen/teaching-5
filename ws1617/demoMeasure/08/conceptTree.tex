@@ -1,0 +1,35 @@
+\begin{adjustbox}{max totalsize={\textwidth}{.9\textheight}, center}
+\begin{tikzpicture}[every matrix/.append style={ampersand replacement=\&,matrix of nodes}, >=latex]
+% --- Layout & Styles --------------------------------------
+\tikzstyle{level 1}=[sibling distance = 23em]
+\tikzstyle{level 2}=[sibling distance = 7em]
+% --- Tree -------------------------------------------------
+\node(0)[font = \large]{Political authority}
+  child{
+    node(0-1)[font = \large]{Influence}
+    child{node(0-1-1) [matrix, font=\small] {Regulation of\\participation\\}}
+    child{node(0-1-2) [matrix, font=\small] {Competitiveness\\of participation\\}}
+    child{node(0-1-3) [matrix, font=\small] {Constraints on the\\chief executive\\}}
+    child{node(0-1-4) [matrix, font=\small] {Directi-\\veness\\}}
+  }
+  child{
+    node(0-2)[font = \large]{Recruitment}
+    child{node(0-2-1) [matrix, font = \small] {Regulation of\\recruitment\\}}
+    child{node(0-2-2) [matrix, font = \small] {Competitiveness of\\recruitment\\}}
+    child{node(0-2-3) [matrix, font = \small] {Openness \\of recruitment\\}}
+  }
+  child{
+    node(0-3)[font = \large]{Complexity}
+    child{node(0-3-1) [matrix, font = \small] {Monocratism\\}}
+    child{node(0-3-2) [matrix, font = \small] {Centralism\\}}
+  }
+  ;
+\node(1)[below =6em of 0-1-2, font = \large, color = {rgb:red,202;green,0;blue,32}]{Autocracy};
+\node(2)[below =6em of 0-2-2, font = \large, color = {rgb:red,64;green,64;blue,64}]{Democracy};
+% --- Draw edges -------------------------------------------
+\foreach \x in {0-1-2, 0-1-1, 0-2-2, 0-1-3}
+  \draw [->, color = {rgb:red,202;green,0;blue,32}] (\x) to (1);
+\foreach \x in {0-1-2, 0-2-2, 0-2-3, 0-1-3}
+  \draw [->, color = {rgb:red,64;green,64;blue,64}] (\x) to (2);
+\end{tikzpicture}
+\end{adjustbox}

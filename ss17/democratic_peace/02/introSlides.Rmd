@@ -1,0 +1,136 @@
+---
+title: "Bringt uns die Demokratie den Frieden?"
+author: "Dag Tanneberg"
+date: "04/24/2017"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Achten Demokratien die körperliche Unversehrtheit?
+
+```{r heatmap, echo = FALSE, message=FALSE, fig.align = 'center', fig.width = 4, fig.height = 4/1.5}
+# workspace setup ==========================================
+rm(list = ls())
+packs <- c('ggplot2')
+invisible(lapply(packs, library, character.only = TRUE))
+pathOut <- file.path(
+  "/Users/dag/Dropbox/publikationen/2013/",
+  "PIinDemocracy/PiDemProj/output"
+)
+load(file.path(pathOut, "base.RData"))
+base <- subset(base, year >= 1995 & country != "Malta")
+
+## data setup ----------------------------------------------
+df <- subset(                                  
+  base, select = c("country", "cow", "year", "physint")
+)
+df <- within(df,       ## compute mean physint and sort data
+  mean.physint <- ave(physint, cow, 
+    FUN = function(x) {mean(x, na.rm = TRUE) }
+  )
+)
+df <- df[with(df, order(-mean.physint, country)), ]
+df <- within(df,         # factor countries for sorting plot
+  f.country <- factor(country)
+)
+
+# plot data ------------------------------------------------
+base_size <- 9                             ## set font size
+p <- ggplot(df, aes(
+  x = year, 
+  y = reorder(f.country, mean.physint, decrease = TRUE))
+) +                                            ## add geoms
+geom_tile(
+  data = df, aes(fill = factor(physint)), colour = "white",
+  size = .3
+) +
+scale_x_continuous(
+  breaks = seq(1995, 2007, 3), expand = c(0, 0)
+) +
+scale_y_discrete(expand = c(0, 0)) +
+scale_fill_brewer(type = 'seq', palette = 9) +
+theme_minimal(base_size = base_size) +             ## add theme
+labs(x = "", y = "", fill = "PI Violations") +
+guides(     ## remove white slashes from fill legend boxes
+  fill = guide_legend(nrow = 1, override.aes = list(colour = NULL))
+) +
+theme(                      ## finishing touches to theme
+  text = element_text(family = 'sans'),
+  legend.position = c(.325, 1.04),
+  legend.direction = "horizontal",
+  legend.key = element_rect(colour = "white"),
+  legend.key.size = grid::unit(.5, "lines"),
+  panel.background = element_blank(),
+  panel.border = element_blank(), 
+  panel.grid = element_blank(),
+  axis.ticks = element_blank(),
+  axis.title = element_blank(),
+  axis.text = element_text(size = .6*base_size, angle = 0),
+  plot.margin = unit(c(1, .1, 0, 0), "lines") ## crop margins
+)
+print(p)
+rm(df, p)
+```
+
+## Mögliche Anknüpfungspunkte einer Replikationsstudie
+
+1. Was sind etablierte Demokratien? Gehört Südafrika dazu?
+2. Wie groß ist der Untersschied zu Nichtdemokratien?
+3. Ist die Zeitperiode der Analyse angemessen?
+4. Wie gut misst der CIRI Phyiscal Integrity Index?
+
+
+## Lernziele
+
+1. Einführung in die Friedens- & Konfliktforschung
+2. Aufriss der Staatsrepressionsforschung
+3. Sicherer Umgang mit STATA (12/14)
+4. Wiederholung grundlegender Analysetechniken
+5. Einführung in weiterführende Techniken der statistischen Datenanalyse
+
+## Leistungsanforderungen für 6 ECTS
+
+1. Anfertigung von 3 Hausaufgaben
+    - Vertiefung von 3 Praxissitzungen
+    - Bekanntgabe zu Beginn der Sitzung
+    - Einreichung zu nachfolgenden Sitzung in Moodle
+2. Anfertigung einer Hausarbeit
+    - Ausgabe von 3 Themen zur Mitte des Semester
+    - (Replikations-)Studie im Umfang von 3,000 bis 3,600 Wörtern
+    - Abgabe bis zum 30. September 2017
+
+Für jeden Tag, um den sich die Abgabe einer Teilnahmeleistung
+ohne Angabe von Gründen verzögert, verringert sich die
+Teilnote um einen vollen Notenpunkt. Die Abschlussnote setzt
+sich zu 60 % aus den Hausaufgaben und zu 40 % aus der
+Hausarbeit zusammen.
+
+## Weitere Hinweise
+
+1. Moodle
+    - Kursname: DemFriedSoSe17
+    - Einschreibeschlüssel: 8f01
+    - Sichert die Literatur frühzeitig.
+2. Sprechstunde & Kontakt
+    - Kontakt: dag.tanneberg@uni-potsdam.de
+    - Sprechstunde: Montags, 15-17 Uhr
+    - Anmeldung per Email, max. 8 Termine pro Woche
+3. STATA-Sitzungen finden in Raum **3.01.1.50** statt.
+4. Beachtet den Syllabus und die Ankündigungen in Moodle!
+
+## Fahrplan
+
+1. Staatsrepression und Demokratie
+2. Vorstellung von Standardmaßen der Staatsrepressionsforschung
+3. Replikationsstudien
+    - Datenexploration mit STATA
+    - lineare und logistische Regression
+    - Modelldiagnostik, -vergleich und -diskussion

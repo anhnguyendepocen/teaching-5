@@ -1,0 +1,118 @@
+---
+title: "Freedom House - Zusammenfassung"
+author: "Dag Tanneberg"
+date: "12/09/2016"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+    includes: 
+      in_header: header.tex
+---
+## Allgemeines zur Publikation
+
+- jährliche Publikation der Freedom House Stiftung
+- Auftakt 1973 unter Leitung von Raymond Gastil
+- erscheint als 1978 als *Freedom in the World*
+- Link: [Freedom in the World 2016](https://freedomhouse.org/report/freedom-world/freedom-world-2016)
+- Text: Summarische Darstellung der Jahre 1973 bis 1990
+
+## Konzept 
+
+- urspr. Intention
+    - "orienting discussion of variation in levels of freedom" (21) 
+    - Kolumne in *Freedom at Issue*
+- "essentially a survey of democracy" (22)
+- "assumption that freedom for all peoples is best achieved
+  in liberal democratic societies" [(Freedom House 2016)](https://freedomhouse.org/report/freedom-world-2016/methodology)
+- rights in use:
+    - PR: z.B. "take the opposition into account in major
+    decisions and appointments, *even when it does not have
+    to be consulted in terms of the formal requirements* of
+    the system" (31; Ausdr. hinzugefügt)
+    - CL: "looking for patterns and balances in activities" (31)
+
+## Konzeptbaum
+
+\centering
+\begin{tikzpicture}
+% --- Layout & Styles --------------------------------------
+\tikzstyle{solid node}=[circle,draw,inner sep=1.2,fill=black];
+\tikzstyle{level 1}=[sibling distance = 12em]
+% --- Tree -------------------------------------------------
+\node(0)[solid node, label = north:{Freedom/Liberal democracy}]{}
+  child{
+    node(0-1)[solid node, label = south:{Political rights}]{}
+  }
+  child{
+    node(0-2)[solid node, label = south:{Civil liberties}]{}
+  } ;
+\end{tikzpicture}
+
+## Checklisten für Political rights \& Civil liberties
+\begin{columns}
+  \begin{column}{0.45\textwidth}
+  \scriptsize{Political rights}
+  \begin{enumerate}
+    \tiny
+    \item Chief authority recently elected by a meaningful process
+    \item Legislature recently elected by a meaningful process
+    \item Fair election laws, campaigning opportunity, polling and tabulation
+    \item Fair reflection of voter preference in distribution of power
+    \item Multiple political parties
+    \item Recent shifts in power through elections
+    \item Significant opposition vote
+    \item Free of military or foreign control
+    \item Major group or groups denied reasonable self-determination
+    \item Decentralized political power
+    \item informal consensus; de facto opposition power
+  \end{enumerate}
+  \end{column}
+  \begin{column}{0.55\textwidth}
+  \scriptsize{Civil liberties}
+  \begin{enumerate}
+    \tiny
+    \item Media/literature free of political censorship
+    \item Open public disussion
+    \item Freedom of assembly and demonstration
+    \item Freedom of political or quasipolitical organization
+    \item Nondiscriminatory rule of law in politically relevant cases
+    \item Free from unjustified political terror or imprisonment
+    \item Free trade unions, peasant organizations, or equivalents 
+    \item Free business or cooperatives
+    \item Free professional or other private organizations
+    \item Free religious institutions
+    \item Personal social rights
+    \item Socioeconomic rights
+    \item Freedom from gross socioeconomic inequality
+    \item Freedom from gross government indifference or corruption
+  \end{enumerate}
+  \end{column}
+\end{columns}
+
+## Daten & Aggregation
+
+- subjektive Messung: früher Gastil, heute Länderexperten)
+- Quellenmaterial: persönl. Expertise & Medienberichte
+- graduelle Messung: 1 (frei) $\cdots$ 7 (unfrei)
+    - Früher implizites Modell von Gastil
+    - Heute nach festen Punktwerten vergeben
+- Mittlung von Political rights und Civil liberties
+- Klassifikation von (PR, CL) nach frei, teilweise frei und unfrei
+
+## Kritik an Freedom House
+
+- atheoretisch: kein ausdrückl. Demokratiekonzept
+    1. Was ist Demokratie?
+    2. In welcher Beziehung stehen ihre Attribute zueinander?
+    3. Interne Homogenität: "Democracy is a moving target." (21)
+- intransparenter Mess- & Aggregationsprozess
+    1. Welche Coder und Quellen werden ausgwählt?
+    2. Welches Gewichtungsschema findet Anwendung?
+    3. Wie sehen die Rohdaten aus?
+- enorme Gefahr einer systematischen Verzerrung
+    1. Gastil lange einziger Kodierer
+    2. Heute zusätzl. intransparente Kalibrierungsstufe
+    3. Strukturkonservativ: anlassbezogene Veränderungen der Ergebn.

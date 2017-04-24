@@ -1,0 +1,123 @@
+---
+title: "Die politischen Dynamiken des elektoralen Autoritarismus"
+author: "Dag Tanneberg"
+date: "04/24/2017"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+```{r, echo = FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library('ggplot2')
+library('extrafont'); loadfonts()
+library('tidyr')
+```
+## Eine schwere Frage?
+
+\centering
+Ist die Türkei nach dem Referendum vom 16. April 2017
+weiterhin eine Demokratie?
+
+## Verbreitung von Parlamentswahlen in Autokratien
+```{r}
+library(foreign)
+dd <- read.dta('./data/ddv1.dta')
+detach(package:foreign)
+ggplot(
+  data = subset(dd, regime >= 3 & !is.na(regime)),
+  aes(x = year, fill = factor(legselec))) + 
+  geom_bar(width = 1, colour = 'white', size = .1, position = 'fill') +
+  scale_fill_brewer(
+    type = "qual", palette = 3,
+    labels = c('0' = 'Existiert nicht', '1' = 'Ernannt', '2' = 'Gewählt')
+  ) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0), labels = scales::percent) +
+  labs(
+    y = 'Prozent', fill = 'Parlament'
+  ) +
+  theme_classic(base_family = 'CMU Sans Serif', base_size = 18) +
+  theme(
+    axis.title.x = element_blank(),
+    legend.position = 'bottom', legend.direction = 'horizontal'
+  )
+```
+
+\tiny{Quelle: Cheibub, Gandhi, Vreeland (2010); Variable legselec.}
+
+## Verbreitung von Mehrparteienwahlen in Autokratien
+```{r}
+ggplot(
+  data = subset(dd, regime >= 3 & !is.na(defacto2)),
+  aes(x = year, fill = factor(defacto2))) + 
+  geom_bar(width = 1, colour = 'white', size = .1, position = 'fill') +
+  scale_fill_brewer(
+    type = "qual", palette = 3,
+    labels = c('0' = 'Keine Partei', '1' = 'Einheitsliste', '2' = 'Mehrere Parteien')
+  ) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0), labels = scales::percent) +
+  labs(
+    y = 'Prozent', fill = 'Status polit. Parteien'
+  ) +
+  theme_classic(base_family = 'CMU Sans Serif', base_size = 18) +
+  theme(
+    axis.title.x = element_blank(),
+    legend.position = 'bottom', legend.direction = 'horizontal'
+  )
+```
+
+\tiny{Quelle: Cheibub, Gandhi, Vreeland (2010); Variable defacto2.}
+
+## Lernziele
+
+1. Einführung in die zeitgenössische Autokratieforschung
+2. Sensibilität für die Kontextabhängigkeit polit. Institutionen
+3. Kritikfähigkeit im Umgang mit wissenschaftlichen Beiträgen
+4. Fähigkeit zur pointierten Zusammenfassung von Textinhalten
+
+## Leistungsanforderungen für 6 ECTS
+
+1. Anfertigung von Kurzzusammenfassungen
+    - max. 250 Wörter
+    - Antwortversuch auf die Fragestellung der Sitzung
+    - Abgabe bis Sitzungsbeginn in Moodle
+2. Anfertigung eines Diskussionspapiers
+    - max. 750 Wörter
+    - Vertiefende Diskussion eines Seminarthemas
+    - Abgabe spätestens eine Woche nach der Sitzung
+3. Anfertigung einer Hausarbeit
+    - 3,000 bis 3,600 Wörter
+    - freie Themenwahl
+    - Abgabe bis zum 30. September 2017
+
+## Seminarnote
+
+Für jeden Tag, um den sich die Abgabe einer Teilnahmeleistung
+ohne Angabe von Gründen verzögert, verringert sich die
+Teilnote um einen vollen Notenpunkt. Die Seminarnote setzt
+sich zu 50 % aus den Kurzzusammenfassungen, zu 20 % aus den
+Diskussionspapieren und zu 30 % aus der Hausarbeit zusammen.
+
+## Weitere Hinweise
+
+1. Moodle
+    - Kursname: ElektAutoSose17
+    - Einschreibeschlüssel: 5173
+    - Sichert die Literatur frühzeitig.
+2. Sprechstunde & Kontakt
+    - Kontakt: dag.tanneberg@uni-potsdam.de
+    - Sprechstunde: Montags, 15-17 Uhr
+    - Anmeldung per Email, max. 8 Termine pro Woche
+3. Beachtet den Syllabus und die Ankündigungen in Moodle!
+
+## Fahrplan
+
+1. Was ist elektoraler Autoritarismus?
+2. Wie profitieren autoritäre Regime von Wahlen?
+3. Wie behalten autoritäre Regime am Wahltag die Oberhand?
+4. Bringen Wahlen den Autoritarismus in Bedrängnis?

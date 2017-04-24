@@ -1,0 +1,18 @@
+\usepackage{adjustbox}
+\usepackage{tikz}
+  \usetikzlibrary{matrix}
+  \usetikzlibrary{positioning}
+  \usetikzlibrary{calc}
+
+% Requires \usetikzlibrary{calc}
+\def\connect#1#2#3{%
+% #1: starting node
+% #2: ending node
+% #3: attributes for the shape connecting nodes
+\path let
+  \p1 = ($(#2)-(#1)$),
+  \n1 = {veclen(\p1)},
+  \n2 = {atan2(\x1,\y1)} % <- Update
+in
+  (#1) -- (#2) node[#3, <->, midway, sloped, shading angle=\n2+90, minimum width=\n1, inner sep=0pt, #3] {};
+}

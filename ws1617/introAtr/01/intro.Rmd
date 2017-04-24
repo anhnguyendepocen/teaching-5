@@ -30,18 +30,20 @@ Achse dreht.
 
 ```{r Verbreitung, echo = FALSE}
 library("foreign")
-gwf <- read.dta("/Users/dag/github/teaching/ws1617/introAtr/01/data/GWF_AllPoliticalRegimes.dta")
+gwf <- read.dta(
+  "/Users/dag/github/teaching/ws1617/introAtr/01/data/GWF_AllPoliticalRegimes.dta"
+)
 gwf <- within(gwf, {
   regime_type <- ifelse(
     gwf_regimetype != "NA", 1,
     ifelse(gwf_nonautocracy == "democracy", 0, NA)
   )
-  regime_type <- factor(regime_type, 0:1, c('Autokratie', 'Demokratie'))
+  regime_type <- factor(regime_type, 0:1, c('Demokratie', 'Autokratie'))
   }
 )
 
 library('ggplot2')
-ggplot(
+p <- ggplot(
   data = subset(gwf, !is.na(regime_type)),
   aes(x = year)
 ) +
@@ -53,6 +55,10 @@ ggplot(
   ) +
   theme_minimal() +
   theme(axis.title.x = element_blank())
+ggsave(
+  plot = p, file = './regimesDistribution.png',
+  width = 7, height = 7/1.618, dpi = 300
+)
 ```
 
 ## Geopolitische Bedeutung

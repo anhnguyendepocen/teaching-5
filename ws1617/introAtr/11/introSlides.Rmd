@@ -1,0 +1,51 @@
+---
+title: "Zusammenfassung vom 10. Januar"
+author: "Dag Tanneberg"
+date: "01/17/2017"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+## Wie definiert man politische Repression?
+
+\begin{quote}
+  "Repression is a strategy that elites actively choose when
+  [\dots] benefits exceed the costs, and for any ruler, the
+  preservation of power is the decisive expected benefit."
+  (291)
+\end{quote}
+
+\begin{quote}
+  "sum of all strategies by ruling elites to contain
+  challenges to their rule" (292)
+\end{quote}
+
+## Analytische Komponenten politischer Repression
+
+1. Effekt: constraining vs. incapacitation
+2. Adressaten: Oppositionsführung, Unterstützer, Unbeteiligte
+3. Ausführende Akteure: Regimeführung und Agenten
+
+## Wann setzen Autokratien politische Repression ein?
+
+1. Alternativlosigkeit, d.h. Legitimationsstrategien versagen
+2. Regimecharakteristika:
+    a. Inklusivität autoritärer Regime
+    b. Politischer Einfluss von Sicherheitsakteuren
+3. Eigenschaften des Staates
+    a. Scope & cohesion
+    b. Nähe von Regimeführung und Sicherheitsakteuren
+4. Merkmale der Opposition
+    a. Protestmittel, z.B. Gewalt
+    b. Umfang/Radikalität der Forderungen
+    c. Mobilisierungsgrad
+
+## Nutzt politische Repression etwas?
+
+- Funktioniert sie überhaupt? $\rightarrow$ Endogenität
+- Definiert Repression autoritäres Regieren?
+- In welchem Verhältnis stehen Formen polit. Repression?

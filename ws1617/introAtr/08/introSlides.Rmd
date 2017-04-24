@@ -1,0 +1,116 @@
+---
+title: "Sitzungsbegleitende Folien"
+author: "Dag Tanneberg"
+date: "12/6/2016"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+# Zusammenfassung vom 29. November
+
+## Kontextualisierung
+
+- "*Electoral authoritarian regimes* establish the
+  institutions of liberal democracy on paper, yet subvert
+  them in practice through severe, widespread and systematic
+  manipulation." (Schedler 2013: 1, meine Hervorh.)
+  
+- Seit 1990er EA häufigste Form der Autokratie
+
+- Passen demokratische Institutionen und demokratisches
+  Regieren zusammen?
+    1. "systemfremde Sollbruchstellen" (Merkel 2010: 60)
+    2. "nominally democratic institutions [\dots] serve
+      distinctively authoritarian ends" (Svolik 2012: 12)
+
+## Zentrale Gedanken
+
+\begin{enumerate}
+  \item Distribution an strategisch wichtige Akteure
+  \begin{itemize}
+    \item knappe Güter fair und transparent verteilen
+    \item destabilisierenden Verteilungskonflikten vorbeugen
+  \end{itemize}
+  \item Monitoring von Parteifunktionären/Bürokraten
+  \begin{itemize}
+    \item Regimetreue und Leistungsfähigkeit ungewiss
+    \item zuverlässige Informationsquelle benötigt
+  \end{itemize}
+  \item Wahlen $\equiv$ "tool to manage domestic political elite" (49)
+\end{enumerate}
+ 
+ ## Distribution an strategisch wichtige Akteure
+
+\begin{quote} 
+  The electoral auction creates a market system [\dots]
+  in which channeled competition between members of Egypt’s
+  hegemonic party and party-affiliated independents takes
+  place according to well-established norms and expectations.
+  Individuals who engage in the largest amount of
+  redistribution within their districts are given the
+  opportunity to reap the benefits of parliament. Elections,
+  then, are a decentralized distribution mechanism that aids
+  authoritarian survival by regularizing intra-elite
+  competition, while at the same time outsourcing the cost
+  of political mobilization and redistribution to the
+  rent-seeking elite." (50)
+\end{quote}
+
+## Monitoring von Parteifunktionären/Bürokraten
+
+\begin{quote}
+  "Although these individuals are not seeking elected
+  political office themselves, their ability to mobilize
+  voters and achieve a favorable outcome for party
+  candidates with a minimum of fraud and coercion reflects
+  important characteristics, including capability and
+  loyalty. In this way, the party is able to dismiss those
+  individuals a) who are underperforming due to poor
+  competence or b) whose loyalty to the party is in
+  question." (59)
+\end{quote}
+
+# Sitzungsbegleitende Folien
+
+## Wie lange überdauern Autokratien? ([GWF 2014](http://sites.psu.edu/dictators/))
+```{r, message=FALSE, echo=FALSE, fig.align='center', fig.width=4, fig.height = 4/1.618}
+library('foreign')
+gwf <- read.dta(
+  "/Users/dag/Dropbox/data/GWF Autocratic Regimes 1.2/GWFcases.dta"
+)
+gwf <- within(gwf, {
+  reg_type <- ifelse(
+    gwf_regimetype %in% c(
+      "party-based", "party-personal", "party-military",
+      "party-personal-military", "oligarchy"
+    ), 1, ifelse(gwf_country == "Iran" & gwf_startyr == 1980, 1, NA)
+  )
+  reg_type <- ifelse(gwf_regimetype == 'personal', 2, reg_type)
+  reg_type <- ifelse(gwf_regimetype %in% c(
+      'military', 'military-personal', 'indirect military'
+    ), 3, reg_type
+  )
+  reg_type <- ifelse(gwf_regimetype == 'monarchy', 4, reg_type)
+  reg_type <- factor(
+    reg_type,
+    levels = c(3, 2, 1, 4),
+    labels = c('Militär', 'Personal.', 'Einpartei', 'Monarchie')
+  )
+  delta <- ifelse(!is.na(gwf_endyr), gwf_endyr, 2010) - gwf_startyr
+  }
+)
+
+library('ggplot2'); library('scales')
+library('extrafont'); loadfonts()
+ggplot(data = gwf, aes(x = delta)) +
+  stat_density(colour = 'black', geom = 'line') +
+  facet_grid(~reg_type, scales = 'free_x') +
+  geom_rug() +
+  scale_y_continuous(limits = c(0, .08), breaks = seq(0, .08, by = .02), labels = comma) +
+  labs(x = 'Überlebensdauer in Jahren', y = 'Dichte') +
+  theme_grey(base_family = 'CMU Sans Serif')
+```
