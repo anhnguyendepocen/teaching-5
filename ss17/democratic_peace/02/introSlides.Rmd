@@ -14,7 +14,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Achten Demokratien die körperliche Unversehrtheit?
+## Achten etablierte Demokratien die körperl. Unversehrtheit?
 
 ```{r heatmap, echo = FALSE, message=FALSE, fig.align = 'center', fig.width = 4, fig.height = 4/1.5}
 # workspace setup ==========================================
@@ -58,13 +58,13 @@ scale_x_continuous(
 scale_y_discrete(expand = c(0, 0)) +
 scale_fill_brewer(type = 'seq', palette = 9) +
 theme_minimal(base_size = base_size) +             ## add theme
-labs(x = "", y = "", fill = "PI Violations") +
+labs(x = "", y = "", fill = "CIRI PI Violations") +
 guides(     ## remove white slashes from fill legend boxes
-  fill = guide_legend(nrow = 1, override.aes = list(colour = NULL))
+  fill = guide_legend(nrow = 1, override.aes = list(colour = 'white'))
 ) +
 theme(                      ## finishing touches to theme
   text = element_text(family = 'sans'),
-  legend.position = c(.325, 1.04),
+  legend.position = c(.37, 1.04),
   legend.direction = "horizontal",
   legend.key = element_rect(colour = "white"),
   legend.key.size = grid::unit(.5, "lines"),
@@ -77,13 +77,13 @@ theme(                      ## finishing touches to theme
   plot.margin = unit(c(1, .1, 0, 0), "lines") ## crop margins
 )
 print(p)
-rm(df, p)
+# rm(df, p)
 ```
 
 ## Mögliche Anknüpfungspunkte einer Replikationsstudie
 
-1. Was sind etablierte Demokratien? Gehört Südafrika dazu?
-2. Wie groß ist der Untersschied zu Nichtdemokratien?
+1. Was sind etablierte Demokratien und gehört Südafrika dazu?
+2. Wie groß ist der Unterschied zu Autokratien?
 3. Ist die Zeitperiode der Analyse angemessen?
 4. Wie gut misst der CIRI Phyiscal Integrity Index?
 
@@ -93,8 +93,8 @@ rm(df, p)
 1. Einführung in die Friedens- & Konfliktforschung
 2. Aufriss der Staatsrepressionsforschung
 3. Sicherer Umgang mit STATA (12/14)
-4. Wiederholung grundlegender Analysetechniken
-5. Einführung in weiterführende Techniken der statistischen Datenanalyse
+4. Auffrischung grundlegender Arbeitstechniken
+5. Weiterführende Anwendungen der Datenanalyse
 
 ## Leistungsanforderungen für 6 ECTS
 
@@ -130,7 +130,7 @@ Hausarbeit zusammen.
 
 1. Staatsrepression und Demokratie
 2. Vorstellung von Standardmaßen der Staatsrepressionsforschung
-3. Replikationsstudien
+3. Weiterführende Diskussion und Replikationsstudien
     - Datenexploration mit STATA
     - lineare und logistische Regression
     - Modelldiagnostik, -vergleich und -diskussion

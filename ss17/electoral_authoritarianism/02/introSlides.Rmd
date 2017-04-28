@@ -16,7 +16,7 @@ library('ggplot2')
 library('extrafont'); loadfonts()
 library('tidyr')
 ```
-## Eine schwere Frage?
+## Eine leichte Frage
 
 \centering
 Ist die Türkei nach dem Referendum vom 16. April 2017
