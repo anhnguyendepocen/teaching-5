@@ -1,0 +1,101 @@
+---
+title: "Zusammenfassung vom 05/08/2017"
+author: "Dag Tanneberg"
+date: "05/15/2017"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+```{r optionsChunk, echo = FALSE}
+```
+
+## Wie definiert man politische Repression?
+
+\begin{quote}
+  \normalfont
+  [R]\textit{epression} is any action by another group which
+  raises the contender s cost of collective action. [\dots]
+  (We call repression [\dots] \textit{political} if the other
+  party is a government.)
+\end{quote}
+Tilly (1978: 7).
+
+## Wie definiert man politische Repression?
+
+\small
+\begin{quote}
+  \normalfont
+  By most accounts, repression involves the actual or
+  threatened use of physical sanctions against an individual
+  or organization, within the territorial jurisdiction of
+  the state, for the purpose of imposing a cost on the
+  target as well as deterring specific activities and/or
+  beliefs perceived to be challenging to government
+  personnel, practices or institutions. [\dots] repressive
+  behavior relies on threats and intimidation to compel
+  targets, but it does not concern itself with all coercive
+  applications [\dots]. Rather, it deals with applications
+  of state power that violate First Amendment–type rights,
+  due process in the enforcementand adjudication of law, and
+  personal integrity or security.
+\end{quote}
+Davenport (2007: 2).
+
+## Wie definiert man politische Repression?
+
+\centering
+
+\begin{tabular}{*{2}{l}}
+\hline
+Gemeinsamkeiten & Unterschiede bei Davenport\\
+\hline
+Staat oder seine Agenten & Verletzt fundam. Rechtsansprüche \\ 
+Instrumentelles Handeln & Schreckt Handeln \& Einstellungen ab \\
+Reaktives Handeln & Bedrohungswahrnehmung reicht aus \\
+\hline
+\end{tabular}
+
+## Wie erklärt man die Anwendung politischer Repression?
+
+- i.d.R. informaler entscheidungstheoretischer Ansatz
+- wägen Kosten (c), Nutzen (b) und Erfolgschance (p)
+- formal: $Eu(r) = p(b-c) - (1-p)c$
+- **Threat-Repression-Nexus** (Davenport 2007: 7).
+\begin{quote}
+\small
+\normalfont
+  [\dots] governing authorities should respond with
+  repression to behavior that threatens the political
+  system, government personnel, the economy, or the lives,
+  beliefs, and livelihoods of those within their territorial
+  jurisdiction.
+\end{quote}
+
+## Welche Rolle spielt die Demokratie?
+
+- **Domestic democratic peace** (Davenport 2007: 10)
+    - Norm der gewaltlosigkeit in Demokratie
+    - polit. Konflikte zentrales Element der Demokratie
+    - Verantwortung ggü. Wähler & Gewaltenteilung
+    - institutionelle Alternativen zu polit. Repression
+    
+## Wie wägt man Rechte gegeneinander ab?
+
+**Test of proportionality**
+
+- Hat die Einschränkung ein legitimes Ziel? \newline (z.B. öffentliche Sicherheit)
+- Beruht die Einschränkung auf einem eindeutigen und allgemein zugänglichen Gesetz? 
+  \newline 
+  (z.B. Art. 8 Abs. 2 GG, Versammlungsgesetze der Länder)
+- Ist der Eingriff dem identifizierten Ziel angemessen
+  und für dessen Durchsetzung in einer demokratischen
+  Gesellschaft notwendig? \newline 
+  (z.B. Recht auf *friedliche* Versammlung)
+- Gibt es einen Schutz gegen die willkürliche Anwendung
+  von Beschränkungen? \newline
+  (z.B. Widerspruchsrecht gegen Verwaltungsentscheidungen)
+  

@@ -1,0 +1,74 @@
+---
+title: "Zusammenfassung vom 05/08/2017"
+author: "Dag Tanneberg"
+date: "05/15/2017"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+```{r, echo = FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library('ggplot2')
+library('extrafont'); loadfonts()
+```
+
+## Was sind Menschenrechte?
+
+- **MR** nach international. Recht anerkannte, moral. Ansprüche
+- Verbindliche Spielregeln für Verhältnis Bürger-Staat
+- Dazu gehören mindestens:
+    - Internationale Erklärung der Menschenrechte (1948)
+    - Internationaler Pakt über bürgerl. und polit. Rechte (1966)
+    - Internationaler Pakt wirtschaftl., soz. und kult. Rechte (1966)
+    - $\equiv$ International Bill of Human Rights
+- legalistische Int. im Ggs. zu Philosophie & Sozialanthropologie
+
+## Wie misst man den Respekt vor Menschenrechten
+
+- **3 analytische Gesichtspunkte**
+    - **rights-in-law** Gewährt der Staat MR?
+    - **rights-as-policy** Ergreift der Staat Maßnahmen zur Einlösung?
+    - **rights-in-practice** Können Bürger MR wahrnehmen?
+
+- **4 empirische Ansätze**
+    - **Ereignisdaten** *Wer* hat *was* *wem* angetan?
+    - **Standardbasierte Daten** Exp.-urteile auf einer Ordinalskala
+    - **Umfragedaten**
+    - **Administrative Statistik**
+    
+## Was messen CIRI & PTS?
+
+- rights-in-practice
+- standardbasierte Daten
+- Auswertung der jährlichen Berichte von US State Dept. & AI
+- **Staatsterror**
+    - Verletzungen des Rechts auf körperl. Unversehrtheit durch den Staat oder seine Agenten
+    - polit. Haft. Folter, Verschleppung, außergerichtl. Tötung
+    
+## Wie messen CIRI & PTS?
+\begin{columns}
+  \begin{column}{.49\linewidth}
+  \textbf{CIRI}
+  \begin{itemize}
+    \item 3-stufige Ordinalskala
+    \item desaggreg. Bewertung
+    \item Intensität: Schwellenwerte, Signalwörter
+    \item absoluter Maßstab: keine Gewichtung nach Bevölkerungsgröße, Art des Verstoßes
+  \end{itemize}
+  \end{column}
+  \begin{column}{.49\linewidth}
+  \textbf{PTS}
+  \begin{itemize}
+    \item 5-stufige Ordinalskala
+    \item summarische Bewertung von \textit{scope}, \textit{intensity} und \textit{range}
+    \item benefit-of-doubt-Regel
+    \item relativer Maßstab: implizite Gewichtung nach Bevölkerungsgröße, Art des Verstoßes
+  \end{itemize}
+  \end{column}
+\end{columns}
+
+

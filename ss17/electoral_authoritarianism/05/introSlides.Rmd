@@ -1,0 +1,210 @@
+---
+title: "Zusammenfassung vom 05/08/2017"
+author: "Dag Tanneberg"
+date: "05/15/2017"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+```{r, echo = FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library('ggplot2')
+library('extrafont'); loadfonts()
+```
+
+## Fragestellung
+
+- **Ethisches Prädikat** Demokratie setzt Werte durch
+- **Wahlen** einfachste Form polit. Partizipation in der Demokratie
+- **Fragestellung** Stellenwert von Wahlen für Werte?
+- **Antwortstrategie**
+    a. Def. Wahlen & demokratische Wahlen
+    b. Bestimmung ``des'' Werts der Demokratie
+    c. Anteil demokratischer Wahlen an der Einlösung
+
+## Wahlen & Demokratische Wahlen
+
+- **Wahl** Verfahren/Technik zur Bildung von Körperschaften
+  oder Vergabe von Regierungsgewalt
+- **demokratische Wahl**
+    a. periodische Wahlen & allgemeines Wahlrecht
+    b. frei & geheim: polit. Angebot nicht willkürlich eingeschränkt
+    c. verbindlich & Mehrheitsprinzip
+- **Funktion demokrat. Wahlen für die Demokratie**
+    a. Repräsentation politischer Interessen
+    b. Bestellung einer Regierung
+    c. Bildung einer politischen Opposition
+
+## Demokrat. Wahlen & Wert der Demokratie
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{Problem}
+\begin{itemize}
+  \item $\exists$ Konzeptionen der Dem.
+  \item[$\rightarrow$] Wert der Dem. veränderlich
+\end{itemize}
+
+\textbf{Lösungsversuch}
+\begin{itemize}
+  \item Vgl. prominenter Konz.
+  \item Dem. Wahlen sind
+  \begin{itemize}
+    \item notwendig \& hinreichend (Weber, Dahl, Downs)
+    \item notw., aber nicht hinr. (Rawls, Pettit)
+    \item weder notw. noch hinr. (Fishkin, Barber)
+  \end{itemize}
+  \item Schnittmenge: Non-Tyrannei
+\end{itemize}
+
+\end{column}
+\begin{column}{0.5\textwidth}
+```{r necSufCond, echo = FALSE, fig.align='center', fig.width = 2, fig.height=2.5}
+library('ggplot2')
+library('tidyr')
+pdta <- expand.grid(a = 0:1, b = 0:1)
+pdta <- within(pdta, {
+  nec <- ifelse(b <= a, 1, 0)
+  suf <- ifelse(a <= b, 1, 0)
+  necsuf <- ifelse(a == b, 1, 0)
+  a <- factor(a, 0:1, c("~A", "A"))
+  b <- factor(b, 0:1, c("~B", "B"))
+  }
+)
+pdta <- gather(pdta, 'cond', 'value', nec:necsuf)
+pdta <- within(pdta, {
+  value <- ifelse(cond == 'suf', 1, value)
+  cond <- factor(
+    cond,
+    c('necsuf', "nec", 'suf'),
+    c('notwendig & hinreichend', 'notwendig & ~hinreichend', '~notwendig & ~hinreichend')
+  )
+  }
+)
+pdta <- pdta[rep(1:nrow(pdta), each = 5), ]
+ggplot(
+  data = subset(pdta, value == 1),
+  aes(x = a, y = b)) +
+  geom_jitter(
+    position = position_jitter(width = .2, height = .2)
+  ) +
+  facet_wrap(~ cond, nrow = 3, ncol = 1) +
+  ggthemes::theme_fivethirtyeight() +
+  theme(plot.margin = grid::unit(rep(0.2, 4), 'lines'))
+
+```
+\end{column}
+\end{columns}
+
+## Synthese: Demokrat. Wahlen & Non-Tyrannei
+
+- "Ablehnung ungezügelter Machtausübung" (30)
+- "konsitutionelle Demokratie liberaler Provenienz" (31)
+- **Beschränkungen polit. Macht**
+    - Verfassung: inhaltlich (unantastbare Rechtsgüter)
+    - Gewaltenteilung/-verschränkung: Machtdispersion
+    - Dem. Wahlen: inhaltlich (Rechenschaft) & zeitlich (Regelmäßigkeit)
+- **Kritik**
+    - niedrige Wahlbeteiligung $\rightarrow$ Wann werden Wahlen sinnlos?
+    - Rechenschaftspflicht $\rightarrow$ Wofür werden
+      Regierungen abgewählt?
+    - soziale Ungleichheit $\rightarrow$ Können alle Rechenschaft einfordern?
+
+## Was passiert mit dem Eigenschaftsraum der Klassifikation?
+```{r}
+library('ggplot2')
+pdta <- expand.grid(
+  exselec = factor(
+    1:3, 1:3, c('CE directly elected', 'CE indirectly elected', 'CE not elected')
+  ),
+  legselec = factor(
+    0:2, 0:2, c('No legislature', 'Non-elective', 'Elective')
+  ),
+  multiple_parties = factor(
+    0:2, 0:2, c('No parties', '1 party', 'At least 2 parties')
+  ),
+  gov_change = factor(0:1, 0:1, c('No alternation', 'At least 1 alternation'))
+)
+pdta <- within(pdta, {
+  democracy <- ifelse(
+    exselec %in% c('CE directly elected', 'CE indirectly elected') &
+    legselec == 'Elective' &
+    multiple_parties == 'At least 2 parties' &
+    gov_change == 'At least 1 alternation',
+    1, 0
+  )
+  democracy <- factor(democracy, 0:1, c('Not-democracy', 'Democracy'))
+  }
+)
+ggplot(data = pdta, aes(x = legselec, y = multiple_parties)) +
+  geom_tile(fill = 'white', colour = 'grey85', size = .5) +
+  scale_x_discrete(expand = c(0,0)) +
+  scale_y_discrete(expand = c(0,0)) +
+  facet_grid(exselec ~ gov_change) +
+  theme_grey(base_family = 'CMU Sans Serif', base_size = 18) +
+  theme(
+    axis.title = element_blank(),
+    legend.position = 'bottom',
+    legend.direction = 'horizontal',
+    legend.title = element_blank(),
+    axis.ticks = element_blank()
+  )
+```
+
+## Was passiert mit dem Eigenschaftsraum der Klassifikation?
+
+```{r}
+ggplot(data = pdta, aes(x = legselec, y = multiple_parties)) +
+  geom_tile(aes(fill = democracy), colour = 'grey85', size = .5) +
+  scale_x_discrete(expand = c(0,0)) + 
+  scale_y_discrete(expand = c(0,0)) +
+  scale_fill_manual(values = c('white', 'darkorange')) +
+  facet_grid(exselec ~ gov_change) +
+  theme_grey(base_family = 'CMU Sans Serif', base_size = 18) +
+  theme(
+    axis.title = element_blank(),
+    legend.position = 'bottom',
+    legend.direction = 'horizontal',
+    legend.title = element_blank(),
+    axis.ticks = element_blank()
+  )
+```
+
+## Trennschärfeverlust in [Democracy & Dictatorship (Link)](https://sites.google.com/site/joseantoniocheibub/datasets/democracy-and-dictatorship-revisited)
+
+```{r}
+library('foreign')
+dd <- read.dta('./data/ddv1.dta')
+dd <- within(dd, {
+  regime_alt <- ifelse(
+    democracy == 0 & type2 == 0, 0,  ifelse(
+      democracy == 0 & type2 == 1, 1, ifelse(
+        democracy == 1, 2, NA
+      )
+    )
+  )
+  regime_alt <- factor(regime_alt, 0:2, c('Diktatur', 'Typ 2 Fehler', 'Demokratie'), ordered = TRUE)
+  }
+)
+ggplot(
+  data = subset(dd, !is.na(regime_alt)),
+  aes(x = year, fill = regime_alt)) +
+  geom_bar(width = 1, colour = 'white', size = .1) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_y_continuous(
+    expand = c(0,0), limits = c(0, 225),
+    breaks = seq(0, 225, 50)
+  ) +
+  scale_fill_brewer(type = "qual", palette = 3) +
+  labs(y = 'Absolute Häufigkeit') +
+  theme_grey(base_family = 'CMU Sans Serif', base_size = 22) +
+  theme(
+    legend.position = 'top', legend.direction = 'horizontal',
+    legend.title = element_blank(),
+    axis.title.x = element_blank()
+  )
+rm(list = ls())

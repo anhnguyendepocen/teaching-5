@@ -1,0 +1,132 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+  \usetikzlibrary{positioning}
+  \usetikzlibrary{calc}
+  \usetikzlibrary{matrix}
+\usepackage{adjustbox}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+    
+
+
+\title{Zusammenfassung vom 05/15/2017}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  ``Die politischen Dynamiken des elektoralen Autoritarismus''\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Sommersemester 2017
+}
+\date{\today}
+
+% document body --------------------------------------------
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+  \frametitle{Fragestellungen der vergangenen Sitzung}
+  \begin{enumerate}
+    \item Helfen uns demokratische Wahlen, Autokratien zu erkennen?
+    \item Warum sind Wahlen im elekt. Autoritarismus wichtig?
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Helfen uns demokratische Wahlen, \dots?}
+  \textbf{Klassifikation politischer Regime nach Przeworski et al.}
+  \begin{itemize}
+    \item minimaler, prozeduraler Demokratiebegriff
+    \item dichotome Unterscheidung nach streng objektiven Merkmalen
+    \item explizite Darstellung systematischer Messfehler
+  \end{itemize}
+
+  \begin{quote}
+    \normalfont
+    \small
+    ``Our purpose is to distinuish between (1) regimes that
+    allow some, even if limited, regularized competition
+    among conflicting visions and interests and (2) regimes
+    in which some values or interests enjoy a monopoly
+    buttressed by the threat or the actual use of force.
+    Thus `democracy', for us, is a regime in which those who
+    govern are selected through contested elections. This
+    definition has two parts: `government' and
+    `contestation'.'' (S. 15)
+  \end{quote}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Helfen uns demokratische Wahlen, \dots?}
+  \input{ACLPtree.tex}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Helfen uns demokratische Wahlen, \dots?}
+  \textbf{ {\sc typeii} Ärger um den Regierungswechsel}
+  \begin{itemize}
+    \item Lässt eine Regierung nur wählen, weil sie nicht verliert?
+    \item[$\rightarrow$] Objektive Merkmale (\#1--3) reichen nicht aus
+    \item ``Err we must; the question is which way.'' (23)
+    \begin{itemize}
+      \item Typ 1 Wenn im Zweifel, dann Autokratie.
+      \item Typ 2 Wenn im Zweifel, dann Demokratie.
+    \end{itemize}
+    \item ``We choose to take a cautious stance, that is, to avoid type-II errors.'' (25)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Warum sind Wahlen im elekt. Autoritarismus wichtig?}
+  \textbf{Schedlers Kritik an Przeworski et al.}
+  \begin{itemize}
+    \item Subj. Urteile unverzichtbar zur Bewertung obj. Merkmale
+    \item[$\rightarrow$] Wahlmanipulation selten objektiver Fakt
+    \begin{enumerate}
+      \item Wahlmanipulation i.d.R. vielfältig \& dezentralisiert
+      \item autorit. Herrschaft überformt Präferenzgenese \& -äußerung
+    \end{enumerate}
+    \item Erhebung des autorit. Gehalts einer Wahl durch subj. Urteilen
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Warum sind Wahlen im elekt. Autoritarismus wichtig?}
+  \textbf{Was ist dann elektoraler Autoritarismus?}
+  \begin{itemize}
+    \item neuer Typ Autoritarismus
+    \item betont Zugang zu polit. Macht \& Einfluss
+    \item beschreibt die Öffnung autoritärer Herrschaft für
+    \begin{enumerate}
+      \item (semi-)kompetitive Wahlen zu exek. \& legisl. Ämtern
+      \item politischem \& sozialem Pluralismus
+      \item organisierte Dissidenz
+    \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Warum sind Wahlen im elekt. Autoritarismus wichtig?}
+  \textbf{Wahlen im EA sind konstitutiv für}
+  \begin{enumerate}
+    \item \textbf{Nested games} (1) Manipulation \& (2) institutionelle Reform
+    \item \textbf{Bürger} Primat demokrat. Legitimation i.S.v. Zustimmung
+    \item \textbf{teilautonome Opposition} (1) Partizipation oder Boykott, (2) Akzeptanz oder Protest
+    \item \textbf{herrschende Parteien} Mobilisierung, Patronage \& Konfliktschlichtung
+  \end{enumerate}
+\end{frame}
+
+
+\end{document}
