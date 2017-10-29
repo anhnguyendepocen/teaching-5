@@ -1,0 +1,159 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+  \usetikzlibrary{positioning}
+  \usetikzlibrary{calc}
+  \usetikzlibrary{matrix}
+\usepackage{adjustbox}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+    
+
+
+\title{Zusammenfassung vom 06/26/2017}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  ``Die politischen Dynamiken des elektoralen Autoritarismus''\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Sommersemester 2017
+}
+\date{07/03/2017}
+
+% document body --------------------------------------------
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Wie wird gewählt?}
+
+Elektoraler Autoritarismus unterminiert systematisch und in
+verschiedensten Varianten den Wettbewerbsgrad von Wahlen.
+
+\begin{enumerate}
+  \item Welche Rolle spielt Gewalt?
+  \begin{itemize}
+    \item ständige Möglichkeit unter autoritärer Herrschaft
+    \item Repression $=$ Gewalt als Herrschaftsmittel
+  \end{itemize}
+  \item Welche Rolle spielen politische Institutionen?
+  \begin{itemize}
+    \item nominell demokr. Inst. $=$ Instrumente autorit. Herrschaft
+    \item Wie erreicht man diese Transmutation?
+  \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Norma Kriger, ZANU(PF) Strategies}
+  Anhänger und Kandidaten der Opposition werden vor und nach
+  der Wahl Opfer systematischer Diskriminierung.
+  \vfill
+  \textbf{Politischer Diskurs}
+  \begin{itemize}
+    \item Androhung \& Rechtfertigung von Gewalt
+    \item Diffamierung polit. Opposition als Staatsfeinde
+  \end{itemize}
+  \vfill
+  \textbf{Anwendung von Gewalt}
+  \begin{itemize}
+    \item Anwerbung jugendl. Schlägertrupps (Ausnutzung sozialer Not)
+    \item körperliche Misshandlung \& Entzug von Lebenschancen
+    \item Zwangsmitgliedschaften in der ZANU(PF)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Golosov, Authoritarian Electoral Engineering}
+  \begin{itemize}
+    \item \textbf{Hintergrund} Rezentralisierung d. russ. Staates unter Putin
+    \item \textbf{Zielkonflikt} Autoritäre Macht vs. Demokrat. Legitimität
+    \item \textbf{polit. Instrument} Verrechnung von Stimmen in Sitze
+    \begin{itemize}
+      \item vor 2007 \href{https://de.wikipedia.org/wiki/Hare-Niemeyer-Verfahren}{\textit{Hare-Niemayer-Verfahren}}
+      \item nach 2007: Imperiali Highest Averages (IHA) empfohlen
+      \item i.d.R. Tyumen (IHA, aber 1 Sitz für jede Partei $\geq 7\%$)
+    \end{itemize}
+  \end{itemize}
+  \begin{quote}
+  \textnormal{%
+    \scriptsize{%
+      ``Thus in fact, the political conditions of electoral
+      authoritarianism generate two mutually contradictory
+      sets of incentives for electoral engineering. On the
+      one hand, there are incentives for maintaining the
+      political monopoly, which required providing the
+      pro-government party with super-majorities previously.
+      On the other hand, there are incentives for securing
+      the democratic appearance of the regime and co-opting
+      the opposition, which makes it imperative to ensure
+      that licensed opposition parties are represented. (1623)
+    }
+  }
+  \end{quote}
+\end{frame}
+
+\end{document}

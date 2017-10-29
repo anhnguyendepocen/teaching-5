@@ -1,0 +1,144 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+%\usepackage{beamerthemeshadow}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+  \usetikzlibrary{positioning}
+  \usetikzlibrary{calc}
+  \usetikzlibrary{matrix}
+\usepackage{booktabs}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+    
+
+
+\title{Zusammenfassung vom 05/22/2017}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Bringt uns die Demokratie den Frieden?{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Sommersemester 2017
+}
+\date{\today}
+
+% Slide show contents --------------------------------------
+\begin{document}
+\maketitle
+
+\begin{frame}
+\frametitle{Fragestellungen}
+\begin{enumerate}
+  \item Was leistet die Demokratiemessung, warum ist sie wichtig?
+  \item Welche Varianten der Demokratiemessung gibt es? \\
+    Welche relativen Vor- und Nachteile haben sie?
+  \item Wie vergleicht man Ansätze in der Demokratiemessung?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Was leistet die Demokratiemessung, \dots?}
+\begin{block}{\textbf{Demokratiemessung}}
+  Die wissenschaftliche Einschätzung der demokratischen
+  Qualität politischer \textit{Regime}, d.i. {\glqq}the set
+  of rules, norms, or institutions that determine how the
+  government is constituted, how it is organized, and how
+  major decisions are made{\grqq} (146)
+\end{block}
+
+\textbf{Leistungen der Demokratiemessung}
+\begin{itemize}
+  \item entwickelt empirisch-analytische Konzepte
+  \item beschreibt und ordnet empirische Vielfalt
+  \item erschließt latente Variablen der empirischen Forschung
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Welche Varianten der Demokratiemessung gibt es?}
+Demokratiekonzepte unterscheiden sich i.\,A. nach 2 Dimensionen:
+
+\begin{enumerate}
+  \item Minimal/prozedural vs. maximal/substantiell
+  \begin{itemize}
+    \item Ist Demokratie nur eine Methode der Herrschaftsbestellung?
+    \item Nein, Demokratie kommt allein in Verfahren zum Ausdruck.
+    \item Ja, Demokratie hängt auch von Politikergebnissen ab.
+  \end{itemize}
+  \item Dichotom oder graduell
+  \begin{itemize}
+    \item Gibt es Abstufungen der Demokratie?
+    \item Nein, man kann auch nicht halb schwanger sein.
+    \item Ja, es gibt auch zw. Demokratien nennenswerte Unterschiede.
+  \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Welche Varianten der Demokratiemessung gibt es?}
+Zusammengefasst ergeben sich folgende Zuordnungen:
+
+\begin{tabular}{*{3}{l}}
+  \toprule
+  ~ & Dichotom & Graduell \\ \midrule
+  Minimal & Democracy \& Dictatorship & Polity IV\\
+  Substantiell & $\emptyset$ & Freedom House \\ \bottomrule
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vorteile und Nachteile im Vergleich}
+\begin{columns}
+  \begin{column}{.49\linewidth}
+  \textbf{Schmale Konzepte}
+  \begin{itemize}
+    \item erleichtern Kausalzshg.
+    \item verschleiern Unterschiede.
+  \end{itemize}
+  
+  \textbf{Substantielle Konzepte}
+  \begin{itemize}
+    \item integr. Vorbdg. \& Nebenflg.
+    \item setzen hohe Standards.
+  \end{itemize}
+  \end{column}
+  \begin{column}{.49\linewidth}
+  \textbf{Dichotomien}
+  \begin{itemize}
+    \item treffen klare Zuordnungen.
+    \item verkennen Heterogenität.
+  \end{itemize}
+  \textbf{Graduelle Messungen}
+  \begin{itemize}
+    \item sind präziser.
+    \item sind kaum interpretierbar.
+  \end{itemize}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Wie vergleicht man Ansätze in der Demokratiemessung?}
+\begin{block}{Objektivität}
+Ist die Messung von Messendem und Messsituation unabhängig? \\
+\end{block}
+
+\begin{block}{Reliabilität}
+Kommen wiederholte Messungen zu ähnlichen Ergebnissen?
+\end{block}
+
+\begin{block}{Validität}
+Handelt es sich um eine gültige Messung des Konzepts?
+\end{block}
+\end{frame}
+\end{document}

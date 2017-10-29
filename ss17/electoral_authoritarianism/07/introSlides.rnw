@@ -1,0 +1,119 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+%\usepackage{beamerthemeshadow}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+  \usetikzlibrary{positioning}
+  \usetikzlibrary{calc}
+  \usetikzlibrary{matrix}
+\usepackage{booktabs}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+    
+
+
+\title{Zusammenfassung vom 05/22/2017}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Die politischen Dynamiken des elektoralen Autoritarismus{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Sommersemester 2017
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{frame}
+  \frametitle{Fragestellungen}
+  \begin{itemize}
+    \item Wie definiert man autoritäre Herrschaft?
+    \item Welche zentralen Konflikte kennzeichnen sie?
+    \item Welche Anfordrg. stellt sie an die Analyse polit. Institutionen?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Wie definiert man autoritäre Herrschaft?}
+  \begin{block}{\textbf{Svoliks Prämissen}}
+  \begin{enumerate}
+    \item {\glqq}First, dictatorships inherently lack an
+      independent authority with the power to enforce
+      agreements among key political actors.{\grqq} (2)
+    \item {\glqq}Second, violence is an ever-present and 
+      ultimate arbiter of conflicts in authoritarian
+      politics.{\grqq} (ibid.)
+  \end{enumerate}
+  \end{block}
+
+  \textbf{Zweck von Prämissen}
+  \begin{itemize}
+    \item irreduzibler Ausgangspunkt der Theoriebildung
+    \item Deduktion weiterer Charakteristika
+    \item[$\rightarrow$] Power-sharing \& control sind Ableitungen!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Welche zentralen Konflikte kennzeichnen a.H.?}
+  \begin{enumerate}
+    \item Problem of authoritarian control
+    \begin{itemize}
+      \item vertikaler Konflikt zw. Diktator \& Bürgern
+      \item Machterhalt des D. gegen Btlg.-ansprüche der Bürger
+      \item Kann der D. Anreize für Stillschweigen schaffen?
+    \end{itemize}
+    \item Problem of authoritarian power-sharing
+    \begin{itemize}
+      \item horizontaler Konflikt zw. Diktator \& unterstützenden Eliten
+      \item Machtkonzentration vs. -dispersion
+      \item Können Eliten den Opportunismus des D. sanktionieren?
+    \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Welche zentralen Konflikte kennzeichnen a.H.?}
+\begin{figure}
+\centering
+\begin{tikzpicture}
+  % Define nodes -------------------------------------------
+  \node (0) {\textbf{Diktator}};
+  \node (1) [right = 10em of 0] {\textbf{Eliten}} ;
+  \node (2) [below = 8em of 0] {\textbf{Bevölkerung}} ;
+  \node (3) at ($(0)!.5!(1)$) [label = Power-sharing] {} ;
+  \node (4) at ($(0)!.5!(2)$) [label = {[rotate = 90]north:Control}] {} ;
+  \node (5) [below =.25em of 3] {(polit. Institutionen)} ;
+  \matrix [matrix of nodes, below of = 2, left delimiter=(,right delimiter=)] {
+    Repression \\
+    Kooptation \\
+  } ;
+  % Draw paths ---------------------------------------------
+  \draw (0) [<->] to (1) ;
+  \draw (0) [<->] to (2) ;
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Welche Anfordrg. stellt a.H. an die Analyse \dots?}
+  \begin{itemize}
+    \item {\glqq}compliance with institutions is as much of
+      a puzzle as are the consequences of those institutions{\grqq}
+    \item[$\rightarrow$] Warum sollten sich D. an selbstgegebene Institutionen halten?
+    \item[$\rightarrow$] Welche Verhaltenswirkung haben Institutionen unter a.H.?
+    \item polit. Institutionen verlangen selbstdurchsetzende Äquilibria
+  \end{itemize}
+\end{frame}
+\end{document}

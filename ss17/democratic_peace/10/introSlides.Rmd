@@ -1,0 +1,195 @@
+---
+title: "Sitzungsbegleitende Folien vom 06/19/2017"
+author: "Dag Tanneberg"
+date: "06/19/2017"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library("extrafont")
+library('ggplot2')
+loadfonts()
+```
+
+```{r introdutory graph}
+set.seed(6997)
+text_dta <- data.frame(
+  x = c(5, 8), y = c(4, 6), label = c("Delta~x", "Delta~y")
+)
+pdta <- pdta <- data.frame(
+  x = c(2, 2 + ceiling((10 - 2) * runif(2))),
+  y = c(4, 4 + ceiling((10 - 4) * runif(2)))
+)
+p1 <- ggplot(data = pdta[1:2, ], aes(x = x, y = y)) +
+  scale_x_continuous(
+    limits = c(1, 9), breaks = seq(1, 9, 2)
+  ) +
+  scale_y_continuous(
+    limits = c(3, 9), breaks = seq(3, 9, 2)
+  ) +
+  geom_segment(
+    aes(xend = x[2], yend = y[1]), colour = colors()[310]
+  ) +
+  geom_line(
+    arrow = grid::arrow(
+      length = grid::unit(.125, "inches"), type = "closed")
+  ) +
+  geom_point(colour = "black", fill = "white", shape = 21) +
+  labs(title = expression(y == beta[0] + beta[1]*x)) +
+  geom_text(
+    data = text_dta, aes(label = label), parse = TRUE,
+    hjust = -.2, vjust = 1.2
+  ) +
+  theme_minimal(base_family = "CMU Sans Serif")
+```
+
+## Wie bestimmt man eine Gerade?
+```{r, echo = FALSE, fig.width = 4, fig.height = 4 / 1.618, fig.align = 'center'}
+p1
+```
+
+## Wie bestimmt man eine Gerade?
+
+\begin{columns}
+\begin{column}{.33\linewidth}
+```{r, echo = FALSE, fig.width = 2, fig.height = 2, fig.align = 'center'}
+p1
+```
+\end{column}
+\begin{column}{0.66 \linewidth}
+\begin{align*}
+& geg.~P_1 = (2, 4); P_2 = (8, 8);\\
+& ges.~\beta_0; \beta_1 \\
+\\
+& \beta_1 = \frac{\Delta y}{\Delta x} = \frac{8 - 4}{8 - 2} = \frac{4}{6} = \frac{2}{3} \\
+\\
+& 4 = \beta_0 + \beta_1 * 2 \\
+& \beta_0 = 4 - \frac{2}{3} * 2 = 4 - \frac{4}{3} = \frac{8}{3}\\
+\\
+& y = \frac{8}{3} + \frac{2}{3} * x
+\end{align*}
+\end{column}
+\end{columns}
+
+
+## Wie bestimmt man jetzt eine Gerade?
+```{r, echo = FALSE, fig.width = 4, fig.height = 4 / 1.618,  fig.align = 'center'}
+p2 <- ggplot(data = pdta[1:2, ], aes(x = x, y = y)) +
+  scale_x_continuous(
+    limits = c(1, 9), breaks = seq(1, 9, 2)
+  ) +
+  scale_y_continuous(
+    limits = c(3, 9), breaks = seq(3, 9, 2)
+  ) +
+  geom_point(colour = "black", fill = "white", shape = 21) +
+  labs(title = expression(y == beta[0] + beta[1]*"x?")) +
+  theme_minimal(base_family = "CMU Sans Serif")
+p2 + geom_point(data = data.frame(x = 4, y = 7), pch = 21)
+```
+
+## Wie bestimmt man jetzt eine Gerade?
+
+- eindeutige Lösung ist nicht möglich
+- Schulwissen versagt bereits bei 3 Datenpunkten
+- Näherungslösungen werden benötigt
+
+## Was ist eine Näherungslösung?
+
+- Verfahren, das Voraussagen $\hat{y}$ über $y$ trifft
+- Voraussage und Beobachtung stimmen i.d.R. nicht überein
+- Differenz zwischen Beobachtung und Vorhersage $\equiv$ Residuum
+    - formal: $e = y - \hat{y}$
+- Interpretationen für Residuen sind vielfältig
+    - Messfehler für $y$
+    - Übersehene, systematische Einflüsse auf $y$
+    - Echte Zufälligkeit in der Beziehung $y \sim x$, etc.
+- Näherungslösungen kann man über ihre Residuen vergleichen
+
+## Was ist eine Näherungslösung?
+```{r, fig.width = 4, fig.height = 4/1.618, fig.align = 'center'}
+set.seed(23092014)
+x <- sample(1:10, 10, replace = FALSE)
+yhat <- 1 + .8 * x
+y <- yhat + rnorm(length(x), sd = 1.5)
+
+text_data <- data.frame(
+  x = c(x[3], x[3]), y = c(y[3], yhat[3]),
+  label = c("y[i]", "hat(y)[i]")
+)
+ggplot(data = data.frame(x, yhat, y), aes(x = x, y = y)) +
+  geom_abline(intercept = 1, slope = .8, size = .3) +
+  geom_segment(aes(xend = x, yend = yhat), colour = 'red') +
+  geom_point(shape = 21, colour = 'black', fill = 'white') +
+  geom_point(aes(y = yhat), shape = 19, size = .8) +
+  geom_text(
+    data = text_data, aes(label = label), 
+    family = 'CMU Sans Serif', parse = TRUE, hjust = 1.8, vjust = -.01
+  ) +
+  labs(title = expression(e[i] == y[i] - hat(y)[i])) +
+  scale_x_continuous(limits = c(0, 10), breaks = seq(0, 10, 2)) +
+  scale_y_continuous(limits = c(0, 10), breaks = seq(0, 10, 2)) +
+  theme_minimal(base_family = 'CMU Sans Serif')
+```
+
+## Was ist eine gute Näherungslösung?
+
+- Ansatz: $y = f(x, \beta, \epsilon) = f(x, \beta) + \epsilon = x\beta + \epsilon = \beta_0 + \beta_1x + \epsilon$
+    1. $y$ ist eine lineare Funktion von $x$
+    2. $\beta_1$ gibt Auskunft über die Stärke dieser Beziehung
+    3. $\epsilon$ kennzeichnet einen unvermeidbaren Vorhersagefehler 
+- Ziel: $\beta$ schätzen, sodass $\epsilon$ in der Summe minimal wird
+
+\begin{align*}\min_{\hat{\beta}}\sum_{i=1}^N\omega_i|e_i|\end{align*}
+
+## Was leistet das OLS-Verfahren?
+- Ordinary least squares (OLS): $\omega \sim$ Größe der Residuen
+\begin{align*}
+    & \min_{\hat{\beta}}\sum_{i=1}^N|e_i|\cdot|e_i|\\
+  = & \min_{\hat{\beta}}\sum_{i=1}^Ne_i^2\\
+  = & \min_{\hat{\beta}}\sum_{i=1}^N(y_i - \hat{y}_i)^2\\
+  = & \min_{\hat{\beta}}\sum_{i=1}^N(y_i - (\beta_0 + \beta_1x_i))^2  \\
+\end{align*}
+
+## Beispiel ohne erklärende Variable
+\begin{align*}
+    & \min_{\hat{y}}\sum_{i=1}^N(y_i - \hat{y})^2 \\
+    & \text{First order condition:}\\
+    & 0 = \frac{\partial}{\partial\hat{y}}\sum_{i=1}^N(y_i - \hat{y})^2 = -2\sum_{i=1}^N(y_i - \hat{y}) = 
+       (-2\sum_{i=1}^N(y_i)) + 2N\hat{y}\\
+    & \hat{y} = \frac{1}{N}\sum_{i=1}^N(y_i) = \bar{y}
+\end{align*}
+
+## Zusammenfassend
+
+1. Ist die Beziehung zwischen zwei oder mehr Variablen nicht
+  eindeutig bestimmt, dann müssen Näherungslösungen verwendet
+  werden. Dabei entstehen Residuen $e = y - \hat{y}$.
+2. Diese Residuen kann man nutzen, um unterschiedliche
+  Näherungslösungen miteinander zu vergleichen.
+3. Die lineare Regression ist eine Näherungslösung. Sie
+  behauptet, eine abhängige Variable $y$ ließe sich auf eine
+  gewichtete Summe unabhängiger Variablen $X\beta$
+  zurückführen.
+4. Schätzt man ein lineares Regressionsmodell im OLS verfahren,
+  dann sucht man Regressionsgewichte $\beta$, die die quadrierte
+  Summe der Residuen minimieren.
+5. Unter Geltung weiterer Annahmen (Gauss-Markov-Annahmen)
+  sind diese Koeffizienten *blue*, d.h.
+  *best unbiased linear estimators*.
+  
+## Genug Trockenschwimmen
+\begin{center}
+Auf nach STATA!
+\end{center}
+
+
+
+
+
+
