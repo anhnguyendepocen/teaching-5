@@ -1,7 +1,7 @@
 ---
-title: "Zusammenfassung vom 23. Oktober 2017"
+title: "Zusammenfassung vom 30. Oktober 2017"
 author: "dag.tanneberg@uni-potsdam.de"
-date: "30 Oktober 2017"
+date: "6 November 2017"
 output:
   beamer_presentation:
     includes:
@@ -16,19 +16,78 @@ output:
 
 1. Was ist Kausalität?
 2. Welche Annahmen treffen kausale Erklärungen?
+3. So what?
 
-# Was ist Kausalität?
+# Kontrafaktische Definition von Kausalität
 
 ```{r, fig.height = 2, message=FALSE,echo=FALSE,warning=FALSE, fig.width = 5, fig.height=2}
 source("~/github/teaching/ws1718/fors_des/04/demonstrate_causal_effect.R")
 ```
 
-\begin{figure}[t]
+\begin{quote}
+  According to [the counterfactual definition if causality; D.T.],
+  something has causal relevance of changing it (without
+  disturbing the rest of the system) would affect the outcome.
+  In other words, the outcome counterfactually depends on the
+  cause. Causes are difference-makers. (Toshkov 2016: 153f.)
+\end{quote}
+
+# Kausalität als theoretisches Konzept
+
+- **Kontrafaktisch**: Einheit *i* in **T**reatment *und* **C**ontrol
+    - fundamentale Unsicherheit kausaler Erklärungen
+- **Voraussetzung**: abhängige, unabh. und Kontrollvariablen
+- **Problem**: Einfluss unsystematischer Störgrößen auf $y_i^T - y_i^C$
+- **Lösung**: 
+    - hypothethische Pop. von Replikationsergebnissen
+    - Verteilung der Replikationsergebnisse $\equiv$ Zufallsvariable
+    - Zusammenfassen der Zufallsvariablen eliminiert Störgrößen
+
+\begin{figure}[b]
 \centering
 \includegraphics[width = \textwidth]{/Users/dag/github/teaching/ws1718/fors_des/04/demonstrate_causal_effect_cropped.pdf}
 \end{figure}
 
-- **Kontrafaktisch**: Einheit *i* in **T**reatment und **C**ontrol
-- **Voraussetzung**: abhängige, unabh. und Kontrollvariablen
-- **Problem**: Einfluss unsystematischer Störgrößen auf $y_i^T - y_i^C$
-- **Lösung**: hypothethische Pop. von Replikationsergebnissen
+# Welche Annahmen treffen kausale Erklärungen?
+
+- **Problem**: Wie schlägt man den Bogen von der Definition von
+  Kausalität zu kausaler Inferenz, d.h. dem Rückschluss
+  von Beobachtungsdaten auf Ursache und Wirkung?
+
+\begin{quote}
+ [\dots] the causal effect is the difference between the
+ systematic component of observations made when the explanatory
+ variable takes one value and the systematic component of
+ \underline{comparable observations} when the explanatory
+ takes on another value (KKV: 82f.; meine Hervorh.)
+\end{quote}
+
+# Welche Annahmen treffen kausale Erklärungen?
+
+## 1. Annahme: Einheitenhomogenität
+\begin{itemize}
+\small
+\item ``[\dots] the expected values of
+  the dependent variables from each unit are the same when
+  our explanatory variable takes on a particular value'' (KKV: 91).
+\item $\mu_1^T = \mu_2^T \land \mu_1^C = \mu_2^C \implies \mu_1^T - \mu_1^C = \mu_2^T - \mu_2^C = \mu_1^T - \mu_2^C$
+\end{itemize}
+
+## 2. Annahme: Konditionale Unabhängigkeit
+\begin{itemize}
+\small
+\item ``[V]alues are assigned to the explanatory variables independently
+of the values taken by the dependent variables'' (KKV: 94).
+\item X verursacht Y und nicht umgekehrt (keine Endogenität)
+\end{itemize}
+
+# So what?
+
+- Analyse gerichteter Wirkungszusammenhänge
+    - Verursacht X die Ausprägung von Y?
+    - Wie groß ist der Einfluss von X auf Y?
+- Robuster als Gesetze, funktionalist. Erkl. o. Intentionalitätsarg.
+- Kompatibel mit verschiedenen epistemolog. Grundhaltungen
+
+$\implies$ Enorme Leistungsfähigkeit und Flexibilität
+ 
