@@ -1,0 +1,34 @@
+---
+title: "Zusammenfassung vom 23. Oktober 2017"
+author: "dag.tanneberg@uni-potsdam.de"
+date: "30 Oktober 2017"
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+# Fragen der Sitzung
+
+1. Was ist Kausalität?
+2. Welche Annahmen treffen kausale Erklärungen?
+
+# Was ist Kausalität?
+
+```{r, fig.height = 2, message=FALSE,echo=FALSE,warning=FALSE, fig.width = 5, fig.height=2}
+source("~/github/teaching/ws1718/fors_des/04/demonstrate_causal_effect.R")
+```
+
+\begin{figure}[t]
+\centering
+\includegraphics[width = \textwidth]{/Users/dag/github/teaching/ws1718/fors_des/04/demonstrate_causal_effect_cropped.pdf}
+\end{figure}
+
+- **Kontrafaktisch**: Einheit *i* in **T**reatment und **C**ontrol
+- **Voraussetzung**: abhängige, unabh. und Kontrollvariablen
+- **Problem**: Einfluss unsystematischer Störgrößen auf $y_i^T - y_i^C$
+- **Lösung**: hypothethische Pop. von Replikationsergebnissen

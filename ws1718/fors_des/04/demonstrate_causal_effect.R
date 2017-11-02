@@ -7,16 +7,22 @@ library(extrafont)
 loadfonts()
 
 # definitions ----------------------------------------------
+o_par <- par()
 N <- 30
 x <- runif(N, min = 0, max = 1)
 realized_x <- quantile(x, .1)
 
 # generate plot --------------------------------------------
+#dev.new()
 pdf(
   file = "~/github/teaching/ws1718/fors_des/04/demonstrate_causal_effect.pdf",
-  width = 7, height = 1.2, family = "CMU Sans Serif"
+  width = 4.5, height = 1.2, family = "CMU Sans Serif"
 )
-par(bg = '#F0F0F0', mfrow = c(1, 3), mai = c(0, 0, .5, .1))
+# dev.off(); dev.new()
+par(
+  bg = '#F0F0F0', mfrow = c(1, 3),
+  mai = c(0, 0, .5, .1), mar = rep(1, 4), tcl = -.4
+)
 
 # (1) realized causal effect
 plot(
@@ -57,3 +63,7 @@ text(x = 0.5, y = dunif(0.5),
   label = expression(mu[i]^T - mu[i]^"C"), adj = c(0.5, 1.4)
 )
 dev.off()
+## housekeeping ============================================
+par(o_par)
+rm(list = ls())
+
