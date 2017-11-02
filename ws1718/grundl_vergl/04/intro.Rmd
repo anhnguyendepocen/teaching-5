@@ -1,0 +1,112 @@
+---
+title: "Zusammenfassung vom 30. Oktober 2017"
+author: "dag.tanneberg@uni-potsdam.de"
+date: "6 November 2017"
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+
+# Fragestellungen
+1. Was leistet die Demokratiemessung, warum ist sie wichtig?
+2. Welche Varianten der Demokratiemessung gibt es?
+    - Welche Vor- und Nachteile haben sie?
+3. Wie vergleicht man Ansätze in der Demokratiemessung?
+
+
+# Was leistet die Demokratiemessung, warum\dots?
+
+## **Demokratiemessung**
+
+  \dots ist die wissenschaftliche Einschätzung der
+  demokratischen Qualität politischer \textit{Regime}, d.i.
+  "the set of rules, norms, or institutions that determine
+  how the government is constituted, how it is organized,
+  and how major decisions are made" (CGG: 146)
+
+## **Leistungen der Demokratiemessung**
+
+- entwickelt empirisch-analytische Konzepte der Demokratie
+- beschreibt und ordnet Vielfalt der Demokratie
+- erschließt der empirischen Forschung eine latente Variable
+
+# Welche Varianten der Demokratiemessung gibt es?
+
+\begin{enumerate}
+  \item Minimales/prozedurales vs. maximales/substantielles Konzept
+  \begin{itemize}
+    \item Ist Demokratie nur eine Methode der Herrschaftsbestellung?
+    \item Nein, Demokratie kommt allein in Verfahren zum Ausdruck.
+    \item Ja, Demokratie hängt auch von Politikergebnissen ab.
+  \end{itemize}
+  \item Dichotome vs. graduelle Messung
+  \begin{itemize}
+    \item Gibt es Abstufungen der Demokratie?
+    \item Nein, man kann auch nicht halb schwanger sein.
+    \item Ja, alle Regime tragen mehr oder weniger Merkmale der Dem.
+  \end{itemize}
+\end{enumerate}
+
+
+# Welche Varianten der Demokratiemessung gibt es?
+
+\begin{tabular}{*{3}{l}}
+  \toprule
+  ~ & Dichotom & Graduell \\ \midrule
+  Minimal & Democracy \& Dictatorship & Polity IV\\
+  Substantiell & $\emptyset$ & Freedom House \\ \bottomrule
+\end{tabular}
+
+# Vorteile und Nachteile im Vergleich
+\begin{columns}
+  \begin{column}{.49\linewidth}
+  \textbf{Schmale Konzepte}
+  \begin{itemize}
+    \item erleichtern Kausalzshg.
+    \item verschleiern Unterschiede.
+  \end{itemize}
+
+  \textbf{Substantielle Konzepte}
+  \begin{itemize}
+    \item integr. Vorbdg. \& Nebenflg.
+    \item setzen hohe Standards.
+  \end{itemize}
+  \end{column}
+  
+  \begin{column}{.49\linewidth}
+  \textbf{Dichotomien}
+  \begin{itemize}
+    \item treffen klare Zuordnungen.
+    \item trunkieren Varianz.
+  \end{itemize}
+  \textbf{Graduelle Messungen}
+  \begin{itemize}
+    \item sind präziser.
+    \item sind kaum interpretierbar.
+  \end{itemize}
+  \end{column}
+\end{columns}
+
+# Wie vergleicht man Ansätze in der Demokratiemessung?
+
+## **Objektivität** ($\approx$ Replizierbarkeit)
+Ist die Messung von Messendem und Messsituation unabhängig?
+
+## **Reliabilität**
+Kommen wiederholte Messungen zu ähnlichen Ergebnissen?
+
+## **Validität**
+Handelt es sich um eine gültige Messung des Konzepts?
+
+# Das Verhältnis von Validität und Reliabilität
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale = .1]{/Users/dag/github/teaching/ws1718/grundl_vergl/04/Reliability_and_validity_DE.pdf}
+\end{figure}

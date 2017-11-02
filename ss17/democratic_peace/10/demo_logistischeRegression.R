@@ -1,3 +1,4 @@
+library('ggplot2')
 set.seed(23501)
 N <- 1000
 x <- rnorm(N)
