@@ -1,0 +1,42 @@
+---
+title: "Sitzungsbegleitende Folien"
+author: "Dag Tanneberg"
+date: "11/6/2017"
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Was ist ein Potenzgesetz?
+
+- haben die Form $y = a * x^b$
+- beschreiben die Verteilung natürlicher Phänomene
+- Beispiele: Worthäufigkeiten, 
+
+# Beispiel: Bevölkerungszahl deutscher Städte ([Wikipedia](https://de.wikipedia.org/wiki/Potenzgesetz_(Statistik)#/media/File:German_Cities_Pareto_Density_-_de.svg))
+  ![](/Users/dag/github/teaching/ws1718/fors_des/04/german_cities.png)
+
+# Logik der Falsifikation einer Implikation
+
+\begin{table}
+\centering
+\begin{tabular}{*{3}{c}}
+\toprule
+\textbf{H}ypothese & \textbf{D}aten & \textbf{H} $\implies$ \textbf{D} \\ \midrule
+W & W & \color{blue} W\\
+W & F & \color{red} F\\
+F & W & \color{blue} W\\ 
+F & F & W\\
+\bottomrule
+\multicolumn{3}{l}{Legende: {\color{blue} $\bullet$} Bestätigung {\color{red} $\bullet$} Falsifikation.}
+\end{tabular}
+\end{table}

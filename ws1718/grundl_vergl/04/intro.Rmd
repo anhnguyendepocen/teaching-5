@@ -104,7 +104,7 @@ Kommen wiederholte Messungen zu ähnlichen Ergebnissen?
 ## **Validität**
 Handelt es sich um eine gültige Messung des Konzepts?
 
-# Das Verhältnis von Validität und Reliabilität
+# Das Verhältnis von Reliabilität und Validität
 
 \begin{figure}[t]
 \centering
