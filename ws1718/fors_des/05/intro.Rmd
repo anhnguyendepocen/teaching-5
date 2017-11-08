@@ -1,0 +1,55 @@
+---
+title: "Zusammenfassung vom 6. November 2017"
+author: "dag.tanneberg@uni-potsdam.de"
+date: "6 November 2017"
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+# Fragen der Sitzung
+
+1. Welche Grenzen setzt uns die Epistemologie?
+2. Welche Grenzen setzt uns die Ontologie?
+3. Woran krankt die Falsifikation?
+
+# Welche Grenzen setzt uns die Epistemologie?
+
+- **Epistemologie**
+    - Auseinandersetzung mit Erkenntnisfähigkeit
+    - Welches Wissen akzeptieren wir als wissenschaftlich?
+- **Positivismus**
+    - Forschung nach dem Vorbild der Naturwissenschaften 
+    - Wissen aus Sinneswahrnehmungen (Phänomenalismus)
+    - Kausalerklärung: Manipulation objektiver Ursachen
+- **Interpretativismus**
+    - Soziale Welt erfordert Forschung eigener Art
+    - Wissen aus Horizontverschmelzung (Hermeneutik)
+    - Kausalerklärung: Nachvollziehen sozialer Handlungen
+
+# Welche Grenzen setzt uns die Ontologie?
+
+- **Ontologie**
+    - Auseinandersetzung mit der Natur sozialer Dinge
+    - Besitzen soziale Phänomene eine objektive Realität?
+- **Objektivisimus**
+    - behauptet soz. Phänomene $=$ äußerer Zwang
+    - betont formale, beständige Merkmale (Regeln, Einstellungen)
+- **Konstruktivismus**
+    - behauptet soz. Phänomene $=$ interindivid. Übereinkunft
+    - betont aktive Rolle der Individuen
+    
+# Woran krankt die Falsifikation?
+
+1. **Hypothesen sind keine Theorien**
+    - n:n-Relation zw. Theorien & Hypothesen
+    - Scheitert eine Theorie an der Falsifikation *einer* Implikation?
+    - Scheitert eine Hypothese, *welche* Theorie ist dann widerlegt?
+2. **Beobachtungswissen ist fehleranfällig**
+    - Implikationen einer Theorie müssen messbar sein
+    - 
