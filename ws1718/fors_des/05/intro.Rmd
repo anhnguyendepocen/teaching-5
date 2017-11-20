@@ -46,10 +46,17 @@ output:
     
 # Woran krankt die Falsifikation?
 
+Einer scheiternden Hypothese entspricht nicht zwingend eine
+scheiternde Theorie. Die Falsifikation einer Theorie ist
+konsensuell.
+
 1. **Hypothesen sind keine Theorien**
     - n:n-Relation zw. Theorien & Hypothesen
     - Scheitert eine Theorie an der Falsifikation *einer* Implikation?
     - Scheitert eine Hypothese, *welche* Theorie ist dann widerlegt?
 2. **Beobachtungswissen ist fehleranfällig**
-    - Implikationen einer Theorie müssen messbar sein
-    - 
+    - Beobachtungen erfordern Hilfstheorien
+    - Messanlagen sind nie perfekt
+    - Was scheitert: Theorie, Hilfstheorie oder Messung?
+    
+    
