@@ -1,0 +1,68 @@
+---
+title: "Zusammenfassung vom 20. November 2017"
+author: "dag.tanneberg@uni-potsdam.de"
+date: "27 November 2017"
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+# Fragen der Sitzung
+
+1. Was leistet eine Forschungsfrage?
+2. Welche Rolle spielen Puzzle?
+3. Welchen Anforderungen genügt eine gute Forschungsfrage?
+
+# Was leistet eine Forschungsfrage?
+
+- verarbeitet ein existierendes Forschungsgebiet
+- formuliert einen bearbeitbaren Forschungsgegenstand
+- definiert Typ und Zielstellung der Arbeit
+\vfill
+
+## Typen und Zielstellungen sozialwissenschaftlicher Forschung
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[shape = rectangle, level distance = 2.5em, sibling distance = 6em, edge from parent/.style={draw,-latex}]
+  \node (0) [circle, draw, fill = black, inner sep = .1em] {} 
+    child { node (0-1) {normativ}}
+    child { node (0-2) {positiv}
+      child { node (0-2-1) {theoretisch}}
+      child { node (0-2-2) {empirisch} 
+        child { node (0-2-2-1) {deskriptiv} }
+        child { node (0-2-2-2) {prädiktiv} }
+        child { node (0-2-2-3) {explanatorisch} 
+          child { node (0-2-2-3-1) {Theoriebildung} }
+          child { node (0-2-2-3-2) {-test} }
+          child { node (0-2-2-3-3) {-anwendung} }
+        }
+      }
+    } ;
+\end{tikzpicture}
+\end{figure}
+
+# Welche Rolle spielen Puzzle?
+
+- **Problem**: Wie breche ich ein Thema auf eine Frage herunter?
+- **Königsweg**: Puzzle, d.i.: \glqq a real-world event, or
+  pattern of events, that 'doesn't make sense' in the light
+  of intuitions, accepted wisdom, or a dominant theoretical
+  perspective on the problem\grqq (Toshkov 2016: 46)
+- **Vorteile**
+  1. definiert eine Forschungslücke
+  2. garantiert Anschlussfähigkeit an eine laufende Debatte
+  3. stellt Bezug zu einer existierenden Literatur her
+
+# Welchen Kriterien genügt eine gute Forschungsfrage?
+
+- **prägnant**: kurz und grammatikalisch einfach
+- **strukturell einfach**: nicht mehrgliedrig
+- **ergbnisoffen**: nimmt Hypothesen nicht vorweg
+- **bemüht allg. Konzepte**: im Ggs. zu Werten einer Variablen
+- **falsifizierbar**: nicht tautologisch
+- **bearbeitbar**: Datenverfügbarkeit, notw. Kompetenzen, etc.

@@ -1,0 +1,161 @@
+---
+title: "Weiterführende Grafiken"
+author: "dag.tanneberg@uni-potsdam.de"
+date: "27 November 2017"
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+```{r, create charts, echo = FALSE, message=FALSE}
+rm(list = ls())
+library(foreign)
+library(ggplot2)
+library(extrafont)
+library(ggthemes)
+loadfonts(quiet = TRUE)
+plot_width = 10
+base_size = 17
+
+dd <- read.dta(
+  "/Users/dag/Dropbox/data/archive/dd/data/ddrevisited_data_v1.dta"
+)
+pdta <- aggregate(
+  flagdem ~ year + regime, data = subset(dd, regime <= 2),
+  FUN = function(x){sum(!is.na(x))}
+)
+pdta <- within(pdta,
+  n_regimes <- ave(flagdem, year, FUN = sum)
+)
+
+p_abs <- ggplot(
+  data = pdta,
+  aes(x = year, y = flagdem,
+    linetype = factor(
+      regime, levels = 0:2,
+      labels = c(
+        "Parlamentarisch", "Präsidentiell",
+        "Semi-präsidentiell"
+      )
+    )
+  )
+) +
+  geom_line() +
+  scale_x_continuous(limits = c(1945, 2010), breaks = seq(1950, 2010, 10)) +
+  scale_y_continuous(limits = c(0, 60), breaks = seq(0, 60, 10)) +
+  labs(x = "Jahr", linetype = "Regierungssystem") +
+  theme_fivethirtyeight(base_family = 'CMU Sans Serif', base_size = 1.5 * base_size)
+ggsave(
+  plot = p_abs, file = "/Users/dag/github/teaching/ws1718/grundl_vergl/07/p_abs.pdf",
+  width = plot_width, height = plot_width/1.618
+)
+p_rel <- ggplot(
+  data = pdta,
+  aes(x = year, y = flagdem/n_regimes,
+    linetype = factor(
+      regime, levels = 0:2,
+      labels = c(
+        "Parlamentarisch", "Präsidentiell",
+        "Semi-präsidentiell"
+      )
+    )
+  )
+) +
+  geom_line() +
+  scale_x_continuous(limits = c(1945, 2010), breaks = seq(1950, 2010, 10)) +
+  scale_y_continuous(limits = c(0, .8), breaks = seq(0, .8, .1)) +
+  labs(x = "Jahr", linetype = "Regierungssystem") +
+  theme_fivethirtyeight(base_family = 'CMU Sans Serif', base_size = 1.5 * base_size)
+ggsave(
+  plot = p_rel, file = "/Users/dag/github/teaching/ws1718/grundl_vergl/07/p_rel.pdf",
+  width = plot_width, height = plot_width/1.618, dpi = 300
+)
+```
+
+# Thema des Diskussionspapiers
+
+**Die Gefahren des Präsidentialismus**
+
+Mit seinem Beitrag über die Gefahren des Präsidentialismus
+prägte Juan Linz eine klassische Debatte der Vergleichenden
+Politikwissenschaft. Seine Argumente führen ihn schließlich
+zu der Behauptung, der Parlamentarismus sei dem
+Präsidentialismus überlegen. Diskutiere die Position von Juan
+Linz und beachte dabei mindestens die folgenden Aspekte.
+
+\begin{enumerate}
+  \item Was unterscheidet den Präsidentialismus vom Parlamentarismus?
+  \item Woran krankt der Präsidentialismus laut Juan Linz?
+  \item Stützen empirische Studien Linz Position?
+\end{enumerate}
+
+# Allgemeine Hinweise zum Diskussionspapier
+
+**Zielstellung**
+
+1. Präsidentialismus & Parlamentarismus aufarbeiten
+1. Linz Position darstellen
+2. Reflektierte Antwort auf Linz formulieren
+3. Eigene Position durch emp. oder theoret. Argumente verteidigen
+
+**Allgemeines** 
+
+\begin{itemize}
+  \item \textbf{Umfang} $1000$ Wörter ($\pm 20\%$ Toleranz)
+  \item \textbf{Formatierungsvorgaben} beachten
+  \item \textbf{Dateiformat} PDF
+  \item \textbf{Abgabe} 11. Dezember 2017 per \href{mailto:dag.tanneberg@uni-potsdam.de}{Email}
+\end{itemize}
+
+# Klassifikation demokratischer Regierungssysteme
+
+\begin{tikzpicture}[level distance = 6em, sibling distance = 14em]
+\node (0) {
+  \itshape
+  \begin{tabular}{l}
+    Ist die Regierung dem gewählten\\
+    Parlament politisch verantwortlich?
+  \end{tabular}
+  }
+  child{ node (1) {Präsidentialismus} }
+  child{
+    node (2) {
+    \itshape
+    \begin{tabular}{l}
+      Wurde das Staatsoberhaupt für\\
+      eine feste Amtszeit direkt gewählt?
+    \end{tabular}
+    }
+    child{ node (3) {Semipräsidentialismus} }
+    child{ node (4) {Parlamentarismus} }
+  } ;
+\draw node [left of = at 0] at ($(0)!.5!(1)$) {Nein} ;
+\draw node [right of = at 0] at ($(0)!.5!(2)$) {Ja} ;
+\draw node [left of = at 1] at ($(2)!.5!(3)$) {Ja} ;
+\draw node [right of = at 1] at ($(2)!.5!(4)$) {Nein} ;
+\end{tikzpicture}
+
+# Verbreitung demokratischer Regierungssysteme über Zeit
+
+\begin{columns}
+  \begin{column}{.5\linewidth}
+  \begin{figure}[t]
+    \centering
+    \subcaption*{Absolute Anzahl}
+    \includegraphics[width = \linewidth]{/Users/dag/github/teaching/ws1718/grundl_vergl/07/p_abs.pdf}
+  \end{figure}
+  \end{column}
+  \begin{column}{.5\linewidth}
+  \begin{figure}[t]
+    \subcaption*{Relative Anzahl}
+    \includegraphics[width = \linewidth]{/Users/dag/github/teaching/ws1718/grundl_vergl/07/p_rel.pdf}
+  \end{figure}
+  \end{column}
+\end{columns}
+\footnotesize
+\textit{Quelle}: Cheibub, José Antonio; Gandhi, Jennifer; Vreeland, James (2010): Democracy and Dictatorship Revisited. In Public Choice 143 (1/2), S. 67–101.
