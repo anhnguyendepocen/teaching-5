@@ -1,0 +1,69 @@
+---
+title: "Sitzungsbegleitende Folien"
+author: "dag.tanneberg@uni-potsdam.de"
+date: "27 November 2017"
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+# Was leisten Kausalmechanismen?
+
+Zahlreiche sozialwissenschaftliche Studien streben nach
+kausalen Erklärungen. Dabei treffen sie regelmäßig Aussagen
+über den vermeintlichen Mechanismus, der Ursache und Wirkung
+verbindet. Aber was leisten solche mechanistischen Erklärungen
+eigentlich für die Sozialwissenschaften? Diskutiere diese
+Frage, indem Du auf die nachfolgenden Aspekte eingehst.
+
+\begin{enumerate}
+  \item Was ist eine kausale Erklärung und welche Spielarten gibt es?
+  \item Wie unterscheiden sich kausale von anderen Erklärungsarten?
+  \item Wie unterstützen M. die Formulierung kausaler Erklärungen?
+  \item Welche Probleme bereiten Kausalmechanismen?
+\end{enumerate}
+
+# Was bedeutet die Unterscheidung x- und y-zentr. Designs?
+
+Im Zuge der Debatte über qualitative und ein quantitative
+Ansätzen in der Sozialwissenschaft gelangte die
+Unterscheidung von x- und y-zentrierten Designs zu
+besonderer Prominenz. Doch was bedeutet diese
+Klassifikation eigentlich? Diskutiere diese Frage, indem Du
+auf die nachfolgenden Aspekte eingehst.
+
+\begin{enumerate}
+  \item Was sind x- bzw. y-zentrierte Designs?
+  \item Wie unterscheidet sich diese Klassifikation von der Einteilung in qualitative und quantitative Ansätze?
+  \item Welchen Einfluss haben x- und y-zentrische Designs auf
+  \begin{itemize}
+    \item die Auswahl von Methoden;
+    \item den Umgang mit empirischen Daten;
+    \item auf die Verallgemeinerungsfähigkeit von Forschungsergebnissen?
+  \end{itemize}
+  \item Welche Probleme bereiten x- bzw. y-zentrierte Designs
+\end{enumerate}
+
+# Allgmeine Hinweise
+
+\begin{itemize}
+\item \textbf{Umfang} $1500$ Wörter ($\pm 10\%$ Toleranz)
+\item \textbf{Formatierungsvorgaben}
+  \begin{itemize}
+    \item Zitation: Autor-Jahr mit Seitenangabe
+    \item Schriftgröße: $11$
+    \item zulässige Schriftarten: Times New Roman, Garamond, Gill Sans, CMU Serif
+    \item Zeilenabstand: 1,5
+    \item Korrekturrand: $4$cm, rechts
+    \item Auf ein Absatzende folgt eine Leerzeile.
+    \item Es gibt keine weiteren Formatierungsvorgaben.
+  \end{itemize}
+\item \textbf{Gewicht} $25\%$ der abschließenden Seminarnote
+\item \textbf{Abgabe} 18. Dezember 2017 per \href{mailto:dag.tanneberg@uni-potsdam.de}{Email}
+\item \textbf{Dateiformat} PDF
+\end{itemize}

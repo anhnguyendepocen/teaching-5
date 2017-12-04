@@ -1,7 +1,7 @@
 ---
 title: "Zusammenfassung vom 6. November 2017"
 author: "dag.tanneberg@uni-potsdam.de"
-date: "6 November 2017"
+date: "30 November 2017"
 output:
   beamer_presentation:
     includes:
@@ -23,11 +23,11 @@ output:
 - **Epistemologie**
     - Auseinandersetzung mit Erkenntnisfähigkeit
     - Welches Wissen akzeptieren wir als wissenschaftlich?
-- **Positivismus**
+1. **Positivismus**
     - Forschung nach dem Vorbild der Naturwissenschaften 
     - Wissen aus Sinneswahrnehmungen (Phänomenalismus)
     - Kausalerklärung: Manipulation objektiver Ursachen
-- **Interpretativismus**
+2. **Interpretativismus**
     - Soziale Welt erfordert Forschung eigener Art
     - Wissen aus Horizontverschmelzung (Hermeneutik)
     - Kausalerklärung: Nachvollziehen sozialer Handlungen
@@ -37,10 +37,10 @@ output:
 - **Ontologie**
     - Auseinandersetzung mit der Natur sozialer Dinge
     - Besitzen soziale Phänomene eine objektive Realität?
-- **Objektivisimus**
+1. **Objektivisimus**
     - behauptet soz. Phänomene $=$ äußerer Zwang
     - betont formale, beständige Merkmale (Regeln, Einstellungen)
-- **Konstruktivismus**
+2. **Konstruktivismus**
     - behauptet soz. Phänomene $=$ interindivid. Übereinkunft
     - betont aktive Rolle der Individuen
     
