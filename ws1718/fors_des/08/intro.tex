@@ -1,0 +1,252 @@
+% Preamble -------------------------------------------------
+\PassOptionsToPackage{table}{xcolor}
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{adjustbox}
+\usepackage{tikz}
+  \usetikzlibrary{positioning, calc, decorations.pathreplacing, backgrounds}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\usepackage[style = apa, doi = false]{biblatex}
+\bibliography{./library.bib}
+
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 27. November 2017}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Forschungsdesign in den Sozialwissenschaften{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Wintersemester 2017/2018
+}
+\date{4. Dezember 2017}
+
+\begin{document}
+\maketitle
+
+\begin{frame}
+\frametitle{Hintergrund}
+\textbf{Ausgangspunkt}
+\begin{itemize}
+  \item Warum ist eine Forschungsfrage wichtig? \newline
+  $\quad \Rightarrow$ bricht Literatur auf einen Aspekt herunter
+  \item Aber wie beantworte ich eine Forschungsfrage? \newline
+  $\quad \Rightarrow$ x-, y-zentrische und kontrastive Designs
+\end{itemize}
+
+\textbf{Anspruch der Unterscheidung}
+\begin{itemize}
+  \item legt Augenmerk auf Kausalperspektiven
+  \item bietet Alternative zu Quanti/Quali
+  \item ermöglicht lagerübergreifenden Diskurs
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Drei idealtypische Forschungsdesigns}
+
+\begin{tcolorbox}[boxrule = 0pt, frame hidden, colbacktitle = gray!55, title = \textbf{x-zentriert}, height = 2cm, width = \textwidth, sharp corners, no shadow]
+\begin{itemize}
+  \item Wozu führt x?
+  \item isoliert und schätzt einen Effekt
+\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[boxrule = 0pt, frame hidden, colbacktitle = gray!55, title = \textbf{y-zentriert}, height = 2cm, width = \textwidth, sharp corners, no shadow]
+\begin{itemize}
+  \item Was führte zu y?
+  \item sucht beste Erklärung
+\end{itemize}
+\end{tcolorbox}
+\begin{tcolorbox}[boxrule = 0pt, frame hidden, colbacktitle = gray!55, title = \textbf{kontrastiv}, height = 2cm, width = \textwidth, sharp corners, no shadow]
+\begin{itemize}
+  \item Vergleich widerstreitender Theorien
+  \item sucht belastbarste Theorie
+\end{itemize}
+\end{tcolorbox}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Klassifikation von Forschungsdesigns}
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[%
+  level distance = 6em, sibling distance = 10em, scale = .9,%
+  edge from parent/.style = {draw, -latex},%
+  background rectangle/.style = {fill = gray!10},%
+  show background rectangle
+]
+\node (0) {\itshape Anzahl der Theorien}
+  child{ node (1) {x-zentriert} }
+  child{
+    node (2) {\itshape Verhältnis der Theorien}
+    child{ node (3) {y-zentriert} }
+    child{ node (4) {kontrastiv} }
+  } ;
+\draw node (5) [below right = 0em of 3] {} ;
+\draw node (6) [left = 10em of 5] {} ;
+\draw node (7) [below left = 0em of 4] {} ;
+\draw node (8) [below right = 0em of 4] {} ;
+\draw node (9) [left = 0em of 6] {\itshape Art der Evidenz} ;
+\draw [decorate, decoration={brace, amplitude = 5pt}] (5) -- (6)
+  node [midway, label = south:{\footnotesize direkt}] {}
+;
+\draw [decorate, decoration={brace, amplitude = 5pt}] (8) -- (7)
+  node [midway, label = south:{\footnotesize direkt \& indirekt}] {}
+;
+\draw (0) edge node [sloped, anchor = south] {\footnotesize $1$} (1) ;
+\draw (0) edge node [sloped, anchor = south] {\footnotesize $\ge 2$} (2) ;
+\draw (2) edge node [sloped, anchor = south] {\scriptsize komplementär} (3) ;
+\draw (2) edge node [sloped, anchor = south] {\scriptsize konkurrierend} (4) ;
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Stärken und Fallstricke der Designvarianten}
+
+\begin{adjustbox}{width = \textwidth}
+\begin{tabular}{*{3}{l}}
+\rowcolor{gray!75}\textcolor{white} ~ & \textbf{\textcolor{white}{Stärken}} & \textbf{\textcolor{white}{Fallstricke}} \\
+x-zentriert                    & transpar. Geltungsbdg.          & Relevanz isol. Detailfragen\\
+~                              & direkte Evidenz                 & Einfluss konkur. Theorien?\\
+\rowcolor{gray!25} y-zentriert & gute Individualerklärung        & fallabhängiges Ergebnis\\
+\rowcolor{gray!25} ~           & findet beste Komb. verfügb. Th. & Th.-entw. \& -test ungetrennt\\
+kontrastiv                     & verwertet indir. Evidenz        & Methoden des Theorievgl.?\\
+~                              & findet beste verfügb. Th.       & Wann konkurrieren Th.?\\
+\end{tabular}
+\end{adjustbox}
+
+% \begin{adjustbox}{width = \textwidth}
+% \begin{tabular}{p{14.5em}p{14.5em}}
+%   \multicolumn{1}{c}{\cellcolor{gray!10} \textbf{x-zentriert}} &
+%   \cellcolor{blue!20}
+%   \begin{tabular}{l}
+%     \textbf{(x)} transpar. Geltungsbdg.\\
+%     \textbf{(y)} gute Individualerklärung\\
+%   \end{tabular} \\
+%   \cellcolor{green!20}
+%   \begin{tabular}{l}
+%     \textbf{(x)} Relevanz isol. Detailfragen\\
+%     \textbf{(y)} Th.-entw. \& -test ungetrennt\\
+%   \end{tabular} &
+%   \multicolumn{1}{c}{\cellcolor{gray!10} \textbf{y-zentriert}} \\
+% \end{tabular}
+% \end{adjustbox}
+% \vfill
+
+% \begin{adjustbox}{width = \textwidth}
+% \begin{tabular}{p{14.5em}p{14.5em}}
+%   \multicolumn{1}{c}{\cellcolor{gray!10} \textbf{x-zentriert}} &
+%   \cellcolor{blue!20}
+%   \begin{tabular}{l}
+%     \textbf{(x)} Sichert direkte Evidenz\\
+%     \textbf{(k)} Verwertet indir. Evidenz\\
+%   \end{tabular} \\
+%   \cellcolor{green!20}
+%   \begin{tabular}{l}
+%     \textbf{(x)} Einfluss konkur. Theorien?\\
+%     \textbf{(k)} Methoden des Theorievgl.?\\
+%   \end{tabular} &
+%   \multicolumn{1}{c}{\cellcolor{gray!10} \textbf{kontrastiv}} \\
+% \end{tabular}
+% \end{adjustbox}
+% \vfill
+
+% \begin{adjustbox}{width = \textwidth}
+% \begin{tabular}{p{14.5em}p{14.5em}}
+%   \multicolumn{1}{c}{\cellcolor{gray!10} \textbf{y-zentriert}} &
+%   \cellcolor{blue!20}
+%   \begin{tabular}{l}
+%     \textbf{(y)} beste Komb. verfügb. Th.\\
+%     \textbf{(k)} findet beste verfügb. Th.\\
+%   \end{tabular} \\
+%   \cellcolor{green!20}
+%   \begin{tabular}{l}
+%     \textbf{(y)} Kein Test komplem. Th.\\
+%     \textbf{(k)} Wann konkurrieren Th.?\\
+%   \end{tabular} &
+%   \multicolumn{1}{c}{\cellcolor{gray!10} \textbf{kontrastiv}} \\
+% \end{tabular}
+% \end{adjustbox}
+
+
+% \begin{adjustbox}{width = \textwidth}
+% \begin{tabular}{lll}
+%   ~ & \multicolumn{2}{c}{\textbf{Vorteile}} \\
+%   \multicolumn{1}{c}{\cellcolor{gray!10} \textbf{x-zentriert}} &
+%   \cellcolor{blue!20}
+%   \begin{tabular}{l}
+%     \textbf{(x)} transpar. Geltungsbdg.\\
+%     \textbf{(y)} gute Individualerkl.\\
+%   \end{tabular} &
+%   \cellcolor{blue!20}
+%   \begin{tabular}{l}
+%     \textbf{(x)} Sichert direkte Evidenz\\
+%     \textbf{(k)} Verwertet indir. Evidenz\\
+%   \end{tabular} \\
+%   \hline
+%   \cellcolor{green!20}
+%   \begin{tabular}{l}
+%     \textbf{(x)} Relevanz isol. Detailfragen\\
+%     \textbf{(y)} Th.-entw. \& -test ungetrennt\\
+%   \end{tabular} &
+%   \multicolumn{1}{c}{\cellcolor{gray!10} \textbf{y-zentriert}} &
+%   \cellcolor{blue!20}
+%   \begin{tabular}{l}
+%     \textbf{(y)} beste Komb. verfügb. Th.\\
+%     \textbf{(k)} liefert beste verfügb. Th.\\
+%   \end{tabular} \\
+%   \hline
+%   \cellcolor{green!20}
+%   \begin{tabular}{l}
+%     \textbf{(x)} Einfluss konkur. Theorien?\\
+%     \textbf{(k)} Methoden des Theorievgl.?\\
+%   \end{tabular} &
+%   \cellcolor{green!20}
+%   \begin{tabular}{l}
+%     \textbf{(y)} Kein Test komplem. Th.\\
+%     \textbf{(k)} Wann konkurrieren Th.?\\
+%   \end{tabular} &
+%   \multicolumn{1}{c}{\cellcolor{gray!10} \textbf{kontrastiv}} \\
+%   \multicolumn{2}{c}{\textbf{Nachteile}} \\
+% \end{tabular}
+% \end{adjustbox}
+\end{frame}
+
+\begin{frame}
+\frametitle{Kombinationsmöglichkeiten}
+\begin{itemize}
+  \item \textbf{Verallgemeinerung einer Individualerklärung}
+  \begin{enumerate}
+    \item Entwicklung einer y-zentrierten Erklärung
+    \item nachgeordneter x-zentrierter Test einer wichtigen Implikation
+    \item [$\bullet$] \scriptsize{\fullcite{Geddes.1994}}.
+  \end{enumerate}
+  \item \textbf{Sektoraler Vergleich von Theorien}
+  \begin{enumerate}
+    \item Entwicklung einer sparsamen, y-zentrierten Erklärung
+    \item Komponenten nach kontrastiver Logik gerechtfertigt
+    \item [$\bullet$] \scriptsize{\fullcite{Greitens.2016}}.
+  \end{enumerate}
+  \item \textbf{Robuste Schätzung eines Effekts}
+  \begin{enumerate}
+    \item Auswirkung \textit{eines} Faktors (x-zentriert)
+    \item Ausschluss inkompatibler Theorien (kontrastiv)
+    \item [$\bullet$] \scriptsize{\fullcite{Przeworski.1997}}.
+  \end{enumerate}
+\end{itemize}
+\end{frame}
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\usepackage{tikz}
+\usetikzlibrary{calc, positioning}\begin{document}
+\begin{align*}\begin{tikzpicture}[level distance = 8em, sibling distance = 14em]
+\node (0) {\itshape Wie viele Theorien?}
+  child{ node (1) {x-zentriert} }
+  child{
+    node (2) {\itshape Verhältnis der Theorien?}
+    child{ node (3) {y-zentriert} }
+    child{ node (4) {kontrastiv} }
+  } ;
+\draw (5) [below right = 1em of 3] {} ;
+\draw (6) [left = 14em of 5] {} ;
+\draw [decorate, decoration={brace,amplitude=4pt}] (5) -- (6) node [label = south:direkt] {};
+\draw (0) edge node [sloped, anchor = south] {$1$} (1) ;
+\draw (0) edge node [sloped, anchor = south] {$\ge 2$} (2) ;
+\draw (2) edge node [sloped, anchor = south] {komplementär} (3) ;
+\draw (2) edge node [sloped, anchor = south] {konkurrierend} (4) ;
+\end{tikzpicture}\end{align*}
+\end{document}

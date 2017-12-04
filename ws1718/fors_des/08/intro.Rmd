@@ -1,0 +1,63 @@
+---
+title: "Zusammenfassung vom 27. November 2017"
+author: "dag.tanneberg@uni-potsdam.de"
+date: "4 Dezember 2017"
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+# Ausgangspunkt
+
+- methodologischer Konflikt: quantitativ vs. qualitativ
+
+# Klassifikation von Forschungsdesigns
+
+\begin{tikzpicture}[level distance = 6em, sibling distance = 10em, edge from parent/.style = {draw, -latex}]
+\node (0) {\itshape Anzahl der Theorien}
+  child{ node (1) {x-zentriert} }
+  child{
+    node (2) {\itshape Verhältnis der Theorien}
+    child{ node (3) {y-zentriert} }
+    child{ node (4) {kontrastiv} }
+  } ;
+\draw node (5) [below right = 0em of 3] {} ;
+\draw node (6) [left = 10em of 5] {} ;
+\draw node (7) [below left = 0em of 4] {} ;
+\draw node (8) [below right = 0em of 4] {} ;
+\draw node (9) [left = 0em of 6] {\itshape Art der Evidenz} ;
+\draw [decorate, decoration={brace, amplitude = 5pt}] (5) -- (6) 
+  node [midway, label = south:{\footnotesize direkt}] {}
+;
+\draw [decorate, decoration={brace, amplitude = 5pt}] (8) -- (7)
+  node [midway, label = south:{\footnotesize direkt \& indirekt}] {}
+;
+\draw (0) edge node [sloped, anchor = south] {\footnotesize $1$} (1) ;
+\draw (0) edge node [sloped, anchor = south] {\footnotesize $\ge 2$} (2) ;
+\draw (2) edge node [sloped, anchor = south] {\footnotesize komplementär} (3) ;
+\draw (2) edge node [sloped, anchor = south] {\footnotesize konkurrierend} (4) ;
+\end{tikzpicture}
+
+# Klassifikation von Forschungsdesigns
+
+## **x-zentriertes Design**
+- Ziel: Präzise Schätzung des Effekts einer unabh. Variablen
+- Vorteil: Kontrolle
+- Nachteil: Vernachlässigt konkurrierende Erklärungen
+  
+## **y-zentriertes Design**
+- Ziel: Möglichst umfassende Erklärung einer abh. Variablen
+- Vorteil: Detaillierte Fallkenntnis
+- Nachteil: 
+  
+## **kontrastives Design**
+  - Ziel: Vergleichender Test mehrere Theorien
+  - Vorteil: 
+  - Nachteil: 
+  
+# neue folie
