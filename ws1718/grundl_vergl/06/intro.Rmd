@@ -1,7 +1,7 @@
 ---
-title: "Zusammenfassung vom 30. Oktober 2017"
+title: "Zusammenfassung vom 6. November 2017"
 author: "dag.tanneberg@uni-potsdam.de"
-date: "6 November 2017"
+date: "20 November 2017"
 output:
   beamer_presentation:
     includes:
@@ -17,17 +17,16 @@ output:
 
 1. Worum geht es bei der Theorie der rationalen Wahl?
 2. Welche Annahmen trifft die Theorie der rationalen Wahl?
-3. Wie hilft mir das alles weiter?
+3. Wie hilft mir das weiter?
 
 # Worum geht es bei der Theorie der rationalen Wahl?
 
 ## **Zentrale Behauptung**
 
-- Individuen wägen Kosten und Nutzen einer Handlung ab
+- Individuen wägen Vor- und Nachteile einer Handlung ab
 - Wahl des besten Mittels zur Verfolgung eines Zwecks
 
 ## **Rationales Handeln...**
-
 - verfährt instrumentell;
 - erfolgt zielgerichtet und vorausschauend;
 - optimiert;
@@ -46,7 +45,7 @@ output:
 
 # Welche Annahmen trifft die Theorie der rationalen Wahl?
 
-- Wahl einer Handlungsoption\dots
+- Wahl einer Handlungsoption
     - erklärt sich logisch aus Präferenzen über Handlungsfolgen
     - setzt eine kohärente Präferenzordnung voraus
 
