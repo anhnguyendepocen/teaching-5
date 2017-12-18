@@ -34,25 +34,52 @@
 \maketitle
 
 \begin{frame}
-\frametitle{Was heißt messen?}
+\frametitle{Warum messen wir?}
   \textbf{Messen}
   \begin{itemize}
-    \item ordnet Zahlen zu Objekten gemäß festgelegter Regeln
-    \item strebt strukturtreue Abbildung an
+    \item ermöglicht den \textit{pointierten} Vergleich von Objekten
+    \item ordnet Objekten Zahlen gemäß festgelegter Regeln zu
+    \item strebt strukturtreue Abbildung der Realität an
     \begin{itemize}
       \item [$\rightarrow$] Ordnung der Messergebnisse wahrt empirische Ordnung
     \end{itemize}
   \end{itemize}
+  \vfill
   \begin{table}
   \centering
   \begin{tabular}{*{3}{c}|*{3}{c}}
   \multicolumn{3}{c}{richtig} & \multicolumn{3}{c}{falsch}\\
   Objekt & & Messerg. & Objekt & & Messerg. \\\hline
-  \color{blue!50}{A} & $\rightarrow$ & \color{blue!50}{1} & \color{blue!50}{A} & $\rightarrow$ & \color{blue!100}{3}\\
-  \color{blue!75}{B} & $\rightarrow$ & \color{blue!75}{2} & \color{blue!75}{B} & $\rightarrow$ & \color{blue!50}{1}\\
-  \color{blue!100}{C} & $\rightarrow$ & \color{blue!100}{3} & \color{blue!100}{C} & $\rightarrow$ & \color{blue!75}{2}\\
+  \color{blue!25}{A} & $\rightarrow$ & \color{blue!25}{1} & \color{blue!25}{A} & $\rightarrow$ & \color{blue!100}{3}\\
+  \color{blue!63}{B} & $\rightarrow$ & \color{blue!63}{2} & \color{blue!63}{B} & $\rightarrow$ & \color{blue!25}{1}\\
+  \color{blue!100}{C} & $\rightarrow$ & \color{blue!100}{3} & \color{blue!100}{C} & $\rightarrow$ & \color{blue!63}{2}\\
   \end{tabular}
   \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Welche Eigenschaften haben Messergebnisse?}
+  \textbf{Skalentyp/-niveau}
+  \begin{itemize}
+    \item fasst Eigenschaften eines Messergebnisses zusammen
+    \item informiert über den Informationsgehalt einer Messung
+    \item [$\rightarrow$] informativere Messungen erlauben mehr Anwendungen
+  \end{itemize}
+  \vfill
+  \begin{table}
+    \footnotesize
+    \centering
+    \caption*{Festgelegte Eigenschaften der wichtigsten Skalentypen}
+    \begin{tabular}{l*{5}{c}}
+                           & Nominal    & Ordinal    & Intervall   & Ratio\\ \hline
+      Distinkte Kategorien & \checkmark & \checkmark & \checkmark & \checkmark \\
+      Geordnete Kategorien &            & \checkmark & \checkmark & \checkmark \\
+      Gleiche Abstände     &            &            & \checkmark & \checkmark \\
+      Absoluter Nullpunkt  &            &            &            & \checkmark \\
+      Beispiel & Gender & Gefahrenlage & $^{\circ}$C & Länge\\\hline
+    \end{tabular}
+  \end{table}
+  \vfill
 \end{frame}
 
 \begin{frame}
@@ -150,13 +177,26 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Welche Eigenschaften haben Messergebnisse?}
-  \begin{tabular}{*{2}{l}*{4}{c}}
-  ~                                    & Skalentyp & Nullpunkt & Abstände & Ränge & Kategorien \\
-  \multirow{2}{*}{\textbf{Kategorial}} & Nominal   &           &          &       &\checkmark\\
-  ~                                    & Ordinal   &           &          &\checkmark&\checkmark\\
-  \multirow{2}{*}{\textbf{Numerisch}}  & Interval  &           &\checkmark&\checkmark&\checkmark\\
-  ~                                    & Ratio     & \checkmark &\checkmark&\checkmark&\checkmark\\
-  \end{tabular}
+  \frametitle{Warum fällt den Sozialwiss. gutes Messen so schwer?}
+  \begin{enumerate}
+    \item Latente Konstrukte
+    \begin{itemize}
+      \item wichtige Phänomene nicht direkt beobachtet (Frieden)
+      \item {\glqq}vereinbarte{\grqq} (kausale) Beziehung zw. Indikator \& Konstrukt
+      \item [$\rightarrow$] Messen ist ein theoretischer Akt
+    \end{itemize}
+    \item Kausale Beziehungen zw. Konstrukt \& Indikator
+    \begin{itemize}
+      \item reflektive Indik.: latentes Konstrukt verursacht Messwert
+      \item formative Indik.: Indikatoren verursachen latentes Konstrukt
+      \item [$\rightarrow$] Kausalbeziehung i.\,e.\,S. nicht manipulier- oder prüfbar
+    \end{itemize}
+    \item Zweckabhängigkeit des Messens
+    \begin{itemize}
+      \item Differenzierung: möglichst feine Abstufungen zw. Objekten
+      \item Gruppierung: Einordnung von Objekten in diskrete Kategorien
+      \item [$\rightarrow$] verlangen je eigene Gütekriterien
+    \end{itemize}
+  \end{enumerate}
 \end{frame}
 \end{document}
