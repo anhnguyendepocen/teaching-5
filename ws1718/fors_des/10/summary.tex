@@ -1,0 +1,132 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{adjustbox}
+\usepackage{tikz}
+  \usetikzlibrary{positioning, calc, decorations.pathreplacing, backgrounds, fit}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\definecolor{grey538}{rgb}{240,240,240}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 18. Dezember 2017}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Grundlagen der Vergleichenden Politikwissenschaft{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Wintersemester 2017/2018
+}
+\date{8. Januar 2018}
+
+\begin{document}
+\maketitle
+
+\begin{frame}
+  \frametitle{Leitfragen}
+  \begin{enumerate}
+    \item Was sind Konzepte?
+    \item Wie baut man Konzepte auf?
+    \item Welche Fallstricke muss man beachten?
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+
+\textbf{Konzepte sind}
+  \begin{enumerate}
+    \item allgemeine Aussagen $\rightarrow$ Klassen von Phänomenen
+    \item abstrakte Repräsenationen $\rightarrow$ nicht sensorisch erfahrbar
+    \item Bausteine von Theorien $\rightarrow$ betreffen x oder y, aber nicht x $\sim$ y
+  \end{enumerate}
+\vfill
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+    \textbf{(a) Klassische Konzepte}
+    \begin{itemize}
+      \item formulieren Merkmale
+      \item regelbasierte Hierarchie
+      \item notw. \& hinr. Bdg.
+    \end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    \textbf{(b) Prototypische Konzepte}
+    \begin{itemize}
+      \item formulieren Merkmale
+      \item Verteilung statt Hierarchie
+      \item Familienähnlichkeiten
+    \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Wie baut man Konzepte auf?}
+\begin{columns}
+\begin{column}{.4\textwidth}
+\centering
+\begin{tikzpicture}[
+  edge from parent/.style = {draw, -latex},
+  scale = 1
+]
+\tikzstyle{every node} = [fill, circle, inner sep = .1em]
+\node (root) {}
+  child{ node (1) {}
+    child{ node (1-1) {} }
+    child{ node (1-2) {} }
+    child{ node (1-3) {} }
+  }
+  child{ node (2) {} }
+  child{ node (3) {} };
+% \node (4) [right = of root, fill = none] {Begriff} ;
+% \node (5) [right = of 2, fill = none] {Merkmale} ;
+% \node (6) [right = of 1-3, fill = none] {Indikatoren} ;
+\begin{scope}[on background layer]
+  \node [fill = gray, opacity = .25, shape = rectangle, fit = (root) (1-1) (3)] {};
+\end{scope}
+\end{tikzpicture}
+\end{column}
+\begin{column}{.6\textwidth}
+\textbf{Drei Ebenen der Konzeptbildung}
+\begin{enumerate}
+  \item Begriff
+  \begin{itemize}
+    \item Bezeichnung des K.
+    \item unsytematisiertes Hintergrundk.
+  \end{itemize}
+  \item Merkmale
+  \begin{itemize}
+    \item bestimmen Intension des K.
+    \item systematisiertes K.
+  \end{itemize}
+  \item Indikatoren
+  \begin{itemize}
+    \item Messbarmachung des K.
+    \item Übergang zur Extension
+  \end{itemize}
+\end{enumerate}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Welche Fallstricke muss man beachten?}
+\begin{itemize}
+    \item Profusion, d.i. Innovation ohne Notwendigkeit
+    \item Stretching, d.i. Anwendung auf nicht zugehörige Fälle
+    \item Funktionale Äquivalente, d.i. Phänomene mit gleichem Effekt
+    \item Redundanz, d.i. Doppelung von Merkmalen
+\end{itemize}
+\end{frame}
+\end{document}

@@ -1,0 +1,15 @@
+---
+title: "Untitled"
+author: "Dag Tanneberg"
+date: "1/4/2018"
+output: beamer_presentation
+---
+
+# Häufige Probleme
+
+1. Unterscheidung Präsidentialismus & Parlamentarismus
+2. Umfassende Wiedergabe Linz
+3. Verbindung begleitender Literatur und Linz
+4. Eigene Position nicht eindeutig heraus gearbeitet
+
+
