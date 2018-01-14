@@ -1,0 +1,134 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{adjustbox}
+\usepackage{tikz}
+  \usetikzlibrary{positioning, calc, decorations.pathreplacing, backgrounds, fit}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\definecolor{grey538}{rgb}{240,240,240}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 5. Januar 2018}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Forschungsdesign in den Sozialwissenschaften{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Wintersemester 2017/2018
+}
+\date{15. Januar 2018}
+
+\begin{document}
+\maketitle
+
+\begin{frame}
+  \frametitle{Leitfragen}
+  \begin{enumerate}
+    \item Warum ist die Fallauswahl wichtig?
+    \item Welche Herausforderungen muss eine Fallauswahl bewältigen?
+    \item Welche Varianten der Fallauswahl gibt es?
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \textbf{Ziel der Fallauswahl}
+  \begin{itemize}
+    \item Selektion von Einheiten aus einer größeren Gruppe
+    \item Rückschluss von selektierten Einheiten auf Gruppe
+    \item [$\rightarrow$] Fallauswahl beeinflusst Qualität der Inferenz
+  \end{itemize}
+  \vfill
+  \textbf{Beispiel einer systematisch verzerrten Fallauswahl}
+  \begin{itemize}
+    \item Welche Faktoren begünstigen den Erfolg einer Revolution?
+    \item Auswertung \textit{erfolgreicher} Revolutionen
+    \item [$\rightarrow$] kein Rückschluss auf \textit{alle} Revolutionen möglich
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Welche Herausford. muss eine Fallauswahl bewältigen}
+  \begin{enumerate}
+    \item Gewährleistung einer repräsentativen Auswahl
+    \begin{itemize}
+      \item Dialog Analysegesamtheit \& Population
+      \item Analysegesamtheit reflektiert Theorie über Population
+    \end{itemize}
+    \item Varianz auf theoretisch bedeutsamen Merkmalen herstellen
+    \begin{itemize}
+      \item Vielfältige Testumstände erzeugen
+      \item Belastbarkeit der Theorie steigt
+    \end{itemize}
+    \item Population eindeutig bestimmen
+    \begin{itemize}
+      \item Geltungsbedingungen des Populationsmodells bestimmen
+      \item Problem: oft versteckte Annahmen
+      \item [$\rightarrow$] Demokratien foltern nicht
+    \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Welche Varianten der Fallauswahl gibt es?}
+\begin{figure}
+\centering
+  \begin{tikzpicture}[grow = right, scale = .5, anchor = west, edge from parent/.style={draw,-latex}, level distance = 8em]
+  \tikzstyle{level 1}=[sibling distance=16em]
+  \tikzstyle{level 3}=[sibling distance=2em]
+  \node (root) {\itshape{Auswahl unabh. v. Anwender?}}
+    child  { node (1) {Zufallsauswahl} }
+    child  { node (2) {\itshape{Ziel des Anwenders?}}
+      child { node (2-1) [circle, draw, fill = black, inner sep = .1em] {}
+        child{ node {Typische} }
+        child{ node {Diverse} }
+        child{ node {Abweichende} }
+        child{ node {Einflussreiche} }
+        child{ node {Most similar} }
+        child{ node {Most different} }
+      }
+      child { node (2-2) [circle, draw, fill = black, inner sep = .1em] {}
+        child{ node {Diverse} }
+        child{ node {Extreme} }
+        child{ node {Abweichende} }
+        child{ node {Most similar} }
+        child{ node {Most different} }
+      }
+    } ;
+  \draw (root) edge node [sloped, anchor = south] {\scriptsize ja} (1) ;
+  \draw (root) edge node [sloped, anchor = south] {\scriptsize nein} (2) ;
+  \draw (2) edge node [sloped, anchor = south] {\scriptsize Konfirmation} (2-1) ;
+  \draw (2) edge node [sloped, anchor = south] {\scriptsize Exploration} (2-2) ;
+  \end{tikzpicture}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Allgemeine Rückmeldung zu den Diskussionspapieren}
+\textbf{Zweck}
+\begin{itemize}
+  \item Auseinandersetzung mit einer wichtigen Kontroverse
+  \item Aufarbeitung zentraler Argumente und Konfliktlinien
+  \item kritische Reflektion und Systematisierung trainieren
+\end{itemize}
+
+\textbf{Häufige Stolpersteine}
+\begin{itemize}
+  \item \textbf{Begrifflichkeiten} Was ist eine kausale Erklärung?
+  \item \textbf{Selektion} Welche Argumente in der Literatur sind relevant?
+  \item \textbf{Begründungsleistung} Warum liefert ein x-zentrisches Design keine gute Einzelfallerklärung?
+  \item \textbf{Positionsnahme} Nutzt euch die Unterscheidung x- und y-zentrischer Designs?
+\end{itemize}
+\end{frame}
+\end{document}
