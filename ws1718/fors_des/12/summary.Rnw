@@ -1,0 +1,160 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{adjustbox}
+\usepackage{tikz}
+  \usetikzlibrary{positioning, calc, decorations.pathreplacing, backgrounds, fit}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{booktabs}
+
+\definecolor{grey538}{rgb}{240,240,240}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 5. Januar 2018}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Forschungsdesign in den Sozialwissenschaften{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Wintersemester 2017/2018
+}
+\date{15. Januar 2018}
+
+\begin{document}
+\maketitle
+
+<<setup-options, echo = FALSE, message = FALSE>>=
+  opts_chunk$set(echo = FALSE, warn = FALSE, message = FALSE)
+  setwd("/Users/dag/github/teaching/ws1718/fors_des/12")
+  library(ggplot2)
+  library(extrafont)
+  loadfonts(quiet = TRUE)
+@
+
+\begin{frame}
+\frametitle{Leitfragen der Sitzung}
+  \begin{enumerate}
+    \item Welche Fallstricke stellen sich einem Forschungsdesign?
+    \item Was sind unsystematische bzw. systematische Messfehler?
+    \item Wie wirken sich Messfehler aus?
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Welche Fallstricke stellen sich einem Forschungsdesign?}
+  \textbf{Sehr viele!} Messfehler, Drittvariablen, Endogenität\dots
+  \vfill
+  \textbf{Wie wirken sich diese Fallstricke aus?}
+  \begin{enumerate}
+    \item \textbf{Effizienz}
+    \begin{itemize}
+      \item Wie stabil sind Ergebnisse bei wiederholter Analyse?
+      \item [$\rightarrow$] Präzision eines Inferenzschlusses
+    \end{itemize}
+    \item \textbf{Bias}
+    \begin{itemize}
+      \item Werden Ergebnisse systematisch verfälscht?
+      \item [$\rightarrow$] Erwartungstreue eines Inferenzschlusses
+    \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was sind unsystematische bzw. systematische Messfehler?}
+  \begin{itemize}
+    \item \textbf{Messen}
+    \begin{itemize}
+      \item regelgeleitete Zuordnung von Zahlen zu Objekten
+      \item strukturtreue Abbildung der Realität
+    \end{itemize}
+    \item \textbf{Messfehler}
+    \begin{itemize}
+      \item Abweichung des Messergebnisses $x$ vom ``wahren'' Wert $\theta$
+      \item unsystematische ($\epsilon$) oder systematische Abweichung ($u$)
+    \end{itemize}
+  \end{itemize}
+  \begin{columns}
+  \begin{column}{.3\textwidth}
+      \begin{figure}
+        \begin{tikzpicture}[
+          grow = right, edge from parent/.style={draw,-latex},
+          level distance = 8em, sibling distance = 8em, minimum size = 2em, inner sep = 0,
+          scale = 1,
+          background rectangle/.style = {fill = gray!10},%
+          show background rectangle
+        ]
+          \tikzstyle {latent} = [draw, shape = circle, fill = white]
+          \tikzstyle {observed} = [draw, shape = rectangle, fill = white]
+          % place nodes
+          \path node (0) [latent] at (-1,0) {$\theta$};
+          \path node (1) [observed] at (0,0) {$x$};
+          \path node (2) [latent] at (1,.6) {$\epsilon$};
+          \path node (3) [latent] at (1,-.6) {$u$};
+          % place edges
+          \foreach \x in {0, 2, 3}
+            { \draw [-latex] (\x) -- (1) ; } ;
+          \begin{scope}[on background layer]
+            \node [fill=grey538, fit = (0) (1) (2)] {};
+          \end{scope}
+        \end{tikzpicture}
+      \end{figure}
+    \end{column}
+    \begin{column}{.7\textwidth}
+      \begin{tabular}{*{3}{l}}
+        ~ & \textbf{unsystematisch} & \textbf{systematisch}\\
+        Abweichung & zufällig & immer gleich \\
+        Beispiel & Erinnerungsfehler & Lügen \\
+      \end{tabular}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Wie wirken sich Messfehler aus?}
+\textbf{Es kommt darauf an.}
+\begin{enumerate}
+  \item Geht es um Beschreibung oder kausale Inferenz?
+  \item Betrifft der Fehler die abhängige oder die unabh. Variable?
+\end{enumerate}
+\vfill
+
+\begin{tabular}{l*{4}{c}}
+\toprule
+~ & \multicolumn{2}{c}{\textbf{Abhängige Variable}} & \multicolumn{2}{c}{\textbf{Unabh. Variable}}\\
+~ & Deskription & Kausalität & Deskription & Kausalität\\ \midrule
+unsystem. & Ineffizienz & Ineffizienz & Ineffizienz & Bias \\
+system. & Bias & ~ & Bias & ~\\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Effekt unsystematischer Messfehler auf kausale Inferenz}
+<<execute-error-simulation, fig.height = 4>>=
+  source("./causalInference_measurementError.R")
+  p
+  rm(list = ls())
+@
+\end{frame}
+
+\begin{frame}
+  \frametitle{Wie gehe ich mit Messfehlern um?}
+  \begin{enumerate}
+    \item Konzept und Messung eng vermitteln
+    \item multiple Indikatoren verwenden
+    \item empirische Implikationen steigern
+    \item Effekt antizipieren und diskutieren
+  \end{enumerate}
+\end{frame}
+\end{document}

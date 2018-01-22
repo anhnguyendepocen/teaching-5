@@ -1,18 +1,16 @@
 # Preamble
-library(ggplot2)
-library(extrafont)
-loadfonts()
+rm(list = ls())
 set.seed(84420)
 
 # Definitions ==============================================
 # constants
-n <- 100
-reps <- 500
+n <- 30
+reps <- 100
 sigma <- c(.1, 1, 2)
 beta <- c(2, 1.5)
 
 # variables & output objects
-X <- cbind(1, runif(n, -1, 1))
+X <- cbind(1, rnorm(n))
 beta_estimates <- array(FALSE,
   dim = c(reps, length(beta), length(sigma), 2),
   dimnames = list(
@@ -27,19 +25,18 @@ beta_estimates <- array(FALSE,
 # (1) unsystematic error in y
 for(s in 1:length(sigma)){         # for each level of error
   for(i in 1:reps) {      # for each round of the simulation
-    y <- rnorm(n, X %*% beta, sigma[s])
+    assign("y", rnorm(n, X %*% beta, sigma[s]))
     beta_estimates[i, , s, 'affects_y'] <- coef(lm(y ~ X[, 2]))
   }
 }
 # (2) unsystematic error in x
+y <- X %*% beta
 for(j in 1:length(sigma)){       # for each level of error
   for(i in 1:reps){       # for each round of the simulation
-    assign("Y", X %*% beta)# + rnorm(n))
     assign("X_e", rnorm(n, X[, 2], sigma[j]))
-    beta_estimates[i, , j, 'affects_x'] <- coef(lm(Y ~ X_e))
+    beta_estimates[i, , j, 'affects_x'] <- coef(lm(y ~ X_e))
   }
 }
-
 
 # prepare results for plot =================================
 pdta <- data.frame(
@@ -87,15 +84,12 @@ p <- ggplot(
   ) +
   geom_abline(intercept = beta[1], slope = beta[2], colour = 'red') +
   facet_grid(affected ~ sigma, labeller = label_parsed) +
-  labs(
-    title = "Effekt unsystematischer Messfehler auf kausale Inferenz",
-    subtitle = expression('"Wahres" Modell:' ~~ y == 2 + 1.5 * x)
-  ) +
+  # labs(
+  #   title = "Effekt unsystematischer Messfehler auf kausale Inferenz",
+  #   subtitle = expression('"Wahres" Modell:' ~~ y == 2 + 1.5 * x)
+  # ) +
   ggthemes::theme_fivethirtyeight(base_family = 'Times') +
   theme(axis.title = element_text())
-ggsave(plot = p, file = "messfehler.pdf", width = 7, height = 7 / 1.618)
+# ggsave(plot = p, file = "messfehler.pdf", width = 7, height = 7 / 1.618)
 
-# housekeeping =============================================
-rm(list = ls())
-detach(package:ggplot2)
-detach(package:extrafont)
+## END
