@@ -1,0 +1,183 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{adjustbox}
+\usepackage{tikz}
+  \usetikzlibrary{positioning, calc, decorations.pathreplacing, backgrounds, fit}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+
+\definecolor{grey538}{rgb}{240,240,240}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 22. Januar 2018}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Forschungsdesign in den Sozialwissenschaften{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Wintersemester 2017/2018
+}
+\date{29. Januar 2018}
+
+\begin{document}
+\maketitle
+
+\begin{frame}
+\frametitle{Leitfragen}
+\begin{enumerate}
+  \item Für welche Variablen muss ich kontrollieren?
+  \item Wie bewältige ich Endogenität?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Auf welche Variablen muss ich kontrollieren?}
+\begin{enumerate}
+  \item In den amerikanischen Bundesstaaten nimmt die
+    Scheidungsrate zu, wenn die Hochzeitsrate steigt. Das
+    Alter der Eheschließenden spielt eine erheblich Rolle.
+    Junge Menschen heiraten häufiger und sie lassen sich
+    öfter scheiden.
+  \item Nicht-demokratische Einparteistaaten weisen häufig
+    einen höheren sozialen Entwicklungsstand als andere
+    autoritäre Regime auf. Mit einer kommunistischen
+    Ideologie geht sowohl das Herrschaftsmonopol einer
+    einzigen Partei als auch ein Bemühen um soziale
+    Entwicklung einher.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Für welche Variablen muss ich kontrollieren?}
+\textbf{Störgröße, Drittvariable, Kontrollvariable, \dots}
+\begin{itemize}
+  \item Variable, die die kausale Beziehung $X \implies Y$ beeinflusst
+  \item [$\rightarrow$] kausaler Effekt von $X$ wird aufgebläht oder versteckt
+\end{itemize}
+
+\begin{figure}
+\begin{subfigure}{.3\textwidth}
+  \centering
+  \subcaption{Irrelevant}
+  \begin{tikzpicture}
+    \node (Z) at (.5, 0) {Z} ;
+    \node (X) at (0, 1) {X} ;
+    \node (Y) at (1, 1) {Y} ;
+    \draw [-latex] (X) to (Y) ;
+    \draw [-latex] (Z) to (X) ;
+  \end{tikzpicture}
+\end{subfigure}
+  \hfill
+\begin{subfigure}{.3\textwidth}
+  \centering
+  \subcaption{altern. Ursache}
+  \begin{tikzpicture}
+    \node (Z) at (.5, 0) {Z} ;
+    \node (X) at (0, 1) {X} ;
+    \node (Y) at (1, 1) {Y} ;
+    \draw [-latex] (X) to (Y) ;
+    \draw [-latex] (Z) to (Y) ;
+  \end{tikzpicture}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.3\textwidth}
+  \centering
+  \subcaption{Störgröße}
+  \begin{tikzpicture}
+    \node (Z) at (.5, 0) {Z} ;
+    \node (X) at (0, 1) {X} ;
+    \node (Y) at (1, 1) {Y} ;
+    \draw [-latex, dashed] (X) -- (Y) ;
+    \draw [-latex] (Z) to (X) ;
+    \draw [-latex] (Z) to (Y) ;
+  \end{tikzpicture}
+\end{subfigure}
+\end{figure}
+\textbf{Wie berücksichtige ich Störgrößen?}
+\begin{itemize}
+  \item Statistische Analyse: Prädiktor aufnehmen
+  \item Qualitatitve Analyse: z.\,B. bei der Fallauswahl
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Für welche Variablen muss ich kontrollieren?}
+\textbf{Störgrößen sorgfältig modellieren, denn \dots}
+\begin{enumerate}
+  \item Ineffiziente Erklärung: Argumentation mind. nicht sparsam
+  \item Post-treatment bias: \tikz{%
+    \node (X) at (0, 0) {X} ;%
+    \node (Xprime) at (1, 0) {X'} ;%
+    \node (Y) at (2, 0) {Y} ;%
+    \draw [-latex] (X) -- (Xprime);%
+    \draw [-latex] (Xprime) -- (Y) ;%
+  }
+\end{enumerate}
+
+Kommunistische autoritäre Regime weisen häufig
+einen höheren sozialen Entwicklungsstand als andere
+autoritäre Regime auf. Eine kommunistische
+Ideologie begründet in der Regel das Herrschaftsmonopol
+einer einzigen Partei. Wenn die Fallauswahl sich auf
+Einparteiregime beschränkt, dann verzerrt sie den
+Effekt einer kommunistischen Ideologie auf den sozialen
+Entwicklungsstand.
+\end{frame}
+
+\begin{frame}
+\frametitle{Wie bewältige ich Endogenität?}
+
+\textbf{Endogenität}
+\begin{itemize}
+  \item erkl. Var. X nicht Ursache, sondern Folge der abh. Var. Y
+\end{itemize}
+
+\textbf{Beispiel}
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+  \node (Educ) {Bildung};
+  \node (Tol) [right = of Educ] {Toleranz} ;
+  \node (Gay) [right = of Tol] {\begin{tabular}{c} Befürwortung \\ gleichgeschl. Ehe \end{tabular}} ;
+  \draw (Educ) -- (Tol) -- (Gay) ;
+  \draw node at ($(Educ)!.5!(Tol)$) [label = north:?] {} ;
+  \draw node at ($(Tol)!.375!(Gay)$) [label = north:?] {} ;
+  \end{tikzpicture}
+\end{figure}
+
+\textbf{Endogenität droht immer, wenn\dots}
+\begin{itemize}
+  \item keine Kontrolle über Experimental- und Kontrollgruppe
+  \item [$\rightarrow$] betrifft v.\,a. nicht-experimentelle Beobachtungsdaten
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Endogenität droht immer, wenn\dots}
+
+\textbf{Lösungsstrategien}
+\begin{enumerate}
+  \item Abhängige bzw. unabhängige Variable enger fassen
+  \item [$\rightarrow$] bestimmte Arten/Aspekte von Bildung/Toleranz betroffen?
+  \item Endogenität in eine Störgröße überführen
+  \item [$\rightarrow$] auf den Wohnort kontrollieren
+  \item Fälle mit Bedacht auswählen
+  \item [$\rightarrow$] Gibt es deviante Fälle?
+\end{enumerate}
+\end{frame}
+
+
+\end{document}

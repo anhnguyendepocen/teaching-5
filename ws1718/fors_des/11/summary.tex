@@ -43,6 +43,7 @@
 \end{frame}
 
 \begin{frame}
+\frametitle{Warum ist eine Fallauswahl wichtig?}
   \textbf{Ziel der Fallauswahl}
   \begin{itemize}
     \item Selektion von Einheiten aus einer größeren Gruppe
@@ -91,24 +92,19 @@
     child  { node (1) {Zufallsauswahl} }
     child  { node (2) {\itshape{Ziel des Anwenders?}}
       child { node (2-1) [circle, draw, fill = black, inner sep = .1em] {}
-        child{ node {Typische} }
+        child{ node {\dots} }
         child{ node {Diverse} }
-        child{ node {Abweichende} }
-        child{ node {Einflussreiche} }
-        child{ node {Most similar} }
-        child{ node {Most different} }
+        child{ node {Typische} }
       }
       child { node (2-2) [circle, draw, fill = black, inner sep = .1em] {}
-        child{ node {Diverse} }
-        child{ node {Extreme} }
+        child{ node {\dots} }
         child{ node {Abweichende} }
-        child{ node {Most similar} }
-        child{ node {Most different} }
+        child{ node {Extreme} }
       }
     } ;
   \draw (root) edge node [sloped, anchor = south] {\scriptsize ja} (1) ;
   \draw (root) edge node [sloped, anchor = south] {\scriptsize nein} (2) ;
-  \draw (2) edge node [sloped, anchor = south] {\scriptsize Konfirmation} (2-1) ;
+  \draw (2) edge node [sloped, anchor = south] {\scriptsize Konfirm.} (2-1) ;
   \draw (2) edge node [sloped, anchor = south] {\scriptsize Exploration} (2-2) ;
   \end{tikzpicture}
 \end{figure}

@@ -1,0 +1,121 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{adjustbox}
+\usepackage{tikz}
+  \usetikzlibrary{positioning, calc, decorations.pathreplacing, backgrounds, fit}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\definecolor{grey538}{rgb}{240,240,240}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 22. Dezember 2017}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Grundlagen der Vergleichenden Politikwissenschaft{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Wintersemester 2017/2018
+}
+\date{29. Januar 2018}
+
+\begin{document}
+\maketitle
+
+\begin{frame}
+\frametitle{Frage der letzten Sitzung}
+\begin{enumerate}
+  \item Was will die Vetospielertheorie leisten?
+  \item Wie funktioniert die Vetospielertheorie?
+  \item Welche Kritik kann man an der Vetospielertheorie leisten?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Was will die Vetospielertheorie leisten?}
+\begin{itemize}
+  \item unterschiedlichste Aspekte polit. Systeme integrieren
+  \begin{itemize}
+    \item [z.B.] Regierungs- \& Parteiensystem, Föderalismus, etc.
+  \end{itemize}
+  \item sparsame Erklärung politischer Dynamiken anbieten
+  \item [$\rightarrow$] betont Konstellationen von Vetospielern und Agendasetzung
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Wie funktioniert die Vetospielertheorie?}
+\textbf{Allgemeine Grundlagen}
+\begin{itemize}
+  \item Theorie der rationalen Wahl
+  \item Räumliche Modelle der Politik
+  \item [$\rightarrow$] Nutzenrationale Akteure in mehrdimensionalen Situationen
+  \item [$\rightarrow$] Nutzen hängt von Entfernung zu einem Idealpunkt ab
+\end{itemize}
+\vfill
+
+\textbf{Besondere Grundlagen}
+\begin{enumerate}
+  \item Vetospieler: Akteur, der polit. Veränd. zustimmen muss
+  \begin{enumerate}
+    \item Konstitutionelle VS: von der Verfassung vorgesehen
+    \item Parteiliche VS: entstehen im politischen Prozess
+  \end{enumerate}
+  \item Politikstabilität: Schwierigkeit den \textit{status quo} (SQ) zu ändern
+  \begin{enumerate}
+    \item Winset$_{\text{SQ}}$: Menge aller Politiken, die SQ vorgezogen werden
+    \item Einstimmigkeitskern: Menge aller Politiken mit leerem Winset
+  \end{enumerate}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Wie funktioniert die Vetospielertheorie?}
+\begin{columns}
+  \begin{column}{.5\textwidth}
+  \begin{figure}
+    \centering
+    \input{vetoPlayerMaster.tex}
+  \end{figure}
+  \end{column}
+  \begin{column}{.5\textwidth}
+  \textbf{Einflüsse auf Politikstabilität}
+  \begin{enumerate}
+    \item Anzahl: Kommen neue VS hinzu, dann sinkt die Politikstabilität nicht.
+    \item [$\rightarrow$] Absorptionsregel
+    \item Kongruenz: Nimmt die Entfernung zw. d. Idealpunkten zu, dann steigt die Politikstabilität.
+  \end{enumerate}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Letzte Bemerkungen}
+\textbf{Politikstabilität beeinflusst\dots}
+\begin{enumerate}
+  \item Agendasetzungsmacht
+  \item Regierungsstabilität
+  \item Regimestabilität
+  \item Unabhängigkeit der Bürokratie
+  \item Unabhängigkeit der Gerichte
+\end{enumerate}
+
+\textbf{Mögliche Kritik an der Vetospielertheorie}
+\begin{enumerate}
+  \item VS häufig nicht leicht erkennbar
+  \item Policy-Präferenzen sind exogen
+  \item VS verhalten sich ausschließlich policy-seeking
+\end{enumerate}
+\end{frame}
+\end{document}

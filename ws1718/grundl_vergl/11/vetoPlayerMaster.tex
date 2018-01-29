@@ -1,0 +1,40 @@
+\begin{tikzpicture}[scale = 3]
+% define SQ & ideal points
+\coordinate (SQ) at (.2, .2) ;
+\coordinate (A) at (.2, .8) ;
+\coordinate (B) at (.8, .2) ;
+% \coordinate (C) at (.8, .8) ;
+% calculate distance from sq
+\coordinate (1) at ($(SQ) - (A)$) ;
+\coordinate (2) at ($(SQ) - (B)$) ;
+% \coordinate (3) at ($(SQ) - (C)$) ;
+% draw indifference curves
+\draw let \p1 = (1) in (A) circle ({veclen(\x1,\y1)}) ;
+\draw let \p1 = (2) in (B) circle ({veclen(\x1,\y1)}) ;
+% \draw let \p1 = (3) in (C) circle ({veclen(\x1,\y1)}) ;
+% fill winset
+\begin{scope}
+  \clip let \p1 = (1) in (A) circle ({veclen(\x1,\y1)}) ;
+  \fill [blue!25, fill opacity = .5] let \p1 = (2) in (B) circle ({veclen(\x1,\y1)}) ;
+\end{scope}
+% draw unanimity core
+\draw [dashed] (A) -- (B) ; % -- (C) -- (A) ;
+% place visible nodes
+\draw node at (A) [shape = circle, fill = black, inner sep = 0.2em, draw] {} ;
+\draw node at (B) [shape = circle, fill = black, inner sep = 0.2em, draw] {} ;
+% \draw node at (C) [shape = circle, fill = black, inner sep = 0.2em, draw] {} ;
+\draw node at (SQ) [shape = circle, fill = black, inner sep = 0.2em, draw] {} ;
+% add labels
+\draw node at (A) [label = west:{A}] {} ;
+\draw node at (B) [label = south:{B}] {} ;
+% \draw node at (C) [label = north east:{C}] {} ;
+\draw node at (SQ) [label = north east:{SQ}] {} ;
+% add reference lines
+\draw (0,1) [latex-] -- (0, 0) ;
+\draw [-latex] (0, 0) -- (1, 0) ;
+\draw node at (0, 1) [label = {north:Wirtschaft}] {} ;
+\draw node at (1, 0) [label = east:Soziales] {} ;
+% add legend
+\draw node at (0, -.2) [fill = blue!25, shape = rectangle, label = east:Winset des Status quo] {} ;
+\draw node at (0, -.4) [dashed, draw, shape = rectangle, label = east:Einstimmigkeitskern] {} ;
+\end{tikzpicture}
