@@ -11,6 +11,11 @@ output:
     colortheme: "seagull"
     toc: false
 ---
+## Relevanz
+
+Immer wieder heißt es, Recep Tayyip Erdoğan verwandele die
+Türkei in eine Diktatur. Einmal angenommen, der Vorwurf
+stimmte. Was hieße das eigentlich?
 
 ## Inhalte
 
@@ -26,19 +31,19 @@ output:
 ## Leistungsanforderungen
 
 1. Regelmäßige, aktive Teilnahme
-2. *alle*: 1 Reaktionspapier ($\rightarrow$ [wikihow.com](https://www.wikihow.com/Write-a-Reaction-Paper))
-    - Selbstgewählte Sitzung
+2. *Alle Teilnehmenden*: 1 Reaktionspapier ($\rightarrow$ [wikihow.com](https://www.wikihow.com/Write-a-Reaction-Paper))
+    - Selbstgewählte Sitzung nachbereiten
     - Abgabe spätestens 7 Tage nach der Sitzung
     - Umfang: 750 Wörter ($\pm 10\%$)
     
 3. *ECTS*: Hausarbeit
-    - Auf Moodle stehe 2 Themen zur Wahl.
+    - Moodle: 2 Wahlthemen; freie Themen nach Rücksprache
     - Abgabe: 30.09.
     - Umfang: 4500 Wörter ($\pm 10\%$)
 
 ## Moodle
 
-**Titel des Kurses**: Autokratie SoSe18
+**Titel des Kurses**: Autokratie_SoSe18
 
 **Einschreibeschlüssel**: yFWXS3TH
 

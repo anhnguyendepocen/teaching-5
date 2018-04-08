@@ -12,30 +12,18 @@ output:
     toc: false
 ---
 
-# Inhalte
-
 ## Inhalte
 
 1. Grundlagen der Vergleichenden Politikwissenschaft
-    - Was ist Wissenschaft?
-    - Was bedeutet es, zu vergleichen?
+    - empirisch-analytische Wissenschaft und Vergleich
 2. Theorie der rationalen Wahl
-    - Was leistet die Theorie der rationalen Wahl?
-    - Wie vergleicht man mit ihrer Hilfe polit. Institutionen?
-    
-## Inhalte
-
+    - Grundlagen, Anwendungsbeispiele und Erweiterungen
 3. Politischer Wettbewerb
-    - Wie verhalten sich politische Parteien?
-    - Konfliktlinien & Parteiensysteme
-    - Wahlen & Parteiensysteme
-    - Parlamentarismus & Präsidentialismus
+    - Konfliktlinien, Parteien-, Wahl- & Regierungssysteme
 4. Systematisierungsversuche
-    - Mehrheits- & Konkordanzdemokratie
-    - Vetospielertheorie
-5. Steht die Demokratie am Abgrund?
-
-# Leistungsanforderungen
+    - Mehrheits- & Konkordanzdemokratie, Vetospieleransatz
+5. Zukunftsperspektiven
+    - Democratic rollback
 
 ## Leistungsanforderungen
 
@@ -48,18 +36,14 @@ output:
     - schnellstmögliche Bekanntgabe zweier Themen zur Auswahl
     - Abgabe: 30.09.
     - Umfang: 3000 Wörter ($\pm 10\%$)
-    
-# Moodle
 
 ## Moodle
 
 **Titel des Kurses**: grdl_vgl_pw_18s
 
-**Einschreibeschlüssel**: QTjS7hIJ
+**Einschreibeschlüssel**: \serif{QTjS7hIJ}
 
 Beachten Sie die Groß- und Kleinschreibung!
-
-# Sprechstunde
 
 ## Sprechstunde
 
