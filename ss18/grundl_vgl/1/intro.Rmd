@@ -1,0 +1,70 @@
+---
+title: "Einführungssitzung"
+author: "dag.tanneberg@uni-potsdam.de"
+date: "09.04.2018"
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+# Inhalte
+
+## Inhalte
+
+1. Grundlagen der Vergleichenden Politikwissenschaft
+    - Was ist Wissenschaft?
+    - Was bedeutet es, zu vergleichen?
+2. Theorie der rationalen Wahl
+    - Was leistet die Theorie der rationalen Wahl?
+    - Wie vergleicht man mit ihrer Hilfe polit. Institutionen?
+    
+## Inhalte
+
+3. Politischer Wettbewerb
+    - Wie verhalten sich politische Parteien?
+    - Konfliktlinien & Parteiensysteme
+    - Wahlen & Parteiensysteme
+    - Parlamentarismus & Präsidentialismus
+4. Systematisierungsversuche
+    - Mehrheits- & Konkordanzdemokratie
+    - Vetospielertheorie
+5. Steht die Demokratie am Abgrund?
+
+# Leistungsanforderungen
+
+## Leistungsanforderungen
+
+1. Regelmäßige, aktive Teilnahme
+2. *alle*: 1 Diskussionspapier
+    - Bekanntgabe des Themas: 14.05.
+    - Abgabe: 28.05.
+    - Umfang: 750 Wörter ($\pm 10\%$)
+3. *ECTS*: Hausarbeit
+    - schnellstmögliche Bekanntgabe zweier Themen zur Auswahl
+    - Abgabe: 30.09.
+    - Umfang: 3000 Wörter ($\pm 10\%$)
+    
+# Moodle
+
+## Moodle
+
+**Titel des Kurses**: grdl_vgl_pw_18s
+
+**Einschreibeschlüssel**: QTjS7hIJ
+
+Beachten Sie die Groß- und Kleinschreibung!
+
+# Sprechstunde
+
+## Sprechstunde
+
+**Zeitpunkt** Montags, 15.00 bis 17.00 Uhr
+
+**Ort**: Haus 1, R.1.44
+
+**Anmeldung**: per Email an dag.tanneberg@uni-potsdam.de

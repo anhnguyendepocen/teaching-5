@@ -1,0 +1,53 @@
+---
+title: "Einführungssitzung"
+author: "dag.tanneberg@uni-potsdam.de"
+date: "09.04.2018"
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+## Inhalte
+
+1. Unterscheidung von Demokratie und Autokratie
+    - Kategoriale vs. graduelle Unterscheidungen
+2. Theoretische Perspektiven auf autoritäre Herrschaft
+    - Typologien vs. strategiebasierte Ansätze
+3. politische Institutionen und autoritäre Herrschaft
+    - (Regierungs-)Parteien, Wahlen, Parlamente
+4. Ausgewählte Aspekte autoritärer Herrschaft
+    - Soziale Wohlfahrt, Repression, Protest, Stabilität & Wandel
+
+## Leistungsanforderungen
+
+1. Regelmäßige, aktive Teilnahme
+2. *alle*: 1 Reaktionspapier ($\rightarrow$ [wikihow.com](https://www.wikihow.com/Write-a-Reaction-Paper))
+    - Selbstgewählte Sitzung
+    - Abgabe spätestens 7 Tage nach der Sitzung
+    - Umfang: 750 Wörter ($\pm 10\%$)
+    
+3. *ECTS*: Hausarbeit
+    - Auf Moodle stehe 2 Themen zur Wahl.
+    - Abgabe: 30.09.
+    - Umfang: 4500 Wörter ($\pm 10\%$)
+
+## Moodle
+
+**Titel des Kurses**: Autokratie SoSe18
+
+**Einschreibeschlüssel**: yFWXS3TH
+
+Beachten Sie die Groß- und Kleinschreibung!
+
+## Sprechstunde
+
+**Zeitpunkt** Montags, 15.00 bis 17.00 Uhr
+
+**Ort**: Haus 1, R.1.44
+
+**Anmeldung**: per Email an dag.tanneberg@uni-potsdam.de
