@@ -12,6 +12,13 @@ output:
     toc: false
 ---
 
+## Warum Vergleichende Politikwissenschaft?
+
+Bei der Vergleichenden Politikwissenschaft handelt es sich
+neben den Internationalen Beziehungen um den größten
+Teilbereich der Politikwissenschaft. Aber worum geht es in
+der Vergleichenden Politikwissenschaft eigentlich?
+
 ## Inhalte
 
 1. Grundlagen der Vergleichenden Politikwissenschaft
@@ -41,7 +48,7 @@ output:
 
 **Titel des Kurses**: grdl_vgl_pw_18s
 
-**Einschreibeschlüssel**: \serif{QTjS7hIJ}
+**Einschreibeschlüssel**: QTjS7hIJ
 
 Beachten Sie die Groß- und Kleinschreibung!
 
