@@ -1,0 +1,97 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+  \usetikzlibrary{positioning}
+  \usetikzlibrary{calc}
+  \usetikzlibrary{matrix}
+\usepackage{adjustbox}
+
+\usepackage[%
+  isbn = false, doi = false, url = false
+]{biblatex}
+\usepackage{bibentry}
+\usepackage{amsmath}
+\addbibresource{./library.bib}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 16.04.2018}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Wie erkl\"art man autorit\"are Herrschaft?{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Sommersemester 2018
+}
+\date{30.04.2018}
+% document body --------------------------------------------
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Leitfragen der Sitzung}
+  \begin{enumerate}
+    \item Welches Spektrum von Regierungsformen umfasst
+      autoritäre Herrschaft?
+    \item Wie verändern sich die Ziele autoritärer
+      Herrschaft, wenn sie sich der Demokratie angleicht?
+    \item Was unterscheidet den Totalitarismus von anderen
+      Formen autoritärer Herrschaft?
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Definition des Autoritarismus nach Juan J. Linz}
+  \begin{quote}
+    \normalfont
+    \small
+    ``political systems with \textbf{limited, not responsible,
+    political pluralism}, without elaborate and guiding
+    ideology, but with \textbf{distinctive mentalities},
+    \textbf{without extensive nor intensive political mobilization},
+    except at some points in their development, and in which
+    a leader or occasionally a small group exercises power
+    within formally ill-defined limits but actually quite
+    predictable ones''
+    \newline \newline
+    \footnotesize{\fullcite[159]{Linz.2000}}.
+  \end{quote}
+  \begin{itemize}
+    \item autorit. Herrschaft $\equiv \{\text{Totalitarismus; Demokratie}\}^\complement$
+    \item mehrdimensionale, graduelle Unterscheidung
+    \item variabler Herrschaftsanspruch:
+
+    Kontrolle $\leftrightarrow$ Entpolitisierung $\leftrightarrow$ Voluntarismus
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Konzeptbaum des Ansatzes von Juan Linz}
+  \begin{figure}[t]
+    \input{Linz_tree.tex}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Kritische Anmerkungen}
+  \begin{enumerate}
+    \item autoritäre Herrschaft \textit{ex negativo} bestimmt
+    \item Wechselbeziehung zw. Merkmalen wenig elaboriert
+    \item Annahmen über Ziele kaum theoretisch geerdet
+    \item implizite Schwellwerte für Klassifikationen (Compet. Authorit.)
+  \end{enumerate}
+\end{frame}
+
+\end{document}

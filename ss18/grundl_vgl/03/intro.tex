@@ -1,0 +1,88 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+  \usetikzlibrary{positioning}
+  \usetikzlibrary{calc}
+  \usetikzlibrary{matrix}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{booktabs}
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 23.04.2018}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Grundlagen der Vergleichenden Politikwissenschaft{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Sommersemester 2018
+}
+\date{30.04.2018}
+% document body --------------------------------------------
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Leitfragen der Sitzung}
+  \begin{enumerate}
+    \item Was sind verstehen und erklären?
+    \item Was heißt vergleichen?
+    \item Welche Varianten des Vergleichs gibt es?
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was sind verstehen und erklären?}
+  \begin{itemize}
+    \item \textbf{Verstehen}: idiographisch, d.h. Einzigartigkeit beschreiben
+    \item \textbf{Erklären}: nomothetisch, d.h. Betrachtung generalisieren
+    \item [$\rightarrow$] alternative Erkenntnisinteressen
+    \item \textbf{Vergleichen}: Gemeinsamkeiten und Unterschiede begründen
+    \item [$\rightarrow$] Einzigartigkeit eliminieren \& Generalisierung erreichen
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was heißt vergleichen?}
+  \begin{itemize}
+    \item \textbf{Kontrolle ausüben}: Kann man eine Sache verallgemeinern?
+    \item \textbf{Kriterien formulieren}: Kann man sinnvoll vergleichen?
+    \item \textbf{Verallgemeinerung abwägen}: Wie wichtig sind Ideosynkrasien?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Welche Varianten des Vergleichs gibt es?}
+  \begin{itemize}
+    \item \textbf{Mill's Methoden}: Logische Modelle des Vergleichs
+    \item \textbf{Auswertung von Kovarianz}: eliminieren altern. Erkl.
+    \item \textbf{Prototypische Forschungsdesigns}: MoA \& MoD
+    \item \textbf{Scheitern an}: multipler Kausalität, Interaktionseffekten, probabilistischen Beziehungen
+  \end{itemize}
+  \begin{table}[b]
+    \centering
+    \begin{tabular}{l *{8}{c}}
+      \toprule
+      Method of & \multicolumn{4}{c}{Agreement} & \multicolumn{4}{c}{Difference}\\
+      \cmidrule(lr){2-5} \cmidrule(lr){6-9}
+      & $x_1$ & $x_2$ & $x_3$ & $y$ & $x_1$ & $x_2$ & $x_3$ & $y$ \\
+      \midrule
+      & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 1\\
+      & 1 & 1 & 0 & 1 & 0 & 1 & 0 & 0\\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+\end{document}

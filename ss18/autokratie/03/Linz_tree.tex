@@ -1,0 +1,50 @@
+\begin{adjustbox}{max totalsize={\textwidth}{.9\textheight}, center}
+\begin{tikzpicture}[
+  every matrix/.append style={ampersand replacement=\&,matrix of nodes},
+  edge from parent/.append style={-latex}
+]
+% --- Layout & Styles --------------------------------------
+\tikzstyle{solid node}=[circle,draw,inner sep=1.2,fill=black];
+\tikzstyle{hollow node}=[circle,draw,inner sep=1.2];
+\tikzstyle{level 1}=[sibling distance = 12em]
+\tikzstyle{level 2}=[sibling distance = 6em]
+% --- Tree -------------------------------------------------
+\node(0){Politisches Regime}
+  child{
+    node(0-1){Pluralismus}
+    child{
+      node(0-1-1){Totalitär}
+    }
+    child{
+      node(0-1-2){Demokratisch}
+    }
+  }
+  child{
+    node(0-2){Ideologie}
+    child{
+      node(0-2-1){Totalitär}
+    }
+    child{
+      node(0-2-2){Demokratisch}
+    }
+  } 
+  child{
+    node(0-3){Mobilisierung}
+    child{
+      node(0-3-1){Totalitär}
+    }
+    child{
+      node(0-3-2){Demokratisch}
+    }
+  } ;
+\coordinate (arc-1-1) at ($(0-1)!.5!(0-1-1)$) ;
+\coordinate (arc-1-2) at ($(0-1)!.5!(0-1-2)$) ;
+\draw [-] (arc-1-1) to [bend right] (arc-1-2) ;
+\coordinate (arc-2-1) at ($(0-2)!.5!(0-2-1)$) ;
+\coordinate (arc-2-2) at ($(0-2)!.5!(0-2-2)$) ;
+\draw [-] (arc-2-1) to [bend right] (arc-2-2) ;
+\coordinate (arc-3-1) at ($(0-3)!.5!(0-3-1)$) ;
+\coordinate (arc-3-2) at ($(0-3)!.5!(0-3-2)$) ;
+\draw [-] (arc-3-1) to [bend right] (arc-3-2) ;
+\end{tikzpicture}
+\end{adjustbox}
