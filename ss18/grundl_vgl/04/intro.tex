@@ -1,0 +1,148 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+  \usetikzlibrary{positioning, backgrounds, calc}
+\usepackage{tikzscale}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{booktabs}
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 30.04.2018}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Grundlagen der Vergleichenden Politikwissenschaft{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Sommersemester 2018
+}
+\date{07.05.2018}
+
+\definecolor{grey538}{RGB}{240,240,240}
+% document body --------------------------------------------
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Leitfragen der Sitzung}
+  \begin{enumerate}
+    \item Was leistet der strukturell-individualistische Ansatz?
+    \item Was zeichnet die Theorie der rationalen Wahl aus?
+    \item Was ist eine rationale Wahl?
+    \item Was nutzt mir das?
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was leistet der strukturell-individualistische Ansatz?}
+  \begin{itemize}
+    \item \textbf{Zweck}: kollektive Explananda d. Individualverhalten erklären
+    \item \textbf{Mittel}: Mehrebenenzshg zw. Struktur \& Akteur
+    \item \textbf{Analyseschritte}: Logik der
+    \begin{enumerate}
+      \item Situation: Welche Makromerkmale sind handlungsrelevant?
+      \item Selektion: Wie wählen Individuen zw. Handlungsalternativen?
+      \item Aggregation: Wie überlagern sich Handlungsentscheidungen?
+    \end{enumerate}
+    \item \textbf{Handlungstheorie}:
+    \begin{itemize}
+      \item benennt handlungsrelevante Situationsmkm.
+      \item informiert Entsch. zw. Handlungsalternativen
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was leistet der strukturell-individualistische Ansatz?}
+  \begin{figure}
+  \centering
+    \includegraphics{analyseschema.tikz}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was zeichnet die Theorie der rationalen Wahl aus?}
+  \begin{itemize}
+    \item \textbf{zentral}: Bedürfnisbefriedigung unter Bdg. von Knappheit
+    \item \textbf{Handeln}:
+    \begin{itemize}
+      \item Allokation knapper Mittel auf konkurrierende Ziele
+      \item [$\rightarrow$] planvolle \& intentionale Wahlentschiedung unter Restriktionen
+    \end{itemize}
+    \item \textbf{Handlungsziel}: Allokation maximiert den Individualnutzen
+    \item [$\rightarrow$] $\exists$ Rangfolge über Handlungskonsequenzen
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Was ist eine rationale Wahl?}
+\begin{itemize}
+  \item \textit{Präferenzen über Handlungsfolgen} leiten Handlungsselektion
+  \item erfordert eine kohärente Präferenzordnung
+\end{itemize}
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[grow = right, level distance = 1em, sibling distance = 4em, background rectangle/.style = {fill = grey538, draw = black}, show background rectangle]
+% node placement
+\node (0) [draw, shape = circle, fill = black, inner sep = 0.1em] {}
+  child { node  (0-1) {} edge from parent [-latex]}
+  child { node (0-2) {} edge from parent [-latex] }
+;
+% label placement
+\node [left = 0em and 0em of 0] {
+  \begin{tabular}{l}
+  \textbf{Präferenz-}\\
+  \textbf{ordnung}
+  \end{tabular}
+} ;
+\node (l1) [right = 0em and 0em of 0-2] {
+  \begin{tabular}{l}
+    \textbf{Vollständigkeit}\\
+    $\bullet$ erschöpfender Vergleich\\
+    $\bullet ~ \forall ~ i, j \in I: i \ge j \lor i \le j \lor i = j$\\
+  \end{tabular}
+} ;
+\node (l2) [right = 0em and 0em of 0-1] {
+  \begin{tabular}{l}
+    \textbf{Transitivität} \\
+    $\bullet$ widerspruchsfreie Ordnung \\
+    $\bullet ~ \forall ~ i, j, k \in I: i \ge j \land j \ge k \implies i \ge k$ \\
+  \end{tabular}
+} ;
+\end{tikzpicture}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Was nutzt mir das?}
+  \begin{enumerate}
+    \item belastbare Analytik von Interaktionszusammenhängen
+    \begin{itemize}
+      \item Wer verfolgt welche Zwecke?
+      \item Welche Mittel setzt der Akteur wahrscheinlich ein?
+    \end{itemize}
+    \item bildet widerspruchsfreie Theorien
+    \begin{itemize}
+      \item Zwingt zu transparenten Annahmen
+      \item Fördert annahmentreue Argumentation
+    \end{itemize}
+    \item vielseitig einsetzbar \& empirisch erprobt
+    \begin{itemize}
+      \item Analysiert Ein- und Mehrpersonenzusammenhänge
+      \item Bietet ein Portfoliot von Standardproblemen
+    \end{itemize}
+  \end{enumerate}
+\end{frame}
+\end{document}
