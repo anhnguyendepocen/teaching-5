@@ -7,6 +7,7 @@ output:
     theme: "Berlin"
     fonttheme: "professionalfonts"
     colortheme: "seagull"
+    fig_caption: false
     toc: false
 ---
 
@@ -46,13 +47,15 @@ In einer Umfrage während des Vietnamkriegs fragten
 Sidney [Verba *et al.*](https://www.cambridge.org/core/journals/american-political-science-review/article/public-opinion-and-the-war-in-vietnam/4CF464A54961820322468877568C89B0) nach den Präferenzen der amerikanischen
 Bevölkerung über das weitere Engagement ihre Landes in Vietnam.
 
-a. Verba *et al.* fanden heraus, dass die Antworten der
-  meisten Befragten den Anforderungen eines eindimensionalen
-  Politikraums genügten. Welche Anforderungen sind das?
+a. Verba *et al.* zeigten, dass die Antworten der
+  meisten Befragten in einem eindimensionalen Politikraum
+  dargestellt werden konnten. Welchen Anforderungen genügen
+  diese Antworten?
 b. Ein kleiner Teil der Befragten verlangte sowohl eine
   Reduktion als auch eine Erweiterung des Engagements.
-  Welche Annahme verletzen diese Befragten? Worauf deutet
-  der Verstoß hin?
+  Welche Annahme verletzen die Präferenzen dieser Befragten?
+  Worauf deutet der Verstoß hin? Warum ist das in einem
+  *politischen* Sinne relevant?
 
 # Aufgabe B
 
@@ -71,9 +74,9 @@ c. Jeder Akteur darf jederzeit neue Vorschläge unterbreiten. Es gilt die Mehrhe
   Referenzpunkt $o^*$ bevorzugt:
   $Pr_i(o^*) = \{o \in O; o \succ o^*\}$.
 
-\begin{figure}
+\begin{center}
   \includegraphics[width = .5\textwidth]{ex_praeferenzmenge.png}
-\end{figure}
+\end{center}
 
 # Aufgabe C
 
@@ -81,7 +84,7 @@ In einem eindimensionalen Politikraum sind die Idealpunkte der Akteure a, b und 
 
 ![](./problem_c.png)
 
-a. Schraffiere die Einigungsmenge der Akteure b und c.
+a. Schraffiere die Gewinnmenge der Akteure b und c.
 b. Welchen Punkt würde a (c) vorsclagen, wenn er der Agendasetzer wäre und ein alleiniges Vorschlagsrecht besäße?
 c. Nimm an, im Falle einer Nichteinigung würder nicht der Status quo bestehen bleiben, sondern die Regel sq$^*$ tritt in Kraft. Welche Punkt würde Agendasetzer a jetzt vorschlagen?
 
