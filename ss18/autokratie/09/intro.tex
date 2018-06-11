@@ -1,0 +1,137 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+  \usetikzlibrary{positioning, arrows, matrix, calc, backgrounds, fit, decorations.pathmorphing}
+\usepackage{adjustbox}
+\definecolor{grey538}{RGB}{240,240,240}
+\usepackage{subcaption}
+\usepackage[%
+  isbn = false, doi = false, url = false
+]{biblatex}
+\usepackage{bibentry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{multirow}
+\addbibresource{./library.bib}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 04.06.2018}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Wie erkl\"art man autorit\"are Herrschaft?{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Sommersemester 2018
+}
+\date{11.06.2018}
+% document body --------------------------------------------
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Leitfragen der Sitzung}
+  \begin{enumerate}
+    \item Warum spricht Smith über autoritäre Regierungsparteien?
+    \item Welche Vorteile generieren autoritäre Regierungsparteien?
+    \item Unter welchen Voraussetzungen greifen diese Vorteile?
+    \item Nachtrag zum Forschungsdesign
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Warum spricht Smith über autoritäre Regierungsparteien?}
+  \begin{itemize}
+    \item Lücke in der theoretischen Literatur \newline
+      \small{
+        ``Missing from the study of authoritarianism is a causal
+        account linking origins to institutions and institutions to
+        outcomes, [\dots].'' (421)
+      }
+    \item Charakter autoritärer Regierungsparteien nicht selbstverständlich \newline
+    \small{
+      ``Treating party institutions as prior variables makes it
+      nearly impossible to figure out how incentives within such
+      regimes might come, or not come, to look very much like
+      the Stag Hunt game.'' (427)
+    }
+    \item Begleitumstände der Konsolidierung stiften Pfadabhängigkeiten \newline
+    \small{
+      ``The theory suggests that prospects for long-term
+      survival of single-party regimes are best
+      conceptualized as a function of the challenges
+      political actors face as they make decisions about
+      building parties.'' (430)
+    }
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Welche Vorteile generieren autoritäre Regierungsparteien?}
+  \begin{enumerate}
+    \item Mit Blick auf \textit{authoritarian power-sharing}
+    \begin{itemize}
+      \item Koalitionsmanagement, d.\,h. Streitschlichtungsprozeduren
+    \end{itemize}
+    \item Mit Blick auf \textit{authoritarian control}
+    \begin{itemize}
+      \item Repression: Mobilisierung der eigenen Anhängerschaft
+      \item Kooptation: Staatsparteien; selektive Gewähr von Vorteilen
+    \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Unter welchen Voraussetzungen greifen diese Vorteile?}
+  \begin{quote}
+  ``Elites that face organized opposition in the form of
+  highly institutionalized social groups [\dots], \textbf{and}
+  that have little or no access to rent sources are
+  likely to respond to these constraints
+  by building party institutions to mobilize their own
+  constituencies.'' (422; my emph.)
+\end{quote}
+\begin{tabular}{*{3}{c}}
+~ & \multicolumn{2}{c}{Organiz. strength of opposition} \\
+Rent revenues & High & Low \\ \midrule
+Low &  \textbf{Organizat. weapons} \\
+~ & Indonesia (1967-71) \\
+~ & Tanzania (1954-62) \\
+High & ~ & \textbf{Rent havens} \\
+~ & ~ & Guinea-Bissau (70-74) \\
+~ & ~ & Philippines (1978-82) \\
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Nachtrag zum Forschungsdesign}
+  \begin{itemize}
+    \item Mixed Methods Approach
+    \item Quantitative Analyse: Effekt nicht robust
+    \begin{itemize}
+      \item Werden die Koeffizienten korrekt interpretiert?
+      \item Wie belastbar sind Aussagen über statistische Signifikanz?
+      \item Ausschluss von Mexiko \& UdSSR: Selection bias?
+    \end{itemize}
+    \item Qualitative Analyse: Konsolidierungsbdg. plausibilisieren
+    \begin{itemize}
+      \item Kombination von Method of Agreement \& Difference
+      \item Wie aussagekräftig ist die Analyse von Krisen?
+      \item Bestimmt der Zeitraum der Analyse auf das Ergebnis?
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\end{document}
