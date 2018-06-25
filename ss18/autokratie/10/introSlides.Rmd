@@ -1,0 +1,76 @@
+---
+title: "Zusammenfassung vom 11 Juni 2018"
+author: "dag.tanneberg@uni-potsdam.de"
+date: "18 Juni 2018"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+## Warum gibt es Wahlen jenseits der Demokratie?
+
+- __Problem__: Wie verteilen Autokraten knappe Güter, ohne
+  sich angreifbar zu machen?
+
+\begin{enumerate}
+  \item Distribution an strategisch wichtige Akteure
+  \begin{itemize}
+    \item knappe Güter fair und transparent verteilen
+    \item destabilisierenden Verteilungskonflikten vorbeugen
+  \end{itemize}
+  \item Monitoring von Parteifunktionären/Bürokraten
+  \begin{itemize}
+    \item Regimetreue und Leistungsfähigkeit ungewiss
+    \item zuverlässige Informationsquelle benötigt
+  \end{itemize}
+  \item[$\rightarrow$] Wahlen $\equiv$ "tool to manage domestic political elite" (49)
+\end{enumerate}
+ 
+## Distribution an strategisch wichtige Akteure
+
+- Wahlen stiften marktförmigen Wettbewerb ([\textcolor{blue}{All-pay auction}](https://en.wikipedia.org/wiki/All-pay_auction))
+- Wettbewerb folgt transparenten und sicheren Regeln
+- Wahlerfolg hängt vom ind. Einsatz ab (Wahlkampfkosten)
+- pos. [\textcolor{blue}{Externalität}](https://de.wikipedia.org/wiki/Externer_Effekt): Kand. schaffen lokale Verteilungsnetzwerke
+
+\begin{quote} 
+  "Elections, then, are a decentralized distribution
+  mechanism that aids authoritarian survival by regularizing
+  intra-elite competition, while at the same time
+  outsourcing the cost of political mobilization and
+  redistribution to the rent-seeking elite." (50)
+\end{quote}
+
+## Monitoring von Parteifunktionären/Bürokraten
+
+- alternative Karriere im Partei-/Staatsapparat
+- Problem: Wie Kompetenz & Loyalität prüfen?
+- Wahlen $\equiv$ Lackmustest
+
+\begin{quote}
+  "their ability to mobilize voters and achieve a favorable
+  outcome for party candidates with a minimum of fraud and
+  coercion reflects important characteristics, including
+  capability and loyalty" (59)
+\end{quote}
+
+## Kritik an Theorie und Empirie
+
+\begin{enumerate}
+  \item Warum nutzen MPs ihre strukturellen Vorteile nicht aus?
+  \begin{itemize}
+    \item [] \textbf{Gegenargumente}:
+    \item Wahlen wären nicht \textit{self-enforcing}.
+    \item Regime hält den Wettbewerb offen.
+  \end{itemize}
+  \item Ambivalenz von Wahlen: auch Plattform der Opposition
+  \item Einzelfallstudie: Wie generalisierbar sind die Ergebnisse?
+  \item emp. Tests von fragwürdiger Qualität
+  \begin{itemize}
+    \item[\textbf{H1}] Turnover beinhaltet Opposition \& abstrahiert von Elitennetzw.
+    \item[\textbf{H2}] Verengt auf Muslimbruderschaft \& übergeht Kandidatenqualit.
+  \end{itemize}
+\end{enumerate}
