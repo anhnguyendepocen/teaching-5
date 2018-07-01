@@ -1,0 +1,120 @@
+% Preamble -------------------------------------------------
+\PassOptionsToPackage{table}{xcolor}
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{adjustbox}
+\usepackage{tikz}
+  \usetikzlibrary{positioning, calc, decorations.pathreplacing, backgrounds, fit}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\usepackage{booktabs}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 25. Juni 2018}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Grundlagen der Vergleichenden Politikwissenschaft{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Sommersemester 2018
+}
+\date{2. Juli 2018}
+
+% slides ---------------------------------------------------
+\begin{document}
+\maketitle
+
+\begin{frame}
+\frametitle{Leitfragen der Sitzung}
+\begin{enumerate}
+  \item Warum sollten wir über Regierungssysteme sprechen?
+  \item Welche wesentlichen Regierungssysteme gibt es?
+  \item Was bedeuten deren Unterschiede für Parteien?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Warum sollten wir über Regierungssysteme sprechen?}
+\begin{itemize}
+  \item \textbf{Repräsentative Demokratie}: Delegation polit. Macht
+  \item \textbf{Problem}: Wie zieht man eine Regierung zur Verantwortung?
+  \item \textbf{Varianten repräsentativer Demokratie}:
+\end{itemize}
+\begin{columns}
+\begin{column}{.5\textwidth}
+\begin{block}{\textbf{1. Parlamentarismus}}
+\begin{tikzpicture}[grow = up, edge from parent/.style={draw,-latex}]
+\node (0) [shape = rectangle, fill = white] {Staatsbürger}
+  child{ node (1) [shape = rectangle, fill = white] {Parlament}
+    child{node (2) [shape = rectangle, fill = white] {Regierung} }
+  } ;
+\node (3) at ($(1)!0.5!(2)-(2.5,0)$) [shape = rectangle, fill = white] {Verwaltung};
+\node (l1) at ($(0)!0.5!(1)+(.6,0)$) {\small wählt};
+\node (l2) at ($(1)!0.5!(2)+(1.1,0)$) {
+  \small
+  \begin{tabular}{l}
+    hält polit.\\
+    verantwortl.
+  \end{tabular}
+};
+\node (l1) at ($(2)!0.5!(3)-(0.5,-.25)$) {\small leitet};
+\draw [-latex] (2)--(3);
+\end{tikzpicture}
+\end{block}
+\end{column}
+\begin{column}{.5\textwidth}
+\begin{block}{\textbf{2. Präsidentialismus}}
+\begin{tikzpicture}[grow = up, sibling distance = 6em, edge from parent/.style={draw,-latex}]
+\node (0) [shape = rectangle, fill = white] {Staatsbürger}
+  child [level distance = 8em] { node (1) [shape = rectangle, fill = white] {Parlament} }
+  child [level distance = 8em] { node (2) [shape = rectangle, fill = white] {Präsident}
+    child [grow = south west, level distance = 3.5em] { node (3) [shape = rectangle, fill = white] {Kabinett}
+      child [grow = south] {node (4) [shape = rectangle, fill = white] {Verwaltung} }
+    }
+  } ;
+\node (l1) at ($(0)!0.5!(1)-(.6,0)$) {\small wählt} ;
+\node (l2) at ($(2)!0.5!(3)-(0.7,-0.05)$) {\small ernennt} ;
+\node (l3) at ($(3)!0.5!(4)-(0.5,0)$) {\small leitet} ;
+\end{tikzpicture}
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Welche wesentlichen Regierungssysteme gibt es?}
+\begin{tabular}{*{4}{l}}
+~ & ~ & \multicolumn{2}{c}{Politische Abberufbarkeit der Regierung} \\
+~ & ~ & \multicolumn{2}{c}{durch das Parlament} \\
+\multicolumn{2}{l}{Auswahl d. Reg.} & \multicolumn{1}{c}{Ja} & \multicolumn{1}{c}{Nein} \\
+\cmidrule{3-4}
+~ & Parlament & parlamentarisch & versammlungsunabh.\\
+~ & Volk & direktwahl-parlament. & präsidentiell\\
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{Was bedeuten deren Unterschiede für Parteien?}
+\begin{itemize}
+  \item Direktwahl der Exek.: Präsidentialisierung politischer Parteien
+  \item [$\rightarrow$] Anpassung der Parteien an Präsidentschaftswahl
+  \item Präsidentschaft erschließt Pfründe \& Politikgestaltung
+  \item Parteien\dots
+  \begin{enumerate}
+    \item sind tendenziell programmatisch weniger geschlossen
+    \item sind tendenziell lockerer organisiert
+    \item suchen eher den Konflikt mit dem Präsidenten
+  \end{enumerate}
+\end{itemize}
+\end{frame}
+\end{document}

@@ -1,0 +1,52 @@
+---
+title: "Zusammenfassung vom 20. Januar"
+author: "Dag Tanneberg"
+date: "01/27/2017"
+output:
+  beamer_presentation:
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+## Fragestellung & Intuition des Texts
+
+Brauchen wir einen Diskurs zur Qualität der Demokratie?
+
+**Nein, denn:**
+
+1. Debatte verharrt in konzeptioneller Unordnung
+2. Demokratie und Qualität der Demokratie keine Gegensätze
+3. Bedarf nach einem anspruchsvolleren Demokratiebegriff
+
+## Konzeptionelle Unordnung
+**Sense** Was heißt "Qualität der Demokratie"?
+
+- Begriffsinhalt jenseits freier und fairer Wahlen
+- Welche Stationen des Politikprozesses erfassen?
+- Welche Merkmale jeweils einbeziehen?
+- In welchem Verhältnis stehen diese Komponenten zueinander?
+    
+## Falsche Entgegensetzung    
+**Reach** Welche politischen Regime betrifft es?
+
+- Klassische Schrittfolge: 1. Klassifikation; 2. Quantifizierung
+- Kritik zur Begriffbildung: "[\dots] [D]emocracy is a
+  possible quality of a political system but democracy –
+  being a construct and not an object – has no possible
+  qualities." (9)
+- nichtintendierte Folgen:
+    - Regimetyp eines Landes nicht mehr revidierbar
+    - Strengerer Maßstab gegen Demokratien
+
+## Ein anspruchsvollerer Demokratiebegriff
+1. Freie & faire Wahlen
+2. Gouvernementale Entscheidungsprozesse
+    - Verhältniswahl, Unikameralismus mit Mehrheitsentscheidung
+    - keine Gegengewichte - elektorale Rechenschaftspflicht
+3. Soziale Kontextbdg. demokratischer Verfahren
+    - notw. Voraussetzung demokrat. Verfahren
+    - gleiche Wahrnehmung bürgerl. Freiheiten
+
+
