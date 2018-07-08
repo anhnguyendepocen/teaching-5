@@ -1,0 +1,187 @@
+---
+title: "Grundlagen der Vetospielertheorie"
+author: "Dag Tanneberg"
+date: "7/9/2018"
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,fig.height = 3.5, fig.width = 7)
+rm(list = ls())
+library("plotrix")
+library("scales")
+library("kableExtra")
+
+# defintions -----------------------------------------------
+root <- matrix(c(0,1,0,1), nrow = 2, byrow = FALSE)
+actor_symbol <- 19
+sq <- matrix(c(.5, .7), ncol = 2)
+actors <- matrix(
+  c(
+    .7, .4,
+    .2, .7,
+    .2, .2
+  ), nrow = 3, byrow = TRUE
+)
+```
+
+## Grundlagen I
+
+> - Wie definiert Tsebelis Vetospieler?
+>   - "individual or collective actors whose agreement is
+      necessary for a change of the status quo" (19)
+> - Welche Entscheidungsregel folgt daraus? 
+>   - Einstimmigkeit
+> - Welche Arten von Vetospielern nennt Tsebelis?
+>   - Institutionell, d.i. von der Verfassung vorgesehen
+>   - Parteilich, d.i. durch den politischen Prozess etabliert
+
+## Grundlagen I
+
+Entscheide, um welche Art von Vetospieler es sich handelt.
+
+1. Die CSU in einer christlich-liberalen Koalition
+2. Präsident Donald Trump
+3. Das Bundesverfassungsgericht
+4. Der Bundesrat
+
+## Grundlagen II
+
+> - Was versucht Tsebelis mit Hilfe von Vetospielern zu erklären?
+>   - Politikstabilität, d.i. die Schwierigkeit, den Status quo
+      signifikant zu verändern
+> - Warum sollten wir über Politikstabilität nachdenken?
+>   - Implikationen für bspw. Agendasetzungsmacht, Regierungs- &
+      Regimestabilität
+> - Welche Indikatoren für Politikstabilität nennt Tsebelis?
+>   - Größe des Einstimmigkeitskerns
+>   - Größe der Gewinnmenge des Status quos
+      
+## Anwendung I
+
+Definiere den Einstimmigkeitskern. Wo liegt er in der Grafik?
+```{r}
+par(mar = rep(0, 4), bg = 'gray95')
+plot(root,
+  type = 'n', xlim = c(0,1), ylim = c(0,1), asp = 1,
+  xaxt = 'n', xlab = '',
+  yaxt = 'n', ylab = '', bty = 'n'
+)
+# add ideal points
+points(actors, pch = actor_symbol)
+text(x = actors, labels = LETTERS[1:nrow(actors)], pos = 4)
+```
+
+## Anwendung II
+
+Definiere die Gewinnmenge des Status quo. Wo liegt sie in der
+Grafik?
+```{r}
+par(mar = rep(0, 4), bg = 'gray95')
+plot(root,
+  type = 'n', xlim = c(0,1), ylim = c(0,1), asp = 1,
+  xaxt = 'n', xlab = '',
+  yaxt = 'n', ylab = '', bty = 'n'
+)
+# add ideal points
+points(actors, pch = actor_symbol); text(x = actors, labels = LETTERS[1:nrow(actors)], pos = 4)
+points(sq, pch = actor_symbol); text(x = sq, labels = "sq", pos = 3)
+# add unanimity core
+segments(actors[1, 1], actors[1, 2], actors[2, 1], actors[2, 2], lty = "dashed")
+segments(actors[2, 1], actors[2, 2], actors[3, 1], actors[3, 2], lty = "dashed")
+segments(actors[1, 1], actors[1, 2], actors[3, 1], actors[3, 2], lty = "dashed")
+```
+
+## Anwendung II
+
+Definiere die Gewinnmenge des Status quo. Wo liegt sie in der
+Grafik?
+```{r}
+par(mar = rep(0, 4), bg = 'gray95')
+plot(root,
+  type = 'n', xlim = c(0,1), ylim = c(0,1), asp = 1,
+  xaxt = 'n', xlab = '',
+  yaxt = 'n', ylab = '', bty = 'n'
+)
+# add ideal points
+points(actors, pch = actor_symbol); text(x = actors, labels = LETTERS[1:nrow(actors)], pos = 4)
+points(sq, pch = actor_symbol); text(x = sq, labels = "sq", pos = 3)
+# add unanimity core
+segments(actors[1, 1], actors[1, 2], actors[2, 1], actors[2, 2], lty = "dashed")
+segments(actors[2, 1], actors[2, 2], actors[3, 1], actors[3, 2], lty = "dashed")
+segments(actors[1, 1], actors[1, 2], actors[3, 1], actors[3, 2], lty = "dashed")
+# add preference sets
+for(i in 1:(nrow(actors))){
+  draw.circle(
+    actors[i, 1], actors[i, 2], sqrt(sum((actors[i, ] - sq)^2)),
+    lty = 'blank', col = alpha("blue", alpha = .25)
+  )
+}
+```
+
+## Grundlagen III
+
+> - Welche Einflussgrößen nennt Tsebelis für Politikstabilität?
+>   - Anzahl der Vetospieler
+>   - Polarisierung zwischen den Vetospielern
+> - Wie beeinflussen sie die Agendasetzungsmacht eines Spielers?
+>   - Agendasetzungsmacht sinkt, wenn Politikstabilität zunimmt
+
+## Anwendung III
+Woran erkennt man die höhere Politikstabilität (rot)?\newline
+Wann erhöht ein weiterer Vetospieler die Politikstabilität?
+```{r, fig.height = 3.5}
+par(mar = rep(0, 4), bg = 'gray95')
+plot(root,
+  type = 'n', xlim = c(0,1), ylim = c(0,1), asp = 1,
+  xaxt = 'n', xlab = '',
+  yaxt = 'n', ylab = '', bty = 'n'
+)
+# add ideal points
+points(actors, pch = actor_symbol); text(x = actors, labels = LETTERS[1:nrow(actors)], pos = 4)
+points(sq, pch = actor_symbol); text(x = sq, labels = "sq", pos = 3)
+# add unanimity core
+segments(actors[1, 1], actors[1, 2], actors[2, 1], actors[2, 2], lty = "dashed")
+segments(actors[2, 1], actors[2, 2], actors[3, 1], actors[3, 2], lty = "dashed")
+segments(actors[1, 1], actors[1, 2], actors[3, 1], actors[3, 2], lty = "dashed")
+# add preference sets
+for(i in 1:(nrow(actors))){
+  draw.circle(
+    actors[i, 1], actors[i, 2], sqrt(sum((actors[i, ] - sq)^2)),
+    lty = 'blank', col = alpha("blue", alpha = .25)
+  )
+}
+magnifier <- matrix(
+  c(0.1, 0, -.1, .1, -.1, -.1),
+  nrow = nrow(actors),
+  byrow = TRUE
+)
+actors_prime <- actors + magnifier
+points(actors_prime, pch = actor_symbol)
+text(
+    x = actors_prime[, 1],
+    y = actors_prime[, 2],
+    labels = paste0(LETTERS[1:nrow(actors_prime)], "'"),
+    pos = 4
+)
+
+for(i in 1:(nrow(actors))){
+  draw.circle(
+    (actors_prime)[i, 1],
+    (actors_prime)[i, 2],
+    sqrt(sum(((actors_prime)[i, ] - sq)^2)),
+    lty = 'blank', col = alpha("red", alpha = .25)
+  )
+}
+
+segments(actors_prime[1, 1], actors_prime[1, 2], actors_prime[2, 1], actors_prime[2, 2], lty = "dashed")
+segments(actors_prime[2, 1], actors_prime[2, 2], actors_prime[3, 1], actors_prime[3, 2], lty = "dashed")
+segments(actors_prime[1, 1], actors_prime[1, 2], actors_prime[3, 1], actors_prime[3, 2], lty = "dashed")
+```
