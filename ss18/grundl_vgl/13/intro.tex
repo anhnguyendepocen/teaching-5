@@ -1,0 +1,147 @@
+% Preamble -------------------------------------------------
+\PassOptionsToPackage{table}{xcolor}
+\documentclass{beamer}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{adjustbox}
+\usepackage{tikz}
+  \usetikzlibrary{positioning, calc, decorations.pathreplacing, backgrounds, fit}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\usepackage{booktabs}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 2. Juli 2018}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Grundlagen der Vergleichenden Politikwissenschaft{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Sommersemester 2018
+}
+\date{9. Juli 2018}
+
+% slides ---------------------------------------------------
+\begin{document}
+\maketitle
+
+\begin{frame}
+\frametitle{Leitfragen der Sitzung}
+\begin{enumerate}
+  \item Warum schreibt Lijphardt ``Patterns of democracy''?
+  \item Welche grundlegende Frage motiviert seine Arbeit?
+  \item Welche Demokratietypen unterscheidet Lijphardt?
+  \item Kritik an Lijphardt
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Warum schreibt Lijphardt ``Patterns of democracy''}
+\begin{itemize}
+  \item Vielfalt repräsentativer Demokratie
+  \item Wiederkehrende Muster institutioneller Konfigurationen
+  \item [$\rightarrow$] Muster beschreiben (Typologie) \&
+    politische Bdtg. darlegen
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Welche grundlegende Frage motiviert seine Arbeit?}
+  ``[W]ho will do the governing and to whose
+  interests should the government be responsive when the
+  people are in disagreement and have divergent
+  preferences?''
+  (Lijphardt 1999, 1)
+
+\begin{enumerate}
+  \item \textbf{Die Mehrheit!} \newline
+    Mehrheitsdem. $\rightarrow$ Machtkonzentration in knappen
+    Mehrheiten
+  \item \textbf{So viele wie möglich!} \newline
+    Konsensdem. $\rightarrow$ Teilung, Streuung und Brechung
+    polit. Macht
+\end{enumerate}
+
+  ``[\dots] [T]he majoritarian model of democracy is exclusive,
+  competitive, and adversarial, whereas the consensus model
+  is characterized by inclusiveness, bargaining, and
+  compromise; [\dots].'' (Lijphardt 1999, 2)
+\end{frame}
+
+\begin{frame}
+\frametitle{Welche Demokratietypen unterscheidet Lijphardt}
+\begin{tabular}{lll}
+~   & \textbf{Konsensdem.} & \textbf{Mehrheitsdem.} \\ \hline
+~   & Exekutive-Parteien \\ \hline
+Regierungstyp  & Koalitionsreg. & Einparteireg. \\
+Regierungsdominanz  & Nein & Ja \\
+Parteiensystem  & Vielparteiens. & Zweiparteiens. \\
+Wahlsystem & Verhältnisw. & Mehrheitsw. \\
+Interessengruppensyst.  & Korporatismus & Pluralismus \\ \hline
+    & \multicolumn{2}{l}{Föderalismus-Unitarismus} \\ \hline
+Föderalismus & Ja & Nein \\
+Bikameralismus  & Ja (stark) & Nein \\
+Rigide Verf.  & Ja & Nein \\
+Verfassungsger.  & Ja & Nein \\
+Unabh. Zentralbank & Ja & Nein \\
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{Kritik an Lijphardt}
+\begin{itemize}
+  \item nicht Mehrheit, sondern Machtkonzentration zentral
+  \item Merkmale z.\,T. fragwürdig
+  \begin{itemize}
+    \item Wen repräsentiert die Zentralbank?
+  \end{itemize}
+  \item Merkmale kausal miteinander verknüpft\newline
+    (Ganghof, VL Demokratietypen, Slide 22f.)
+\end{itemize}
+\begin{figure}
+\centering
+\begin{tikzpicture}[
+  level distance = 9em,
+  sibling distance = 2em,
+  edge from parent/.style={draw,-latex}
+]
+\node{Wahlsysteme} [grow = right]
+  child{
+    node {Parteiensysteme}
+    child{
+      node {Regierungsdom.}
+    }
+    child{
+      node {Regierungstyp}
+    }
+  }
+;
+\end{tikzpicture}
+\vfill
+\begin{figure}
+\centering
+\begin{tikzpicture}[
+  level distance = 12em,
+   sibling distance = 2em,
+   edge from parent/.style={draw,-latex}
+]
+\node{Föderalismus} [grow = right]
+  child{node {Verfassungsgerichstsbarkeit}}
+  child{node {Bikameralismus}}
+  child{node {Rigide Verfassung}}
+;
+\end{tikzpicture}
+\end{figure}
+\end{figure}
+\end{frame}
+\end{document}
