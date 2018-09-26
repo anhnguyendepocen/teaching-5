@@ -1,0 +1,1317 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fit_",
+				"fit_dommobjj_null"
+			],
+			[
+				"fit_dommobjj",
+				"fit_dommobjj_X_method"
+			],
+			[
+				"dep",
+				"dep_var_info"
+			],
+			[
+				"navc",
+				"navco2"
+			],
+			[
+				"parameter",
+				"parameter.sd_yr"
+			],
+			[
+				"parame",
+				"parameter.mean"
+			],
+			[
+				"param",
+				"parameter.sd"
+			],
+			[
+				"para",
+				"parameter.mean"
+			],
+			[
+				"rbind",
+				"rbind.data.frame\t{base}"
+			],
+			[
+				"regime",
+				"regimetype_collapsed"
+			],
+			[
+				"beta",
+				"beta_1"
+			],
+			[
+				"beta_",
+				"beta_0"
+			],
+			[
+				"MedianAgeM",
+				"MedianAgeMarriage"
+			],
+			[
+				"the",
+				"theme_fivethirtyeight"
+			],
+			[
+				"ty",
+				"tyumen"
+			],
+			[
+				"abs_",
+				"abs_votes"
+			],
+			[
+				"latent",
+				"latentmean.lag"
+			],
+			[
+				"surv",
+				"survfit\t{survival}"
+			],
+			[
+				"no.o",
+				"no.onsets"
+			],
+			[
+				"order",
+				"order_by"
+			],
+			[
+				"aggr",
+				"aggr.campaigns"
+			],
+			[
+				"no.on",
+				"no.ongoing"
+			],
+			[
+				"enthropy",
+				"enthropyMax"
+			],
+			[
+				"values",
+				"valuesX"
+			],
+			[
+				"buil",
+				"buildData"
+			],
+			[
+				"expe",
+				"expectation"
+			],
+			[
+				"myt",
+				"mymatrix"
+			],
+			[
+				"my",
+				"mymatrix"
+			],
+			[
+				"scale_alpha",
+				"scale_alpha_manual"
+			],
+			[
+				"labs",
+				"labels"
+			],
+			[
+				"scale_al",
+				"scale_alpha_manual"
+			],
+			[
+				"repression",
+				"repression.type.labels"
+			],
+			[
+				"repress",
+				"repression.type.labels"
+			],
+			[
+				"set",
+				"setdiff"
+			],
+			[
+				"reference",
+				"reference.mod"
+			],
+			[
+				"label",
+				"labelFacetWrap"
+			],
+			[
+				"disRepTo",
+				"disRepTOndisRep"
+			],
+			[
+				"box",
+				"boxplot"
+			],
+			[
+				"elecsd",
+				"noElecsd.fit"
+			],
+			[
+				"ho",
+				"horizontal"
+			],
+			[
+				"legend.",
+				"legend.box"
+			],
+			[
+				"tar",
+				"targetDf"
+			],
+			[
+				"BASE",
+				"baseDf"
+			],
+			[
+				"noElec",
+				"noElecsd"
+			],
+			[
+				"noEle",
+				"noElecsd"
+			],
+			[
+				"model",
+				"modelFitStats"
+			],
+			[
+				"reference.",
+				"reference.fit"
+			],
+			[
+				"chisq.sc",
+				"chisq.scaling.factor"
+			],
+			[
+				"chis",
+				"chisqScalingFactor"
+			],
+			[
+				"chisq",
+				"chisqValues"
+			],
+			[
+				"inspect",
+				"inspectSampleCov"
+			],
+			[
+				"Sigma",
+				"Sigma.hat"
+			],
+			[
+				"Sigma.",
+				"Sigma.hat.inv"
+			],
+			[
+				"sample",
+				"sampleCov"
+			],
+			[
+				"sampl",
+				"sampleSigma"
+			],
+			[
+				"det",
+				"detSigmaTheta"
+			],
+			[
+				"coeffici",
+				"coefficient"
+			],
+			[
+				"refere",
+				"reference.fit.dwls"
+			],
+			[
+				"coef",
+				"coefEstimates"
+			],
+			[
+				"efa.train",
+				"efa.train.obl"
+			],
+			[
+				"efa.trai",
+				"efa.train.obl"
+			],
+			[
+				"lambda",
+				"lambda.sigmaTheta"
+			],
+			[
+				"sample.",
+				"sample.nobs"
+			],
+			[
+				"scale_x_",
+				"scale_x_continuous"
+			],
+			[
+				"geom_de",
+				"geom_density"
+			],
+			[
+				"boot",
+				"bootstrap"
+			],
+			[
+				"mod",
+				"modindices"
+			],
+			[
+				"fit",
+				"modelFitStats"
+			],
+			[
+				"boots",
+				"bootstrapLavaan"
+			],
+			[
+				"disrep",
+				"disRep.easy"
+			],
+			[
+				"modl",
+				"modelFitStats"
+			],
+			[
+				"o",
+				"obl"
+			],
+			[
+				"unr",
+				"unrot"
+			],
+			[
+				"cum",
+				"cumsum"
+			],
+			[
+				"scale_colo",
+				"scale_colour_gradient2"
+			],
+			[
+				"ident",
+				"identity"
+			],
+			[
+				"item",
+				"end{itemize}\tmaster.Rnw"
+			],
+			[
+				"efa.na",
+				"efa.naive.unrot"
+			],
+			[
+				"efa",
+				"efa.naive.unrot"
+			],
+			[
+				"alpha.",
+				"alpha.nondis2"
+			],
+			[
+				"alpha",
+				"alpha.nondis"
+			],
+			[
+				"alpha.dis",
+				"alpha.dis2"
+			],
+			[
+				"alpha.nondis",
+				"alpha.nondis2"
+			],
+			[
+				"poly",
+				"polychoric"
+			],
+			[
+				"duplica",
+				"duplicates"
+			],
+			[
+				"auth",
+				"authoritarian"
+			],
+			[
+				"path",
+				"pathData"
+			],
+			[
+				"guide",
+				"guide_legend"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Clean up Files"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXing/LaTeX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Primary Quick Build"
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Choose Quick Build"
+				],
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					"Clean up Files"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXing/LaTeX.sublime-build",
+				"Primary Quick Build"
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXing/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXing/LaTeX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/R-Box/support/R-Box.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/R-Box/support/R-Box.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/R/R.sublime-build",
+					""
+				],
+				[
+					"Packages/R-Box/support/R Package.sublime-build",
+					""
+				],
+				[
+					"Packages/R-Box/support/R Package.sublime-build",
+					"Clean and Build"
+				],
+				[
+					"Packages/R-Box/support/R Package.sublime-build",
+					"Test"
+				],
+				[
+					"Packages/R-Box/support/R Package.sublime-build",
+					"Check"
+				],
+				[
+					"Packages/R-Box/support/R Package.sublime-build",
+					"Document"
+				],
+				[
+					"Packages/R-Box/support/R Package.sublime-build",
+					"Compile C++ Attributes"
+				],
+				[
+					"Packages/R-Box/support/R Package.sublime-build",
+					"Build Source"
+				],
+				[
+					"Packages/R-Box/support/R Package.sublime-build",
+					"Build Binary"
+				],
+				[
+					"Packages/SendCode/R - Source File.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/R/R.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/R/R.sublime-build",
+					""
+				],
+				[
+					"Packages/SendCode/support/R - Source File.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/SendCode/support/R - Source File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Stata Enhanced/Stata.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Stata Enhanced/Stata.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/knitr/knitr-Markdown.sublime-build",
+					""
+				],
+				[
+					"Packages/knitr/knitr-Markdown.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Markdown Preview/Markdown.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/knitr/knitr-Markdown.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 269.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"synt r",
+				"Set Syntax: R"
+			],
+			[
+				"lsp",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"package control",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"snyt r",
+				"Set Syntax: R"
+			],
+			[
+				"build",
+				"Build With: R - Source File"
+			],
+			[
+				"synt R",
+				"Set Syntax: R"
+			],
+			[
+				"synt late",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"sndcod",
+				"SendCode: Choose Program"
+			],
+			[
+				"synt sta",
+				"Set Syntax: Stata"
+			],
+			[
+				"repl",
+				"SublimeREPL: R"
+			],
+			[
+				"Send",
+				"SendTextPlus: Choose Program"
+			],
+			[
+				"list pack",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"synt latexing ",
+				"Set Syntax: LaTeXing (Knitr)"
+			],
+			[
+				"synt latex",
+				"Set Syntax: LaTeXing"
+			],
+			[
+				"synt knot",
+				"Set Syntax: knitr (Markdown)"
+			],
+			[
+				"pan",
+				"Pandoc"
+			],
+			[
+				"pandoc",
+				"Pandoc"
+			],
+			[
+				"markdon",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pand",
+				"Pandoc"
+			],
+			[
+				"synt md",
+				"Set Syntax: Markdown"
+			],
+			[
+				"p",
+				"Pandoc"
+			],
+			[
+				"pandod",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"browse package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"markdown editing ",
+				"Preferences: MarkdownEditing Settings – Default"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"color sche",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"outlin",
+				"Browse Mode: Outline (Right)"
+			],
+			[
+				"md",
+				"Set Syntax: Markdown"
+			],
+			[
+				"syn late",
+				"Set Syntax: LaTeXing (Knitr)"
+			],
+			[
+				"repeat",
+				"Repeat Macro"
+			],
+			[
+				"latex clean",
+				"Build With: LaTeX - Clean up Files"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"prev",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"sny",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"snyt md",
+				"Set Syntax: Markdown"
+			],
+			[
+				"mmd",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"synt mmd",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"buil",
+				"Build With: LaTeX"
+			],
+			[
+				"Synt",
+				"Set Syntax: R"
+			],
+			[
+				"previe",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"synt",
+				"Set Syntax: R"
+			],
+			[
+				"synt ",
+				"Set Syntax: R"
+			],
+			[
+				"build cl",
+				"Build With: LaTeX - Clean up Files"
+			],
+			[
+				"synt knitr",
+				"Set Syntax: knitr (Rnw)"
+			],
+			[
+				"sy",
+				"Set Syntax: R"
+			],
+			[
+				"syn ",
+				"Set Syntax: R"
+			],
+			[
+				"clean",
+				"Build With: LaTeX - Clean up Files"
+			],
+			[
+				"latex cle",
+				"Build With: LaTeX - Clean up Files"
+			],
+			[
+				"syn",
+				"Set Syntax: R"
+			],
+			[
+				"repl r",
+				"SublimeREPL: R"
+			],
+			[
+				"repl py",
+				"SublimeREPL: Python"
+			],
+			[
+				"repl R",
+				"SublimeREPL: R"
+			],
+			[
+				"select c",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"syn r",
+				"Set Syntax: R"
+			],
+			[
+				"re",
+				"SublimeREPL: R"
+			],
+			[
+				"synt knit",
+				"Set Syntax: knitr (Rnw)"
+			],
+			[
+				"syn knit",
+				"Set Syntax: knitr (Rnw)"
+			],
+			[
+				"colo",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"latex",
+				"Set Syntax: LaTeXing"
+			],
+			[
+				"synt lat",
+				"Set Syntax: LaTeXing"
+			],
+			[
+				"latexing kni",
+				"Set Syntax: LaTeXing (Knitr)"
+			],
+			[
+				"rep",
+				"SublimeREPL: R"
+			],
+			[
+				"synt latexin",
+				"Set Syntax: LaTeXing (Knitr)"
+			],
+			[
+				"syntr",
+				"Set Syntax: R"
+			],
+			[
+				"synt e",
+				"Set Syntax: Erlang"
+			],
+			[
+				"knitr",
+				"Set Syntax: LaTeXing (Knitr)"
+			],
+			[
+				"r-b",
+				"R-Box: Choose Program"
+			],
+			[
+				"knitr ",
+				"Set Syntax: LaTeXing (Knitr)"
+			],
+			[
+				"r-bo",
+				"R-Box: Choose Program"
+			],
+			[
+				"install pc",
+				"Package Control: Install Package"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"synt kn",
+				"Set Syntax: LaTeXing (Knitr)"
+			],
+			[
+				"c",
+				"Colorsublime: Browse Themes"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"cp",
+				"Color Picker"
+			],
+			[
+				"mmp",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"synt mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"synt mm",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"synt plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"mu",
+				"Set Syntax: MultiMarkdown"
+			]
+		],
+		"width": 436.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/dag/github/political_jiujitsu/src/sensitivity_analysis/02_specify_full_interactions.R",
+		"/Users/dag/github/political_jiujitsu/data/raw_data/SuttonButcherSvensson2014replication.do",
+		"/Users/dag/github/political_jiujitsu/rpt/replication_draft.tex",
+		"/Users/dag/github/political_jiujitsu/src/01_setup.R",
+		"/Users/dag/Library/Mobile Documents/com~apple~CloudDocs/r_packs.txt",
+		"/Users/dag/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Volumes/lsganghof/verschluss/Klausur Archiv/Klausur 2018/Fragepool Grafikmaterial/veto_player_exercise.R",
+		"/Users/dag/github/political_jiujitsu/doc/diary.md",
+		"/Users/dag/github/political_jiujitsu/src/sensitivity_analysis/unobserved_heterogeneity.R",
+		"/Users/dag/github/political_jiujitsu/src/ea_jj.R",
+		"/Users/dag/github/political_jiujitsu/src/data_munging/01_correct_sbs_coding.R",
+		"/Users/dag/github/political_jiujitsu/r/ea_jj.R",
+		"/Users/dag/github/political_jiujitsu/notebooks/diary.md",
+		"/Users/dag/github/political_jiujitsu/r/setup.R",
+		"/Users/dag/Dropbox/Buero/cv/wordpress/2018/curriculum_vitae.tex",
+		"/Users/dag/Downloads/dataverse_files (4)/FarissAPSR_ReplicationFiles_MakeLatentVariables/LatentRepressionDynamicStandardDynamicX/LatentRepressionDynamicStandardDynamicX.bug",
+		"/Users/dag/github/hrps_conflict/replication_files/figure 1.R",
+		"/Users/dag/github/hrps_conflict/replication_files/figure 3.R",
+		"/Users/dag/github/hrps_conflict/replication_files/figure2_04_csv.R",
+		"/Users/dag/github/hrps_conflict/replication_files/figure 2.R",
+		"/Users/dag/github/hrps_conflict/variations/figure2_addedUncertainty.R",
+		"/Users/dag/github/teaching/ss18/grundl_vgl/intro.tex",
+		"/Users/dag/github/teaching/ss18/autokratie/13/intro.tex",
+		"/Users/dag/github/teaching/ss18/grundl_vgl/12/intro.tex",
+		"/Users/dag/github/teaching/ss18/grundl_vgl/13/intro.tex",
+		"/Users/dag/github/teaching/ss18/autokratie/11/intro.tex",
+		"/Users/dag/github/teaching/ss18/autokratie/09/intro.tex",
+		"/Users/dag/github/teaching/ss18/grundl_vgl/10/intro.tex",
+		"/Users/dag/github/teaching/ss18/grundl_vgl/10",
+		"/Users/dag/github/teaching/ss18/grundl_vgl/09/intro.tex",
+		"/Users/dag/Dropbox/TrackManiaForever",
+		"/Users/dag/Dropbox/lehre/ss18/autokratie/Stata/geddes/geddes_replication.do",
+		"/Users/dag/github/teaching/ss18/grundl_vgl/04/intro.tex",
+		"/Users/dag/github/teaching/ss18/grundl_vgl/04/analyseschema.tikz",
+		"/Users/dag/github/teaching/ss18/grundl_vgl/04/analyseschema.tikz.tex",
+		"/Users/dag/github/teaching/ss18/autokratie/04/intro.tex",
+		"/Users/dag/github/teaching/ss18/autokratie/03/intro.tex",
+		"/Users/dag/github/teaching/ss18/grundl_vgl/03/intro.tex",
+		"/Users/dag/Desktop/test.do",
+		"/Users/dag/Library/Application Support/Sublime Text 3/Packages/Stata Enhanced/Stata Enhanced (OSX).sublime-settings",
+		"/Users/dag/Library/Application Support/Sublime Text 3/Packages/Stata Enhanced/Default (OSX).sublime-keymap",
+		"/Users/dag/github/teaching/ss18/grundl_vgl/3/intro.tex",
+		"/Users/dag/github/teaching/ss18/autokratie/02/intro.tex",
+		"/Users/dag/Dropbox/lehre/ss18/autokratie/syllabus/syllabus.tex",
+		"/Users/dag/Library/Mobile Documents/com~apple~CloudDocs/library.bib",
+		"/Users/dag/github/teaching/ws1718/fors_des/13/summary.tex",
+		"/Users/dag/Dropbox/lehre/ws1718/fors_des/termpaper/fixedTopic.tex",
+		"/Users/dag/github/teaching/ws1718/fors_des/12/summary.Rnw",
+		"/Users/dag/github/teaching/ws1718/fors_des/12/causalInference_measurementError.R",
+		"/Users/dag/github/teaching/ws1718/fors_des/11/summary.tex",
+		"/Users/dag/github/teaching/ws1718/grundl_vergl/11/vetoPlayerMaster.tex",
+		"/Users/dag/github/teaching/ws1718/grundl_vergl/11/summary.tex",
+		"/Users/dag/Desktop/untitled.tex",
+		"/Users/dag/github/teaching/ws1718/fors_des/08/intro.tex",
+		"/Users/dag/github/teaching/ws1718/grundl_vergl/10/summary.tex",
+		"/Users/dag/github/teaching/ws1718/fors_des/10/summary.tex",
+		"/Users/dag/Dropbox/lehre/ws1718/fors_des/diskussionspapiere/02/themen.tex",
+		"/Users/dag/github/teaching/ws1718/fors_des/09/summary.tex",
+		"/Users/dag/github/teaching/ws1718/grundl_vergl/09/summary.tex",
+		"/Users/dag/github/teaching/ss17/electoral_authoritarianism/12/introSlides.tex",
+		"/Users/dag/github/teaching/ws1718/grundl_vergl/08/intro.tex",
+		"/Users/dag/Library/Application Support/Sublime Text 3/Packages/User/Markdown (Standard).sublime-settings",
+		"/Users/dag/Library/Application Support/Sublime Text 3/Packages/User/Markdown.sublime-settings",
+		"/Users/dag/github/teaching/ss17/electoral_authoritarianism/11/introSlides.Rnw",
+		"/Users/dag/Dropbox/lehre/sose17/electoral_authoritarianism/discussionPaper/HeynGeorg_Feedback.md",
+		"/Users/dag/Dropbox/lehre/sose17/electoral_authoritarianism/discussionPaper/JuelgDennis_Feedback.md",
+		"/Users/dag/Dropbox/lehre/sose17/electoral_authoritarianism/discussionPaper/LuedckeAnna_Feedback",
+		"/Users/dag/Dropbox/lehre/sose17/electoral_authoritarianism/discussionPaper/PenczekValentin_Feedback.md",
+		"/Users/dag/Dropbox/lehre/sose17/electoral_authoritarianism/discussionPaper/PenczekValentin_Feedback.pdf",
+		"/Users/dag/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/Users/dag/github/teaching/ss17/electoral_authoritarianism/10/demoVerrechnungsverfahren.R",
+		"/Users/dag/Dropbox/lehre/sose17/abschlussarbeiten/lococo/06-28-2017_feedback.md",
+		"/Users/dag/github/teaching/ss17/electoral_authoritarianism/10/introSlides.Rnw",
+		"/Users/dag/Dropbox/projects/2017/demomo/workshops/06-26-2017/steinhoeffel_minutes.md",
+		"/Users/dag/Dropbox/lehre/sose17/electoral_authoritarianism/discussionPaper/KadereitTill_Feedback.md",
+		"/Users/dag/Dropbox/lehre/sose17/democratic_peace/assignments/alternative_assignment.tex",
+		"/Users/dag/Dropbox/lehre/sose17/democratic_peace/assignments/STATA_assignment.tex",
+		"/Users/dag/Dropbox/lehre/sose17/democratic_peace/syllabus/syllabus.tex",
+		"/Users/dag/github/teaching/ss17/electoral_authoritarianism/07/introSlides.rnw",
+		"/Users/dag/github/teaching/ss17/democratic_peace/07/introSlides.Rmd",
+		"/Users/dag/github/teaching/ss17/electoral_authoritarianism/06/ACLPtree.tex",
+		"/Users/dag/github/teaching/ss17/electoral_authoritarianism/06/introSlides.Rnw",
+		"/Users/dag/Dropbox/lehre/sose17/electoral_authoritarianism/syllabus/syllabus.tex",
+		"/Users/dag/Dropbox/lehre/allgemein/assignment_discussionPaper.tex",
+		"/Users/dag/Dropbox/lehre/allgemein/grading_summaries.tex",
+		"/Users/dag/Dropbox/lehre/allgemein/grading_sumaries.tex",
+		"/Users/dag/Dropbox/lehre/sose17/democratic_peace/syllabus/library.bib",
+		"/Users/dag/Dropbox/lehre/sose17/electoral_authoritarianism/syllabus/library.bib",
+		"/Users/dag/Dropbox/lehre/sose17/electoral_authoritarianism/syllabus/syllabus.bbl",
+		"/Users/dag/Dropbox/lehre/ws1617/introAtr/Syllabus.tex",
+		"/Users/dag/Dropbox/lehre/ws1617/demokratiemessung/syllabus.tex",
+		"/Users/dag/Documents/readings/exz/THOMPSON 1975_RegimeVulnerabilityMilitaryCoup.md",
+		"/Users/dag/Dropbox/lehre/ws1617/demokratiemessung/library.bib",
+		"/Users/dag/Documents/readings/exz/DEBS 2010_LivingByTheSword.md",
+		"/Users/dag/Documents/readings/exz/PRZEWORSKI 1990_DemocracyAndTheMarket",
+		"/Users/dag/Documents/readings/exz/OKANE 1981_ProbabilisticApproachToCoupDetat.md",
+		"/Users/dag/Documents/readings/exz/ZIMMERMAN 1979_CausalModelMilitaryCoups.md",
+		"/Users/dag/Documents/readings/exz/LONDREGAN POOLE 1991_PovertyCoupTrap.md",
+		"/Users/dag/Documents/readings/exz/BLALOCK 1989_PowerAndConflict.md",
+		"/Users/dag/Documents/readings/exz/MASON 2004_CaughtInCrossfire.md",
+		"/Users/dag/Documents/readings/exz/KRAIN MYERS 1997_DemocracyAndCivilWar.md",
+		"/Users/dag/Documents/readings/exz/CAREY 2009_ProtestAndCoercion.mmd",
+		"/Users/dag/Documents/readings/exz/GURR 1986_PoliticalOriginsStateTerroAndViolence.md",
+		"/Users/dag/Documents/readings/exz/LICHBACH 1995_RebelsDilemma",
+		"/Users/dag/Documents/readings/exz/ABOUHARB et al 2013_DeFactoJudicialIndependence.md",
+		"/Users/dag/Documents/readings/exz/McCamant 1984_NeglectOfPoliticalRepression.md",
+		"/Users/dag/Documents/readings/exz/HILL 2016_DemocracyAndConceptPersonalIntegrity.md",
+		"/Users/dag/Documents/readings/exz/KLANDERMANS 2015_MotivationsToAction.md",
+		"/Users/dag/Documents/readings/exz/BELLIN 2012_ReconsideringTheRobustnessOfAuthoritarianism.mmd",
+		"/Users/dag/Documents/readings/exz/OPP ROEHL 1990_Micromobilization.md",
+		"/Users/dag/Documents/readings/exz/GOLDSTEIN 1978_PoliticalRepressionInModernAmerica.md",
+		"/Users/dag/Documents/diss/2016/bewerbungPotsdam/curriculum_vitae.tex",
+		"/Users/dag/Documents/readings/exz/TINDALL 2015_NetworkConstraintsOpportunities.md",
+		"/Users/dag/Documents/readings/exz/RITTER CONRAD 2016_PreventingAndRespondingToDissent.md",
+		"/Users/dag/Documents/readings/exz/ENZMANN 2013_Vorwort.mmd",
+		"/Users/dag/Documents/diss/2016/bewerbungPotsdam/dinbrf1.tex",
+		"/Users/dag/Documents/readings/exz/NORDAS DAVENPORT 2013_FightTheYouth.md",
+		"/Users/dag/Documents/readings/exz/BUTCHER SVENSSON 2016_MAnufacturingDissent.md",
+		"/Users/dag/Documents/readings/exz/CELESTINO GLEDITZSCH 2013_FreshCarnations.md",
+		"/Users/dag/Documents/readings/exz/SUTTON et al 2014_ExplainingPoliticalJiuJitsu.md",
+		"/Users/dag/Documents/readings/exz/FRANCISCO 2005_DictatorsDilemma.md",
+		"/Users/dag/Documents/contentList",
+		"/Users/dag/Documents/readings/exz/BELL MURDIE 2016_ApparatusForViolence.md",
+		"/Users/dag/Documents/readings/exz/WALLACE 2015_InformationPolitics.md",
+		"/Users/dag/github/diss/notebooks/movementOnset",
+		"/Users/dag/github/diss/exploration/survCampOnset.R",
+		"/Users/dag/github/diss/r/buildData/chenowethNavco.R",
+		"/Users/dag/github/diss/r/setup.R"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 109.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/dag/github/political_jiujitsu/src/sensitivity_analysis",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 45.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.diagnostics":
+	{
+		"height": 366.0
+	},
+	"output.exec":
+	{
+		"height": 121.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 251.0
+	},
+	"output.markdown":
+	{
+		"height": 106.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 106.0
+	},
+	"pinned_build_system": "",
+	"project": "teaching.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"diss/02_SubstKompl.Rnw"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "teach",
+		"selected_items":
+		[
+			[
+				"teach",
+				"~/Dropbox/lehre/teaching.sublime-workspace"
+			],
+			[
+				"teaching",
+				"~/Dropbox/lehre/teaching.sublime-workspace"
+			],
+			[
+				"",
+				"~/github/diss/diss.sublime-project"
+			],
+			[
+				"di",
+				"~/github/diss/diss.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 458.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 400.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
