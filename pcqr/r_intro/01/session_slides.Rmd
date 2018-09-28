@@ -1,0 +1,42 @@
+---
+title: "Introduction to R"
+author: "Dag Tanneberg"
+date: "10/11/2018"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Who am I?
+
+- (Computational) Political Scientist
+- Research Fellow at the Chair of Comparative Politics
+- Autocracy, Contentious Politics, and Applied Methods
+- really poor intuition for maths & statistics
+
+## And, who are you?
+
+# What is $\mathcal{R}$?
+
+- open-source programming language and environment
+- purpose: statistical computing and graphics
+- written by Robert Gentleman & Ross Ihaka (Auckland, NZ)
+- cross-plattform (UNIX, Linux, FreeBSD, Windows, MacOS)
+- among the most popular programming languages
+
+# Why learn $\mathcal{R}$?
+
+- **Popular**
+    - Large community to turn to for help
+    - New statistical routines often first implemented in R
+- **Data wrangling**
+    - powerful functions for handling, cleaning and exploring data
+- **Data vizualization**
+    - powerful, flexible, and easy plotting (unlike S....)
+- **Open source**
+    - free to use for teachers and students
+    - rapid development & huge community of developers
+    - loads of free learning materials
+    - free multi-core support (unlike S....)
