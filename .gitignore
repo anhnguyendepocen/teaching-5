@@ -1,3 +1,6 @@
+## Sublime project management files
+*.sublime-project
+*.sublime-workspace
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
