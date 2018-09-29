@@ -1,42 +1,131 @@
 ---
-title: "Introduction to R"
 author: "Dag Tanneberg"
 date: "10/11/2018"
-output: beamer_presentation
+title: "Introduction to R"
+output:
+  beamer_presentation:
+    theme: Berlin
+    colortheme: seagull
+    fonttheme: professionalfonts
+    highlight: espresso
+    includes:
+      in_header: preamble.tex
+      before_body: before-body.tex
 ---
-
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Who am I?
 
-- (Computational) Political Scientist
-- Research Fellow at the Chair of Comparative Politics
-- Autocracy, Contentious Politics, and Applied Methods
-- really poor intuition for maths & statistics
+- **Orientation**: (Computationalish) Political Scientist
+- **Position**: Research Fellow, Chair of Comparative Politics
+- **Fields**: Autocracy, Contentious Politics, and Applied Methods
+- **Secret weakness**: Zero intuition for maths & statistics
 
-## And, who are you?
+\begin{block}{\textbf{Introductory Round}}
+  So, who are you? Mind to fill us in on your secret weakness?
+\end{block}
 
-# What is $\mathcal{R}$?
+# Anyways, what is $\mathcal{R}$?
 
 - open-source programming language and environment
 - purpose: statistical computing and graphics
 - written by Robert Gentleman & Ross Ihaka (Auckland, NZ)
 - cross-plattform (UNIX, Linux, FreeBSD, Windows, MacOS)
-- among the most popular programming languages
+- one of the most popular programming languages
 
-# Why learn $\mathcal{R}$?
+# Why bother with $\mathcal{R}$?
 
 - **Popular**
     - Large community to turn to for help
     - New statistical routines often first implemented in R
 - **Data wrangling**
-    - powerful functions for handling, cleaning and exploring data
+    - powerful tools for handling, cleaning and exploring data
 - **Data vizualization**
     - powerful, flexible, and easy plotting (unlike S....)
 - **Open source**
-    - free to use for teachers and students
-    - rapid development & huge community of developers
-    - loads of free learning materials
+    - free for teachers, students, and everyone else
+    - huge & active community of developers
+    - tons and tons and tons of free material
     - free multi-core support (unlike S....)
+    
+# Goals of this workshop
+
+1. Provide a grand tour of elementary $\mathcal{R}$
+    - Basic (probabilistic) programming
+    - Elementary data management
+    - Introduction to ggplot2
+    - Applied regression & working with regression results
+2. Introduce self-help strategies
+    - Diagnose error messages
+    - Find *relevant* resources
+    - Ask a good question
+3. Promote interest, because  $\mathcal{R} \approx$ Fun
+
+# Workshop logistics
+
+- **Place**: Campus Griebnitzsee, House 7, Room ~~101~~ 144
+- **Coffee break**: 10:45 - 11:00
+- **Lunch break**: 12:30 - 13:30
+- **Materials**: Go to https://github.com/dagtann/pcqr/
+
+\begin{table}
+\centering
+\begin{tabular}{lccll}
+\toprule
+Day & Start & End & Official Topic & Secret Topic\\
+\midrule
+1 & 09:15 & 10:45 & Introduction & Test of patience\\
+~ & 11:00 & 12:30 & Data management & Gambling\\
+? & 13:30 & 15:00 & Basic programming & Pie \\
+\midrule
+2 & 09:15 & 10:45 & Graphics & Sth, sth, sth, dark side\\
+~ & 11:00 & 12:30 & Linear regression & Stench of metal\\
+~ & 13:30 & 15:00 & GLMs & Jon Snow \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+# Install & Open R
+
+- If you brought your own computer
+    - Download R from https://cran.r-project.org/ & install
+    - Download RStudio from https://www.rstudio.com/ & install
+- Open RStudio.
+
+# A first glance at RStudio
+
+![](./fig/rstudio_startup.png)
+
+# Let's take $\mathcal{R}$ for a ride.
+
+See if you can solve the following problems.
+
+1. $2 + 2$
+2. $-3 \cdot 9$
+3. $\sqrt[3]{8}$ (Hint: $\sqrt[3]{8} = 8^\frac{1}{3}$)
+4. $(2 + 3) \cdot 8$ 
+5. $\mathcal{R}$ ships with an extensive online
+  documentation. For instance, it includes a manual named
+  ``An Introduction to R''.[^1] Use the RStudio help pane
+  to locate this manual.
+
+[^1]: Note that the title doesn't say "gentle".
+  
+# What did we just learn?
+
+1. You can interact with $\mathcal{R}$ from the console.
+    - $>$: $\mathcal{R}$ is waiting for input.
+    - $+$: Your command is incomplete.
+    - Error: Something went wrong.
+2. $\mathcal{R}$ is a super-charged calculator
+  which supports almost everything you can imagine.
+3. An elementary way to get help on $\mathcal{R}$ is to ask
+  $\mathcal{R}$.[^2]
+    a. ?"+" - Opens the help page on arithmetic operators.
+    b. help("+") - Same here.
+    c. ??Regression - Conducts a keyword search for "Regression".
+
+[^2]: Quotation marks are mandatory for operators (e.g., +) and control statements (e.g., if).
+
