@@ -69,7 +69,7 @@ Day & Start & End & Official Topic\\
 
 ## Anyways, what is $\mathcal{R}$?
 
-- open-source programming language and environment
+- open-source programming language
 - purpose: statistical computing and graphics
 - written by Robert Gentleman & Ross Ihaka (Auckland, NZ)
 - cross-plattform (UNIX, Linux, FreeBSD, Windows, MacOS)
@@ -249,4 +249,15 @@ Let's do that together. What does the function **sample** do?
 
 # Summary
 
-
+## What have we learned so far?
+- $\mathcal{R}$ is an open-source programming language for
+  statistical computing and graphics.
+- There are two main components to $\mathcal{R}$.
+    1. Objects store data. They are the nouns of the
+      $\mathcal{R}$ language.
+    2. Functions operate on data. They are the verbs of the
+      $\mathcal{R}$ language.
+- $\mathcal{R}$ ships with an extensive, easily accessible
+  documentation.
+- Users can extend $\mathcal{R}$'s functionality by
+  loading new packages or by writing their own functions.
