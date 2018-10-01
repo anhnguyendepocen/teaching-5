@@ -1,21 +1,22 @@
 ---
-author: "Dag Tanneberg"
-date: "10/11/2018"
-title: "Introduction to R"
 output:
   beamer_presentation:
     theme: Berlin
     colortheme: seagull
     fonttheme: professionalfonts
     highlight: tango
-    toc: true
+    toc: false
     includes:
       in_header: preamble.tex
-      before_body: before-body.tex
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+\maketitle
+
+## Outline
+\tableofcontents
 
 # General Information
 
@@ -25,7 +26,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - **Position**: Research Fellow, Chair of Comparative Politics, UP
 - **Fields**: Autocracy, Contentious Politics, and Applied Methods
 - **Secret weakness**: Zero intuition for maths & statistics
-
+\vfill
 \begin{block}{\textbf{Introductory Round}}
   So, who are you? Mind to fill us in on your secret weakness?
 \end{block}
@@ -162,16 +163,12 @@ a <- 3 # Object <- Value
       e.g., ^, !, $, @, +, -, /, [.
     - Rule 3: Capitalization matters, i.e. A $\neq$ a.
 
-\begin{table}
-\centering
-\caption{What names will work?}
+\begin{block}{What names will work?}
 \begin{tabular}{llllll}
-\toprule
 !d0 & FOO & 1\_day & day\_1 \\
 \_day1 & .day1 & day.1 & day{\textasciicircum}1 \\
-\bottomrule
 \end{tabular}
-\end{table}
+\end{block}
 
 ## How does are operate on objects?
 
