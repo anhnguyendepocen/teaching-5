@@ -1,6 +1,10 @@
-## Sublime project management files
+## Project management files
 *.sublime-project
 *.sublime-workspace
+
+## OS Files
+*.DS_Store
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -104,8 +108,8 @@ sympy-plots-for-*.tex/
 # WinEdt
 *.bak
 *.sav
-.Rproj.user
-.Rhistory
+
+
 # History files
 .Rhistory
 .Rapp.history
@@ -123,6 +127,7 @@ sympy-plots-for-*.tex/
 /*.Rcheck/
 
 # RStudio files
+*.Rproj
 .Rproj.user/
 
 # produced vignettes
