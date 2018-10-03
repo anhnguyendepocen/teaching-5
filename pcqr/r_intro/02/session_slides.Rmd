@@ -45,7 +45,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Data Structures
 
-## Organizing Principles\footnote{Grolemund, G.. Hands-on Programming with R. Sebastopol: O'Reilly, 62.}
+## Organizing Principles\footnote{\scriptsize{Grolemund, G. 2014.
+  Hands-on Programming with R. Sebastopol: O'Reilly, 62.}
+}
 
 \begin{columns}
   \begin{column}{0.5\textwidth}
@@ -70,7 +72,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Matrices & Arrays
 
-## Data frames & Lists
+## Data Frames & Lists
 
 ## Data I/O
 

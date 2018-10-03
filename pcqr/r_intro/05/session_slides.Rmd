@@ -1,0 +1,99 @@
+---
+output:
+  beamer_presentation:
+    theme: Berlin
+    colortheme: seagull
+    fonttheme: professionalfonts
+    highlight: tango
+    toc: false
+    includes:
+      in_header: preamble.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+\maketitle
+
+# Introduction
+
+## A Taste of ggplot2
+
+\begin{figure}
+  \centering
+  \caption{Vote Share in the 2012 Presidential Elections by 
+    County\footnote{\tiny
+      Healan, K. forthc. Data Visualization. A Practical
+      Introduction. \href{https://socviz.co/maps.html}{https://socviz.co/maps.html} (last access: 10/03/2018).
+    }
+  }
+  \includegraphics[scale = 0.19]{./fig/ch-07-election-county-share.png}
+\end{figure}
+
+## More Tasting: Trajectories in Political Repression\footnote{\tiny
+      Tanneberg, D. 2018. The Politics of Repression under
+      Authoritarian Rule. How Steadfast is the Iron Throne?
+      Dissertation Manuscript, Humboldt University Berlin, p. 54.
+    }
+
+\begin{figure}
+  \centering
+  \includegraphics[scale = .43]{./fig/point_ctryTrajectory.pdf}
+\end{figure}
+
+## Outline
+
+\tableofcontents
+
+# What is ggplot2?
+
+## Graphics Engines in $\mathcal{R}$
+
+## Why use ggplot2?
+
+# How to talk to ggplot2?
+
+## Our target graph
+
+```{r ggplot2_togeher, fig.align='center', echo = FALSE, fig.width = 4, fig.height = 2.8}
+rm(list = ls())
+library("ggplot2")
+library("gapminder")
+p <- ggplot(
+  data = gapminder,
+  mapping = aes(x = reorder(continent, gdpPercap, FUN = median), y = gdpPercap)
+) +
+  geom_boxplot() +
+  scale_y_log10(labels = scales::dollar) + # log10 xvalues, but display Dollar
+  labs(
+    x = "",
+    y = "GDP Per Capita",
+    title ="Economic Development by Continent",
+    subtitle = "Boxplots summarize country-years",
+    caption = "Source: Gapminder.",
+    shape = "Continent"
+  )
+p
+```
+
+# Practice with ggplot2
+
+## Replicate this figure
+```{r ggplot2_self, fig.align='center', echo = FALSE, fig.width = 4.5, fig.height = 2.5}
+p <- ggplot(
+  data = gapminder,
+  mapping = aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point(alpha = .2) +
+  geom_smooth(method = 'lm') + # add linear correlation
+  scale_x_log10(labels = scales::dollar) + # log10 xvalues, but display Dollar
+  labs(
+    x = "",
+    y = "",
+    title ="Life Expectancy vs. Economic Development"
+  ) +
+  facet_wrap(~ continent, nrow = 2) + 
+  theme_gray(base_size = 9)
+p
+```
