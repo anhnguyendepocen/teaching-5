@@ -79,6 +79,24 @@ for (i in 1:length(words)){
 
 [^2]: "for loops are like Las Vegas: what happens in a for loop stays in a for loop" (Gorrelmund 2014: 164).
 
+## Quick Exercise
+
+Remember last session's data management challenge? Let's
+try to express our solution as a for()-Loop.
+```{r, eval = FALSE}
+grade_quantiles <- quantile(
+  student_data[, "grade"], probs = c(.2,.4,.6,.8)
+)
+student_data[, "grade_alp"] <- "F"
+student_data[
+  student_data[, "grade"] > grade_quantiles["20%"],
+  "grade_alp"
+] <- "D"
+# ... and so on until A.
+```
+
+
+
 ## While()-Loops
 - Rerun statement(s) as long as some condition is TRUE
 - Condition should be a logical test
@@ -111,13 +129,69 @@ repeat {
 
 # Conditional Execution
 
-## if()-Statements
+## Intuition
+  - How does the absolute value $|x|$ algorithmically work?
+  
+\begin{figure}
+  \centering
+  \includegraphics[scale = .6]{./fig/abs_value.png}
+\end{figure}
 
-## else()-Statements
+- *Different* operations follow depending on some condition
+- $\rightarrow$ code handles parallel cases
+
+## if() Statements
+
+- Code executes if and only if some condition is TRUE
+- Condition **must** evaluate to a single TRUE/FALSE statement
+```{r, eval = FALSE}
+if (THIS) { # If this is TRUE
+  THAT # then do THAT.
+}
+x <- 4
+if (x < 0) {
+  x <- -1 * x
+}
+```
+
+## if() Statements: What will this return?
+```{r, eval = FALSE}
+# Example 1 =========================================
+x <- 1
+if (TRUE) {
+  x <- 2
+}
+# Example 2 =========================================
+x <- 1
+if (x == 1) {
+  x <- 2
+  if (x == 1) {
+    x <- 3
+  }
+}
+```
+
+## else() Statements
+- tell $\mathcal{R}$ what to do should if() evaluate to FALSE
+- multiple if/else statements can be nested
+```{r, eval = FALSE}
+if (this) {
+  Plan A
+} else {
+  Plan B
+}
+dec <- 3.141 # Example: Round a decimal to integer
+if (dec - trunc(dec) >= 0.5) {
+  dec <- trunc(dec) + 1
+} else {
+  dec <- trunc(dec)
+}
+```
 
 # Practical Challenges
 
-## Imagine a world without $\pi$
+## In a world without $\pi$\dots
+
 
 ## Simulate collider bias
 
