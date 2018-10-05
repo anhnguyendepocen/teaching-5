@@ -19,8 +19,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Outline
 \tableofcontents
 
-
-
 # Sequential Execution
 
 ## Sequential Execution
@@ -32,12 +30,12 @@ knitr::opts_chunk$set(echo = TRUE)
 A <- "Well"
 B <- "hello there."
 paste(A, B, sep = ", ")
-rm(A B) # Explain the error.
+rm(A, B, C) # Explain the error.
 ```
 
 # Iterative Execution
 
-## A.k.a. Looping
+## A.K.A. Looping
 
 - Execute statement(s) repeatedly
   a. over a set of values
@@ -188,13 +186,60 @@ if (dec - trunc(dec) >= 0.5) {
 }
 ```
 
+# Summary
+
+## What have we learned so far?
+
+- Code can be executed sequentially, iteratively, or conditionally
+- Sequential execution is the norm
+- Iterative execution runs the same code repeatedly
+  - **for()** reruns statement(s) for all members of a set
+  - **while()** reruns statement(s) as long as a condition is met
+  - **repeat()** reruns statement(s) until it encounters **break**
+- Conditional execution manages parallel cases
+  - **if()** runs statesment(s) if a condition evaluates to TRUE
+  - **else()** runs statesment(s) if that same condition is FALSE
+
 # Practical Challenges
 
-## In a world without $\pi$\dots
+## In a world where humanity forgot the value of $\pi$ \dots
 
+\begin{columns}
+  \begin{column}{.5\textwidth}
+    {\dots} we will uplift civilization by Monte Carlo simulation.
+    \bigskip
+    
+    Set up a simulation which allows you to generate an estimate
+    of $\pi$ from the chance to hit a circle perfectly inscribed
+    in a square with a randomly thrown dart.
+  \end{column}
+  \begin{column}{.5\textwidth}
+    \begin{figure}
+      \centering
+      \includegraphics[scale = .5]{./fig/circle-in-square-red.png}
+    \end{figure}
+    \begin{align*}
+      p(Hit) &= \frac{A_{ci}}{A_{sq}} = \frac{\pi r^2}{(2r)^2}\\
+      \pi &= 4p(Hit)
+    \end{align*}
+  \end{column}
+\end{columns}
 
-## Simulate collider bias
+## Understanding Collider Bias
 
+In causal inference, collider bias results when we condition on a 
+variable that is causally influenced by one or more other 
+variables. The effect will be a spurious correlation between the
+collider's ancestors. Setup a simulation to demonstrate collider
+bias.
 
-
-# Summary
+\begin{figure}
+  \centering
+  \includegraphics[scale = .5]{./fig/collider_bias.png}
+  \caption{Collider Bias Visualized\footnote{
+    Ellwert, F. 2013. Graphical Causal Models. In: S.L. Morgan 
+      (ed.), Handbook of Causal Analysis for Social Research, p. 
+      251
+    }
+  }
+\end{figure}
