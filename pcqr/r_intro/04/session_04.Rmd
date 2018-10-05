@@ -11,7 +11,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 \maketitle
@@ -25,7 +25,8 @@ knitr::opts_chunk$set(echo = FALSE)
   \caption{Vote Share in the 2012 Presidential Elections by 
     County\footnote{\tiny
       Healan, K. forthc. Data Visualization. A Practical
-      Introduction. \href{https://socviz.co/maps.html}{https://socviz.co/maps.html} (last access: 10/03/2018).
+      Introduction. \href{https://socviz.co/maps.html}{https://socviz.co/maps.html}
+      (last access: 10/03/2018).
     }
   }
   \includegraphics[scale = 0.19]{./fig/ch-07-election-county-share.png}
@@ -50,9 +51,42 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Graphics Engines in $\mathcal{R}$
 
-## Why use ggplot2?
+- 3 major graphics systems in $\mathcal{R}$
+  - base graphics: ships with $\mathcal{R}$[^1]
+  - lattice developed by \href{https://www.isid.ac.in/~deepayan/}{Deepayan Sarkar}
+  - ggplot2 developed by \href{http://hadley.nz/}{Hadley Wickham}
+- all build on Paul Murrell's \href{https://stat.ethz.ch/R-manual/R-patched/library/grid/doc/grid.pdf}{grid Graphics}
+- differ remarkbly on usability & quality of output
+
+[^1]: Check out Nathan Yau's impressive tutorials at \href{https://flowingdata.com/category/tutorials/}{Flowing Data}.
+
+## What's the buzz about ggplot2?
+
+- Implements the Grammar of Graphics in $\mathcal{R}$
+- 
+
+- **BUT** Opiniated software, e.g., 2^nd y-axis over Hadley's cold, dead body.
 
 # How to talk to ggplot2?
+
+
+
+## A schematic for making a plot
+```{r, eval = FALSE}
+p <- ggplot(
+	data = <data>, # 1. What is your data?
+	mapping = aes( # 2. What var's map unto the plot?
+		<aesthetic> = <variable>,
+		<aesthetic> = <variable>,
+		<...> = <...>
+	)
+)
+p + # Add layers to your plot
+  geom_<type>(<...>) + # Define your plot type
+	scale_<mapping>_<type>(<...>) +  # Adjust scales
+	coord_<type>(<...>) + # Adjust co-ordinates
+  labs(<...>) # Label plot elements
+```
 
 ## Our target graph
 
