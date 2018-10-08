@@ -34,7 +34,7 @@ knitr::opts_chunk$set(echo = TRUE)
   \begin{column}{0.4\textwidth}
     \begin{figure}
       \centering
-      \large{Bear with me, and\dots}
+      \large{Stay with me, and\dots}
       \includegraphics[width = 0.9\textwidth]{./fig/riskit4biscuit.jpg}
     \end{figure}
   \end{column}

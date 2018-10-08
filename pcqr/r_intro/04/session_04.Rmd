@@ -103,7 +103,7 @@ p + theme_minimal()
 - Very generic, schematic approach to data viz
 - Flexible themes & fast, high quality results
 - Many users, active community, numerous extension
-    - create animations, networks, maps, etc.
+    - create animations, networks, maps, dags, etc.
 
 
 [^2]: Wilkinson, L. 1999/2005. The Grammar of Graphics.  

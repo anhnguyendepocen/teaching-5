@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - **Background**: Political Scientist
 - **Position**: Research Fellow, Chair of Comparative Politics, UP
 - **Fields**: Autocracy, Contentious Politics, and Applied Methods
-- **Secret weakness**: Zero intuition for maths & statistics
+- **Secret weakness**: Secret tabletop RPG lover
 \vfill
 \begin{block}{\textbf{Introductory Round}}
   So, who are you? Mind to fill us in on your secret weakness?
@@ -34,8 +34,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Goals of this workshop
 
 1. Provide a grand tour of elementary $\mathcal{R}$
-    - Basic (probabilistic) programming
     - Elementary data management
+    - Basic (probabilistic) programming
     - Introduction to ggplot2
     - Applied regression & working with regression results
 2. Introduce self-help strategies
@@ -70,11 +70,11 @@ Day & Start & End & Official Topic\\
 
 ## Anyways, what is $\mathcal{R}$?
 
-- open-source programming language
-- purpose: statistical computing and graphics
-- written by Robert Gentleman & Ross Ihaka (Auckland, NZ)
-- cross-plattform (UNIX, Linux, FreeBSD, Windows, MacOS)
-- one of the most popular programming languages
+- Full-fledged, open-source programming language
+- Purpose: statistical computing and graphics
+- Written by Robert Gentleman & Ross Ihaka (Auckland, NZ)
+- Cross-plattform (UNIX, Linux, FreeBSD, Windows, MacOS)
+- One of the most popular programming languages
 
 ## Why bother with $\mathcal{R}$?
 
@@ -82,14 +82,14 @@ Day & Start & End & Official Topic\\
     - Large community to turn to for help
     - New statistical routines often first implemented in R
 - **Data wrangling**
-    - powerful tools for handling, cleaning and exploring data
+    - Powerful tools for handling, cleaning and exploring data
 - **Data vizualization**
-    - powerful, flexible, and easy plotting (unlike S....)
+    - Powerful, flexible, and easy plotting (unlike S....)
 - **Open source**
-    - free for teachers, students, and everyone else
-    - huge & active community of developers
-    - tons and tons and tons of free material
-    - free multi-core support (unlike S....)
+    - Free for teachers, students, and everyone else
+    - Huge & active community of developers
+    - Tons and tons and tons of free material
+    - Free multi-core support (unlike S....)
     
 ## Install & Open R
 
@@ -134,7 +134,7 @@ See if you can solve the following problems.
     c. ??Regression - Conducts a keyword search for "Regression".
 
 [^2]: Quotation marks are mandatory for operators (e.g., +) and
-control statements (e.g., if).
+control flow statements (e.g., if).
 
 # Objects
 
@@ -171,7 +171,7 @@ a <- 3 # Object <- Value
 \end{tabular}
 \end{block}
 
-## How does are operate on objects?
+## How does $\mathcal{R}$ are operate on objects?
 
 Execute these commands and describe the result.
 ```{r, eval = FALSE}
