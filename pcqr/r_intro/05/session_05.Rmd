@@ -1,0 +1,93 @@
+---
+output:
+  beamer_presentation:
+    theme: Berlin
+    colortheme: seagull
+    fonttheme: professionalfonts
+    highlight: tango
+    toc: false
+    includes:
+      in_header: preamble.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+asoiaf <- read.csv(
+  "~/github/teaching/pcqr/r_intro/05/dta/asoiaf.csv",
+  sep=";",
+  stringsAsFactors=FALSE
+)
+```
+
+\maketitle
+
+# Introduction
+
+## So far, you have learned...
+
+>- to navigate the $\mathcal{R}$ environment,
+>- to create, index, and modify objects,
+>- to take advantage of control flow statements,
+>- generate decent looking graphs.
+>- You are now ready to unleash $\mathcal{R}$ on real data.
+
+## What are we going to do?
+
+We are going to plunge head first into data analysis, taking
+advantage of a data set which includes all *named*
+characters from George R.R. Martin's "A Song of Ice and
+Fire".[^1] In the end, you will be able to offer much insight on
+the mother of all cocktail party questions: **Is Jon Snow going to die?**
+
+To get started:
+
+1. Quit & reopen $\mathcal{R}$.
+2. Load "./05/dta/asoiaf.csv" from the course material.
+    - **Note**: Uncheck the option "Strings as factors".
+
+[^1]: O'Neill, M. 2016. Game of Thrones. https://bit.ly/2qjUfQ2 (last access: 10/08/2018).
+
+## Outline
+\tableofcontents
+
+# Descriptive Statistics
+
+## Glancing at the data
+Enter each of the following commands. Explain the output.
+```{r, eval = FALSE}
+str(asoiaf); summary(asoiaf)
+mean(asoiaf[, "book_intro_chapter"], na.rm = TRUE)
+sd(asoiaf[, "book_intro_chapter"], na.rm = TRUE)
+by(
+  data = asoiaf[, 6:7],
+  INDICES = asoiaf[, c("gender")], FUN = summary
+)
+```
+
+>- What have we learned?
+>- str() returns a brief description of the object
+>- base::summary() returns the five-point-summary and mean
+>- mean() & sd() return just that, require na.rm = TRUE
+>- by() may create summary statistics by group
+
+# Contingency Tables
+
+## Simple N-way Contingency Tables
+
+- table() creates N-way contingency tables
+```{r, eval = FALSE}
+table(asoiaf[, "death_year"]) # 1way
+table(asoiaf[, "death_year"], asoiaf[, "gender"]) # 2way
+table(asoiaf[, "death_year"], asoiaf[, "gender"], asoiaf[, "nobility"]) # 3way
+```
+
+Do you notice anything about the output?
+Check summary(asoiaf[, "death_year"]) if necessary.
+
+## Test
+
+# Adventures in Covariance
+
+# Simple Hypotheses Tests
+
+# Summary
