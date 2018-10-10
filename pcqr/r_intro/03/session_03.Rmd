@@ -107,7 +107,7 @@ while (k < 20) {
   print("Still running") 
 }
 ```
-- Returns anything unless told to
+- Returns nothing unless told to
 
 ## Repeat()-Statements
 - Reruns statement(s) until meets **break**
@@ -138,7 +138,7 @@ repeat {
 - *Different* operations follow depending on some condition
 - $\rightarrow$ code handles parallel cases
 
-## if() Statements
+## if()-Statements
 
 - Code executes if and only if some condition is TRUE
 - Condition **must** evaluate to a single TRUE/FALSE statement
@@ -152,7 +152,7 @@ if (x < 0) {
 }
 ```
 
-## if() Statements: What will this return?
+## if()-Statements: What will this return?
 ```{r, eval = FALSE}
 # Example 1 =========================================
 x <- 1
@@ -169,7 +169,7 @@ if (x == 1) {
 }
 ```
 
-## else() Statements
+## else()-Statements
 - tell $\mathcal{R}$ what to do should if() evaluate to FALSE
 - multiple if/else statements can be nested
 ```{r, eval = FALSE}
@@ -188,7 +188,7 @@ if (dec - trunc(dec) >= 0.5) {
 
 # Summary
 
-## What have we learned so far?
+## What was that about?
 
 - Code can be executed sequentially, iteratively, or conditionally
 - Sequential execution is the norm

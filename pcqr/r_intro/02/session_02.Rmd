@@ -167,13 +167,13 @@ write.csv(
 
 # R Notation
 
-## So far, we have learned\dots
+## So far, we have seen\dots
 
-- what data structures exist
-- what their elementary properties are
-- what data structures are most important
+- what data structures exist,
+- what their elementary properties are,
+- what data structures are most important.
 
-\begin{block}{The Big Question}
+\begin{block}{\textbf{The Big Question}}
   How do we access individual values inside our data?
 \end{block}
 
@@ -240,7 +240,7 @@ student_data[ , -"student_id"] # Explain the error.
 
 - \$ and $[[~]]$ define a second indexing system
 - Applies only to lists and data frames
-- Return atomic vectors (when applied to data frames)
+- Return atomic vectors
 - \$ requires names, but $[[~]]$ always works
 - Examples: data\$variable; data$[[\text{variable}]]$; data$[[1]]$
 ```{r, eval = FALSE}
@@ -260,21 +260,21 @@ we have to meet several obstacles.
 
 ## Part A
 1. Some grades are missing. Angela scored 603 in Science,
-  and Cheryl 28 in Literature. Fill in their grades.
+  and Cheryl 28 in Literature. Find and fill the gaps.
 2. Joel withdrew from class. Remove him from the dataset.
 3. Gender was coded accidentily. Drop the variable.
-4. The grades are on widely different scales. SCALE them
+4. The grades are on widely different scales. Scale them
   to comparable units.
 
 ## Part B
 1. For each student calculate the mean of science, arts, and
   literature.
-2. Find its .2, .4, .6, and .8 QUANTILES. Assign grades
+2. Find its .2, .4, .6, and .8 quantiles. Assign grades
   appropriately.
 3. Greg was caught cheating. He should receive an F.
 4. Create a new data frame grade_data. This data frame should:
     - include only student_id and the final grade;
-    - be ORDERed by student_id.
+    - be ordered by student_id.
 
 ## Congratulations
 \centering
