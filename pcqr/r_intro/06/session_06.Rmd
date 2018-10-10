@@ -1,0 +1,134 @@
+---
+output:
+  beamer_presentation:
+    theme: Berlin
+    colortheme: seagull
+    fonttheme: professionalfonts
+    highlight: tango
+    toc: false
+    includes:
+      in_header: preamble.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("ggplot2")
+asoiaf <- read.csv2(
+  "~/github/teaching/pcqr/r_intro/05/dta/asoiaf.csv",
+  stringsAsFactors=FALSE
+)
+```
+
+\maketitle
+
+# Introduction
+
+## Before we start\dots
+
+- Quit & reopen RStudio.
+- Load "./06/dta/asoiaf.csv"" from the course material.
+  - **Remember**: Uncheck the option "Strings as factors"
+- Open a new script file.
+- Execute the following code:
+```{r, eval = FALSE}
+asoiaf[, "died"] <- !is.na(asoiaf[, "book_of_death"])
+```
+- Install the "car" package.
+
+## What do we intent to do?
+
+- **Question**: What's the chance that Jon Snow is going to die?
+- **Means**: Regression on a linear combination of predictors
+$$p(Death = 1 | \bf{X}, \bf{\beta})  = \beta_0 + \sum_K \beta_kx_k$$
+- **Problem**: Chance of death is not a well-behaved response.
+  a. We don't obseverve probabilities but discrete events.
+  b. Probabilities are restricted to $[0, 1]$, but $\bf{X\beta}$
+    can take any value.
+- **Challenge**: Map the linear combination $\bf{X\beta}$ into a
+  domain which fits our response.
+
+## Some Intuition on GLMs
+
+- Applies to many quantities of interest, e.g.,
+  - Household income
+  - Satisfaction with democracy
+  - Number of bills per session of parliament
+  - \dots
+- 
+
+
+
+
+## Outline
+\tableofcontents
+
+# The Basics of Running GLMs in $\mathcal{R}$
+
+## Generic Format of Fitting GLMs
+
+```{r, eval = FALSE}
+fit <- glm(
+  formula = <formula>,
+  family = <family>(link = "<link>"),
+  # Defaults to gaussian(link = "identity"). Therefore
+  # we skip the lm() function and OLS.
+  data = <data>,
+  weights = <weights>, # Be careful! Meaning changes
+                       # depending on <family>.
+  subset = <subset>,
+  na.action = na.omit, # Retains only complete cases.
+  <...> # Options to tweak the optimizer.
+)
+```
+
+## $\mathcal{R}$'s Formula Interface\footnote{
+  Adapted from Kabacoff, R. 2011. R in Action. Shelter Island: Manning Publications, p. 178.
+}
+
+**Generic Example**
+$$ y \sim x_1 + x_2 + \dots + x_k $$
+**Formula Creation**
+
+\resizebox{\textwidth}{!}{
+  \input{./tbl/formula_arguments}
+}
+ 
+## $\mathcal{R}$'s Formula Interface, contd.
+
+**Exercise** How would you write the following formulas?
+
+1. $y = x + z + xz$
+2. $y = x + x^2 + x^3$
+3. $log_e(y) = x + z + w + xz + xw + wz$
+4. $y$ as a function of variables in the data but $k$
+  
+## Family Generators and Link Functions in glm()\footnote{
+  Adapted from Fox, J. and S. Weisberg. 2011. An R Companion to
+  Applied Regression. 2nd ed. London: SAGE, pp. 231, 233.
+}
+
+**A Practical Example**
+
+```{r, eval = FALSE}
+glm(<...>, family = binomial(link = "logit"), <...>)
+```
+
+\resizebox{\textwidth}{!}{
+  \input{./tbl/link_functions}
+}
+
+## Get Your Hands Dirty
+
+Now it's your turn. Use the **asoiaf** data to
+
+- regress **died** on
+- **allegiances**,
+- the full interaction of **gender** and **nobility**, and
+- a cubic polynomial on **age_in_chapters**.
+- This should be a **logistic** regression model.
+- Save the results to an object called **myfit**.
+
+# Working With Regression Results
+
+# Testing Assumptions
+
