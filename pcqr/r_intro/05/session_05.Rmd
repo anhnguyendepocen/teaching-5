@@ -238,16 +238,14 @@ cor(x = asoiaf[, c(6, 8)],
 - Question: Do two groups come from the same population?
 - In ASOIAF: Do nobles survive longer than other social strata?
 ```{r, eval = FALSE}
-t.test( # Alternative: mu_0 != mu_1
-  age_in_chapters ~ nobility, data = asoiaf)
-t.test( # Alternative: mu_0 > mu_1
-  age_in_chapters ~ nobility, data = asoiaf,
-  alternative = "greater"
-)
 t.test( # Alternative: mu_0 < mu_1
   age_in_chapters ~ nobility, data = asoiaf,
-  alternative = "less", conf.level = .999
+  alternative = "less" # "greater" for mu_0 > mu_1
 )
 ```
+- Defaults to unequal variances & returns Welch's t-test
+- Set paired = TRUE for paired t-tests
+- For detailed instructions see Field, A. et al. 2012.
+  Discovering Statistics Using R. Los Angeles: SAGE, Ch. 9. 
 
 # Summary
