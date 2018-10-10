@@ -12,9 +12,8 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library("ggplot2")
 asoiaf <- read.csv2(
-  "~/github/teaching/pcqr/r_intro/05/dta/asoiaf.csv",
+  "~/github/teaching/pcqr/r_intro/06/dta/asoiaf.csv",
   stringsAsFactors=FALSE
 )
 ```
@@ -29,11 +28,11 @@ asoiaf <- read.csv2(
 - Load "./06/dta/asoiaf.csv"" from the course material.
   - **Remember**: Uncheck the option "Strings as factors"
 - Open a new script file.
-- Execute the following code:
-```{r, eval = FALSE}
+- Execute the code below. What does it do?
+```{r, eval = TRUE}
 asoiaf[, "died"] <- !is.na(asoiaf[, "book_of_death"])
 ```
-- Install the "car" package.
+- Install and load the "car" and "ggplot2" packages.
 
 ## What do we intent to do?
 
@@ -70,8 +69,6 @@ $$p(Death = 1 | \bf{X}, \bf{\beta})  = \beta_0 + \sum_K \beta_kx_k$$
 fit <- glm(
   formula = <formula>,
   family = <family>(link = "<link>"),
-  # Defaults to gaussian(link = "identity"). Therefore
-  # we skip the lm() function and OLS.
   data = <data>,
   weights = <weights>, # Be careful! Meaning changes
                        # depending on <family>.
@@ -95,13 +92,15 @@ $$ y \sim x_1 + x_2 + \dots + x_k $$
  
 ## $\mathcal{R}$'s Formula Interface, contd.
 
-**Exercise** How would you write the following formulas?
+**Exercise** How would you write the following formulas?[^1]
 
-1. $y = x + z + xz$
-2. $y = x + x^2 + x^3$
+1. $y = a + x + z + xz$
+2. $y = a + x + x^2 + x^3$
 3. $log_e(y) = x + z + w + xz + xw + wz$
 4. $y$ as a function of variables in the data but $k$
-  
+
+[^1]: Assume $a$ is the constant.
+
 ## Family Generators and Link Functions in glm()\footnote{
   Adapted from Fox, J. and S. Weisberg. 2011. An R Companion to
   Applied Regression. 2nd ed. London: SAGE, pp. 231, 233.
@@ -128,7 +127,71 @@ Now it's your turn. Use the **asoiaf** data to
 - This should be a **logistic** regression model.
 - Save the results to an object called **myfit**.
 
+## Solution to the Exercise
+
+```{r, results = FALSE}
+myfit <- glm(
+  formula = died ~ 0 + allegiances +
+    gender * nobility +
+    age_in_chapters + I(age_in_chapters^2) +
+    I(age_in_chapters^3),
+  family = binomial(link = "logit"),
+  data = asoiaf
+)
+```
+
 # Working With Regression Results
 
-# Testing Assumptions
+## A Menu of Typical Options
+
+\resizebox{\textwidth}{!}{
+  \input{./tbl/accessor_functions}
+}
+
+## How to Predict New Data
+
+**Generic Sequence**
+
+1. Define scenarios to predict
+2. Create a date frame which contains those scenarios
+3. Use predict() to return quantities of interest
+4. Summarize the results
+
+## Let's Do One Example Together
+
+```{r, eval = FALSE}
+# Steps 1 & 2
+pred_dta <- data.frame(
+  allegiances = "Baratheon",
+  gender = mean(asoiaf$gender),
+  nobility = mean(asoiaf$nobility),
+  age_in_chapters = 0:343, stringsAsFactors = FALSE
+)
+# Step 3
+pred_dta[, "fitted"] <- predict(
+  myfit, newdata = pred_dta, type = "response"
+)
+# Step 4
+ggplot(data = pred_dta,
+  aes(x = age_in_chapters, y = fitted)) + geom_line()
+```
+
+## Get Your Hands Dirty
+
+Now it's your turn. Is John Snow going to die? Setup
+possible scenarios and evaluate the results.
+
+## One Possible Solution
+```{r, eval = FALSE}
+jon_snow <- which(asoiaf$name == "Jon Snow")
+pred_dta <- asoiaf[rep(jon_snow, 3), ]; rm(jon_snow)
+pred_dta[2, "allegiances"] <- "Stark"
+pred_dta[3, "allegiances"] <- "Targaryen"
+pred_dta[, "fitted"] <- predict(
+  myfit, newdata = pred_dta, type = "response"
+)
+pred_dta[, "fitted"]
+```
+
+# Checking Assumptions
 
