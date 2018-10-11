@@ -60,19 +60,6 @@ age_in_chapters, gender, and nobility.
 
 - Proper tools for description change with data type
 - Indicator: How many different values does a variable take?
-- **Exercise**: Create a for() loop that returns the number of
-  unique values on said variables.
-
-## Few or Many Values?, contd.
-
-**A possible solution** 
-```{r, eval=FALSE}
-str(asoiaf)
-vars <- c("allegiances", "age_in_chapters", "gender",
-  "nobility"
-)
-for (v in vars) { print(length(unique(asoiaf[, v]))) }
-```
 
 # Many Values
 

@@ -32,7 +32,6 @@ asoiaf <- read.csv2(
 ```{r, eval = TRUE}
 asoiaf[, "died"] <- !is.na(asoiaf[, "book_of_death"])
 ```
-- Install and load the "car" and "ggplot2" packages.
 
 ## What do we intent to do?
 
@@ -53,10 +52,14 @@ $$p(Death = 1 | \bf{X}, \bf{\beta})  = \beta_0 + \sum_K \beta_kx_k$$
   - Satisfaction with democracy
   - Number of bills per session of parliament
   - \dots
-- 
 
+GLMs use a link function which maps the linear predictor
+($\beta_0 + \sum_K \beta_kx_k$) backed into the domain of the
+reponse.
 
-
+- Typical examples
+  - logit transformation [$ln(\frac{p}{1 - p})$] for binary DVs
+  - natural log ($ln(\mu)$) for count data
 
 ## Outline
 \tableofcontents
@@ -195,3 +198,12 @@ pred_dta[, "fitted"]
 
 # Checking Assumptions
 
+## Checking Assumptions
+
+- Always check your diagnostic plots
+```{r, eval = FALSE}
+plot(myfit)
+```
+
+- For detailed instructions see: Fox, J. and S. Weisberg. 2011.
+  An R Companion to Applied Regression. 2nd ed. London: SAGE.

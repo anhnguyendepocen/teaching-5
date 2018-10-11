@@ -16,6 +16,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \maketitle
 
+## Before we start
+
+1. Please, run the following code.
+```{r, eval = FALSE}
+install.packages(c("tidyverse", "gapminder"))
+for(p in c("tidyverse", "gapminder")) {
+  library(p, character.only = TRUE)
+}
+```
+2. I could not replicate the data$[abbreviated var name] issue.
+3. Mac users with a locale warning on startup: Go to [Stack Overflow](https://stackoverflow.com/questions/9689104/installing-r-on-mac-warning-messages-setting-lc-ctype-failed-using-c) or [rstudio.com](https://community.rstudio.com/t/strange-locale-problems-in-r-after-update-to-mojave/15533/4)
+
+
 # Introduction
 
 ## A Taste of ggplot2
@@ -41,16 +54,25 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [^99]: Cheshire, J. 2012. Great maps with ggplot2. \href{http://spatial.ly/2012/02/great-maps-ggplot2/}{http://spatial.ly/2012/02/great-maps-ggplot2/} (last access: 10/06/2018).
 
-## More Tasting: Hierarchical Edge Bundling[^98]
+## Even More Tasting: Hierarchical Edge Bundling[^98]
 
 \begin{figure}
   \centering
   \includegraphics[scale = .3]{./fig/hierarchical_edge_bundling.png}
 \end{figure}
 
-[^98]: Holtz, Y. 2017. The R Graph Gallery.  \href{https://www.r-graph-gallery.com/311-add-labels-to-hierarchical-edge-bundling/}{https://www.r-graph-gallery.com/311-add-labels-to-hierarchical-edge-bundling/} (last access: 10/06/2018).
+[^98]: Holtz, Y. 2017. The R Graph Gallery.  \href{https://bit.ly/2QKdhLU}{https://bit.ly/2QKdhLU} (last access: 10/06/2018).
 
-## More Modesty: We will create this graph together.
+## An Embarassing Riches of Options[^97]
+
+\begin{figure}
+  \centering
+  \includegraphics[width = .9\textwidth]{./fig/flowing_data.png}
+\end{figure}
+
+[^97]: Yau, N. 2016. 5 Tips for Learning to Code for Vizualization. \href{https://bit.ly/2yu0fe0}{https://bit.ly/2yu0fe0} (last access: 10/11/2018).
+
+## We will create this modest graph together.
 
 ```{r, fig.align='center', echo = FALSE, fig.width = 4, fig.height = 2}
 rm(list = ls())
@@ -87,7 +109,7 @@ p + theme_minimal()
   - base graphics: ships with $\mathcal{R}$[^1]
   - lattice developed by \href{https://www.isid.ac.in/~deepayan/}{Deepayan Sarkar}
   - ggplot2 developed by \href{http://hadley.nz/}{Hadley Wickham}
-- all build on Paul Murrell's \href{https://stat.ethz.ch/R-manual/R-patched/library/grid/doc/grid.pdf}{grid Graphics}
+- All build on Paul Murrell's \href{https://stat.ethz.ch/R-manual/R-patched/library/grid/doc/grid.pdf}{grid Graphics}
 - All differ remarkbly on usability & quality of output
 
 [^1]: Check out Nathan Yau's tutorials at \href{https://flowingdata.com/category/tutorials/}{Flowing Data}.
@@ -103,7 +125,7 @@ p + theme_minimal()
 - Very generic, schematic approach to data viz
 - Flexible themes & fast, high quality results
 - Many users, active community, numerous extension
-    - create animations, networks, maps, dags, etc.
+    - Create animations, networks, maps, dags, etc.
 
 
 [^2]: Wilkinson, L. 1999/2005. The Grammar of Graphics.  
@@ -114,20 +136,24 @@ New York: Springer Science + Business.
 
 ## Intuition
 
-- Idea: map data (e.g., gender) to visual plot elements (e.g., shapes)
-    - a.k.a. aesthetic mappings
+- Idea: logical connection b/w data (e.g., gender) and plot elements (e.g., shapes)
+    - a.k.a. aesthetic mapping
 - Answer the following questions for ggplot2:
-  1. What is your data is?
+  1. What is your data?
   2. What relationships you want to see?
   3. How do you want to see it?
   4. What additional information do you want to see?
   5. What scales, axes, labels should be swown?
+- Complete reference:
+  - Hadley's book: [ggplot2](https://link.springer.com/book/10.1007/978-0-387-98141-3)
+  - ggplot2 Online Reference: [tidyverse](https://ggplot2.tidyverse.org/reference/)
+  - Kieran Healy's book: [Data Vizualization](http://socviz.co/)
 
 ## A schematic for making a plot
 
 ```{r, eval = FALSE}
 p <- ggplot(
-	data = <data>, # 1. What is your data?
+	data = <data>, # 1. What is your ("tidy") data?
 	mapping = aes( # 2. What var's map unto the plot?
 		<aesthetic> = <variable>, # x
 		<aesthetic> = <variable>, # y
@@ -180,7 +206,7 @@ p + theme_minimal()
     - very generic, schematic approach to viz
     - fast, visually pleasing results
 - Principle strategie:
-    a. Map data to plot elements
+    a. Connect (map) data to plot elements
     b. Layer plot elements
 - Read Healan, K. forthc. Data Visualization. A Practical
       Introduction. 
