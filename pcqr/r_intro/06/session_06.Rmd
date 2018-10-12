@@ -37,27 +37,22 @@ asoiaf[, "died"] <- !is.na(asoiaf[, "book_of_death"])
 
 - **Question**: What's the chance that Jon Snow is going to die?
 - **Means**: Regression on a linear combination of predictors
-$$p(Death = 1 | \bf{X}, \bf{\beta})  = \beta_0 + \sum_K \beta_kx_k$$
+$$p(Death = 1 | x, \beta)  = \sum_K \beta_kx_k$$
 - **Problem**: Chance of death is not a well-behaved response.
   a. We don't obseverve probabilities but discrete events.
   b. Probabilities are restricted to $[0, 1]$, but $\bf{X\beta}$
     can take any value.
-- **Challenge**: Map the linear combination $\bf{X\beta}$ into a
-  domain which fits our response.
 
 ## Some Intuition on GLMs
 
+- **Challenge**: Map the linear combination $\bf{X\beta}$ into a
+  domain which fits our response.
 - Applies to many quantities of interest, e.g.,
   - Household income
   - Satisfaction with democracy
   - Number of bills per session of parliament
   - \dots
-
-GLMs use a link function which maps the linear predictor
-($\beta_0 + \sum_K \beta_kx_k$) backed into the domain of the
-reponse.
-
-- Typical examples
+- GLMs: link function $g(\cdot)$ relates response to linear predictor $\bf{X\beta}$
   - logit transformation [$ln(\frac{p}{1 - p})$] for binary DVs
   - natural log ($ln(\mu)$) for count data
 
@@ -145,11 +140,15 @@ myfit <- glm(
 
 # Working With Regression Results
 
-## A Menu of Typical Options
-
-\resizebox{\textwidth}{!}{
-  \input{./tbl/accessor_functions}
+## A Menu of Typical Options\footnote{
+  Adapted from Kabacoff, R. 2011. R in Action. Shelter Island:
+  Manning Publications, p. 179.
 }
+
+\begin{table}
+  \centering
+  \input{./tbl/accessor_functions}
+\end{table}
 
 ## How to Predict New Data
 
@@ -204,6 +203,13 @@ pred_dta[, "fitted"]
 ```{r, eval = FALSE}
 plot(myfit)
 ```
-
 - For detailed instructions see: Fox, J. and S. Weisberg. 2011.
   An R Companion to Applied Regression. 2nd ed. London: SAGE.
+
+# Summary
+
+## Summary
+
+- base $\mathcal{R}$ offers many probability models
+- Numerous extensions are available (see the [CRAN Taskviews](https://cran.r-project.org/web/views/))
+- Discussion of marginal effects requires some acrobatics

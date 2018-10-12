@@ -237,3 +237,30 @@ t.test( # Alternative: mu_0 < mu_1
   Discovering Statistics Using R. Los Angeles: SAGE, Ch. 9. 
 
 # Summary
+
+## R functions for basic statistics\footnote{
+  Selectively adapted from Fox, J. and S. Weisberg. 2011.
+  An R Companion to Applied Regression. 2nd ed. London: SAGE.
+}
+
+\resizebox{\textwidth}{!}{
+  \centering
+  \begin{tabular}{*{2}{l}}
+  Method & $\mathcal{R}$ Function(s) in base\\
+  \midrule
+  Mean & mean()\\
+  Median & median()\\
+  Quantiles & quantile()\\
+  Extremes & range()\\
+  Variance & var()\\
+  Standard Deviation & sd()\\
+  Covariance Matrix & vcov()\\
+  Correlation & cor() \\
+  Analysis of Variance & aov(), lm(), anova()\\
+  Contingency Tables & table(), xtabs() \\
+  t-test for Means & prop.test(), binom.test() \\
+  $\chi^2$ Test for Indep. & chisq.test() \\
+  Various Nonparametric Tests & friedman.test(), kruskal.test(), wilcox.test(), etc.
+  \end{tabular}
+}
+    
