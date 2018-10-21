@@ -1,0 +1,62 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\maketitle
+
+## Rekevanz
+
+Bei Wahlen handelt es sich um den allgemeinsten Ausdruck der
+modernen Demokratie. Warum sollte ihre weltweite Verbreitung problematisch sein?
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = .07]{./fig/Share-in-Democracies-since-1816.png}
+\end{figure}
+
+## Inhalte des Kurses
+
+1. Wahlen und Demokratie
+    - Was sind politische Wahlen?
+    - Was sind demokratische Wahlen?
+2. Ursachen der internationalen Verbreitung von Wahlen
+    - Demokratieförderung, Diffusion, Linkage & Leverage
+3. Probleme politischer Wahlen
+    - Electoral Integrity, Wahlfälschung, Wahlen & Gewalt, Klientelismus
+4. Konsequenzen politischer Wahlen
+    - Kompetitiver Autoritarismus, Massenproteste, Krise der Demokratie
+
+## Leistungsanforderungen
+
+1. Regelmäßige, aktive Teilnahme
+2. *alle*: 1 Reaktionspapier
+    - Sitzungs nach Wahl
+    - Abgabe: als PDF auf Moodle
+    - Umfang: 750 Wörter ($\pm 10\%$)
+3. *ECTS*: Hausarbeit
+    - schnellstmögliche Bekanntgabe zweier Themen zur Auswahl
+    - Abgabe: bis 31. März 2019 als PDF auf Moodle
+    - Umfang: 4500 Wörter ($\pm 10\%$)
+
+## Moodle
+
+**Titel des Kurses**: siegeszug_wahlen
+
+**Einschreibeschlüssel**: FhFn94Ls
+
+Beachtet die Groß- und Kleinschreibung!
+
+## Sprechstunde
+
+**Zeitpunkt** Montags, 15.00 bis 17.00 Uhr
+
+**Ort**: Haus 1, R.1.44
+
+**Anmeldung**: per Email an dag.tanneberg@uni-potsdam.de

@@ -1,0 +1,64 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\maketitle
+
+## Warum Vergleichende Politikwissenschaft?\footnote{
+    \textit{Quelle}: \href{http://wahl.tagesschau.de/wahlen/2018-10-14-LT-DE-BY/index-content.shtml}{Tagesschau.de}
+}
+
+Medien und Politik kommentieren das Ergebnis der bayerischen
+Landtagswahl vom 14. Oktober einhellig als Debakel. Wie
+würdet ihr diese Bewertung differenzieren?
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = 0.2]{./fig/chart282325.png}\newline
+\end{figure}
+
+## Inhalte
+
+1. Grundlagen der Vergleichenden Politikwissenschaft
+    - empirisch-analytische Wissenschaft, Vergleich, polit. Regime
+2. Theorie der rationalen Wahl
+    - Grundlagen, Anwendungen und Erweiterungen
+3. Politischer Wettbewerb
+    a. Konzeptionalisierung (Räuml. Wettbewerb, Parteiprogramme)
+    b. Determinanten (Wahl & Regierungssysteme)
+    c. Grenzen (Föderalismus, Verfassungsgerichtsbarkeit)
+
+## Leistungsanforderungen
+
+1. Regelmäßige, aktive Teilnahme
+2. *alle*: 1 Diskussionspapier
+    - Bekanntgabe des Themas: 19.11.
+    - Abgabe: bis 03.12. als PDF auf Moodle
+    - Umfang: 750 Wörter ($\pm 10\%$)
+3. *ECTS*: Hausarbeit
+    - schnellstmögliche Bekanntgabe zweier Themen zur Auswahl
+    - Abgabe: bis 31. März 2019 als PDF auf Moodle 
+    - Umfang: 3000 Wörter ($\pm 10\%$)
+
+## Moodle
+
+**Titel des Kurses**: grundl_vergl_1819
+
+**Einschreibeschlüssel**: Hssr2qyF
+
+Beachtet die Groß- und Kleinschreibung!
+
+## Sprechstunde
+
+**Zeitpunkt** Montags, 15.00 bis 17.00 Uhr
+
+**Ort**: Haus 1, R.1.44
+
+**Anmeldung**: per Email an dag.tanneberg@uni-potsdam.de

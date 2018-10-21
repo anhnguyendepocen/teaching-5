@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ngerman}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+% Article setup --------------------------------------------
+\title{Einführung in die Datenanalyse mit $\mathcal{R}$\newline%
+  Weiterführende Hinweise%
+}
+% \subtitle{Weiterführende Hinweise}
+\author{
+  Dag Tanneberg\thanks{
+    \href{mailto:dag.tanneberg@uni-potsdam.de}{dag.tanneberg@uni-potsdam.de}
+  }
+}
+\date{\today}
+
+% Hyperlink setup
+% \hypersetup{colorlinks, urlcolor = red, linkcolor = }
+
+\begin{document}
+\maketitle
+
+<<initializeWorkspace, echo = FALSE>>=
+rm(list = ls())
+library("knitr")
+library("ggplot2")
+# load data -----------------------------------------------------
+asoiaf <- read.csv2( # generate data
+  file.path(".", "dta", "asoiaf.csv"), stringsAsFactors = FALSE
+)
+asoiaf[, "died"] <- !is.na(asoiaf[, "book_of_death"])
+# set global chunk options
+opts_chunk$set(echo = TRUE, fig.align='center')
+@
+
+\section{Auswertung multiplikativer Interaktionsterme}
+
+Die letzte Sitzung der Veranstaltung riss die Schätzung und
+Auswertung generalisierter linearer Modelle (GLM) an. Die
+Illustration griff auf einen Datensatz zurück, der Informationen
+über alle namentlich erwähnten Charaktere der Fantasyreihe ``A
+Song of Ice and Fire'' bereitstellte. Die Fragestellung lautete,
+mit welcher Wahrscheinlichkeit der Hauptcharakter Jon Snow sterben
+würde. Zu ihrer Beantwortung griff die Veranstaltung auf Angaben
+über die Zugehörigkeit zu einem Adelshaus, das Alter\footnote{
+  In Ermangelung besserer Informationen misst die entsprechende
+  Variable nicht das natürliche Alter, sondern zählt die Anzahl
+  der seit Einführung des Character verstrichenen Kapitel. Mit
+  etwas gutem Willen handelt es sich um eine Messung der
+  Prozesszeit.
+},
+das Geschlecht sowie den Adelsstatus zurück. Das
+vorgeschlagene logistische Regressionsmodell beinhaltete außerdem
+eine Interaktion von Geschlecht und Adelsstatus sowie ein
+kubisches Polynom des Alters. Offen blieb zum Schluss die
+Auswertung multiplikativer Interaktionsterme. Dieser Abschnitt
+demonstriert eine Strategie zur die graphische Auswertung
+entsprechender Terme.
+
+Zunächst sei an das Regressionsmodell erinnert, mit dessen Hilfe
+
+
+<<generateSessionModel>>=
+fit <- glm( # generate model
+  died ~ 0 + allegiances +
+    gender*nobility +
+    age_in_chapters + I(age_in_chapters^2) + I(age_in_chapters^3),
+  family = binomial(link = "logit"),
+  data = asoiaf
+)
+@
+
+Multiplikative Interaktionsterme können in verschiedenen
+Formen ausgewertet werden. In den Sozialwissenschaften
+erfreuen sich sogenannte Marginal Effect Plots besonderer
+Beliebtheit und sie treten in verschiedenen Varianten auf.
+
+\begin{enumerate}
+  \item Darstellung der partiellen Ableitung
+  \item Darstellung der
+\end{enumerate}
+
+
+<<evaluateDiscreteInteraction>>=
+pred_data <- expand.grid(
+  allegiances = c("Baratheon",  "Lannister", "Stark", "Targaryen"),
+  nobility = 0:1, gender = 0:1,
+  age_in_chapters = median(asoiaf[, "age_in_chapters"], na.rm = TRUE),
+  stringsAsFactors = FALSE
+)
+@
+
+Der resultierende Datensatz enthält eine Zeile für jede der
+vier möglichen Kombinationen von \textbf{gender} und
+\textbf{nobility}. Die werte der Variablen \textbf{allegiances}
+und \textbf{age{\textunderscore}in{\textunderscore}chapters}
+bleiben über alle Reihen hinweg konstant.
+
+<<showPredDta, echo = FALSE>>=
+pred_data
+@
+
+Mit Hilfe der Funktion \textbf{predict()}
+
+<<predictNewData>>=
+pred_data[, "fitted"] <- predict(fit, newdata = pred_data, type = "response")
+pred_data
+@
+
+<<generateMarginalEffectsPlot>>=
+pred_data <- within(pred_data, {
+  # Note: within() requires curly brackets whenever you want to
+  # evaluate multiple statements.
+  gender_label <- factor(gender, 0:1, c("Female", "Male"))
+  nobility_label <- factor(nobility, 0:1, c("Commoner", "Noble"))
+  }
+)
+ggplot(
+  data = pred_data,
+  mapping = aes(x = allegiances, y = fitted, fill = gender_label)
+) +
+  geom_bar(stat = 'identity', position = "dodge") +
+  facet_grid( ~ nobility_label) +
+  labs(
+    title = "Interaction of Gender and Nobility",
+    x = "",
+    y = "Expected probability of death",
+    fill = "Gender"
+  ) +
+  theme(legend.position = "bottom")
+@
+
+Häufig verwenden die Sozialwissenschaften Marginal Effect Plots,
+d.\,h. grafische Darstellungen der slope.
+
+<<refitModel>>=
+fit2 <- glm( # generate model
+  died ~ 0 + allegiances +
+    gender + nobility * age_in_chapters,
+  family = binomial(link = "logit"),
+  data = asoiaf
+)
+summary(fit2)
+@
+
+
+
+\end{document}

@@ -85,7 +85,7 @@ p <- ggplot(
     y = gdpPercap
   )
 ) +
-  geom_boxplot() +
+  geom_boxplot(fill = "orange") +
   scale_y_log10(labels = scales::dollar) + # log10 xvalues, but display Dollar
   labs(
     x = "",
@@ -180,7 +180,7 @@ p <- ggplot(
     y = gdpPercap
   )
 ) +
-  geom_boxplot() +
+  geom_boxplot(fill = "orange") +
   scale_y_log10(labels = scales::dollar) + # log10 xvalues, but display Dollar
   labs(
     x = "",
