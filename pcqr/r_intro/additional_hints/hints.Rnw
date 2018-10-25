@@ -1,8 +1,11 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage{ngerman}
+\usepackage[ngerman]{babel}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[backend = biber, style = chicago-authordate, natbib]{biblatex}
+\addbibresource{library.bib}
 
 % Article setup --------------------------------------------
 \title{Einführung in die Datenanalyse mit $\mathcal{R}$\newline%
@@ -19,8 +22,273 @@
 % Hyperlink setup
 % \hypersetup{colorlinks, urlcolor = red, linkcolor = }
 
+% R Setup
+<<optionsChunk, echo = FALSE>>=
+# set global chunk options
+opts_chunk$set(
+  echo = TRUE, fig.align='center', fig.width = 7,
+  fig.height = 7/1.618
+)
+@
+
 \begin{document}
 \maketitle
+\tableofcontents
+
+\section{Quellcode der Grafiken aus Sitzung 4}
+
+Sitzung 4 lieferte einen knappen Aufriss der Visualisierung
+statistischer Daten mit dem Paket ggplot2. Auf den hinteren
+Folien befinden sich zwei Abbildungen, nach deren Vorbild
+bestimmte Darstellungsmöglichkeiten recherchiert und erprobt
+werden sollten. Der folgende Abschnitt zeigt mit Hilfe
+kommentierten Quellcodes, wie man die beiden Grafiken erstellt.
+Bevor der Code erfolgreich ausgeführt werden kann, müssen die
+Pakete ggplot2 und gapminder geladen werden.
+
+<<section_1_workspace>>=
+packs <- c("ggplot2", "gapminder")
+# Does your system lack any of the packages stated in packs?
+if (any(!(packs %in% installed.packages()))) {
+  mis_pack <- setdiff(packs, installed.packages())
+  cat("Missing package detected. Please install:", mis_pack)
+  rm(mis_pack)
+} else {
+  for (i in packs) {
+    library(i, character.only = TRUE)
+  }
+}
+rm(i, packs)
+data(gapminder)
+@
+
+\subsection{Small multiples}
+
+Die erste Grafik zeigt mehrere Streudiagramme. Sie tragen für
+jeden der fünf Kontinente die durchschnittliche Lebenserwartung
+gegen den ökonomischen Entwicklungsstand ab. Darüber hinaus zeigt
+jedes Diagramm die lineare Korrelation beider Variablen
+und die Sichtbarkeit aller Datenpunkte wurde reduziert.
+
+<<showFigure1, eval = TRUE, echo = FALSE>>=
+ggplot(
+  data = gapminder,
+  mapping = aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point(
+    # This is simple example for how you set an aesthetic, rather
+    # than mapping it to a variable. In this case we set
+    # visibility of ALL data points to 20 per cent.
+    alpha = .2
+  ) +
+  geom_smooth(
+    # geom_smooth adds smoothers to your scatter plot. There is a
+    # number of different smoothers available. This example uses
+    # a linear regression model of the form y ~ x. For complete
+    # information see:
+    # https://ggplot2.tidyverse.org/reference/geom_smooth.html.
+    method = 'lm', colour = "red", size = .3
+  ) +
+  scale_x_log10(labels = scales::dollar) +
+  labs(
+    x = "GDP per capita",
+    y = "Life expectancy at birth",
+    title ="Life Expectancy vs. Economic Development"
+  ) +
+  facet_wrap(
+    # This part is tricky. I provide further information in the
+    # accompanying text. For now, let it suffice to say that I
+    # order ggplot2 to
+    ~ continent, # draw a separate plot for each continent, and
+    nrow = 2 # arrange them in 2 rows.
+  ) +
+  theme_gray(base_size = 9)
+@
+
+Das Besondere der Grafik ist die Verwendung sogenannter
+\textit{small multiples}, d.\,h. kleinerer Darstellungen
+desselben Zusammenhangs, die auf die Ausprägungen mindestens
+einer weiteren Variable bedingen.\footnote{
+  Wie vieles andere in der Visualisierung statistischer Daten
+  geht der Begriff auf Edward Tufte zurück:
+  \cite[67]{tufteEnvisioningInformation2013}.
+}
+Wer mit Stata vertraut ist, hat in der Vergangenheit vielleicht
+ähnliche Grafiken mit der Option by() erstellt. In der
+Terminologie von ggplot2 handelt es sich um \textit{facet}s und
+sie dienen der Organisation einer Reihe von Grafiken.
+Es gilt, zwei Anwendungsfälle zu unterscheiden:
+
+\begin{enumerate}
+    \item Ziel ist eine eindimensionale Sequenz von
+      Teilabbildungen. Hierfür kommt die Funktion facet{\textunderscore}wrap()
+      zum Einsatz.
+    \item Ziel ist eine Matrix statistischer Grafiken, deren
+      Reihen und Spalten die Ausprägungen diskreter Variablen
+      abtragen. Hierfür kommt die Funktion facet{\textunderscore}grid() zum
+      Einsatz.
+\end{enumerate}
+
+In beiden Fällen werden Teilgrafiken durch die Verwendung eines
+Formelarguments definiert. Für facet{\textunderscore}wrap verwendet
+man eine einseitige Formel, d.\,h. die linke Seite der Formel bleibt leer
+und rechts stehen eine oder mehrere durch `+' voneinander
+getrennte, kategoriale Variablen. Die Funktion
+facet{\textunderscore}grid verwendet hingegen eine zweiseitige
+Formel, die zuerst Reihen und dann Spalten festlegt. Aber Beispiele
+sagen mehr als tausend Worte:
+
+<<lineChunk, eval=FALSE>>=
+facet_wrap(~ continent)
+facet_wrap(~ country + continent)
+facet_grid(year ~ country)
+@
+
+Der nachstehende Block zeigt den vollständigen Quellcode der Grafik.
+
+<<Figure1, eval = FALSE>>=
+ggplot(
+  data = gapminder,
+  mapping = aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point(
+    # This is simple example for how you set an aesthetic, rather
+    # than mapping it to a variable. In this case we set
+    # visibility of ALL data points to 20 per cent.
+    alpha = 0.2
+  ) +
+  geom_smooth(
+    # geom_smooth adds smoothers to your scatter plot. There is a
+    # number of different smoothers available. This example uses
+    # a linear regression model of the form y ~ x. For complete
+    # information see:
+    # https://ggplot2.tidyverse.org/reference/geom_smooth.html.
+    method = 'lm', colour = "red", size = 0.3
+  ) +
+  scale_x_log10(labels = scales::dollar) +
+  labs(
+    x = "GDP per capita",
+    y = "Life expectancy at birth",
+    title ="Life Expectancy vs. Economic Development"
+  ) +
+  facet_wrap(
+    # This part is tricky. I provide further information in the
+    # accompanying text. For now, let it suffice to say that I
+    # order ggplot2 to
+    ~ continent, # draw a separate plot for each continent, and
+    nrow = 2 # arrange them in 2 rows.
+  ) +
+  theme_gray(base_size = 9)
+@
+
+\subsection{Selektive Ansprache von Aesthetics}
+
+Die zweite Abbildung zeigt erneut ein Streudiagramm von
+Lebenserwartung und ökonomischem Entwicklungsstand samt
+Glättung. Neu hinzu kommen eine Beschränkung auf den Zeitraum ab
+1997 sowie eine Färbung nach Kontinent. Im Vergleich zum
+vorhergehenden Abschnitt wirkt diese Abbildung simpel. Der Teufel
+steckt im Detail, denn die durch die Werte der Variablen
+continent definierten Farbgruppen sollen zwar im Streudiagramm,
+nicht jedoch in der Glättung auftauchen.
+
+
+<<showFig2, echo = FALSE>>=
+ggplot(
+  data = gapminder[gapminder$year >= 1997, ],
+  mapping = aes(x = gdpPercap, y = lifeExp, colour = continent)
+) +
+  geom_point(alpha = .6) +
+  geom_smooth(method = "loess", aes(colour = NULL)) +
+  scale_x_log10(labels = scales::dollar)  +
+  labs(
+    x = "GDP per capita",
+    y = "Life expectancy at birth",
+    colour = "Continent",
+    title = "Life Expactancy vs. Economic Development",
+    subtitle = "Graph shows 1997, 2003, and 2007."
+  ) +
+  theme_gray(base_size = 9)
+@
+
+Der folgende Codeblock zeigt die Deklaration des Plot-Objekts.
+Darin wird  dem Argument colour die Variable continent übergeben.
+Es handelt sich um einen normalen mapping-Vorgang. Man könnten
+denken, die Sache sei mit dem anschließenden Aufruf von
+geom{\textunderscore}point() und geom{\textunderscore}smooth()
+erledigt.
+
+<<showColourInAes, eval = TRUE>>=
+p <- ggplot(
+  data = gapminder[gapminder$year >= 1997, ], # Filter obs.
+  mapping = aes(x = gdpPercap, y = lifeExp, colour = continent)
+)
+p + geom_point() + geom_smooth()
+@
+
+Der Schein trügt, denn das Argument colour greift für
+\textit{alle} Schichten der Grafik. Folglich zeichnet
+geom{\textunderscore}smooth() für jeden Kontinent eine eigene
+Glättung ein.\footnote{
+  Die zahlreichen Warnmeldungen haben sämtlich damit zu tun,
+  dass die Fallzahlen einiger Kontinente sehr klein sind.
+}
+Die Lösung des Problems liegt in der selektiven Zuordnung einer
+\textit{Aesthetic}. Das kann in diesem Fall auf zwei Arten
+geschehen.
+
+\begin{enumerate}
+  \item Das Argument colour verschwindet aus dem Aufruf von
+    ggplot() und wird erst beim Aufruf von
+    geom{\textunderscore}point() übergeben.
+  \item Das Argument colour verbleibt im Aufruf von ggplot() und
+    wird aus dem Aufruf von geom{\textunderscore}smooth gelöscht.
+\end{enumerate}
+
+<<showVariants, eval = FALSE>>=
+# Variante 1: Selektive Übergabe eines Aesthetics
+p <- ggplot(
+  data = gapminder[gapminder$year >= 1997, ], # Filter obs.
+  mapping = aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point(mapping = aes(colour = continent)) +
+  geom_smooth()
+# Variante 2: Löschen eines Aesthetics
+p <- ggplot(
+  data = gapminder[gapminder$year >= 1997, ], # Filter obs.
+  mapping = aes(x = gdpPercap, y = lifeExp, colour = continent)
+) +
+  geom_point() +
+  geom_smooth(mapping = aes(colour = NULL))
+@
+
+Der vorstehende Block demonstriert beide Möglichkeiten. Welcher
+man den Vorzug gibt, hängt vom konkreten Anwendungsfall ab.
+Sollen beispielsweise weitere Geometrien das Argument colour
+verwenden, dann streicht man es am besten nur aus
+dem Smoother. Interessiert colour hingegen nur in einer einzigen
+Geometrie, dann sollte es aus dem Aufruf von ggplot()
+verschwinden und anschließend einzeln übergeben. Das nachfolgende,
+abschließende Listing zeigt den vollständigen
+Quellcode der Grafik.
+
+<<finalListingGgplot, eval = FALSE>>=
+ggplot(
+  data = gapminder[gapminder$year >= 1997, ],
+  mapping = aes(x = gdpPercap, y = lifeExp, colour = continent)
+) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "loess", aes(colour = NULL)) +
+  scale_x_log10(labels = scales::dollar)  +
+  labs(
+    x = "GDP per capita",
+    y = "Life expectancy at birth",
+    colour = "Continent",
+    title = "Life Expactancy vs. Economic Development",
+    subtitle = "Graph shows 1997, 2003, and 2007."
+  ) +
+  theme_gray(base_size = 9)
+@
 
 <<initializeWorkspace, echo = FALSE>>=
 rm(list = ls())
@@ -31,15 +299,13 @@ asoiaf <- read.csv2( # generate data
   file.path(".", "dta", "asoiaf.csv"), stringsAsFactors = FALSE
 )
 asoiaf[, "died"] <- !is.na(asoiaf[, "book_of_death"])
-# set global chunk options
-opts_chunk$set(echo = TRUE, fig.align='center')
 @
 
 \section{Auswertung multiplikativer Interaktionsterme}
 
 Die letzte Sitzung der Veranstaltung riss die Schätzung und
-Auswertung generalisierter linearer Modelle (GLM) an. Die
-Illustration griff auf einen Datensatz zurück, der Informationen
+Auswertung generalisierter linearer Modelle (GLM) an. Sie griff
+zu diesem Zweck auf einen Datensatz zurück, der Informationen
 über alle namentlich erwähnten Charaktere der Fantasyreihe ``A
 Song of Ice and Fire'' bereitstellte. Die Fragestellung lautete,
 mit welcher Wahrscheinlichkeit der Hauptcharakter Jon Snow sterben
@@ -47,67 +313,110 @@ würde. Zu ihrer Beantwortung griff die Veranstaltung auf Angaben
 über die Zugehörigkeit zu einem Adelshaus, das Alter\footnote{
   In Ermangelung besserer Informationen misst die entsprechende
   Variable nicht das natürliche Alter, sondern zählt die Anzahl
-  der seit Einführung des Character verstrichenen Kapitel. Mit
-  etwas gutem Willen handelt es sich um eine Messung der
-  Prozesszeit.
+  der seit Einführung des Charakters verstrichenen Kapitel bis zu
+  seinem Tod. Mit etwas gutem Willen handelt es sich um eine
+  Messung der Prozesszeit.
 },
-das Geschlecht sowie den Adelsstatus zurück. Das
-vorgeschlagene logistische Regressionsmodell beinhaltete außerdem
-eine Interaktion von Geschlecht und Adelsstatus sowie ein
-kubisches Polynom des Alters. Offen blieb zum Schluss die
-Auswertung multiplikativer Interaktionsterme. Dieser Abschnitt
-demonstriert eine Strategie zur die graphische Auswertung
-entsprechender Terme.
-
-Zunächst sei an das Regressionsmodell erinnert, mit dessen Hilfe
-
+das Geschlecht sowie den Adelsstatus zurück. Das logistische
+Regressionsmodell verwendete außerdem eine Interaktion von
+Geschlecht und Adelsstatus sowie ein kubisches Polynom des
+Alters. Der nachstehende Block wiederholt die
+Modellspezifikation.
 
 <<generateSessionModel>>=
 fit <- glm( # generate model
   died ~ 0 + allegiances +
-    gender*nobility +
+    gender * nobility +
     age_in_chapters + I(age_in_chapters^2) + I(age_in_chapters^3),
   family = binomial(link = "logit"),
   data = asoiaf
 )
 @
 
-Multiplikative Interaktionsterme können in verschiedenen
-Formen ausgewertet werden. In den Sozialwissenschaften
-erfreuen sich sogenannte Marginal Effect Plots besonderer
-Beliebtheit und sie treten in verschiedenen Varianten auf.
+Offen blieb zum Schluss die Auswertung multiplikativer
+Interaktionsterme. Puristen verwenden zu diesem Zweck partielle
+Ableitungen und Kommunikatoren setzen gerne auf den Vergleich von
+Vorhersagewerten. Aber die meisten Sozialwissenschaftler schwören
+auf \textit{Marginal Effect Plots} (MEPs). Partielle Ableitungen
+sind im Falle generalisierter linearer Modelle nicht
+besonders aussagekräftig. Da man dafür außerdem $\mathcal{R}$
+nicht benötigt, verzichte ich auf ihre Darstellung und verweise
+auf den Klassiker \cite{kamModelingInterpretingInteractive2007}.
+Das folgende Kapitel bespricht zunächst den Umgang mit
+Vorhersagewerten und abschließend MEPs.\footnote{
+  Die hier vorgestellten Auswertungsverfahren vermitteln erneut
+  unbequeme, aber grundlegende Programmiertechniken. Wer es etwas
+  bequemer mag, wirft bitte einen Blick auf das Paket effects von
+  Jon Fox oder das Paket sjPlot von Daniel Lüdecke und Carsten
+  Schwemmer.
+}
+
+\subsection{Auswertung von Vorhersagewerten}
+
+Im Wesentlichen gleicht die Auswertung von Vorhersagewerten den
+Verfahren, die bereits im Rahmen der letzten Sitzung vorgestellt
+wurden. Sie erfolgt in drei Schritten.
 
 \begin{enumerate}
-  \item Darstellung der partiellen Ableitung
-  \item Darstellung der
+  \item Zuerst muss das entsprechende Modell geschätzt werden.
+  \item Der Anwender definiert dann die vorherzusagenden
+    Szenarien und speichert sie in einem eigenen Data Frame.
+  \item Mit Hilfe der Funktion predict() und ihres Arguments
+    newdata generiert man die Vorhersagewerte und fasst sie
+    abschließend durch Tabellen oder Abbildungen zusammen.
 \end{enumerate}
 
+Die einzige Komplikation erwächst im zweiten Schritt, da die
+vorherzusagenden Szenarien möglichst den gesamten
+Eigenschaftsraum der Interaktion abbilden sollten. Dabei hilft
+die Funktion expand.grid(). Sie erwartet Vektoren als Argumente
+und generiert einen Data Frame, in dem jede Reihe einer
+Kombination der übergebenen Vektoren entspricht. Der resultierende
+Datensatz hat so viele Reihen, wie es Kombinationen der Vektoren
+gibt. Der nachfolgende Block zeigt ein einfaches Beispiel.
+
+<<DemoExpandGrid>>=
+expand.grid(x = 0:1, y = 0:1) # There are 2^2 combinations.
+@
+
+Da in dem oben gezeigte Regressionsmodell Geschlecht und
+Adelsstatus miteinander interagieren, sollten mindestens deren
+Kombinationsmöglichkeiten voll ausgeschöpft werden. Zusätzlich
+zeigte sich im Rahmen der Sitzung eine starke implizite
+Interaktion mit der assoziierten Adelsfamilie. Daher lohnt es
+sich, auch diese umfassend zu berücksichtigen. Das Alter wird im
+Folgenden auf dem Median konstant gehalten. Der resultierende
+Datensatz enthält eine Zeile für jede der zwölf möglichen
+Kombinationen von \textbf{gender}, \textbf{nobility} und
+\textbf{allegiances}. Die Wert von
+\textbf{age{\textunderscore}in{\textunderscore}chapters}
+bleibt über alle Reihen hinweg konstant.
 
 <<evaluateDiscreteInteraction>>=
+# Define scenarios
 pred_data <- expand.grid(
-  allegiances = c("Baratheon",  "Lannister", "Stark", "Targaryen"),
+  allegiances = c("Lannister", "Stark", "Targaryen"),
   nobility = 0:1, gender = 0:1,
-  age_in_chapters = median(asoiaf[, "age_in_chapters"], na.rm = TRUE),
-  stringsAsFactors = FALSE
+  age_in_chapters = median(
+    asoiaf[, "age_in_chapters"], na.rm = TRUE
+  ), stringsAsFactors = FALSE
 )
+# Make predictions
+pred_data[, "fitted"] <- predict(
+  fit, newdata = pred_data, type = "response"
+)
+pred_data # Show data
 @
 
-Der resultierende Datensatz enthält eine Zeile für jede der
-vier möglichen Kombinationen von \textbf{gender} und
-\textbf{nobility}. Die werte der Variablen \textbf{allegiances}
-und \textbf{age{\textunderscore}in{\textunderscore}chapters}
-bleiben über alle Reihen hinweg konstant.
-
-<<showPredDta, echo = FALSE>>=
-pred_data
-@
-
-Mit Hilfe der Funktion \textbf{predict()}
-
-<<predictNewData>>=
-pred_data[, "fitted"] <- predict(fit, newdata = pred_data, type = "response")
-pred_data
-@
+Zuletzt übergibt man die Vorhersageszenarian an die Funktion
+predict() und speichert sie in einem neuen Vektor.\footnote{
+  In der Regel generiert predict() mit dem Argument se.fit = TRUE
+  sogar den Standardfehler des Vorhersagewerts.
+} Nach ein bißchen Feinschliff können die Ergebnisse in
+einem Säulendiagramm dargestellt werden. Alles spricht dafür,
+dass adlige Frauen bei George R.\,R. Martin die besten
+Überlebensaussichten genießen. Adlige Männer sterben
+dagegen auffällig häufiger.
 
 <<generateMarginalEffectsPlot>>=
 pred_data <- within(pred_data, {
@@ -132,19 +441,139 @@ ggplot(
   theme(legend.position = "bottom")
 @
 
-Häufig verwenden die Sozialwissenschaften Marginal Effect Plots,
-d.\,h. grafische Darstellungen der slope.
+\subsection{Marginal Effect Plots}
 
-<<refitModel>>=
-fit2 <- glm( # generate model
-  died ~ 0 + allegiances +
-    gender + nobility * age_in_chapters,
-  family = binomial(link = "logit"),
-  data = asoiaf
-)
-summary(fit2)
+Häufig verwenden Sozialwissenschaftler sogenannte Marginal Effect
+Plots. Sie tragen den Wert des Regressionsgewichts eines
+substantiell interessierenden Prä\-dik\-tors gegen den Wertebereich
+eines Moderators ab. Weiterhin zeichnen diese Darstellungen häufig
+Konfidenzintervalle um den substantiell interessierenden Effekt
+herum ein. Daher erlaubt diese Art der Darstellung einerseits Aussagen
+über den Verlauf einer Interaktion. Andererseits vermittelt sie
+einen (kritikwürdigen\footnote{
+  Siehe \cite{pepinskyVisualHeuristicsMarginal2018} mit
+  weiteren Nachweisen.
+}) Eindruck von der statistischen Signifikanz sowohl des
+Interaktionsterms als auch des dargestellten Effekts. Abbildung
+\ref{fig:Brambor2006MEP} reproduziert das Beispiel aus dem
+einflussreichen Beitrag
+\citet{bramborUnderstandingInteractionModels2005}. Die
+Anfertigung solcher Grafiken ist nicht trivial, da die
+Berechnung des korrekten Standardfehlers erhebliches
+Kopfzerbrechen bereiten kann.
+
+\begin{figure}
+  \centering
+  \caption{Beispiel eines Marginal Effect Plots}
+  \label{fig:Brambor2006MEP}
+  \includegraphics[width = \textwidth]{./fig/Brambor2006_MEP.png}
+\end{figure}
+\newpage
+
+In der einfachsten aller Welten, d.\,h. einer linearen
+Regression mit zwei interagierenden Variablen,
+liegen die Dinge vergleichsweise einfach. Es sei $
+  y = \beta_0 + \beta_1x + \beta_2z + \beta_3xz + \epsilon
+$ das interessierende Populationsmodell. Dann beschreibt $
+  \frac{\partial y}{\partial x} = \beta_1 + \beta_3z
+$ dessen partielle Ableitung nach $x$. Sie entspricht der
+aufsteigenden, durchgezogenen Linie in Abbildung
+\ref{fig:Brambor2006MEP}. Dieser Teil ist im vorliegenden Beispiel
+schnell erledigt. Zunächst extrahiert man die notwendigen
+Koeffizienten aus dem Regressionsmodell. Dann erzeugt man
+Matrix mit den interessierenden Vorhersageszenarien und
+zuletzt wird ausmultipliziert.
+
+<<mepCoef>>=
+mu <- coef(fit)[c("gender", "gender:nobility")]
+X <- cbind(1, 0:1)
+# Wir setzen Gender auf 1, denn der marginale Effekt ist
+# beta_[gender] + beta_[nobility] * nobility
+mu <- X %*% mu
+# Hier werden Matrizen multipliziert. Insbesondere
+# bei Interaktionstermen mit kontinuierlichen Variablen spart das
+# Zeit. In unserem sehr einfachen Beispiel wäre auch Folgendes
+# möglich:
+coef(fit)["gender"] + c(0, 1) * coef(fit)["gender:nobility"]
 @
 
+Der Standardfehler dieser Interaktion berechnet sich wie folgt:
+\begin{align*}
+\hat{\sigma}_{\frac{\partial y}{\partial x}} =
+  \sqrt{var(\beta_1) + z^2var(\beta_3) + 2zcov(\beta_1\beta_3) }
+\end{align*}
+Da nur zwei Variablen miteinander interagieren, fällt die Formel
+vergleichsweise übersichtlich aus. Die Berechnung in
+$\mathcal{R}$ kommt jedoch keinesfalls handzahm daher. Eine
+mögliche Schrittfolge sieht so aus:
 
+\begin{enumerate}
+  \item Extrahiere die Varianz-Kovarianz-Matrix der
+    Effektschätzer. Das geschieht mit der Funktion vcov().
+  \item Greife auf die Varianzterme der interessierenden
+    Koeffizienten zu. Das geschieht mit Hilfe der Funktion diag()
+    und anschließender (Namens-)Indizierung des resultierenden
+    Vektors.
+  \item Extrahiere den Koviarianzterm durch Indizierung der
+    Varianz-Kovarianz-Matrix.
+  \item Berechne den Standardfehler für die verschiedenen
+    Szenarien.
+\end{enumerate}
 
+Der nachstehende Block zeigt die einzelnen Schritte in
+$\mathcal{R}$-Code.
+
+<<calcSeOfMarEf>>=
+# Step 1:
+sigma2 <- vcov(fit)
+# Step 2 & 3:
+sigma2_coefs <- diag(sigma2)[c("gender", "gender:nobility")]
+# Step 4:
+cov_coefs <- sigma2["gender", "gender:nobility"]
+# Step 5:
+se <- sigma2_coefs["gender"] +
+  c(0, 1)^2 * sigma2_coefs["gender:nobility"] +
+  2 * c(0, 1) * cov_coefs
+se <- sqrt(se)
+@
+
+Abschließend fasst man die Ergebnisse in einem Data Frame zusammen,
+berechnet die Konfidenzintervalle und übergibt die Informationen
+an ggplot2. Erneut zeigt sich ein klarer Überlebensvorteil für
+adlige Frauen.
+
+<<createMarEfPlot>>=
+maref_dta <- data.frame(mu = mu, se = se, nobility = 0:1)
+maref_dta <- within(maref_dta, {
+  nobility_label <- factor(
+    nobility, 0:1, label = c("Commoner", "Noble")
+  )
+  lower <- mu - 1.96 * se
+  upper <- mu + 1.96 * se
+  }
+)
+ggplot(
+  data = maref_dta,
+  aes(x = nobility_label, y = mu, ymin = lower, ymax = upper)
+) +
+  geom_pointrange() +
+  labs(
+    x = "Social Status",
+    y = "Marginal Effect of Gender\nCIs at the .95 level"
+  )
+@
+
+Es folgt eine abschließende Mahnung an den Leser. Das hier
+vorgestellte Verfahren dient vor allem didaktischen Zwecken.
+Es ist hochgradig fehleranfällig und deshalb insbesondere für
+Einsteiger \textit{nicht} geeignet. Die Verallgemeinerung auf
+komplexe Interaktionsterme oder die Verwendung von robusten
+Standardfehlern ist möglich, aber nicht trivial. Die Verwendung
+eines der oben genannten Pakete sei nachdrücklich empfohlen.
+Alternativ können auch Simulationsmethoden zum Einsatz kommen.
+\cite{kingMakingMostStatistical2000} sowie das Standardwerk
+\cite{gelmanAppliedRegressionMultilevel2006} bieten einen guten
+Einblick.
+
+\printbibliography
 \end{document}
