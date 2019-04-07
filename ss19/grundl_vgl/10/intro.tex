@@ -1,0 +1,92 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+\input{header}
+\definecolor{grey538}{RGB}{240,240,240}
+
+\newcommand*{\priority}[1]{\begin{tikzpicture}[scale=0.15]%
+    \draw (0,0) circle (1);
+    \fill[fill opacity=.4,fill=blue] (0,0) -- (90:1) arc (90:90-#1*3.6:1) -- cycle;
+    \end{tikzpicture}}
+% slides ---------------------------------------------------
+\begin{document}
+\maketitle
+
+\begin{frame}
+\frametitle{Ausgangspunkt}
+
+\textbf{Wahlen in Demokratien}
+\begin{itemize}
+  \item stellen allgemeinste Partizipationsform dar
+  \item legitimieren Herrschaft in repr. Demokratien
+\end{itemize}
+
+\textbf{Leitfragen der Sitzung}
+\begin{enumerate}
+  \item Wahlsysteme: Definitionen, Bausteine, Varianten
+  \item Welche Effekte hat ein Wahlsystem?
+  \item Methodologische Probleme der Wahlsystemforschung
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Politische Bdtg. von Wahlsystemen}
+\textbf{Das Wahlsystem}
+\begin{itemize}
+  \item \textbf{Def.}: Regeln zur Übertragung von Päferenzen in Stimmen und Sitze
+  \item \textbf{Zweck}: Rekrutierung polit. Ämter \& Repräsentativvers.
+\end{itemize}
+\textbf{Zielkonflikt}
+\begin{itemize}
+  \item Proportionales Ergebnis vs. Verantwortung f. Entscheidungen
+  \item Wie viele polit. Parteien sollen in das Parlament einziehen werden?
+  \begin{enumerate}
+    \item So viele wie nötig. $\rightarrow$ Geringe Disproportionalität
+    \item So wenig wie möglich. $\rightarrow$ Eindeutige polit. Verantwortung
+  \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Elementare Bausteine eines Wahlsystems}
+
+Der Charakter eines Wahlsystems resultiert aus dem Zusammenspiel verschiedener Bausteine.
+
+\begin{enumerate}
+  \item \textbf{Wahlkreis}: Einheit, in der Stimmen in Mandate übertragen werden
+  \begin{enumerate}
+    \item Anzahl zu vergebender Mandate
+    \item Anzahl stimmberechtigter Bürger
+  \end{enumerate}
+  \item \textbf{Form der Kandidatur}: Individual- vs. Listenkandidatur
+  \item \textbf{Stimmgebungsverfahren}:
+  \begin{enumerate}
+    \item Anzahl zu vergebender Stimmen: Einzel- vs. Mehrstimmgebung
+    \item Art der Stimmgebung: Kandidaten- vs. Listenstimmgebung
+  \end{enumerate}
+  \item \textbf{Stimmverrechnungsverfahren}
+  \begin{enumerate}
+    \item Mehrheitswahl: relativ oder absolut
+    \item Verhältniswahl: Wahlzahlverfahren, Divisorverfahren, STV
+  \end{enumerate}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Wie arbeitet ein Wahlsystem?}
+  \begin{enumerate}
+    \item \textbf{mechanischer Effekt}: technische Regeln d. Mandatsvergabe
+    \begin{itemize}
+      \item Wie viele Parteien erringen ein Mandat?
+      \item Wahlkreisgröße zentral
+    \end{itemize}
+    \item \textbf{psycholog. Effekt}: Antizipation von 1 durch Wähler \& Eliten
+    \begin{itemize}
+      \item Wie viele Parteien bewerben sich auf ein Mandat?
+      \item Wählen die Bürger strategisch?
+    \end{itemize}
+  \item [$\rightarrow$] psycholog. Effekt setzt den mechanischen E. voraus
+  \item [$\rightarrow$] Effekte können in der Realität kaum getrennt werden
+  \end{enumerate}
+\end{frame}
+
+\end{document}

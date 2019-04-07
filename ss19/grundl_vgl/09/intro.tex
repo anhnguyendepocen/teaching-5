@@ -1,0 +1,82 @@
+% Preamble -------------------------------------------------
+\documentclass{beamer}
+\input{header}
+\definecolor{grey538}{RGB}{240,240,240}
+
+\newcommand*{\priority}[1]{\begin{tikzpicture}[scale=0.15]%
+    \draw (0,0) circle (1);
+    \fill[fill opacity=.4,fill=blue] (0,0) -- (90:1) arc (90:90-#1*3.6:1) -- cycle;
+    \end{tikzpicture}}
+% document body --------------------------------------------
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+    \frametitle{Leitfragen der Sitzung}
+    \begin{enumerate}
+        \item Was zeichnet eine politische Partei aus?
+        \item Was kennzeichnet ein Parteiensystem?
+        \item Wie entstehen oder verändern sich Parteiensysteme?
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Was zeichnet eine politische Partei aus?}
+    \begin{itemize}
+        \item \textbf{Definitionsversuch}\newline
+        ``eine \textit{Gruppe gleichgesinnter Personen}, die sich in
+        unterschiedlicher organisatorischer Form an der politischen
+        Willensbildung beteiligt und danach \textit{strebt,
+        politische Positionen zu besetzen und ihre Ziele in einem
+        Gemeinwesen durchzusetzen}.'' (Winkler 2010: 216; mein
+        Ausdruck)
+    \item \textbf{Parteifunktionen}\newline
+        Kommunikation \& Responsivität; Rekrutierung
+        politischen Personals; Aggregation und Artikulation
+        politischer Interessen (Programmbildung); Regierungsbildung
+        und -stützung u.\,a.\,m.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Was kennzeichnet ein Parteiensystem}
+    \begin{itemize}
+        \item \textbf{Definitionsversuch}\newline
+        ``Menge von Parteien und die zwischen ihnen und ihren Eigenschaften bestehenden relevanten Beziehungen'' (Winkler 2010: 226)
+        \begin{itemize}
+            \item [$\rightarrow$] i.\,d.\,R. Wettbewerb (CDU/CSU vs. SPD)
+            \item [$\rightarrow$] auch Kooperation möglich (CDU und CSU)
+        \end{itemize}
+        \item \textbf{Eigenschaften eines Parteiensystems}
+        \begin{itemize}
+            \item üblich: Format, d.\,h. effekt. Parteienzahl ($\sum_{i=1}^N p_i^{-2}$)
+            \item weitere Möglichkeiten: Volatilität, Polarisierung
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Wie entstehen oder verändern sich Parteiensysteme?}
+    \begin{itemize}
+        \item Social Cleavages nach Stein/Rokkan
+        \begin{itemize}
+            \item tiefgreifende gesellschaftl. Konfliktlinie
+            \item reicht zur Organisation polit. Identitäten
+            \item Klassische Konfliktlinien: Zentrum vs. Peripherie;
+                Staat vs. Kirche; Kapital vs. Arbeit; Landwirtschaft
+                vs. Industrie
+        \end{itemize}
+        \item Was sagt das über Parteiensysteme aus?
+        \begin{itemize}
+            \item Parteien beuten existierende Konfliktstrukturen aus\newline
+            $\rightarrow$ primordiale Konflikte
+            \item Alternativ: politische Unternehmer aktivieren Konflikte\newline
+            $\rightarrow$ instrumentelle Konflikte
+            \item bottom-up/Nachfrageseite vs. top-down/Angebotsseite
+        \end{itemize}
+
+
+    \end{itemize}
+\end{frame}
+\end{document}
