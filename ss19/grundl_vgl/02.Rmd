@@ -1,0 +1,89 @@
+---
+date: "14. April 2019"
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\maketitle
+
+## Welche dieser Aussagen sind falsifizierbar?
+
+- Die Sahara ist eine trockene Wüste.
+- Rauchen erhöht die Wahrscheinlichkeit einer Krebserkrankung.
+- Macht bedeutet jede Chance, innerhalb einer sozialen
+  Beziehung den eigenen Willen auch gegen Widerstreben
+  durchzusetzen, gleichviel, worauf diese Chance beruht.
+- Professionelle Armeen akzeptieren den Vorrang ziviler
+  Autoritäten. Sie unternehmen daher keine Putsche.
+
+## Grundlagen der Logik
+
+- Theorien beruhen auf Argumenten.
+- Argumente treffen Annahmen und ziehen daraus Schlussfolgerungen.
+- __Ziel__: logisch gültiger Schluss, d.i. konsistente Theorien
+
+\begin{tabular}{lll}
+    \toprule
+    ~ & Allgemeine Form & Beispiel\\
+    \midrule
+    Praemissa Major & Wenn $P$, dann $Q$. & \multirow{2}{4cm}{Gute Arbeit führt zum Erfolg.}\\
+    \\
+    Praemissa Minor & Es gilt $P$. & Du arbeitest gut.\\
+    Conclusio & Also $Q$. & Du wirst Erfolg haben.\\
+    \bottomrule
+\end{tabular}
+
+## Logisch gültige Schlüsse
+
+\begin{table}
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        ~ & Antezedens & Konsequenz\\
+        \midrule
+        Bestätigen & Gültig (\textit{Modus Ponens}) & ungültig\\
+        Verwerfen & ungültig & gültig (\textit{Modus Tollens})\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+## Warum ist Falsifikation so attraktiv?
+
+Das Antezedens ist in der Regel \textcolor{gray}{unsicher}. Eine Argumentation nach dem Vorbild des Modus Ponens scheidet daher aus. Wir die Gülitigkeit des Antezedens aus Beobachtungsdaten erschließen.
+
+\begin{table}
+    \centering
+    \begin{tabular}{ccc}
+      \toprule
+      Antezedens & Konsequenz & Rückschluss \\
+      \midrule
+      \textcolor{gray}{W} & W & ungültig\\
+      \textcolor{gray}{F} & W & \\ \hline
+      \textcolor{gray}{F} & F & gültig \\
+      \textcolor{gray}{W} & F & \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+## Theoriebildung in den Sozialwissenschaften
+
+Wenn Studierende einen Seminarraum betreten, dann nehmen
+sie in der Regel zuerst in den hinteren Reihen platz. Zwei
+alternative Erklärungen stehen zur Wahl
+
+1. **Aufwandsminimierung**: Menschen minimieren Aufwand.
+    Die Studieren setzen sich daher zuerst auf
+    die der Tür nähsten Plätze.
+2. **Coolness**: Strebsamkeit ist nicht ``cool''.
+    Studierende sitzen daher hinten, um nicht als Streber zu
+    gelten.
+
+\begin{block}{\textbf{Aufgabe}}
+    Schlage einen kritischen Test beider Erklärungen vor.
+\end{block}
