@@ -1,0 +1,138 @@
+---
+date: "29. April 2019"
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\maketitle
+
+## Fragen der Sitzung
+
+\begin{enumerate}
+  \item Was ist Wissenschaft?
+  \item Wie läuft Wissenschaft ab?
+  \item Warum betont die Wissenschaft Falsifikation?
+\end{enumerate}
+
+## Was ist Wissenschaft?
+\begin{itemize}
+  \item kritische Methode des vorläufigen Erkenntnisgewinns
+  \item Wesentliche Merkmale:
+  \begin{enumerate}
+    \item Suche nach neuen Implikationen
+    \item Versuch der Falsifikation
+    \item Test konkurrierender Hypothesen
+  \end{enumerate}
+\end{itemize}
+
+## Wie läuft Wissenschaft ab?
+
+\begin{adjustbox}{max totalsize={.9\textwidth}{.9\textheight},center}\begin{tikzpicture}
+\def \n {5}
+\def \radius {6em}
+\def \margin {8} % margin in angles, depends on the radius
+\foreach \s in {1,...,\n}
+{
+  \node [draw, circle, fill = white!75!blue](\s) at ({-360/\n * (\s - 1)}:\radius) {$\s$};
+  \draw[<-, >=latex] ({360/\n * (\s - 1)+\margin}:\radius)
+    arc ({360/\n * (\s - 1)+\margin}:{360/\n * (\s)-\margin}:\radius);
+}
+\node [right = of 2] {
+  \begin{tabular}{l}
+    \underline{Theorie}\\
+    $\bullet$ Widerspruchsfreiheit\\
+    $\bullet$ mind. 1 emp. Implikation\\
+  \end{tabular}
+} ;
+\node [left = of 3] {
+  \begin{tabular}{l}
+    \underline{Hypothese(n)}\\
+    $\bullet$ falsifizierbar\\
+    $\bullet$ möglichst zahlreich\\
+  \end{tabular}
+} ;
+\node [left = of 4] {
+  \begin{tabular}{l}
+    \underline{Hypothesentest}\\
+    $\bullet$ möglichst vielfältig\\
+    $\bullet$ möglichst kritisch\\
+  \end{tabular}
+} ;
+\node [right = of 5] {
+  \begin{tabular}{l}
+    \underline{Evaluation}\\
+    $\bullet$ Theorie zurückweisen?\\
+    $\bullet$ Neue Fragestellung?\\
+  \end{tabular}
+} ;
+\node [right = of 1] {
+  \begin{tabular}{l}
+    \underline{Fragestellung}\\
+    $\bullet$ Motivation\\
+    $\bullet$ oft normativ inspiriert
+  \end{tabular}
+} ;
+\end{tikzpicture}
+\end{adjustbox}
+
+## Grundlagen der Logik
+
+- Theorien beruhen auf Argumenten.
+- Argumente treffen Annahmen und ziehen daraus Schlussfolgerungen.
+- Ziel: logisch gültiger Schluss
+
+\begin{tabular}{lll}
+    \toprule
+    ~ & Allgemeine Form & Beispiel\\
+    \midrule
+    Praemissa Major & Wenn $P$, dann $Q$. & \multirow{2}{4cm}{Gute Arbeit führt zum Erfolg.}\\
+    \\
+    Praemissa Minor & Es gilt $P$. & Du arbeitest gut.\\
+    Conclusio & Also $Q$. & Du wirst Erfolg haben.\\
+    \bottomrule
+\end{tabular}
+
+## Logisch gültige Schlüsse
+
+\begin{table}
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        ~ & Antezedens & Konsequenz\\
+        \midrule
+        Bestätigen & Gültig (\textit{Modus Ponens}) & ungültig\\
+        Verwerfen & ungültig & gültig (\textit{Modus Tollens})\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+## Warum ist Falsifikation so attraktiv?
+
+Das Antezedens ist in der Regel \textcolor{gray}{unsicher}: Prima facie wissen
+wir nicht, ob unsere Theorien wahr sind. Beobachtungsdaten erlauben es aber,
+Rückschlüsse über das Antezedenz zu ziehen.
+
+\begin{table}
+    \centering
+    \begin{tabular}{ccc}
+      \toprule
+      Antezedens & Konsequenz & Rückschluss\\
+      \midrule
+      \textcolor{gray}{W} & W & ungültig\\
+      \textcolor{gray}{F} & W & \\ \hline
+      \textcolor{gray}{F} & F & gültig\\
+      \textcolor{gray}{W} & F\\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+\textbf{Achtung}: Ein \textit{naiver} Falsifikationismus weist das
+Antezedens bei falscher Konsequenz zurück. Ein \textit{raffinierter}
+Falsifikationismus erkennt an, dass die Falschheit der Konsequenz andere
+Ursachen haben kann, z.\,B. Messfehler, probabilistische Kausalität, etc.

@@ -1,0 +1,56 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 22. April}
+\date{29. April 2019}
+
+\maketitle
+
+## Zentrale Fragen der Sitzung
+
+1. Warum ist die Bewegungs- & Protestforschung relevant?
+2. Vor welchen Herausforderungen steht diese Forschung?
+3. Was müssen wir lernen, um diese Herausforderungen zu bewältigen?
+
+## Warum ist die Bewegungs- & Protestforschung relevant?
+
+1. Normalisierung v. Protest
+2. Legitimationsverlust lib. Demokratie
+3. Lernen über polit. Systeme
+    + Reaktion d. Politik
+    + Agenda-Setting durch Bwg.
+    + Diagnose, Erklärung ges. Veränderungen
+4. Wirkungsanalyse von Bewegungen \& Protest
+5. Beitrag zum kollektiven Gedächtnis
+
+## Vor welchen Herausforderungen steht diese Forschung?
+
+1. Heterogenisierung von Trägern & Zielen soz. Bewegungen
+2. Datenerhebung
+    + Feldforschung: Gefahr für Leib und Leben
+    + Quellenschutz
+3. Schnelllebigkeit von Protesten
+    + Bsp.: Digitalisierung
+4. Abgrenzung der Forschung zur Politik
+    + Bsp.: Einfluss politischer Präferenzen auf Fallauswahl
+
+## Was müssen wir lernen, um diese Herausforderungen zu bewältigen?
+
+1. Gegenstandsadäquate Konzepte bilden
+2. Äquivalenzproblem
+    + Was gilt als Bewegung in unterschiedlichen polit. Systemen?
+    + Was gilt als Protest in unterschiedlichen polit. Systemen?
+3. Dauerhafte Agenda des Feldes formulieren
+    + Entkoppelung von der Medienlogik
+    + Ethische Maßstäbe der Forschung diskutieren
+
+
+
