@@ -1,0 +1,30 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\subtitle{Konzeptualisierung von sozialen Bewegungen}
+\date{29. April 2019}
+
+\maketitle
+
+## Defintion von Snow, Soule und Kriesi
+
+"collectivities acting with some degree of organization and continuity outside of institutional or organizational channels for the purpose of challenging or defending extant authority, whether it is institutionally or culturally based, in the group, organization, society, culture, or world order which they are a part." (11)
+
+
+## Definition in Teune (529)
+
+"dauerhaft mobilisierte Netzwerke nicht-staatlicher Gruppen, die eine kollektive Identität und das Streben nach einem grundsätzlichen sozialen Wandel verbindet und die darüber hinaus ihre Botschaft durch die Inszenierung von Protest öffentlich machen."
+
+## Definition in Roth (433)
+
+"Soziale Bewegung ist ein mobilisierender kollektiver Akteur, der mit einer gewissen Kontinuität auf der Grundlage hoher symbolischer Integration und geringer Rollenspezifikation mittels variabler Organisations- und Aktionsformen das Ziel verfolgt, grundlegendenden sozialen Wandel herbeizuführen, zu verhindern oder rückgängig zu machen."
+
+
