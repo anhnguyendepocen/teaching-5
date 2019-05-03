@@ -1,0 +1,79 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 29. April}
+\date{6. Mai 2019}
+
+\maketitle
+
+## Leitfragen der Sitzung
+
+1. Wie bildet man ein Konzept?
+2. Welches Konzept schlagen die Autoren vor?
+3. Welche Vor- bzw. Nachteile hat ihr Vorschlag?
+
+## Wie baut man Konzepte auf?
+
+**Konzepte sind**:
+
+1. allgemeine Aussagen $\rightarrow$ Klassen von Phänomenen
+2. abstrakte Repräsenationen $\rightarrow$ nicht sensorisch erfahrbar
+3. Bausteine von Theorien $\rightarrow$ betreffen x oder y, aber nicht x $\sim$ y
+
+\vfill
+\begin{columns}
+  \begin{column}{.5\textwidth}
+  \textbf{(a) Klassische Konzepte}
+  \begin{itemize}
+    \item formulieren Merkmale
+    \item regelbasierte Hierarchie
+    \item $\rightarrow$ notw. \& hinr. Bdg.
+  \end{itemize}
+  \end{column}
+  \begin{column}{.5\textwidth}
+  \textbf{(b) Prototypische Konzepte}
+  \begin{itemize}
+    \item formulieren Merkmale
+    \item Verteilung statt Hierarchie
+    \item $\rightarrow$ Familienähnlichkeiten
+  \end{itemize}
+  \end{column}
+\end{columns}
+
+## Welches Konzept schlagen die Autoren vor?
+
+**Soziale Bewegungen sind**:
+\begin{quote}
+    ``\textbf{collectivities acting} with some degree of \textbf{organization}
+    and \textbf{continuity} \textbf{outside of institutional or organizational
+    channels} for the purpose of \textbf{challenging or defending extant
+    authority}, whether it is institutionally or culturally based, in the
+    group, organization, society, culture, or world order which they are a
+    part.'' (11)
+\end{quote}
+
++ bringt relevante Dimensionen der Debatte auf den Punkt
++ zentral: kollektives Handeln außerhalb etablierter Kanäle
++ große Nähe zu einem prototypischen Konzept
+
+## Welche Vor- bzw. Nachteile hat ihr Vorschlag?
+
+**Vorteile**:
+
++ Prägnant $\rightarrow$ überschaubare Anzahl von Merkmalen
++ Flexibel $\rightarrow$ eignet sich für zahlreiche Analysen
++ Neutral $\rightarrow$ nicht (offensichtlich) durch Werturteile belastet
+
+**Nachteile**
+
++ Inhaltlich vage $\rightarrow$ Was ist eine Organisation?
++ Validität fraglich $\rightarrow$ Ist Kontinuität Merkmal oder Effekt?
++ Trennschärfe gering $\rightarrow$ Was sind extra-institutionelle Kanäle?

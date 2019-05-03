@@ -1,0 +1,62 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 29. April}
+\date{6. Mai 2019}
+
+\maketitle
+
+## Leitfragen
+
+1. Auf welchen Grundlagen beruht der *Rational Choice Institutionalism*?
+2. Welche Art von Fragestellung verfolgt eine mechanismenorientierte Regierungslehre?
+3. Welcher Kritik muss sich der *Rational Choice Institutionalism* stellen?
+
+## Auf welchen Grundlagen beruht der RCI?
+
+1. Rationalitätsprinzip
+    + Akteure handeln in Übereinstimmung mit *beliefs* und *desires*
+    + minimale Handlungstheorie, die Verhalten in Handeln übersetzt
+    + Zirkelschluss: Beobachtetes Verhalten beruht auf unbeobachteten Größen,
+        die aus dem Verhalten selbst erschlossen werden.
+2. Mechanismen
+    + Prozess, der ein beobachtbares Verhaltensmuster erzeugt
+    + Kniegelenk sozialwissenschaftlicher Theorien
+    + erklärt die Korrelation empirischer Phänomene
+
+## Welche Art von Fragestellung verfolgt eine\dots
+
+**Arten sozialwissenschaftlicher Fragestellungen**
+
+1. y-zentrisch (causes-of-effects)
+    + sucht bestmögliche Erklärung einer Handlungen
+    + verfährt retrospektiv
+    + setzt sich holistisch mit der Handlungssituation auseinander
+2. x-zentrisch (effects-of-causes)
+    + analysiert typische Effekte einer Akteurskonstellation/Institution
+    + verfährt prospektiv
+    + reduziert die Handlungssituation auf relevante Merkmale
+
+**Die m.R. verfolgt oft einen x-zentrischen Ansatz, weil er**
+
++ einen analytisch abgrenzbaren Mechanismus aufarbeitet,
++ die Vernachlässigung von Kontextfaktoren ermöglicht,
++ vergleichende Analysen erlaubt.
+
+$\rightarrow$ RCI ist eine Methode.
+
+## Welcher Kritik muss sich der *RCI* stellen?
+
++ Rekurs auf unbeobachtbare Größen
++ Zersplitterung des Feldes
++ Präferenzgenese vernachlässigt
++ Effektivität von Institutionen vorausgesetzt
+
