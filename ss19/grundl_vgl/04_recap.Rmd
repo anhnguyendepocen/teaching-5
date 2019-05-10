@@ -46,8 +46,8 @@ output:
 - **zentral**: Bedürfnisbefriedigung unter Bdg. von Knappheit
 - **Handeln** ist die:
     - Allokation knapper Mittel auf konkurrierende Ziele
-    - $\implies$ planvolle \& intentionale Wahlentschiedung unter Restriktionen
-  - **Handlungsziel**: Allokation optimiert den Individualnutzen
+    - $\implies$ planvolle, intentionale & konsequente Wahlentscheidung
+  - **Handlungsziel**: Individualnutzen optimieren
     - $\implies$ $\exists$ Rangfolge über Handlungskonsequenzen
 
 
@@ -92,7 +92,7 @@ output:
 \end{figure}
 
 
-# Warum will ich das wissen?
+# Was habe ich davon?
 \begin{enumerate}
   \item belastbare Analytik von Interaktionszusammenhängen
   \begin{itemize}
