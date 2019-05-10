@@ -1,0 +1,113 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\definecolor{grey538}{RGB}{240,240,240}
+\subtitle{Zusammenfassung vom 6. Mai 2019}
+\maketitle
+
+
+# Leitfragen der Sitzung
+
+1. Was leistet der strukturell-individualistische Ansatz?
+2. Was zeichnet die Theorie der rationalen Wahl aus?
+3. Was ist eine rationale Wahl?
+4. Was habe ich davon?
+
+# Was leistet der strukturell-individualistische Ansatz?
+
+- **Zweck**: kollektive Explananda d. Individualverhalten erklären
+- **Mittel**: Mehrebenenzushg. zw. Struktur \& Akteur
+- **Analyseschritte**:
+    1. Situation: Welche Makromerkmale sind handlungsrelevant?
+    2. Selektion: Wie wählen Individuen zw. Handlungsalternativen?
+    3. Aggregation: Wie überlagern sich Handlungsentscheidungen?
+- **Rolle einer Handlungstheorie**:
+    1. benennt handlungsrelevante Situationsmkm.
+    2. informiert Entsch. zw. Handlungsalternativen
+    - Bsp.: Logik der Angemessenheit; Logik der Konsequenz
+
+# Was leistet der strukturell-individualistische Ansatz?
+
+\begin{figure}
+\centering
+  \input{analyseschema.tikz}
+\end{figure}
+
+# Was zeichnet die Theorie der rationalen Wahl aus?
+
+- **zentral**: Bedürfnisbefriedigung unter Bdg. von Knappheit
+- **Handeln** ist die:
+    - Allokation knapper Mittel auf konkurrierende Ziele
+    - $\implies$ planvolle \& intentionale Wahlentschiedung unter Restriktionen
+  - **Handlungsziel**: Allokation optimiert den Individualnutzen
+    - $\implies$ $\exists$ Rangfolge über Handlungskonsequenzen
+
+
+# Was ist eine rationale Wahl?
+
+- *Präferenzen über Handlungsfolgen* leiten Handlungsselektion
+- erfordert eine kohärente Präferenzordnung
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[%
+    grow = right, level distance = 1em, sibling distance = 4em,%
+    background rectangle/.style = {fill = grey538, draw = black}%
+]
+% node placement
+\node (0) [draw, shape = circle, fill = black, inner sep = 0.1em] {}
+  child { node  (0-1) {} edge from parent [-latex]}
+  child { node (0-2) {} edge from parent [-latex] }
+;
+% label placement
+\node [left = 0em and 0em of 0] {
+  \begin{tabular}{l}
+  \textbf{Präferenz-}\\
+  \textbf{ordnung}
+  \end{tabular}
+} ;
+\node (l1) [right = 0em and 0em of 0-2] {
+  \begin{tabular}{l}
+    \textbf{Vollständigkeit}\\
+    $\bullet$ erschöpfender Vergleich\\
+    $\bullet ~ \forall ~ i, j \in I: i \ge j \lor i \le j \lor i = j$\\
+  \end{tabular}
+} ;
+\node (l2) [right = 0em and 0em of 0-1] {
+  \begin{tabular}{l}
+    \textbf{Transitivität} \\
+    $\bullet$ widerspruchsfreie Ordnung \\
+    $\bullet ~ \forall ~ i, j, k \in I: i \ge j \land j \ge k \implies i \ge k$ \\
+  \end{tabular}
+} ;
+\end{tikzpicture}
+\end{figure}
+
+
+# Warum will ich das wissen?
+\begin{enumerate}
+  \item belastbare Analytik von Interaktionszusammenhängen
+  \begin{itemize}
+    \item Welche Situationsmerkmale sind handlungsrelevant?
+    \item Welche Mittel setzt ein Akteur wahrscheinlich ein?
+  \end{itemize}
+  \item widerspruchsfreie Theorien
+  \begin{itemize}
+    \item Erzwingt transparenten Annahmen
+    \item Fördert annahmentreue Argumentation
+  \end{itemize}
+  \item Vielseitig einsetzbar \& empirisch erprobt
+  \begin{itemize}
+    \item Analysiert Ein- und Mehrpersonenzusammenhänge
+    \item Bietet ein Portfoliot belastbarer Standardprobleme\newline
+      $\rightarrow$ Gefangenendilemma, Matching-Pennies, Game of Chicken
+  \end{itemize}
+\end{enumerate}
