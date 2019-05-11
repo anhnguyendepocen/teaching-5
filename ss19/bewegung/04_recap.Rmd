@@ -1,0 +1,64 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 6. Mai}
+\maketitle
+
+## Leitfragen der Sitzung
+
+1. Welche Kritik richtet der RMA an die Literatur?
+2. Auf welchen Bausteinen beruht der RMA?
+3. Welche Stärken und Schwächen weist der Ansatz auf?
+
+## Welche Kritik richtet der RMA an die Literatur
+
+- **Kanon**: soziale Strukturen $\implies$ Grievances $\implies$ Konflikt
+- **Kritik**: "'[T]here is always enough discontent in any society to supply
+  the grass-roots support for a movement if the movement is effectively
+  organized and has at its disposal the power and resources of some
+  established elite group.' For some purposes we go even further: grievances
+  and discontent may be defined, created, and manipulated by issue
+  entrepreneurs and organizations." (1215)
+- **Implikationen**
+  + Frustration ist eine Konstante ohne jede Erklärungskraft.
+  + Ressourcen und Organisationen erklären soz. Bwg.
+
+## Auf welchen Bausteinen beruht der RMA
+
+1. **Ressourcen**
+    + materiell: z.B. Zeit, Geld, Räumlichkeiten, Arbeitskraft
+    + immateriell: z.B. Know-How, Legitimität
+2. **Analytik der Umwelt des Mobilisierungsprozesses**
+    1. Soziale Bewegung: "a set of opinions and beliefs in a population
+      which represents preferences for changing some elements of the social
+      structure and/or reward distribution of a society" (1217)
+    2. Social Movement Sector
+    3. Social Movement Industry
+    4. Social Movement Organization: "a complex, or formal, organization
+      which identifies its goals with the preferences of a social movement or a
+      countermovement and attempts to implement those goals" (1218)
+3. **Analytik möglicher Adressaten**
+    + adherrents, constituents, beneficiaries, etc.
+
+## Welche Stärken und Schwächen weist der Ansatz auf?
+
+**Stärken**
+
+- erfasst Möglichkeiten und Grenzen erfolgreicher Mobilisierung
+- unterscheidet soziale Bewegungen von ihrer Organisation
+- macht Konflikte zw. und innerhalb von SMOs sichtbar
+
+**Schwächen**
+
+- Mikrofundierung: Was erklärt individuelles Engagement?
+- soziale Strukturen: ungleiche Verteilung von Ressourcen
+- Irrationalität: Vernachlässigt Emotionalität und Emotionsarbeit
+
