@@ -1,0 +1,104 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 13. Mai}
+\maketitle
+
+# Leitfragen
+
+1. Welches Problem betont Mancur Olson?
+2. Worum geht es bei einem Kollektivgutproblem?
+3. Wovon hängt die Lösung des Problems ab?
+
+# Welches Problem betont Mancur Olson?
+
+Selbst unter dem Eindruck handfester gemeinsamer Interessen ist kollektives
+Handeln nicht selbstverständlich.
+\vfill
+\begin{quote}
+    ``Indeed, unless the number of individuals in a group is quite small,
+    or uness there is coercion or some other special device to make individuals act
+    in their common interest, rational, self-interested individuals will not act to
+    achieve their common or group interests.'' (S. 2)
+\end{quote}
+
+**Unterschied zum RMA**
+
+- RMA: Mobilisierungsanstrengungen von Eliten (top-down)
+- Olson: individuelle Anreize für polit. Partizipation (bottom-up)
+
+# Worum geht es bei einem Kollektivgutproblem?
+
+\begin{itemize}
+    \item \textbf{Kollektivgut}: ``any good such that, if any person
+        $X_i$ in a group $X_1$, \dots, $X_i$, \dots $X_n$ consumes it, it cannot
+        feasibly withheld from others in that group'' (S. 14)
+    \begin{itemize}
+        \item [$\rightarrow$] Genuss unabhängig vom Beitrag zur Bereitstellung
+    \end{itemize}
+    \item \textbf{Dilemma}: individuelle Nutzenmaximierung zulasten Kosten kollektiver Wohlfahrt
+    \begin{itemize}
+        \item [$\rightarrow$] \textcolor{red}{Trittbrettfahrer}
+    \end{itemize}
+\end{itemize}
+
+\begin{table}
+    \centering
+    \caption{Gefangenendilemma -- Warum ist die WG-Küche oft schmutzig?}
+    \begin{tabular}{r*{2}{c}}
+        \toprule
+        Stefan / Ida & Reinigen & $\lnot$Reinigen \\ \midrule
+        Reinigen & $3, 3$ & \textcolor{red}{$-2, 5$} \\
+        $\lnot$Reinigen & \textcolor{red}{$5, -2$} & $0, 0$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+# Wovon hängt die Lösung des Problems ab?
+
+\begin{small}
+    ``[\dots] in a large organization, the loss of one dues payer
+    will not noticeably increase the burden for any other one dues payer, and
+    so a rational person would not believe that if he were to withdraw from an
+    organization he would drive others to do so'' (S. 12)
+\end{small}
+
+
+**Mit der Größe einer Gruppe**
+
+\begin{small}
+    \begin{enumerate}
+        \item sinkt der individuelle Anteil am Gesamtnutzen,
+          wodurch sich die Kosten-Nutzen-Kalkulation verschlechtert.
+        \item sinkt die Wahrscheinlichkeit, dass eine hinreichend
+            motivierte Untergruppe das Gut bereitstellt.
+        \item steigen die Organisationskosten, die bei der
+          Koordination des Herstellungsprozesses anfallen.
+        \item nimmt der soziale Druck ab, den die Gruppe auf
+          ihre Mitglieder aufbauen kann.
+    \end{enumerate}
+\end{small}
+
+# Wovon hängt die Lösung des Problems ab?
+
+Zur Verwirklichung gemeinsamer Ziele müssen große Gruppen auf
+    (a) *selektive Anreize* oder (b) *Sanktionen* zurückgreifen.
+
+**Beispielhafte Kritikpunkte**
+
+1. Verschiebung des Problems: Warum sollten rationale Akteure in die Bildung von
+    Organisationen und Zwangsapparaten investieren?
+2. Glaubwürdigkeit der Sanktionen: Große Gruppen sind über das Handeln ihrer
+    Mitglieder nicht perfekt informiert. Fallen Trittbrettfahrer überhaupt auf?
+3. Politische Führung vernachlässigt: Politische Unternehmer ziehen einen
+    selektiven, organisationsunabhängigen Nutzen aus ihren
+    Mobilisierungsanstrengungen, z.B. Prominenz.
+

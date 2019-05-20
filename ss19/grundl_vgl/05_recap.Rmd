@@ -1,0 +1,58 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 13. Mai 2019}
+\maketitle
+
+## Leitfragen
+
+1. Was kennzeichnet eine (parlamentarische) Regierung?
+2. Wie sagt man parlamentarischer Regierungen vorher?
+3. Woran scheitern diese Vorhersagen?
+
+## Was kennzeichnet (parlamentarische) Regierungen?
+
+**Aufbau und Arbeitsweise**
+
+- *Parlamentarische Regierung*: Premierminister + Kabinett (Minister)
+- *Ressortprinzip*: Die Minister führen ihr Haus eigenverantwortlich im Rahmen
+    der gemeinsamen Richtlinien.
+- *Kollektivorgan*: Alle Kabinettsmitglieder verantworten Regierungsbeschlüsse
+    gemeinsam.
+
+**Institutionelle Randbedingungen**
+
+- immer aus polit. Gründen abberufbar (Misstrauensvotum)
+- häufig Investiturabstimmung notwendig
+
+## Wie sagt man parlamentarischer Regierungen vorher?
+
+1. **office seeking
+    - Politiker streben nur nach Ämtern
+    - Koalitionen: Kooperation durch Abgabe von Ämtern erkaufen
+    - **Hypothesen**
+        1. führt zu Minimal Winning Coalitions
+        2. $\%$ Kabinettsposten $\sim$ $\%$ Parlamentsmandate der Regierung (Gamson's Law)
+2. **policy seeking**
+  - Politiker streben nur nach Politikinhalten
+  - Koalitionen: Kooperation durch Inhalte erkauft
+  - **Hypothese** führt zu Minimal Connected Winning Coalitions
+
+## Woran scheitern diese Vorhersagen?
+
+1. **Minderheitsregierungen**
+    - institutioneller \& politischer Rahmen unberücksichtigt
+    - Institutionen: starke Ausschüsse, keine Investiturabstimmung
+    - Kontext: starke Partei, Korporatismus
+2. **Übergroße Mehrheiten**
+    -  Ausnahmesituationen \& komplementäre politische Erwägungen unberücksichtigt
+    -  Ausnahmesituationen: z.\,B. Regierungen der nationalen Einheit
+    -  kompl. polit. Erw.: Disziplinierung kleiner Koalitionspartner
