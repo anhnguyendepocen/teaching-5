@@ -38,7 +38,7 @@ output:
 
 \begin{figure}
 \centering
-  \input{analyseschema.tikz}
+  \includegraphics[width = \textwidth]{04_analyse_schema.png}
 \end{figure}
 
 # Was zeichnet die Theorie der rationalen Wahl aus?
