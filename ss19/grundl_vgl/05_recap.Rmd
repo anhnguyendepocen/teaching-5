@@ -35,7 +35,7 @@ output:
 
 ## Wie sagt man parlamentarischer Regierungen vorher?
 
-1. **office seeking
+1. **office seeking**
     - Politiker streben nur nach Ämtern
     - Koalitionen: Kooperation durch Abgabe von Ämtern erkaufen
     - **Hypothesen**
