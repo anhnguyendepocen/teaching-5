@@ -1,0 +1,109 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 20. Mai}
+\maketitle
+
+# Leitfragen
+
+1. Worum geht es in McAdams *Political Process Theory*?
+2. Wann entstehen soziale Bewegungen?
+3. Wann überdauern soziale Bewegungen?
+
+
+# Worum geht es in McAdams *Political Process Theory*?
+
+**Intuition**
+
+Soziale Bewegungen entstehen und überdauern in einem dynamischen,
+reziproken Prozess. Umweltbedingungen fördern die Entstehung sozialer
+Bewegungen und deren Handeln wirkt auf ihre Umwelt zurück.
+Wesentliche Triebfedern dieses Wechselspiels sind *politische
+Gelegenheitsstrukturen*, *Organisationsstärke*, *kognitive Befreiung* sowie
+*Art* und *Umfang des Bewegungsprotests*.
+
+**Abgrenzung zu**
+
+1. **RMA**: *bottom-up*-Modell, präziserer Ressourcenbegriff
+2. **Olson**: differenzierte Betrachtung politischer Organisationen
+
+
+# Wann entstehen soziale Bewegungen?
+
+\begin{columns}
+    \begin{column}{.5\textwidth}
+        \small
+        \begin{enumerate}
+            \item Polit. Gelegenheitsstrukturen
+            \begin{itemize}
+                \item Umverteilung von Macht
+                \item betrifft System o. Gruppe
+            \end{itemize}
+            \item Organisationsstärke
+            \begin{itemize}
+                \item Handlungsfähigkeit
+                \item Ressourcen mobilisieren
+            \end{itemize}
+            \item Kognitive Befreiung
+            \begin{itemize}
+                \item Wirksamkeitsglaube
+                \item mediiert 1. \& 2.
+            \end{itemize}
+        \end{enumerate}
+    \end{column}
+    \begin{column}{.5\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{./06_McAdamA.png}
+        \end{figure}
+        \par
+        \small
+        Polit. Gelegenheitsstrukturen und Organisationsstärke markieren
+        notw. Bedingungen. Nur gemeinsam mit kognitiver Befreiung werden sie
+        hinreichend für die Entstehung von sozialen Bewegungen.
+    \end{column}
+\end{columns}
+
+
+# Wann überdauern soziale Bewegungen?
+
+\begin{columns}
+    \begin{column}{.5\textwidth}
+        \small
+        \begin{enumerate}
+            \item Organisationsstärke bewahren
+            \begin{itemize}
+                \item erfordert formale Org.
+                \item Probleme
+                \begin{enumerate}
+                    \item Oligarchisierung
+                    \item Kooptation
+                \end{enumerate}
+            \end{itemize}
+            \item Sozialer Kontrolle widerstehen
+            \begin{itemize}
+                \item bedroht etabl. Interessen
+                \item Probleme
+                \begin{enumerate}
+                    \item Taktiken: intra- vs. extraiinstitutionell
+                    \item Ziele: Reform vs. Revolution
+                \end{enumerate}
+            \end{itemize}
+        \end{enumerate}
+    \end{column}
+    \begin{column}{.5\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{./06_McAdamB.png}
+        \end{figure}
+    \end{column}
+\end{columns}
+

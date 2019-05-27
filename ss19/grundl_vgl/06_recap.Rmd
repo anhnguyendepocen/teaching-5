@@ -1,0 +1,84 @@
+---
+output:
+  beamer_presentation:
+    includes:
+        in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    fig_caption: false
+    toc: false
+---
+\subtitle{Zusammenfassung vom 20. Mai 2019}
+\maketitle
+
+# Leitfragen der Sitzung
+
+1. Worum geht es in räumlichen Modellen der Politik?
+2. Aus welchen Bausteinen bestehen diese Modelle?
+3. Wie arbeitet man mit räumlichen Modellen der Politik?
+
+# Worum geht es in räumlichen Modellen der Politik?
+
+**Räumliche Modelle der Politik**
+
+- formalisieren unsere Intuition über Distanzen in der Politik,
+- übertragen politische Positionen in euklidische Räumen,
+- werten die Wechselwirkung von Akteuren und Institutionen aus.
+
+**Fundamente**
+
+1. Theorie der rationalen Wahl
+    + Akteure haben vollständige und transitive Präferenzen.
+2. Spieltheorie
+    + A. handeln strategisch, d.h. sie antizipieren das Handeln Dritter.
+
+# Aus welchen Bausteinen bestehen diese Modelle?
+
+1. Idealpunkte
+    - Akteure ziehen eine Position allen anderen vor.
+    - Nutzen einer Politik nimmt mit zunehmender Distanz vom I. ab
+2. Nutzenfunktion
+    - bildet die *Struktur* einer Präferenzordnung ab
+    - erreicht über dem Idealpunkt ein Maximum
+3. Eingipfeligkeit von Präferenzen (Single-peakedness)
+    - Idealpunkt = globales Maximum der Nutzenfunktion
+    - oft: Symmetrie ($||y_i - o_r|| = ||y_i - o_s|| \implies u_i(o_r) = u_i(o_s)$)
+
+# Wie arbeitet man mit räumlichen Modellen der Politik?
+
+- **Paretomenge**
+    - Verbindung der Idealpunkte
+    - Intuition: verändertes Politikerg. benachteiligt mind. 1 Akteur
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = .5]{paretomenge.png}
+\end{figure}
+
+- **Präferenzmenge**
+    - alle Punkte, die ein Akteur ggü. einem Vergleichspkt. bevorzugt
+    - Intuition: zeigt "Toleranzbereich" eines Akteurs auf
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = .5]{praeferenzmenge.png}
+\end{figure}
+
+# Wie arbeitet man mit räumlichen Modellen der Politik?
+
+\begin{columns}
+    \begin{column}{.5\textwidth}
+        \textbf{Gewinnmenge}
+        \begin{itemize}
+            \item alle Punkte, die bei geltender \textit{Entscheidungsregel} einen \textit{Referenzpunkt} besiegen können
+            \item Intuition: Schnittstelle zw. Akteursmodell und politischen Institutionen
+        \end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width = \textwidth]{gewinnmenge.png}
+        \end{figure}
+    \end{column}
+\end{columns}
