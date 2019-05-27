@@ -23,7 +23,7 @@ output:
 **Räumliche Modelle der Politik**
 
 - formalisieren unsere Intuition über Distanzen in der Politik,
-- übertragen politische Positionen in euklidische Räumen,
+- übertragen politische Positionen in euklidische Räume,
 - werten die Wechselwirkung von Akteuren und Institutionen aus.
 
 **Fundamente**
@@ -43,7 +43,7 @@ output:
     - erreicht über dem Idealpunkt ein Maximum
 3. Eingipfeligkeit von Präferenzen (Single-peakedness)
     - Idealpunkt = globales Maximum der Nutzenfunktion
-    - oft: Symmetrie ($||y_i - o_r|| = ||y_i - o_s|| \implies u_i(o_r) = u_i(o_s)$)
+4. oft: Symmetrie ($||y_i - o_r|| = ||y_i - o_s|| \implies u_i(o_r) = u_i(o_s)$)
 
 # Wie arbeitet man mit räumlichen Modellen der Politik?
 
@@ -71,7 +71,7 @@ output:
     \begin{column}{.5\textwidth}
         \textbf{Gewinnmenge}
         \begin{itemize}
-            \item alle Punkte, die bei geltender \textit{Entscheidungsregel} einen \textit{Referenzpunkt} besiegen können
+            \item alle Punkte, die bei geltender \textit{Entscheidungsregel} einen \textit{Referenzpunkt} (oft $sq$) besiegen können
             \item Intuition: Schnittstelle zw. Akteursmodell und politischen Institutionen
         \end{itemize}
     \end{column}
