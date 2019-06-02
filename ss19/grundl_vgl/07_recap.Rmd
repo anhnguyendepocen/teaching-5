@@ -1,0 +1,81 @@
+---
+output:
+  beamer_presentation:
+    includes:
+        in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    fig_caption: false
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 27. Mai 2019}
+\maketitle
+
+# Leitfragen der Sitzung
+
+1. Was zählt zur Programmatik politischer Parteien?
+1. Warum wertet man bevorzugt Wahlprogramme aus?
+1. Was kann man mit so einer Auswertung anfangen?
+
+# Was zählt zur Programmatik politischer Parteien?
+
+- **Pogrammatik einer Partei**
+    - Übersetzung gesellschaftl. Interessen in polit. Forderungen
+- **Programmarten**
+    - Grundsatzprogramm, Aktionsp., Kurzp., Wahlp.
+    - Unterschiede: Beständigkeit, Umfang, Addressaten, Zweck
+
+\begin{center}
+    \footnotesize
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Parteiziel} & \textbf{Programmfunktion} & \textbf{Addressat} \\
+        \midrule
+        \multirow{2}{*}{Politikverwirklichung} & Praxisanleitung & Parlamentarier \& \\
+        & Ideologieübersetzung & Minister \\
+        \multirow{2}{*}{Stimmenmaximierung} & Werbung & \multirow{2}{*}{Wähler \& Medien} \\
+        & Profilbildung & \\
+        \multirow{2}{*}{Regierungsbeteiligung} & Operationsbasis & \multirow{2}{*}{andere Parteien} \\
+        & Signalisierung & \\
+        \multirow{2}{*}{Innerpart. Demokratie} & Integration & \multirow{2}{*}{Parteibasis} \\
+        & Kontroll \& Legitimation & \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+# Warum wertet man bevorzugt Wahlprogramme aus?
+
+1. **Aktualität**: Wahlpr. ändern sich mit jeder Wahlperiode.
+2. **Verfügbarkeit**: Alle Parteien formulieren Wahlprogramme.
+3. **Querschnitt**: Wahlprogramme bedienen alle Parteiziele.
+
+\begin{center}
+    \begin{tabular}{lllll}
+        \toprule
+        & \textbf{Grundsatz} & \textbf{Aktion} & \textbf{Kurz} & \textbf{Wahl} \\
+        \midrule
+        Politikverwirklichung & \priority{66} & \priority{100} & \priority{33} & \priority{66} \\
+        Stimmenmaximierung & \priority{0} & \priority{0} & \priority{0} & \priority{66} \\
+        Regierungsbeteiligung  & \priority{0} & \priority{66} & \priority{100} & \priority{66} \\
+        Innerpart. Demokratie  & \priority{100} & \priority{0} & \priority{0} & \priority{66} \\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+# Was kann man mit so einer Auswertung anfangen?
+
+- Grundlage gehaltvoller empirisch-analytischer Forschung
+- Information der politischen Öffentlichkeit
+    - Beispiel: [Alle Wahlprogramme lesen? Dauert nur 17 Stunden](https://www.zeit.de/politik/deutschland/2017-08/bundestagswahl-wahlprogramme-parteien-computeranalyse)
+- Bspw. erhob das \href{https://manifesto-project.wzb.eu/}{Manifesto Projekt}
+    - seit 1945
+    - in über 50 Ländern
+    - Wahlprogramme von mehr als 1000 politischen Parteien.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale = .26]{./centerPartiesDE.png}
+\end{figure}
+
