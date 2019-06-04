@@ -66,16 +66,17 @@ output:
 
 # Was kann man mit so einer Auswertung anfangen?
 
-- Grundlage gehaltvoller empirisch-analytischer Forschung
-- Information der politischen Öffentlichkeit
-    - Beispiel: [Alle Wahlprogramme lesen? Dauert nur 17 Stunden](https://www.zeit.de/politik/deutschland/2017-08/bundestagswahl-wahlprogramme-parteien-computeranalyse)
-- Bspw. erhob das \href{https://manifesto-project.wzb.eu/}{Manifesto Projekt}
-    - seit 1945
-    - in über 50 Ländern
-    - Wahlprogramme von mehr als 1000 politischen Parteien.
+Das [Manifesto Project](https://manifesto-project.wzb.eu/) erhob seit 1945
+Wahlprogramme von mehr als 1000 politischen Parteien in über 50 Ländern der Welt.
+Diese Daten sind
+
+- Grundlage gehaltvoller, empirisch-analytischer Forschung
 
 \begin{figure}
     \centering
-    \includegraphics[scale = .26]{./centerPartiesDE.png}
+    \includegraphics[scale = .2]{./fig/centerPartiesDE.png}
 \end{figure}
+
+- und informieren die politischen Öffentlichkeit.
+    - Beispiel: [Alle Wahlprogramme lesen? Dauert nur 17 Stunden](https://www.zeit.de/politik/deutschland/2017-08/bundestagswahl-wahlprogramme-parteien-computeranalyse)
 
