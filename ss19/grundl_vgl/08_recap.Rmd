@@ -1,0 +1,61 @@
+---
+output:
+  beamer_presentation:
+    includes:
+        in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    fig_caption: false
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 3. Juni 2019}
+\maketitle
+
+# Leitfragen der Sitzung
+
+1. Was zeichnet eine politische Partei aus?
+1. Was kennzeichnet ein Parteiensystem?
+1. Wie entstehen oder verändern sich Parteiensysteme?
+
+# Was zeichnet eine politische Partei aus?
+
+- **Definitionsversuch**\newline
+    ``eine \textit{Gruppe gleichgesinnter Personen}, die sich in
+    unterschiedlicher organisatorischer Form an der politischen
+    Willensbildung beteiligt und danach \textit{strebt,
+    politische Positionen zu besetzen und ihre Ziele in einem
+    Gemeinwesen durchzusetzen}.'' (Winkler 2010: 216; mein
+    Ausdruck)
+- **Parteifunktionen**\newline
+    Kommunikation \& Responsivität; Rekrutierung
+    politischen Personals; Aggregation und Artikulation
+    politischer Interessen (Programmbildung); Regierungsbildung
+    und -stützung u.a.m.
+
+# Was kennzeichnet ein Parteiensystem?
+
+- **Definitionsversuch**\newline
+    ``Menge von Parteien und die zwischen ihnen und ihren Eigenschaften bestehenden relevanten Beziehungen'' (Winkler 2010: 226)
+    - i.d.R. Wettbewerb (CDU/CSU vs. SPD)
+    - auch Kooperation möglich (CDU & CSU, Kooptation in autoritären Regimen)
+- **Eigenschaften eines Parteiensystems**
+    - Format, d.h. effekt. Parteienzahl ($\sum_{i=1}^N p_i^{-2}$)
+    - Polarisierung, d.h. Spannweite politischer Positionen
+    - sonstige: Volatilität, Kompetitivität, etc.
+
+# Wie entstehen oder verändern sich Parteiensysteme?
+
+- Social Cleavages nach Stein/Rokkan
+    - tiefgreifende gesellschaftl. Konfliktlinie
+    - reicht zur Organisation polit. Identitäten
+    - Klassische Konfliktlinien: Zentrum vs. Peripherie;
+        Staat vs. Kirche; Kapital vs. Arbeit; Landwirtschaft vs. Industrie
+- Was sagt das über Parteiensysteme aus?
+    - Parteien beuten existierende Konfliktstrukturen aus\newline
+        $\rightarrow$ primordiale Konflikte
+    - Alternative: politische Unternehmer aktivieren Konflikte\newline
+        $\rightarrow$ instrumentelle Konflikte
+- bottom-up/Nachfrageseite vs. top-down/Angebotsseite
+

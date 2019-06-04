@@ -1,0 +1,57 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 3. Juni}
+\maketitle
+
+# Leitfragen der Sitzung
+
+1. Was sind Protestzyklen?
+2. Wie laufen Protestzyklen ab?
+
+# Was sind Protestzyklen?
+\small
+
+\begin{quote}
+    {\glqq}a phase of heightened conflict across the social system, with rapid
+    diffusion of collective action from more mobilized to less mobilized
+    sectors, a rapid pace of innovation in the forms of contention employed,
+    the creation of new or transformed collective action frames, a combination
+    of organized and unorganized participation, and sequences of intensified
+    information flow and interaction between challengers and authorities{\grqq}
+    (199)
+\end{quote}
+
+**Wichtige Aspekte**
+
+1. Gelegenheitsfenster: \glqq Protestpioniere\grqq belegen durch klare
+    Forderungen die Verwundbarkeit der etablierten Elite, weisen Konkurrenten
+    in die Schranken und bahnen sektorübergreifende Allianzen an.
+2. Innovation: Neue Kombinationen von Identitäten, Taktiken und Forderungen
+    generieren (temporäre) Vorteile für Protestteilnehmer.
+
+# Wie laufen Protestzyklen ab?
+\small
+1. **Konfliktdiffusion**
+    - Ausgreifen kollektiven Handelns
+    - Mechanismen: Lernen am Modell, Gegenbewegungen, *Scale shift*
+2. **Erschöpfung**, d.i. nachlassende Partizipation
+    - \glqq as movements organize, activists argue over methods and goals, and divide into factions, they involve risk, personal costs, and, eventually, weariness and disillusionment\grqq (206)
+    - Zielkonflikt: große Teilnehmerzahlen vs. klare Programmatik
+3. **Radikalisierung/Institutionalisierung**
+    - Bewegung hin zu/fort von
+    ideologischen Extremen und die Wendung hin zu/fort von disruptiven
+    Protestformen
+    - These: \glqq radicalization and institutionalization can occur at the same time and are mutually constitutive \grqq (207)
+4. **Restabilisierung**, d.i. Veralltäglichung polit. Interaktionsmuster
+    1. Repression: negative Sanktion kollektiven Handelns
+    2. Erleichterung: Kooptation einzelner Forderungen/Akteure
+
