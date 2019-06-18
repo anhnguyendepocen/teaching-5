@@ -1,0 +1,90 @@
+---
+output:
+  beamer_presentation:
+    includes:
+        in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    fig_caption: false
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 17. Juni 2019}
+\maketitle
+
+
+# Leitfragen der Sitzung
+
+1. Wahlsysteme: Definitionen, Bausteine, Varianten
+1. Welche Effekte hat ein Wahlsystem?
+1. Methodologische Probleme der Wahlsystemforschung
+
+# Politische Bdtg. von Wahlsystemen
+
+**Wahlen**
+
+- stellen die allgemeinste Partizipationsform dar,
+- legitimieren politische Herrschaft,
+- rekrutieren polit. Ämter \& Repräsentativvers.
+
+**Wahlsystem**
+
+- Intuition: Regeln zur Übertragung von
+    1. Präferenzen in Stimmen
+    2. Stimmen in Sitze
+
+**Problem** *Wie viele Parteien sollen in das Parlament einziehen?*
+
+1. So viele wie nötig. $\rightarrow$ Geringe Disproportionalität
+1. So wenig wie möglich. $\rightarrow$ Eindeutige polit. Verantwortung
+
+
+# Elementare Bausteine eines Wahlsystems
+
+\begin{enumerate}
+  \item \textbf{Wahlkreis}: Einheit, in der Stimmen in Mandate übertragen werden
+  \begin{enumerate}
+    \item Anzahl zu vergebender Mandate
+    \item Anzahl stimmberechtigter Bürger
+  \end{enumerate}
+  \item \textbf{Form der Kandidatur}: Individual- vs. Listenkandidatur
+  \item \textbf{Stimmgebungsverfahren}:
+  \begin{enumerate}
+    \item Anzahl zu vergebender Stimmen: Einzel- vs. Mehrstimmgebung
+    \item Art der Stimmgebung: Kandidaten- vs. Listenstimmgebung
+  \end{enumerate}
+  \item \textbf{Stimmverrechnungsverfahren}
+  \begin{enumerate}
+    \item Mehrheitswahl: relativ oder absolut
+    \item Verhältniswahl: Wahlzahlverfahren, Divisorverfahren, STV
+  \end{enumerate}
+\end{enumerate}
+
+
+# Welche Effekte hat ein Wahlsystem?
+
+\begin{enumerate}
+  \item \textbf{mechanischer Effekt}: technische Regeln d. Mandatsvergabe
+  \begin{itemize}
+    \item Wie viele Parteien erringen ein Mandat?
+    \item Wahlkreisgröße zentral
+  \end{itemize}
+  \item \textbf{psycholog. Effekt}: Antizipation von 1 durch Wähler \& Eliten
+  \begin{itemize}
+    \item Wie viele Parteien bewerben sich auf ein Mandat?
+    \item Wählen die Bürger strategisch?
+  \end{itemize}
+
+  \item [$\rightarrow$] psycholog. Effekt setzt den mechanischen E. voraus
+  \item [$\rightarrow$] Effekte können in der Realität kaum getrennt werden
+\end{enumerate}
+
+# Methodologische Probleme der Wahlsystemforschung
+
+1. Trennung von mechan. & psycholog. Effekt des Wahlsystems
+    - Mechanischer Effekt $\equiv$ Parteienzahl Wahl $-$ Parlament
+2. Prognosen über Wirkung einer Wahlsystemreform
+    - *Allmaehliche* Anpassung von Eliten und Wählern
+3. Endogenität von Wahlsystemen
+    - Eliten antizipieren den Effekt einer Wahlsystemreform
