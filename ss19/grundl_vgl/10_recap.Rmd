@@ -1,0 +1,155 @@
+---
+output:
+  beamer_presentation:
+    includes:
+        in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    fig_caption: false
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 24. Juni 2019}
+\maketitle
+
+
+
+<!-- % Preamble -------------------------------------------------
+\PassOptionsToPackage{table}{xcolor}
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{adjustbox}
+\usepackage{tikz}
+  \usetikzlibrary{positioning, calc, decorations.pathreplacing, backgrounds, fit}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\usepackage{booktabs}
+
+% Slides setup ---------------------------------------------
+\usetheme{Berlin}
+\usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+
+\title{Zusammenfassung vom 14. Januar 2019}
+\author{Dag Tanneberg\thanks{%
+  \href{mailto:dag.tanneberg@uni-potsdam.de}%
+    {dag.tanneberg@uni-potsdam.de}
+  }
+}
+\institute[Universität Potsdam]{
+  {\glqq}Grundlagen der Vergleichenden Politikwissenschaft{\grqq}\\
+  Universität Potsdam\\
+  Lehrstuhl für Vergleichende Politikwissenschaft\\
+  Wintersemester 2018/2019
+}
+\date{\today} -->
+
+
+# Leitfragen der Sitzung
+
+1. Warum sollten wir über Regierungssysteme sprechen?
+1. Welche Regierungssysteme gibt es?
+1. Was bedeuten deren Unterschiede für die Parteien?
+
+
+# Warum sollten wir über Regierungssysteme sprechen?
+
+- *Problem*: Wie zieht man eine Regierung zur Verantwortung?
+- *Repräsentative Demokratie*: Delegation polit. Macht
+- *Madison's Dilemma*: Delegierte auf eigenen Vorteil bedacht
+
+\begin{center}
+  \textbf{Varianten repräsentativer Demokratie}
+\end{center}
+
+\begin{columns}
+\begin{column}{.5\textwidth}
+\begin{block}{\textbf{1. Parlamentarismus}}
+\begin{tikzpicture}[grow = up, edge from parent/.style={draw,-latex}]
+\node (0) [shape = rectangle, fill = white] {Staatsbürger}
+  child{ node (1) [shape = rectangle, fill = white] {Parlament}
+    child{node (2) [shape = rectangle, fill = white] {Regierung} }
+  } ;
+\node (3) at ($(1)!0.5!(2)-(2.5,0)$) [shape = rectangle, fill = white] {Verwaltung};
+\node (l1) at ($(0)!0.5!(1)+(.6,0)$) {\small wählt};
+\node (l2) at ($(1)!0.5!(2)+(1.1,0)$) {
+  \small
+  \begin{tabular}{l}
+    hält polit.\\
+    verantwortl.
+  \end{tabular}
+};
+\node (l1) at ($(2)!0.5!(3)-(0.5,-.25)$) {\small leitet};
+\draw [-latex] (2)--(3);
+\end{tikzpicture}
+\end{block}
+\end{column}
+\begin{column}{.5\textwidth}
+\begin{block}{\textbf{2. Präsidentialismus}}
+\begin{tikzpicture}[grow = up, sibling distance = 6em, edge from parent/.style={draw,-latex}]
+\node (0) [shape = rectangle, fill = white] {Staatsbürger}
+  child [level distance = 8em] { node (1) [shape = rectangle, fill = white] {Parlament} }
+  child [level distance = 8em] { node (2) [shape = rectangle, fill = white] {Präsident}
+    child [grow = south west, level distance = 3.5em] { node (3) [shape = rectangle, fill = white] {Kabinett}
+      child [grow = south] {node (4) [shape = rectangle, fill = white] {Verwaltung} }
+    }
+  } ;
+\node (l1) at ($(0)!0.5!(1)-(.6,0)$) {\small wählt} ;
+\node (l2) at ($(2)!0.5!(3)-(0.7,-0.05)$) {\small ernennt} ;
+\node (l3) at ($(3)!0.5!(4)-(0.5,0)$) {\small leitet} ;
+\end{tikzpicture}
+\end{block}
+\end{column}
+\end{columns}
+
+
+# Welche wesentlichen Regierungssysteme gibt es?
+
+**Geschlossene Exekutive**
+
+\begin{center}
+  \begin{tabular}{llll}
+    \toprule
+     ~ & \multicolumn{2}{c}{Bestellung von} \\
+    Überleben von  & \multicolumn{2}{c}{Regierung \& Parlament} \\
+    Reg. \& Parl. & \multicolumn{1}{c}{Gemeinsam} & \multicolumn{1}{c}{Getrennt} \\
+    \cmidrule{2-3}
+    Gemeinsam & \textit{parlamentarisch} & direktwahl-parlament.\\
+    Getrennt & versammlungsunabh. & \textit{präsidentiell}\\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+**Duale Exekutive**
+
+- Premier-präsidentieller Semipräsidentialism
+    - PM \& Kabinett nicht durch Präsidenten abberufbar
+- Präsidentiell-parlamentarischer Semipräsidentialismus
+    - PM \& Kabinett durch Päsident \& Parlament abberufbar
+
+
+
+# Was bedeuten deren Unterschiede für Parteien?
+
+**Ausgangspunkt**: Parteien lösen Probleme kollektiven Handelns.
+
+1. stabilisieren parlamentarische Entscheidungen
+1. leihen Kandidaten ihre Reputation
+
+
+**These**: Präsidentialisierung politischer Parteien
+
+- Parteistrukturen folgen Erfordernissen der Präsidentschaftswahl
+- Gewinn der Präsidentschaft $=$ Offices $+$ Policies
+
+\begin{block}{Parteien im Präsidentialismus\dots}
+  \begin{enumerate}
+    \item sind tendenziell programmatisch weniger geschlossen;
+    \item sind tendenziell lockerer organisiert;
+    \item suchen eher den Konflikt mit dem Präsidenten.
+  \end{enumerate}
+\end{block}
+
