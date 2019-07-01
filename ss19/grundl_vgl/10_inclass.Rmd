@@ -1,16 +1,18 @@
 ---
-title: "Grundlagen der Vetospielertheorie"
-author: "Dag Tanneberg"
-date: "21 Januar 2019"
 output:
   beamer_presentation:
     includes:
-      in_header: header.tex
+        in_header: universal_header.tex
     theme: "Berlin"
     fonttheme: "professionalfonts"
     colortheme: "seagull"
+    fig_caption: false
     toc: false
 ---
+
+\subtitle{Grundlagen der Vetospieleransatzes}
+\date{1. Juli 2019}
+\maketitle
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,fig.height = 3.5, fig.width = 7)
@@ -36,7 +38,7 @@ actors <- matrix(
 
 >- Wie definiert Tsebelis Vetospieler?
 >    - "individual or collective actors whose agreement is necessary for a change of the status quo" (19)
->- Welche Entscheidungsregel folgt daraus? 
+>- Welche Entscheidungsregel folgt daraus?
 >    - Einstimmigkeit
 >- Welche Arten von Vetospielern nennt Tsebelis?
 >    - Institutionell, d.i. von der Verfassung vorgesehen
@@ -46,7 +48,7 @@ actors <- matrix(
 
 Entscheide, um welche Art von Vetospieler es sich handelt.
 
-1. Die CSU in der Großen Koalition
+1. Die SPD in der Großen Koalition
 2. Präsident Donald Trump
 3. Das Bundesverfassungsgericht
 4. Der Bundespräsident
@@ -62,7 +64,7 @@ Entscheide, um welche Art von Vetospieler es sich handelt.
 > - Welche Indikatoren für Politikstabilität nennt Tsebelis?
 >     - Größe des Einstimmigkeitskerns
 >     - Größe der Gewinnmenge des Status quos
-      
+
 ## Anwendung I
 
 Definiere den Einstimmigkeitskern. Wo liegt er in der Grafik?
