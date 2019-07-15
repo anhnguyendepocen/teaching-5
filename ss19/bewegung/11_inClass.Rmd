@@ -19,7 +19,7 @@ output:
     - Formatierung grundsätzlich frei, solange einheitlich
     - Korrekturrand von 4cm ist nett
 - Zitation: [Hilfestellung des Lehrstuhls](https://www.uni-potsdam.de/fileadmin01/projects/vergleichende-politikwissenschaft/Pr%C3%BCfungen/formal_guideline.pdf)
-- Verwendet Zitatationsmanagementsoftware! Zum Beispiel: [Citavi](https://www.uni-potsdam.de/zim/angebote-loesungen/software-campuslizenzen/campuslizenz-citavi.html), [Zotero](https://www.zotero.org/)
+- Verwendet Zitationsmanagementsoftware! Zum Beispiel: [Citavi](https://www.uni-potsdam.de/zim/angebote-loesungen/software-campuslizenzen/campuslizenz-citavi.html), [Zotero](https://www.zotero.org/)
 
 # Eine sehr gute Hausarbeit\dots
 
