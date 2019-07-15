@@ -1,0 +1,62 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 17. Juni}
+\maketitle
+
+# Sitzungsleitende Fragen
+
+1. Was hat es mit dem Begriff "Repertoire" auf sich?
+2. Welchen Logiken folgt das Repertoire sozialer Bewegungen?
+3. Wie reflektieren soziale Bwg. ihr Repertoire?
+
+
+# Was hat es mit dem Begriff "Repertoire" auf sich?
+
+**Protest**
+
+- "nonroutinized ways of affecting political, social, and cultural processes" (165)
+- indirekter Druck auf Entscheidungsträger
+- "political resource of the powerless" (166)
+
+**Repertoire**
+
+- "whole set of means [a group] has for making claims of different types on different individuals" (168)
+- zeitgenössisches Repertoire
+    1. national, d.h. kann über viele Orte hinweg koordiniert werden
+    2. autonom, d.h. Innovation anstelle von Billigung durch Eliten
+    3. modular, d.h. Protestformen für verschiedene Zwecke einsetzbar
+
+# Welchen Logiken folgt das Repertoir sozialer Bwg.
+
+1. Logik der Zahl
+    - Mobilisierung großer Teilnehmerzahlen
+    - Folgt dem Modell demokratischer Abstimmungen
+    - Beispiele: Märsche, Petitionen, Netstrikes
+2. Logik des Schadens
+    - Verursachung möglichst großen Sachschadens
+    - Folgt dem Modell des Krieges
+    - Beispiele: Streik, Boykotte, politische Gewalt
+3. Logik des Bezeugens
+    - Darstellung eines starken persönlichen Bezugs
+    - Inkaufnahme enormer Kosten unterstreicht Entschlossenheit
+    - Beispiele: Menschenketten, Mahnwachen
+
+# Wie reflektieren soziale Bwg. ihr Repertoire?
+
+"the ideal movement strategy is one that is convincing with respect to political
+"authorities, legitimate with respect to potential supporters, rewarding with
+"respect to those already active in the movement, and novel in the eyes of the
+"mass media. These are not entirely compatible demands." (179)
+
+- Zielkonflikt verschiedener Handlungslogiken \& Adressaten
+- Einschränkungen durch Protestgeschichte \& polit. Kontext
+- Antizipation der Reaktion polit. Entscheidungsträger

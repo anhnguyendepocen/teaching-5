@@ -1,0 +1,64 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\subtitle{Zusammenfassung vom 24. Juni}
+\maketitle
+
+
+# Leitfragen der Sitzung
+
+1. Warum sollten wir über das Verhältnis von Bewegungen und Parteien nachdenken?
+2. Welche Form des Nachdenkens schlägt Dieter Rucht vor?
+3. Wie empiriefähig ist sein Vorschlag?
+
+
+# Warum sollten wir\dots
+
+1. Deskriptive Inferenz - Was ist der Fall?
+    - Wie interagieren soz. Bwg. mit etablierten polit. Kräften?
+    - Führen einige Interaktionsmuster soz. Bwg. eher zum Erfolg?
+2. Kausale Inferenz - Warum ist das der Fall?
+    - Warum bilden sich unterschiedliche Interaktionsmuster aus?
+    - Warum sind einige Interaktionsmuster erfolgreicher als andere?
+3. Realweltliche Relevanz
+    - Parteien i.d.R. zentrale Akteure der Politik
+    - Bewegungen suchen den Kontakt, bspw. *Tea Party Bewegung*
+
+# Welche Form des Nachdenkens schlägt Dieter Rucht vor?
+
+**Beziehungsmuster zw. Parteien und Bewegungen**
+
+\begin{center}
+    \begin{tabular}{lll}
+        \toprule
+        ~ & \multicolumn{2}{c}{Koexistenz}\\
+        Bezugspunkt & temporär/Verdrängung & dauerhaft/Symbiose\\
+        \midrule
+        bewegungszentriert & Stufenmodell & Sprachrohr-Modell\\
+        parteizentriert & Schöpfquelle-Modell & Avantgarde-Modell\\
+        \bottomrule
+    \end{tabular}
+\end{center}
+
+- deskriptive Typologie
+- folgt den klassischen Regeln der Konzeptbildung
+
+# Wie empiriefähig ist sein Vorschlag?
+
+1. Ist die Typologie erschöpfend?
+    - Erfasst sie alle möglichen Beziehungsmuster?
+    - abstrahiert von Heterogenität soz. Bwg.
+2. Schließen sich ihre Kategorien wechselseitig aus?
+    - Fallen alle Beobachtungen in eine und nur in eine Kategorie?
+    - Dimension Koexistenz nicht trennscharf
+3. Liefert die Typologie trennscharfe Befunde?
+    - Klumpung im Schöpfquelle-Modell
+    - Stufen-, Sprachrohr- und Avantgarde-Modelle nur hist. relevant 
