@@ -1,0 +1,39 @@
+---
+output:
+  beamer_presentation:
+    includes:
+      in_header: universal_header.tex
+    theme: "Berlin"
+    fonttheme: "professionalfonts"
+    colortheme: "seagull"
+    toc: false
+---
+
+\subtitle{Hinweise zur Hausarbeit}
+\maketitle
+
+# Allgemeine Hinweise
+
+- Umfang: 3000 Wörter ($\pm$ 10 %)
+- Formatierung: [Hilfestellung des Lehrstuhls](https://www.uni-potsdam.de/fileadmin01/projects/vergleichende-politikwissenschaft/Pr%C3%BCfungen/formal_guideline.pdf)
+    - Formatierung grundsätzlich frei, solange einheitlich
+    - Korrekturrand von 4cm ist nett
+- Zitation: [Hilfestellung des Lehrstuhls](https://www.uni-potsdam.de/fileadmin01/projects/vergleichende-politikwissenschaft/Pr%C3%BCfungen/formal_guideline.pdf)
+- Verwendet Zitatationsmanagementsoftware! Zum Beispiel: [Citavi](https://www.uni-potsdam.de/zim/angebote-loesungen/software-campuslizenzen/campuslizenz-citavi.html), [Zotero](https://www.zotero.org/)
+
+# Eine sehr gute Hausarbeit\dots
+
+- spitzt ihr Thema zu einer produktiven Fragestellung zu
+- kommuniziert ihren Argumentationsgang durch die Gliederung
+- trennt sauber zwischen Literatur, Theorie und Empirie
+- präsentiert **relevante** Inhalte
+- paraphrasiert **und** synthetisiert
+- zieht selbstkritisch Bilanz
+- beantwortet die Forschungsfrage
+
+# Abgabe
+
+- **Deadline**: 30. September 2019
+- **Einreichung**: Moodle
+- **Format**: PDF
+
