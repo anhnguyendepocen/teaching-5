@@ -1,0 +1,19 @@
+\begin{tabular}{l*{8}{c}}
+  \toprule
+  & \multicolumn{7}{c}{link = ''$<$arg$>$''}\\
+  \cmidrule{2-9}
+  & $\mu$ & $\mu^{-1}$ & $ln(\mu)$ & $ln(\frac{\mu}{1-\mu})$ & $\Phi(\mu)$ & $ln[-ln(1-\mu)]$ & $\sqrt{\mu}$ & $\frac{1}{\mu^2}$\\
+  family & identity & inverse & log & logit & probit & cloglog & sqrt & 1/mu{\textasciicircum}2 \\
+  \midrule
+  gaussian() & $\bullet$ & $\circ$ & $\circ$ \\
+  binomial() & & & $\circ$ & $\bullet$ & $\circ$ & $\circ$ \\
+  poisson() & $\circ$ & & $\bullet$ & & & & $\circ$ \\
+  Gamma() & $\circ$ & $\bullet$ & $\circ$ \\
+  inverse.gaussian() & $\circ$ & $\circ$ & $\circ$ & & & & & $\bullet$ \\
+  quasi() & $\bullet$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$\\
+  quasibinomial() & & & & $\bullet$ & $\circ$ & $\circ$ & & \\
+  quasi() & $\circ$ & & $\bullet$ & & & & $\circ$ &\\
+  \midrule
+  \multicolumn{9}{l}{\textit{Legend}: $\bullet$ default, $\circ$ possible}\\
+  % \bottomrule
+\end{tabular}

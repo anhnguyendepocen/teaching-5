@@ -1,0 +1,14 @@
+\begin{tabular}{c*{2}{l}}
+\toprule
+Symbol & Meaning & Example \\
+\midrule
+$:$ & Specify an interaction & $y \sim x:z \Rightarrow y = xz$\\
+$*$ & Specify all possible interactions & $y \sim x*z \Rightarrow y = x + z + xz$\\
+\textasciicircum & Specify interactions up to some degree & $y \sim (x + z)^2 \Rightarrow y = x + z + xz$\\
+$.$ & Wildcard for all other variables & $y \sim . \Rightarrow y = x + z + w + \dots$\\
+- & Remove variable(s) & $y \sim (x + z)^2 – x:z \Rightarrow y = x + z$\\
+$-1$ OR $0 + $ & Remove the intercept & $y \sim x - 1$ OR $y \sim 0 + x$\\
+$I()$ & Arithmetical transformation & $y \sim I(x^2) \Rightarrow y = x^2$\\
+\textit{function} & Other mathematical transformations & $\text{log10}(y) \sim x \Rightarrow log_{10}(y) = x$\\
+% \bottomrule
+\end{tabular}
