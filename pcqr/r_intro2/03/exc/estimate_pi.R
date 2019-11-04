@@ -3,9 +3,9 @@ n <- 1000
 reps <- 100
 r <- 1
 
-hits <- vector("logical", length = n) 
+hits <- vector("logical", length = n)
 for(i in 1:n){
-   hits[i] <- sqrt(sum(runif(2, -r, r)^2)) <= r
+    hits[i] <- sqrt(sum(runif(2, -r, r)^2)) <= r
 }
 4 * mean(hits)
 

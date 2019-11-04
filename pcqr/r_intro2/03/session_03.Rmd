@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Run a script
   - step by step;
-  - from start to end (or error).
+  - from start to end (or other condition).
 ```{r, eval = FALSE}
 A <- "Well"
 B <- "hello there."
@@ -94,8 +94,8 @@ student_data[
 ```
 
 
-
 ## While()-Loops
+
 - Rerun statement(s) as long as some condition is TRUE
 - Condition should be a logical test
 - Remember ["Groundhog Day"](https://www.imdb.com/title/tt0107048/)
@@ -128,7 +128,7 @@ repeat {
 # Conditional Execution
 
 ## Intuition
-  - How does the absolute value $|x|$ algorithmically work?
+  - How does the absolute value $|x|$ work algorithmically?
 
 \begin{figure}
   \centering
@@ -178,7 +178,7 @@ if (this) {
 } else {
   Plan B
 }
-dec <- 3.141 # Example: Round a decimal to integer
+dec <- pi # Example: Round a decimal to integer
 if (dec - trunc(dec) >= 0.5) {
   dec <- trunc(dec) + 1
 } else {
