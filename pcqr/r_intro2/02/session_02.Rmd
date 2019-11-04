@@ -71,7 +71,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## Atomic vectors: Creation, Dimensionality, Homogeneity
-  
+
 - **Creation**
 ```{r atmoicVectorExamples}
 die <- 1:6 # Remember our first session?
@@ -83,7 +83,7 @@ die <- c(1, 2, 3, 4, 5, 6) # Standard assignment: c()
   - Integer: Whole numbers ($\mathcal{Z}$)
   - Double a.k.a. Numeric: Real numbers ($\mathcal{R}$)
   - Character: Text data
-  
+
 ```{r, eval = FALSE}
 logic <- c(TRUE, FALSE, FALSE); typeof(logic)
 int <- c(-1L, 99L); typeof(int)
@@ -262,15 +262,15 @@ we have to meet several obstacles.
 1. Some grades are missing. Angela scored 603 in Science,
   and Cheryl 28 in Literature. Find and fill the gaps.
 2. Joel withdrew from class. Remove him from the dataset.
-3. Gender was coded accidentily. Drop the variable.
-4. The grades are on widely different scales. Scale them
+3. Gender was coded accidentally. Drop the variable.
+4. The grades are on widely different scales. **Scale** them
   to comparable units.
 
 ## Part B
-1. For each student calculate the mean of science, arts, and
-  literature.
+1. Take the average of scaled science, arts, and literature grades for
+    each student.
 2. Find its .2, .4, .6, and .8 quantiles. Assign grades
-  appropriately.
+    appropriately.
 3. Greg was caught cheating. He should receive an F.
 4. Create a new data frame grade_data. This data frame should:
     - include only student_id and the final grade;

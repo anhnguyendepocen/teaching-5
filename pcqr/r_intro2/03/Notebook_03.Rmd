@@ -1,0 +1,59 @@
+---
+title: "Session 03: Data Management Challenge"
+output: html_notebook
+editor_options:
+  chunk_output_type: inline
+---
+
+# Sequential Execution
+
+A script runs step by step from start to end (or error).
+
+```{r}
+a <- "Hello"
+b <- "World!"
+print(paste(a, b))
+```
+
+# Iterative Execution
+
+## for()-loops
+
+Execute statement(s) repeatedly over a set of values.
+
+```{r}
+for (value in c("Waiting", "for", "statistics.")) {
+  print(value)
+}
+# Is there an object called "value" exist in your workspace?
+"value" in %in% ls()
+```
+
+It is good practice to loop over a set of integers which indexes both object and storage simultaneously.
+
+```{r, eval = FALSE}
+words <- c("So", "how's", "looping", "so", "far?")
+chr <- vector("character", length = length(words))
+chr
+for (i in 1:length(words)){
+    chr[i] <- words[i]
+}
+chr
+```
+
+Create a for()-loop to replace your assign letter grades with a more concise statement
+
+```{r, eval = FALSE}
+student_data <- read.csv("./dta/student_data_complete.csv",
+    stringsAsFactors = FALSE)
+grade_quantiles <- quantile(
+  student_data[, "grade"], probs = c(.2,.4,.6,.8)
+)
+student_data[, "grade_alp"] <- "F"
+student_data[
+  student_data[, "grade"] > grade_quantiles["20%"],
+  "grade_alp"
+] <- "D"
+# ... and so on until A.
+```
+
