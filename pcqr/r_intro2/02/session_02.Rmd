@@ -21,9 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \begin{columns}
   \begin{column}{0.6\textwidth}
-    Learning to manage data in $\mathcal{R}$ is hard.
-    \textit{Everybody} struggles at first. Reasons
-    include:
+    Learning to manage data in $\mathcal{R}$ is hard. \textit{Everybody} struggles. Reasons include:
     \begin{itemize}
       \item Where's my spreadsheet?
       \item Barrage of new concepts
@@ -100,6 +98,7 @@ chr <- c(TRUE, "Hello", 2.0, "R"); typeof(chr)
   - type: What kind of data is it?
   - length: How many elements does your vector contain?
   - names: What do you call an element?
+
 ```{r lengthExample, eval = FALSE}
 die <- 1:6
 length(die) # Check the length of an atomic vector
@@ -159,9 +158,10 @@ write.csv(
   - The ‘R Data Import/Export’ manual (see Help in RStudio)
   - https://www.statmethods.net/input/index.html
 
+
 ##
 
-\begin{block}{Break time}
+\begin{block}{Break}
   Let's catch our breath and take a 5 minute break.
 \end{block}
 

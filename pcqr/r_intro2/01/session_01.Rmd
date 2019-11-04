@@ -32,10 +32,10 @@ knitr::opts_chunk$set(echo = TRUE)
 - **Background**: Political scientist turned $\mathcal{R}$ enthusiast
 - **Position**: Project Manager @ [Ebner Stolz](https://www.ebnerstolz.de)
 - **Fields**: Autocracy, contentious politics, applied methods
-- **Secret weakness**: I love buying *expensive* boardgames.
+- **Secret weakness**: I *enjoy* tabletop RPG podcasts.
 \vfill
 \begin{block}{\textbf{Introductory Round}}
-  So, who are you? Mind to fill us in on your secret weakness?
+  So, who are you? Fill us in on your secret weakness.
 \end{block}
 
 ## Goals of this workshop
@@ -58,20 +58,21 @@ knitr::opts_chunk$set(echo = TRUE)
 - **Materials**: Go to https://github.com/dagtann/pcqr/
 
 \begin{table}
-\begin{tabular}{lccll}
-\toprule
-Day & Start & End & Official Topic\\
-\midrule
-1 & 09:15 & 10:45 & The Very Basics\\
-~ & 11:00 & 12:30 & Data Management\\
-~ & 13:30 & 15:00 & Basic Program Flow\\
-\midrule
-2 & 09:15 & 10:45 & Graphics\\
-~ & 11:00 & 12:30 & Basic Statistics\\
-~ & 13:30 & 15:00 & GLMs\\
-\bottomrule
-\end{tabular}
+  \begin{tabular}{lccll}
+    \toprule
+    Day & Start & End & Official Topic\\
+    \midrule
+    1 & 09:15 & 10:45 & The Very Basics\\
+    ~ & 11:00 & 12:30 & Data Management\\
+    ~ & 13:30 & 15:00 & Basic Program Flow\\
+    \midrule
+    2 & 09:15 & 10:45 & Graphics\\
+    ~ & 11:00 & 12:30 & Basic Statistics\\
+    ~ & 13:30 & 15:00 & GLMs\\
+    \bottomrule
+  \end{tabular}
 \end{table}
+
 # Toward $\mathcal{R}$
 
 ## Why bother with $\mathcal{R}$?
@@ -89,25 +90,25 @@ Day & Start & End & Official Topic\\
     - Tons and tons and tons of free material
     - Free multi-core support (unlike S....)
 
-## So, why really bother with $\mathcal{R}$?
+## Seriously, why bother with $\mathcal{R}$?
 
 - **Jobs, Jobs, Jobs!**
     - Thousands of openings on LinkedIn \& Xing
-    - Excellent entry salaries at agile companies
+    - Excellent entry salaries at all levels of seniority
 - **Power. Overwhelming.**
-    - Let's walk though appetizer.Rmd
+    - Let's walk through appetizer.Rmd
     ![](./fig/kubrick.jpg){width=320px}
 
 
 # Making Landfall
 
-## A first glance at RStudio
+## A First Glance at R Studio
 
 ![](./fig/rstudio_startup.png)
 
 ## Let's take $\mathcal{R}$ for a ride.
 
-See if you can get $\mathcal{R}$ to answer the following problems.
+Use $\mathcal{R}$ to answer the following problems.
 
 1. $2 + 2$
 2. $-3 \cdot 9$
@@ -119,11 +120,12 @@ See if you can get $\mathcal{R}$ to answer the following problems.
   ``An Introduction to R''.[^1] Use the RStudio help pane
   to locate this manual.
 
-[^1]: Note, the title doesn't say "gentle".
+[^1]: The title doesn't say "gentle". Kabacoff, Robert I. (XXXX). *R in Action*. Data Anaysis and Graphics With R. 2$^{nd}$ ed. Manning Publications: Shelter Island, NY, and Kosuke, Imai (XXXX). *Quantitative Social Science*. Cambridge Universtiy Press: Cambdridge are most gentle introductions. 
 
 ## What was that about?
 
-1. You can interact with $\mathcal{R}$ from the console.
+1. $\mathcal{R}$ is mostly easy to talk to.
+    - Hints on the terminal.
     - $>$: $\mathcal{R}$ is waiting for input.
     - $+$: Your command is incomplete.
     - Error: Something went wrong.
@@ -201,16 +203,15 @@ die %*% die
 ```
 
 > - **Lessons learned**:
-> - $\mathcal{R}$ defaults to element-wise execution. Thereby
-  values of one case are only paired with other
-  values of that same case.
+> - $\mathcal{R}$ defaults to element-wise execution.
+    In spreadsheet thinking, values of one record are only paired with other values of that same record.
 > - If $\mathcal{R}$ operates on vectors of unequal length,
-  it will repeat the shorter vector until it meets the longer
-  one.[^3]
+    it will repeat the shorter vector until it meets the longer
+    one.[^3]
 > - $\mathcal{R}$ does linear algebra when explicitly
-  asked to.
+    asked to.
 
-[^3]: This is called "recycling".
+[^3]: In $\mathcal{R}$ this behavior is called "recycling". Pythonistas call it "broadcasting".
 
 # Functions
 
