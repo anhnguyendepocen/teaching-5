@@ -93,10 +93,10 @@ New York: Springer Science + Business.
     - a.k.a. aesthetic mapping
 - Answer the following questions for ggplot2:
   1. What is your data?
-  2. What relationships you want to see?
+  2. What relationships do you want to see?
   3. How do you want to see it?
   4. What additional information do you want to see?
-  5. What scales, axes, labels should be swown?
+  5. What scales, axes, labels should be shown?
 - Complete reference:
   - Hadley's book: [ggplot2](https://link.springer.com/book/10.1007/978-0-387-98141-3)
   - ggplot2 Online Reference: [tidyverse](https://ggplot2.tidyverse.org/reference/)
