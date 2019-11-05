@@ -16,19 +16,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \maketitle
 
-## Before we start
-
-1. Please, run the following code.
-```{r, eval = FALSE}
-install.packages(c("tidyverse", "gapminder"))
-for(p in c("tidyverse", "gapminder")) {
-  library(p, character.only = TRUE)
-}
-```
-2. I could not replicate the data$[abbreviated var name] issue.
-3. Mac users with a locale warning on startup: Go to [Stack Overflow](https://stackoverflow.com/questions/9689104/installing-r-on-mac-warning-messages-setting-lc-ctype-failed-using-c) or [rstudio.com](https://community.rstudio.com/t/strange-locale-problems-in-r-after-update-to-mojave/15533/4)
-
-
 # Introduction
 
 ## A Taste of ggplot2
@@ -36,32 +23,23 @@ for(p in c("tidyverse", "gapminder")) {
 \begin{figure}
   \centering
   \includegraphics[scale = 0.19]{./fig/ch-07-election-county-share.png}
-  \caption{Vote Share in the 2012 Presidential Elections by 
+  \caption{Vote Share in the 2012 Presidential Elections by
     County\footnote{\tiny
-      Healan, K. forthc. Data Visualization. A Practical
-      Introduction. \href{https://socviz.co/maps.html}{https://socviz.co/maps.html}
-      (last access: 10/03/2018).
+      Healan, K. 2019. Data Visualization. A Practical
+      Introduction. Princeton: Princeton University Press, \href{https://socviz.co/maps.html}{https://socviz.co/maps.html}
+      (last access: 11/05/2019).
     }
   }
 \end{figure}
 
-## More Tasting: London Bicycle Routes[^99]
-
-\begin{figure}
-  \centering
-  \includegraphics[scale = .19]{./fig/bike_ggplot.png}
-\end{figure}
-
-[^99]: Cheshire, J. 2012. Great maps with ggplot2. \href{http://spatial.ly/2012/02/great-maps-ggplot2/}{http://spatial.ly/2012/02/great-maps-ggplot2/} (last access: 10/06/2018).
-
-## Even More Tasting: Hierarchical Edge Bundling[^98]
+## Second Serving: Hierarchical Edge Bundling[^98]
 
 \begin{figure}
   \centering
   \includegraphics[scale = .3]{./fig/hierarchical_edge_bundling.png}
 \end{figure}
 
-[^98]: Holtz, Y. 2017. The R Graph Gallery.  \href{https://bit.ly/2QKdhLU}{https://bit.ly/2QKdhLU} (last access: 10/06/2018).
+[^98]: Holtz, Y. 2017. The R Graph Gallery. \href{https://bit.ly/2QKdhLU}{https://bit.ly/2QKdhLU} (last access: 11/05/2019).
 
 ## An Embarassing Riches of Options[^97]
 
@@ -71,31 +49,6 @@ for(p in c("tidyverse", "gapminder")) {
 \end{figure}
 
 [^97]: Yau, N. 2016. 5 Tips for Learning to Code for Vizualization. \href{https://bit.ly/2yu0fe0}{https://bit.ly/2yu0fe0} (last access: 10/11/2018).
-
-## We will create this modest graph together.
-
-```{r, fig.align='center', echo = FALSE, fig.width = 4, fig.height = 2}
-rm(list = ls())
-library("ggplot2")
-library("gapminder")
-p <- ggplot(
-  data = gapminder,
-  mapping = aes(
-    x = reorder(continent, gdpPercap, FUN = median),
-    y = gdpPercap
-  )
-) +
-  geom_boxplot(fill = "orange") +
-  scale_y_log10(labels = scales::dollar) + # log10 xvalues, but display Dollar
-  labs(
-    x = "",
-    y = "GDP Per Capita",
-    title ="Economic Development",
-    caption = "Source: Gapminder.",
-    shape = "Continent"
-  )
-p + theme_minimal()
-```
 
 ## Outline
 
@@ -123,20 +76,20 @@ p + theme_minimal()
     of geometric objects (points, lines, bars)."[^3]
 
 - Very generic, schematic approach to data viz
-- Flexible themes & fast, high quality results
-- Many users, active community, numerous extension
-    - Create animations, networks, maps, dags, etc.
+- Seamless integration with [tidyverse](https://www.tidyverse.org)
+- Numerous extensions: Animations, maps, dags, etc.
+- Delivers high quality results -- fast.
 
-
-[^2]: Wilkinson, L. 1999/2005. The Grammar of Graphics.  
+[^2]: Wilkinson, L. 1999/2005. The Grammar of Graphics.
 New York: Springer Science + Business.
-[^3]: Wickham, H. 2009. ggplot2. New York: Springer Science + Business.
+[^3]: Wickham, H. 2016. ggplot2. 2^[nd] ed. New York: Springer Science + Business.
 
 # How do you talk to ggplot2?
 
 ## Intuition
 
-- Idea: logical connection b/w data (e.g., gender) and plot elements (e.g., shapes)
+- Idea: logical connection b/w data \& plot elements
+    - Example: Gender $\mapsto$ Color
     - a.k.a. aesthetic mapping
 - Answer the following questions for ggplot2:
   1. What is your data?
@@ -149,7 +102,7 @@ New York: Springer Science + Business.
   - ggplot2 Online Reference: [tidyverse](https://ggplot2.tidyverse.org/reference/)
   - Kieran Healy's book: [Data Vizualization](http://socviz.co/)
 
-## A schematic for making a plot
+## A Schematic for Making a Plot
 
 ```{r, eval = FALSE}
 p <- ggplot(
@@ -168,7 +121,7 @@ p <- ggplot(
 ggsave(file = <...>, plot = <...>, ...) # Save ur work
 ```
 
-## Our target graph
+## Our Target Graph
 ```{r, echo = FALSE, fig.align='center', echo = FALSE, fig.width = 4, fig.height = 2}
 rm(list = ls())
 library("ggplot2")
@@ -192,8 +145,8 @@ p <- ggplot(
 p + theme_minimal()
 ```
 
-- Install and load packages ggplot2 and gapminder.
-- Answer questions 1-5 on paper.
+- Open the notebook file notebook_04.Rmd.
+- Using the notebook, answer questions 1-5.
 - Use the generic schematic and \href{https://ggplot2.tidyverse.org/}{tidyverse}
   to generate the plot.
 
@@ -208,10 +161,8 @@ p + theme_minimal()
 - Principle strategie:
     a. Connect (map) data to plot elements
     b. Layer plot elements
-- Read Healan, K. forthc. Data Visualization. A Practical
-      Introduction. 
-      \href{https://socviz.co/maps.html}{https://socviz.co/maps.html}
-      (last access: 10/03/2018).
+- Read Healan, K. 2019. Data Visualization. A Practical
+    Introduction. Princeton: Princeton University Press. Avaliable at \href{https://socviz.co/}{https://socviz.co/} (last access: 11/05/2019).
 
 ## Self-practice: Replicate these figures.
 ```{r ggplot2_self, fig.align='center', echo = FALSE, fig.width = 4.5, fig.height = 2.5}
@@ -227,7 +178,7 @@ p <- ggplot(
     y = "Life expectancy at birth",
     title ="Life Expectancy vs. Economic Development"
   ) +
-  facet_wrap(~ continent, nrow = 2) + 
+  facet_wrap(~ continent, nrow = 2) +
   theme_gray(base_size = 9)
 p
 ```
