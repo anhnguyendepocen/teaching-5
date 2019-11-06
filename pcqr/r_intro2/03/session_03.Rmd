@@ -45,7 +45,9 @@ rm(A, B, C) # Explain the error.
 - Typical use-case: transform several variables
 
 ## for()-Loops[^1]
+
 - repeats statements for each element on an input set
+
 ```{r, eval = FALSE}
 # Generic example
 for (VALUE in THAT) { # Do THIS for each VALUE in THAT
@@ -56,17 +58,20 @@ for (value in c("Waiting", "for", "statistics.")) {
   print(value)
 }
 ```
+
 - for() creates an object called VALUE
-- reassigns VALUE for each element in the set THIS
+- reassigns VALUE for each element in the set THAT
 
 [^1]: People don't like for(). For alternatives see https://bit.ly/2IEbeGj.
 
 ## for()-Loops, contd.
+
 - for() returns nothing unless told to[^2]
 - Save the output to an object
 - Good practice:
   - Execute on a set of integers
   - Index both object and storage simultaneously
+
 ```{r, eval = FALSE}
 words <- c("So", "how's", "looping", "so", "far?")
 chr <- vector("character", length = length(words))
@@ -184,7 +189,6 @@ repeat {
 \end{table}
 
 
-
 ## if()-Statements
 
 - Code executes if and only if some condition is TRUE
@@ -240,7 +244,7 @@ if (dec - trunc(dec) >= 0.5) {
 
 ## But I want to operate on an entire vector!
 
-- Looping: Use vectorized functions, e.g. apply(), sapply(), lapply(), etc.
+- Looping: Use vectorized functions, e.g. apply(), sapply(), etc.
 - Conditional execution: Use `ifelse(<test>, <yes>, <no>)`
 
 ```{r}
@@ -248,8 +252,6 @@ x <- 1:6
 evens <- ifelse(x %% 2 == 0, 1, 0)
 rbind(x, evens)
 ```
-
-
 
 # Summary
 

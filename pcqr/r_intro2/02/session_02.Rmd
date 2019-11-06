@@ -278,4 +278,4 @@ we have to meet several obstacles.
 
 ## Congratulations
 \centering
-You just learned a hell lot of $\mathcal{R}$. Enjoy lunch!
+You just learned a hell of a lot of $\mathcal{R}$. Enjoy lunch!

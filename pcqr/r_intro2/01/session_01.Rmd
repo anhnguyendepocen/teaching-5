@@ -96,7 +96,7 @@ knitr::opts_chunk$set(echo = TRUE)
     - Thousands of openings on LinkedIn \& Xing
     - Excellent entry salaries at all levels of seniority
 - **Power. Overwhelming.**
-    - Let's walk through appetizer.Rmd
+    - Let's walk through ./01/appetizer/appetizer.Rmd
     ![](./fig/kubrick.jpg){width=320px}
 
 
@@ -163,7 +163,7 @@ a <- 3 # Object <- Value
 - Naming rules:
     - Rule 1: An object name cannot start with a number.
     - Rule 2: An object name cannot use certain special symbols,
-      e.g., ^, !, $, @, +, -, /, [.
+      e.g., ^, !, $, @, +, -, /, [, or reserved names, e.g., NA, NULL, etc.
     - Rule 3: Capitalization matters, i.e. A $\neq$ a.
 
 \begin{block}{What names will work?}
@@ -220,10 +220,13 @@ die %*% die
 - $\mathcal{R}$ uses functions to operate on data.
 - The data passed to a function is called its argument.
 - **Generic example:**
+
 ```{r, eval = FALSE}
 FctName(arg.1 = value.1, ..., arg.n = value.n)
 ```
+
 Execute these commands and describe the result.
+
 ```{r, eval = FALSE}
 die <- 1:6; mean(die)
 round(mean(die), digits = 2); round(mean(die), 2)
@@ -237,11 +240,13 @@ round(mean(die), digits = 2); round(mean(die), 2)
 ## How do you get more functions?
 
 - Install & load new packages.[^4]
+
 ```{r, eval = FALSE}
 install.packages("tidyverse")
 library("tidyverse") # Load a package 2 access its fcts.
 ```
 - Write your own function.
+
 ```{r, eval = FALSE}
 FctName <- function(x, y, z = 1){ # Assign function
   ## x, y ... mandatory arguments

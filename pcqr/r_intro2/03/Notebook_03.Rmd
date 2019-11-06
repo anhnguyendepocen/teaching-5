@@ -28,8 +28,6 @@ Execute statement(s) repeatedly over a set of values.
 for (value in c("Waiting", "for", "statistics.")) {
   print(value)
 }
-# Is there an object called "value" exist in your workspace?
-"value" in %in% ls()
 ```
 
 It is good practice to loop over a set of integers which indexes both object and storage simultaneously.

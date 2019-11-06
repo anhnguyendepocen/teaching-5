@@ -33,12 +33,12 @@ executes the entire chunk. Your output will appear immediately below the chunk.
 
 ```
 
-Finally, *R* ships with an extensive online documentation. For instance, it includes a manual named ``An Introduction to R''.[^1] Use the RStudio help pane to locate this manual.
+Finally, *R* ships with an extensive online documentation. For instance, it includes a manual named ``An Introduction to R''. Use the RStudio help pane and open that manual.
 
 
 ## What is an object?
 
-*R* stores data in objects. When encountering an object, *R* returns the data saved inside.
+*R* stores data in objects. When encountering an object, *R* returns the data saved inside. Think of objects as the nouns of the *R* language.
 
 ```{r}
 a <- 1 # Assign value "1" to object "a".
@@ -73,7 +73,7 @@ a
 
 - Rule 1: An object name cannot start with a number.
 - Rule 2: An object name cannot use certain special symbols,
-      e.g., ^, !, $, @, +, -, /, [.
+      e.g., ^, !, $, @, +, -, /, [, or reserved names, e.g., NA, NULL, etc.
 - Rule 3: Capitalization matters, i.e. A ≠ a.
 
 ```{r }
@@ -122,12 +122,17 @@ die %*% die
 
 ## What is a function?
 
-*R* uses functions to operate on data. The data passed to a function is called its argument. Execute the following commands and describe the result.
+*R* uses functions to operate on data. Think of functions as the verbs of the *R* language. The data passed to a function is called its argument. Execute the following commands and describe the result.
 
 ```{r, eval = FALSE}
 die <- 1:6; mean(die)
 ```
 
 ```{r}
-round(mean(die), digits = 2); round(mean(die), 2)
+round(mean(1:6), digits = 2) 
 ```
+
+```{r}
+round(mean(die), 2)
+```
+
