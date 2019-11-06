@@ -120,7 +120,7 @@ Use $\mathcal{R}$ to answer the following problems.
   ``An Introduction to R''.[^1] Use the RStudio help pane
   to locate this manual.
 
-[^1]: The title doesn't say "gentle". Kabacoff, Robert I. (XXXX). *R in Action*. Data Anaysis and Graphics With R. 2$^{nd}$ ed. Manning Publications: Shelter Island, NY, and Kosuke, Imai (XXXX). *Quantitative Social Science*. Cambridge Universtiy Press: Cambdridge are most gentle introductions. 
+[^1]: The title doesn't say "gentle". Kabacoff, Robert I. (2015). *R in Action*. Data Anaysis and Graphics With R. 2$^{nd}$ ed. Manning Publications: Shelter Island, NY, and Kosuke, Imai (2017). *Quantitative Social Science*. Cambridge Universtiy Press: Cambdridge offer most gentle introductions.
 
 ## What was that about?
 

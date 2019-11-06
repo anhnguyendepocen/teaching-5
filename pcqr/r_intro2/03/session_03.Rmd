@@ -93,24 +93,22 @@ student_data[
 # ... and so on until A.
 ```
 
-
-## While()-Loops
-
+## while()-Statements
 - Rerun statement(s) as long as some condition is TRUE
-- Condition should be a logical test
-- Remember ["Groundhog Day"](https://www.imdb.com/title/tt0107048/)
-  - Include a change of condition in the while()'s body!
+- Remember ["Groundhog Day"](https://www.imdb.com/title/tt0107048/)?
+
 ```{r, eval = FALSE}
 k <- 0
-while (k < 20) {
-  k <- k + 1
-  print("Still running")
+while (k < 20) {  # statement evaluates to ONE value
+  cat(k, "and counting...", "\n")
+  k <- k + 1  # Make sure that your condition fails!
 }
 ```
-- Returns nothing unless told to
 
-## Repeat()-Statements
-- Reruns statement(s) until meets **break**
+## repeat()-Statements
+
+- Rerun statement(s) until **break** statement is met
+
 ```{r, eval = FALSE}
 chr <- "All work and no play makes Jack a dull boy"
 k <- 0
@@ -138,21 +136,73 @@ repeat {
 - *Different* operations follow depending on some condition
 - $\rightarrow$ code handles parallel cases
 
+
+## Detour: Logical Tests in *R*
+
+- Check the truth value of some condition
+- All tests return a logical values
+- Obey element-wise execution and recycling
+
+\begin{table}
+  \centering
+  \begin{tabular}{lll}
+      \toprule
+      Operator & Syntax & Test\\
+      \midrule
+      $>$ & a $>$ b & Is a greater than b?\\
+      $>=$ & a $>=$ b & Is a at least equal to b?\\
+      $<$ & a $<$ b & Is a less than b?\\
+      $<=$ & a $<=$ b & Is a at most equal to b?\\
+      $==$ & a $==$ b & Is a equal to b?\\
+      $!=$ & a $!=$ b & Is a not equal to b?\\
+      \%in\% & a \%in\% c(a, b, c) & Is a in the set c(a, b, c)?\\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+
+## Longer Detour: Boolean Operators in *R*
+
+- Operate on several logical tests
+- *Usually* return a single logical value
+
+\begin{table}
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        Operator & Syntax & Test\\
+        \midrule
+        \& & cond1 \& cond2 & Are both conditions true?\\
+        $|$ & cond1 \& cond2 & Is at least one condition true?\\
+        xor & xor(cond1, cond2) & Is either cond1 or cond2 true?\\
+        ! & !cond1 & Negate cond1. \\
+        any() & any(cond1, cond2) & Is any condition true?\\
+        all() & all(cond1, cond2) & Are all conditions true?\\
+        \%in\% & a \%in\% c(a, b, c) & Is a in the set c(a, b, c)?\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+
 ## if()-Statements
 
 - Code executes if and only if some condition is TRUE
-- Condition **must** evaluate to a single TRUE/FALSE statement
+- Condition should evaluate to a single TRUE/FALSE statement
+
 ```{r, eval = FALSE}
 if (THIS) { # If this is TRUE
   THAT # then do THAT.
 }
-x <- 4
+x <- -4
 if (x < 0) {
   x <- -1 * x
 }
+x
 ```
 
 ## if()-Statements: What will this return?
+
 ```{r, eval = FALSE}
 # Example 1 =========================================
 x <- 1
@@ -170,8 +220,10 @@ if (x == 1) {
 ```
 
 ## else()-Statements
+
 - tell $\mathcal{R}$ what to do should if() evaluate to FALSE
 - multiple if/else statements can be nested
+
 ```{r, eval = FALSE}
 if (this) {
   Plan A
@@ -186,6 +238,19 @@ if (dec - trunc(dec) >= 0.5) {
 }
 ```
 
+## But I want to operate on an entire vector!
+
+- Looping: Use vectorized functions, e.g. apply(), sapply(), lapply(), etc.
+- Conditional execution: Use `ifelse(<test>, <yes>, <no>)`
+
+```{r}
+x <- 1:6
+evens <- ifelse(x %% 2 == 0, 1, 0)
+rbind(x, evens)
+```
+
+
+
 # Summary
 
 ## What was that about?
@@ -199,8 +264,9 @@ if (dec - trunc(dec) >= 0.5) {
 - Conditional execution manages parallel cases
   - **if()** runs statesment(s) if a condition evaluates to TRUE
   - **else()** runs statesment(s) if that same condition is FALSE
+  - **ifelse()** is a vectorized version
 
-# Practical Challenges
+# Practical Challenge
 
 ## In a world where humanity forgot the value of $\pi$ \dots
 
@@ -212,6 +278,9 @@ if (dec - trunc(dec) >= 0.5) {
     Set up a simulation which allows you to generate an estimate
     of $\pi$ from the chance to hit a circle perfectly inscribed
     in a square with a randomly thrown dart.
+    \bigskip
+
+    You can do this in four lines!
   \end{column}
   \begin{column}{.5\textwidth}
     \begin{figure}
@@ -224,22 +293,3 @@ if (dec - trunc(dec) >= 0.5) {
     \end{align*}
   \end{column}
 \end{columns}
-
-## Understanding Collider Bias
-
-In causal inference, collider bias results when we condition on a
-variable that is causally influenced by one or more other
-variables. The effect will be a spurious correlation between the
-collider's ancestors. Setup a simulation to demonstrate collider
-bias.
-
-\begin{figure}
-  \centering
-  \includegraphics[scale = .5]{./fig/collider_bias.png}
-  \caption{Collider Bias Visualized\footnote{
-    Ellwert, F. 2013. Graphical Causal Models. In: S.L. Morgan
-      (ed.), Handbook of Causal Analysis for Social Research, p.
-      251
-    }
-  }
-\end{figure}

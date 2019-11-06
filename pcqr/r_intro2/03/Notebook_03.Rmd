@@ -74,14 +74,14 @@ Letters <- c("F", "D", "C", "B", "A")
 A simple absolute value algorithm:
 
 ```{r}
-x <- -14
+x <- -4
 if (x < 0) {
   x <- -1 * x
 }
 x
 ```
 
-What will these statements return?
+What will these statements return? Think first, check later.
 
 ```{r}
 x <- 1
