@@ -29,24 +29,22 @@ asoiaf <- read.csv2(
 - to create, index, and modify objects,
 - to take advantage of control flow statements,
 - generate decent looking graphs.
-- You are now ready to unleash $\mathcal{R}$ on real data.
+
+Looks like you are ready to unleash $\mathcal{R}$ on real data.
 
 ## What are we going to do?
 
 We are going to plunge head first into data analysis, taking
-advantage of a data set which includes all *named*
-characters from George R.R. Martin's "A Song of Ice and
-Fire".[^1] In the end, you will be able to offer scientific
-insight on the mother of all cocktail party questions: **What's
-the chance that Jon Snow is going to die?**
+advantage of data on all *named* characters in George R.R. Martin's
+"A Song of Ice and Fire".[^1] In the end, you will be able to offer
+scientific insight on the erstwhile mother of all cocktail party
+questions: **What's the chance that Jon Snow is going to die?**
 
 To get started:
 
 1. Quit & reopen $\mathcal{R}$.
-2. Load "./05/dta/asoiaf.csv" from the course material.
-    - **Note**: Uncheck the option "Strings as factors".
-3. Open a new script file.
-4. Load "ggplot2".
+2. Using RStudio open "./05/notebook_05.Rmd"
+3. Execute the first code chunk.
 
 [^1]: O'Neill, M. 2016. Game of Thrones. https://bit.ly/2qjUfQ2 (last access: 10/08/2018).
 
@@ -65,7 +63,8 @@ age_in_chapters, gender, and nobility.
 
 ## Central Tendency and Spread
 
-Enter each of the following commands. Explain the output.
+Execute each of the following commands. Explain the output. Set na.rm to FALSE. What happens?
+
 ```{r, eval = FALSE}
 mean(asoiaf[, "age_in_chapters"], na.rm = TRUE)
 sd(asoiaf[, "age_in_chapters"], na.rm = TRUE)
@@ -75,6 +74,7 @@ quantile(asoiaf[, "age_in_chapters"],
 )
 summary(asoiaf[, "age_in_chapters"])
 ```
+
 >- **What have we learned?**
 >- mean(), sd(), and quantile() return just that.
 >- Each requires instructions on how to process NAs.
@@ -95,13 +95,17 @@ ggplot(data = asoiaf, aes(sample = age_in_chapters)) +
   geom_qq() + geom_qq_line()
 ```
 
-[^2]: For an entire theory of graphical EDA using 
-  ggplot2 see Unwin, A. 2015. Graphical Data Analysis 
+[^2]: For an entire theory of graphical EDA using
+  ggplot2 see Unwin, A. 2015. Graphical Data Analysis
   with R. Boca Raton: CRC Press.
 
 ## Grouping Values
 
 - **Goal**: Controlled loss of information for, e.g., tables
+- **Means**:
+    - Aggregate by some meaningful group
+    - Discretize continuous variables
+
 ```{r, eval = FALSE}
 # Variant a. Aggregate data --------------------------
 mu_age_by_allegiance <- aggregate(
@@ -112,8 +116,9 @@ mu_age_by_allegiance <- aggregate(
 ```
 
 ## Grouping Values, contd.
+
 ```{r, eval = FALSE}
-# Variant b. Recode the data -------------------------
+# Variant b. Discretize the data -------------------------
 tmp <- cut(x = asoiaf[, "age_in_chapters"],
   breaks = 5
   # divides data into <breaks> pieces of equal length
@@ -123,8 +128,8 @@ tmp <- cut(x = asoiaf[, "age_in_chapters"],
     asoiaf[, "age_in_chapters"], na.rm = TRUE
   ), # vector of values at which to cut x.
   include.lowest = FALSE
-); summary(tmp) # Note something weird?
-typeof(tmp); class(tmp) # Note something weird?
+); summary(tmp) # Notice something weird?
+typeof(tmp); class(tmp) # Notice something weird?
 ```
 
 # Few Values
@@ -133,8 +138,9 @@ typeof(tmp); class(tmp) # Note something weird?
 
 - Special instance ("class") of atomic vectors
 - Store nominal and ordinal data, e.g., eye color & letter grades
-- Look like character strings, but behave like integers
+- Look like character strings, but may behave like integers
 - Create factors only when needed
+
 ```{r, results=FALSE}
 grades <- c("A", "B", "B", "C")
 grades <- factor(grades,
@@ -149,6 +155,7 @@ typeof(grades); attributes(grades) # Try these.
 
 - Components of a factor: numeric value & character label
 - labels (BUT NOT VALUES) can be used for logical indexing
+
 ```{r}
 grades; as.numeric(grades)
 grades > "C" # will work fine
@@ -158,12 +165,15 @@ grades > 1 # will generally not work
 ## Simple N-way Contingency Tables
 
 - table() creates N-way contingency tables
+
 ```{r}
 table(asoiaf[, "gender"]) # single 1way table
 ```
 
 
-Explain the output of these statements. Do you notice anything?
+Explain the output of these statements. Explain the difference in
+your own words.
+
 ```{r, eval = FALSE}
 apply(
   asoiaf[, c("gender", "nobility")], 2, table
@@ -175,6 +185,7 @@ table(asoiaf[, "book_of_death"], asoiaf[, "nobility"])
 
 - You must state explicitly what information you require.
 - Examples: Proportions & Totals
+
 ```{r, eval = FALSE}
 mytable <- table(
   "gender" = asoiaf[, 'gender'],
@@ -193,6 +204,7 @@ addmargins(mytable)
 - Numerous methods provided
 - Most defined by individual functions
 - See packages [vcd & vcdExtra](https://cran.r-project.org/web/packages/vcdExtra/vignettes/vcd-tutorial.pdf) for more options
+
 ```{r, results = FALSE}
 mytable <- table(
   "gender" = asoiaf[, 'gender'],
@@ -207,6 +219,7 @@ fit <- fisher.test(mytable); fit # Fisher's Exact Test
 - Scatter plots are the starting point for any correlation analysis
 - base::pairs() & car::scatterplotMatrix() return plot matrices
 - Quantify associations using cor() and cor.test() functions
+
 ```{r, eval = FALSE}
 # a. Explain the code and plot. ---------------------
 ggplot(data = asoiaf,
@@ -225,16 +238,18 @@ cor(x = asoiaf[, c(6, 8)],
 
 - Question: Do two groups come from the same population?
 - In ASOIAF: Do nobles survive longer than other social strata?
+
 ```{r, eval = FALSE}
 t.test( # Alternative: mu_0 < mu_1
   age_in_chapters ~ nobility, data = asoiaf,
   alternative = "less" # "greater" for mu_0 > mu_1
 )
 ```
+
 - Defaults to unequal variances & returns Welch's t-test
 - Set paired = TRUE for paired t-tests
 - For detailed instructions see Field, A. et al. 2012.
-  Discovering Statistics Using R. Los Angeles: SAGE, Ch. 9. 
+  Discovering Statistics Using R. Los Angeles: SAGE, Ch. 9.
 
 # Summary
 
@@ -251,7 +266,7 @@ t.test( # Alternative: mu_0 < mu_1
   Mean & mean()\\
   Median & median()\\
   Quantiles & quantile()\\
-  Extremes & range()\\
+  Extremes & range(), min(), max()\\
   Variance & var()\\
   Standard Deviation & sd()\\
   Covariance Matrix & vcov()\\
@@ -263,4 +278,4 @@ t.test( # Alternative: mu_0 < mu_1
   Various Nonparametric Tests & friedman.test(), kruskal.test(), wilcox.test(), etc.
   \end{tabular}
 }
-    
+
