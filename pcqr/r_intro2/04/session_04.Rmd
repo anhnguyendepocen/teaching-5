@@ -16,7 +16,60 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \maketitle
 
+
 # Introduction
+
+
+## Before we start\dots
+
+Here is our in-class solution to yesterday's puzzle. We have built in a
+semantic error. Can you spot and fix the error?
+Hint: Try different parameter settings.
+
+```{r, eval = FALSE}
+r <- 1; n <- 10000
+hits <- vector("logical", length = n)
+for (i in seq(n)) {
+    hits[i] <- sqrt(sum(runif(2, -r, r) ^ 2)) <= 1
+}
+4 * mean(hits)
+```
+
+
+## Before we start\dots
+In 1987, the Indiana General Assembly attempted to establish the value
+of $\pi$ by legislative fiat. The
+[Indiana Pi Bill](https://en.wikipedia.org/wiki/Indiana_Pi_Bill) goes
+back Edward J. Goodwin's scientifically proven method to square the circle.
+
+```{r}
+pi; pi <- 3.2; pi; base::pi
+```
+
+Now, an object sits on your workspace that has name pi and value $3.2$.
+You can still access the mathematical constant, though. See the manual:
+`?"::"`.
+
+
+## Today's Agenda
+
+- **Place**: Campus Griebnitzsee, House 7, Room 2.41
+- **Coffee break**: 10:45 - 11:00
+- **Lunch break**: 12:30 - 13:30
+- **Materials**: Go to https://github.com/dagtann/pcqr/
+
+\begin{table}
+  \begin{tabular}{lccll}
+    \toprule
+    Day & Start & End & Official Topic\\
+    \midrule
+    2 & 09:15 & 10:45 & Graphics\\
+    ~ & 11:00 & 12:30 & Basic Statistics\\
+    ~ & 13:30 & 15:00 & (G)LMs\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
 
 ## A Taste of ggplot2
 
@@ -32,6 +85,7 @@ knitr::opts_chunk$set(echo = TRUE)
   }
 \end{figure}
 
+
 ## Second Serving: Hierarchical Edge Bundling[^98]
 
 \begin{figure}
@@ -41,6 +95,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [^98]: Holtz, Y. 2017. The R Graph Gallery. \href{https://bit.ly/2QKdhLU}{https://bit.ly/2QKdhLU} (last access: 11/05/2019).
 
+
 ## An Embarassing Riches of Options[^97]
 
 \begin{figure}
@@ -49,6 +104,7 @@ knitr::opts_chunk$set(echo = TRUE)
 \end{figure}
 
 [^97]: Yau, N. 2016. 5 Tips for Learning to Code for Vizualization. \href{https://bit.ly/2yu0fe0}{https://bit.ly/2yu0fe0} (last access: 10/11/2018).
+
 
 ## Outline
 
@@ -165,21 +221,27 @@ p + theme_minimal()
     Introduction. Princeton: Princeton University Press. Avaliable at \href{https://socviz.co/}{https://socviz.co/} (last access: 11/05/2019).
 
 ## Self-practice: Replicate these figures.
+
 ```{r ggplot2_self, fig.align='center', echo = FALSE, fig.width = 4.5, fig.height = 2.5}
 p <- ggplot(
   data = gapminder,
   mapping = aes(x = gdpPercap, y = lifeExp)
 ) +
   geom_point(alpha = .2) +
-  geom_smooth(method = 'lm', colour = "red", size = .3) + # add linear correlation
+  geom_smooth(
+    mapping = aes(colour = "Linear correlation"), method = 'lm',
+    se = FALSE, size = .3
+  ) +
   scale_x_log10(labels = scales::dollar) + # log10 xvalues, but display Dollar
   labs(
     x = "GDP per capita",
     y = "Life expectancy at birth",
+    colour = "Smoother",
     title ="Life Expectancy vs. Economic Development"
   ) +
   facet_wrap(~ continent, nrow = 2) +
-  theme_gray(base_size = 9)
+  theme_gray(base_size = 9) +
+  theme(legend.position = "bottom", legend.key = element_blank())
 p
 ```
 

@@ -19,8 +19,9 @@ pdta <- gapminder
 
 # Warmup
 
-You should never rush blindly into data vizualization. Hence, before we get to work, we are going study our target graph in detail. Find an answer to each of
-the five questions below.
+You should never rush blindly into data vizualization. Hence, let's
+study our target graph in detail before we hack any code into $\mathcal{R}$.
+Answer each of the five questions below.
 
 ![](./fig/gapminder_target.png)
 
@@ -46,7 +47,7 @@ head(...)
 2. What relationships do you want to see?
 ```{r}
 p <- ggplot(data = ..., mapping = aes(x = ..., y = ...))  # Map(!) data to plot.
-``` 
+```
 
 3. How do you want to see it?
 ```{r}
