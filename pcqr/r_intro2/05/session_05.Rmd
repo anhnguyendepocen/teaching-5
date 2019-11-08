@@ -43,7 +43,7 @@ questions: **What's the chance that Jon Snow is going to die?**
 To get started:
 
 1. Quit & reopen $\mathcal{R}$.
-2. Using RStudio open "./05/notebook_05.Rmd"
+2. Open the notebook "./05/notebook_05.Rmd" in RStudio.
 3. Execute the first code chunk.
 
 [^1]: O'Neill, M. 2016. Game of Thrones. https://bit.ly/2qjUfQ2 (last access: 10/08/2018).

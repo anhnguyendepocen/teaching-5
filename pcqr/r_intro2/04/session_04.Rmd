@@ -23,8 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Before we start\dots
 
 Here is our in-class solution to yesterday's puzzle. We have built in a
-semantic error. Can you spot and fix the error?
-Hint: Try different parameter settings.
+semantic error. Can you spot and fix it? Hint: Try different parameter settings.
 
 ```{r, eval = FALSE}
 r <- 1; n <- 10000
@@ -37,10 +36,12 @@ for (i in seq(n)) {
 
 
 ## Before we start\dots
+
 In 1987, the Indiana General Assembly attempted to establish the value
 of $\pi$ by legislative fiat. The
 [Indiana Pi Bill](https://en.wikipedia.org/wiki/Indiana_Pi_Bill) goes
-back Edward J. Goodwin's scientifically proven method to square the circle.
+back to Edward J. Goodwin's scientifically proven method to square the
+circle.
 
 ```{r}
 pi; pi <- 3.2; pi; base::pi
